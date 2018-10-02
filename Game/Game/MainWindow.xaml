@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:Game"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Margin="0,0,3.6,0">
+        <Label Content="Trick or treat" HorizontalAlignment="center" VerticalAlignment="top" Margin="30" RenderTransformOrigin="-0.497,0.216" Height="74" Width="236" FontSize="36" FontWeight="Bold"/>
+        <Button Content="Play" HorizontalAlignment="Left" Margin="35,146,0,0" VerticalAlignment="Top" Width="120" Height="36" FontSize="18" IsDefault="True"/>
+        <Button Content="Highscore" HorizontalAlignment="Left" Margin="35,217,0,0" VerticalAlignment="Top" Width="120" Height="36" FontSize="18" IsDefault="True"/>
+        <Button Content="Customize" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Width="120" Height="36" FontSize="18" IsDefault="True"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="35,374,0,0" VerticalAlignment="Top" Width="120" Height="36" FontSize="18" IsDefault="True" Click="Button_Click"/>
+
     </Grid>
 </Window>
