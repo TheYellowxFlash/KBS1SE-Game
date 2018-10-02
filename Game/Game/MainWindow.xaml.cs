@@ -28,6 +28,14 @@ namespace Game
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+            Point p = new Point(5, 6);
+        }
+
+        private void Grid_Initialized(object sender, EventArgs e)
+        {
+            /*var uri = new Uri(@"pack://Game:,,,/Resources/halloween.gif");
+            var image = new BitmapImage(uri);
+            this.Background = new ImageBrush(image);*/
         }
     }
 }
