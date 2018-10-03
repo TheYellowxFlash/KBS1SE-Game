@@ -5,7 +5,14 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{F80E50CA-A26B-4B65-A252-7FF04C2E3AAB}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovementTest", "MovementTest\MovementTest.csproj", "{B867B2DB-90EB-4DA0-BD79-DAE3883D55F5}"
+=======
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{A22E713C-0D23-47DD-AAAE-5A9994730F35}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\halloween.gif = ..\..\..\..\..\halloween.gif
+	EndProjectSection
+>>>>>>> edf64728b606bf710fc213fa0e11dbbba6c886fc
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
