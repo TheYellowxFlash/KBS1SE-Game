@@ -8,5 +8,6 @@ namespace Game.Model
 {
     interface Moveable
     {
+        // nodig ??
     }
 }

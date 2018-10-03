@@ -69,6 +69,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Enemy.cs" />
+    <Compile Include="Model\Moveable.cs" />
+    <Compile Include="Model\Obstacle.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\Prop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -97,5 +102,6 @@
   <ItemGroup>
     <Resource Include="halloween.gif" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
