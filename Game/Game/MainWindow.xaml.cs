@@ -20,22 +20,29 @@ namespace Game
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void play_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
-            Point p = new Point(5, 6);
         }
 
-        private void Grid_Initialized(object sender, EventArgs e)
+        private void customize_Click(object sender, RoutedEventArgs e)
         {
-            /*var uri = new Uri(@"pack://Game:,,,/Resources/halloween.gif");
-            var image = new BitmapImage(uri);
-            this.Background = new ImageBrush(image);*/
+
+        }
+
+        //private void highscore_Click(object sender, RoutedEventArgs e)
+        //{
+
+        //}
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }
