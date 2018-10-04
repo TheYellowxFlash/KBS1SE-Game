@@ -28,8 +28,9 @@ namespace Game
 
         private void play_Click(object sender, RoutedEventArgs e)
         {
-            MovementTest.MainWindow m = new MovementTest.MainWindow();
-            m.Show();
+            //MovementTest.MainWindow m = new MovementTest.MainWindow();
+            Level1 level1 = new Level1();
+            level1.Show();
             this.Close();
         }
         

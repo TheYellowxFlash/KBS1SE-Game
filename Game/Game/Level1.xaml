@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Game"
         mc:Ignorable="d"
         Title="Level1" Height="450" Width="800">
-    <Canvas x:Name="Level1">
+    <Canvas x:Name="level1">
         
     </Canvas>
 </Window>
