@@ -5,8 +5,8 @@
 
     <Style TargetType="{x:Type Button}">
         <Setter Property="Height" Value="100" />
-        <Setter Property="Width" Value="220" />
-        <Setter Property="FontSize" Value="40"/>
+        <Setter Property="Width" Value="280" />
+        <Setter Property="FontSize" Value="50"/>
         <Setter Property="Background" Value="Green"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -19,7 +19,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="FontSize" Value="50"/>
+                <Setter Property="FontSize" Value="60"/>
             </Trigger>
         </Style.Triggers>
 
