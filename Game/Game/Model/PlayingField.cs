@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game.Model
 {
-    class Obstacle : Prop
+    class PlayingField
     {
-        public Obstacle(string path)
-        {
-
-        }
     }
 }

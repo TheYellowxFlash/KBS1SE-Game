@@ -12,10 +12,11 @@ namespace Game.Model
         public Point Position { get; set; }
         public Point Size { get; set; }
 
-        public Prop(Point position)
+        public Prop(Point position,Point size)
         {
             Position = position;
-            Size = new Point(40, 40);
+            Size = size;
         }
+        public Prop() { }
     }
 }
