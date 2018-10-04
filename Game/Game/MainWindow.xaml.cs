@@ -32,16 +32,16 @@ namespace Game
             m.Show();
             this.Close();
         }
-        /*
+        
         private void customize_Click(object sender, RoutedEventArgs e)
         {
 
-        }*/
+        }
 
-        //private void highscore_Click(object sender, RoutedEventArgs e)
-        //{
+        private void highscore_Click(object sender, RoutedEventArgs e)
+        {
 
-        //}
+        }
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {

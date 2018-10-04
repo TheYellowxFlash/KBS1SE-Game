@@ -15,12 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Theme", "Game.Theme\Ga
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovementTest", "MovementTest\MovementTest.csproj", "{B867B2DB-90EB-4DA0-BD79-DAE3883D55F5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fonts", "Fonts", "{118D2EC5-4B16-4B60-8093-705D26BC3458}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\..\..\Downloads\hallowen\HallowenInline.otf = ..\..\..\..\..\..\Downloads\hallowen\HallowenInline.otf
-		..\..\..\..\..\..\Downloads\hallowen\HallowenInline.ttf = ..\..\..\..\..\..\Downloads\hallowen\HallowenInline.ttf
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
