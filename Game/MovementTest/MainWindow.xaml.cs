@@ -37,11 +37,11 @@ namespace MovementTest
         {
             InitializeComponent();
 
-            startPosX = Canvas.GetLeft(enemy2);
-            startPosY = Canvas.GetTop(enemy2);
+            //startPosX = Canvas.GetLeft(enemy2);
+            //startPosY = Canvas.GetTop(enemy2);
 
             timer.Tick += TimerOnTick;
-            timer.Tick += RecalculateCollision;
+            //timer.Tick += RecalculateCollision;
             timer.Interval = new TimeSpan(0,0,0,0,1);
             timer.Start();
 
@@ -72,60 +72,60 @@ namespace MovementTest
                 Canvas.SetLeft(Player, x);
             }
 
-            pX = Canvas.GetLeft(Player);
-            pY = Canvas.GetTop(Player);
+            //pX = Canvas.GetLeft(Player);
+            //pY = Canvas.GetTop(Player);
 
-            xE = Canvas.GetLeft(enemy2);
-            yE = Canvas.GetTop(enemy2);
+            //xE = Canvas.GetLeft(enemy2);
+            //yE = Canvas.GetTop(enemy2);
 
-            if (pX < xE)
-            {
-                xE -= .5;
-            }
-            else
-            {
-                xE += .5;
-            }
+            //if (pX < xE)
+            //{
+            //    xE -= .5;
+            //}
+            //else
+            //{
+            //    xE += .5;
+            //}
 
-            if (pY < yE)
-            {
-                yE -= .5;
-            }
-            else
-            {
-                yE += .5;
-            }
+            //if (pY < yE)
+            //{
+            //    yE -= .5;
+            //}
+            //else
+            //{
+            //    yE += .5;
+            //}
 
-            Canvas.SetLeft(enemy2, xE);
-            Canvas.SetTop(enemy2, yE);
+            //Canvas.SetLeft(enemy2, xE);
+            //Canvas.SetTop(enemy2, yE);
         }
 
-        public void RecalculateCollision(object sender, EventArgs e)
-        {
-            Rect r1 = BoundsRelativeTo(Player, PlayingField);
-            Rect r2 = BoundsRelativeTo(enemy, PlayingField);
-            Rect r3 = BoundsRelativeTo(enemy2, PlayingField);
+        //public void RecalculateCollision(object sender, EventArgs e)
+        //{
+        //    Rect r1 = BoundsRelativeTo(Player, PlayingField);
+        //    Rect r2 = BoundsRelativeTo(enemy, PlayingField);
+        //    Rect r3 = BoundsRelativeTo(enemy2, PlayingField);
 
-            if (r1.IntersectsWith(r2) || r1.IntersectsWith(r3))
-            {
-                MessageBox.Show("Game over");
+        //    if (r1.IntersectsWith(r2) || r1.IntersectsWith(r3))
+        //    {
+        //        MessageBox.Show("Game over");
 
-                // hier moet de reset functie
-                x = 0;
-                y = 0;
-                xE = startPosX;
-                yE = startPosY;
-                Canvas.SetLeft(enemy2, xE);
-                Canvas.SetTop(enemy2, yE);
-                Canvas.SetLeft(Player, x);
-                Canvas.SetTop(Player, y);
-            }
-        }
+        //        // hier moet de reset functie
+        //        x = 0;
+        //        y = 0;
+        //        xE = startPosX;
+        //        yE = startPosY;
+        //        Canvas.SetLeft(enemy2, xE);
+        //        Canvas.SetTop(enemy2, yE);
+        //        Canvas.SetLeft(Player, x);
+        //        Canvas.SetTop(Player, y);
+        //    }
+        //}
 
-        public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
-        {
-            return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
-        }
+        //public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
+        //{
+        //    return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
+        //}
 
     }
 }

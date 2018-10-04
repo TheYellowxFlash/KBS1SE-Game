@@ -107,6 +107,10 @@
       <Project>{4fc75aa6-0038-4de7-bd17-5d190466132b}</Project>
       <Name>Game.Theme</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MovementTest\MovementTest.csproj">
+      <Project>{b867b2db-90eb-4da0-bd79-dae3883d55f5}</Project>
+      <Name>MovementTest</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

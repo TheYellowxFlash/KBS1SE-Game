@@ -11,7 +11,7 @@
 
     <Canvas x:Name="PlayingField" HorizontalAlignment="Left" Height="418" VerticalAlignment="Top" Width="790">
         <Rectangle x:Name="Player" Fill="#FF7EA4DA" Height="39" Stroke="Black" Width="40"/>
-        <Rectangle x:Name="enemy" Fill="#FF42C02E" Height="100" Canvas.Left="259" Stroke="Black" Canvas.Top="260" Width="100"/>
-        <Rectangle x:Name="enemy2" Fill="#FFC02E9D" Height="25" Canvas.Left="612" Stroke="Black" Canvas.Top="232" Width="25"/>
+        <!--<Rectangle x:Name="enemy" Fill="#FF42C02E" Height="100" Canvas.Left="259" Stroke="Black" Canvas.Top="260" Width="100"/>
+        <Rectangle x:Name="enemy2" Fill="#FFC02E9D" Height="25" Canvas.Left="612" Stroke="Black" Canvas.Top="232" Width="25"/>-->
     </Canvas>
 </Window>

@@ -9,8 +9,9 @@
     <Grid Margin="0,0,3.6,0">
         <Label Content="Trick || treat" HorizontalAlignment="center" VerticalAlignment="top" Height="89" Width="495" FontSize="80" FontFamily="Hallowen Inline" FontWeight="Bold" Panel.ZIndex="1"/>
         <Button x:Name="play" Content="Play" HorizontalAlignment="Left" Margin="126,157,0,0" VerticalAlignment="Top" FontFamily="Hallowen Inline" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="play_Click"/>
-        <Button x:Name="customize" Content="Customize" HorizontalAlignment="Left" Margin="126,257,0,0" VerticalAlignment="Top" FontFamily="Hallowen Inline" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="customize_Click"/>
-        <!--
+        <!--<Button x:Name="customize" Content="Customize" HorizontalAlignment="Left" Margin="126,257,0,0" VerticalAlignment="Top" FontFamily="Hallowen Inline" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="customize_Click"/>
+        
+        --><!--
             <Button x:Name="highscore" Content="highscore" HorizontalAlignment="Left" Margin="108,325,0,0" VerticalAlignment="Top" Width="200" Height="48" FontSize="40" FontFamily="Hallowen Inline" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="highscore_Click" />
             -->
         <Button x:Name="exit" Content="Exit" HorizontalAlignment="Left" Margin="126,580,0,0" VerticalAlignment="Top" FontFamily="Hallowen Inline" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="exit_Click" RenderTransformOrigin="0.864,-0.714" />

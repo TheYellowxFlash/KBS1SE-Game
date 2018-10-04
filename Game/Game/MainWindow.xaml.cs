@@ -28,12 +28,15 @@ namespace Game
 
         private void play_Click(object sender, RoutedEventArgs e)
         {
+            MovementTest.MainWindow m = new MovementTest.MainWindow();
+            m.Show();
+            this.Close();
         }
-
+        /*
         private void customize_Click(object sender, RoutedEventArgs e)
         {
 
-        }
+        }*/
 
         //private void highscore_Click(object sender, RoutedEventArgs e)
         //{
