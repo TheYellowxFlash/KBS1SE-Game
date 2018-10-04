@@ -9,15 +9,16 @@ using System.Windows.Input;
 
 namespace Game.Model
 {
-    class Player
+    class Player : Prop
     {
         public Point Locatie { get; set; }
 
         public Point Size { get; set; }
 
-        public Player(Point position)
+        public Player(Point position, Point size) : base(position, size)
         {
             position = new Point(0,0);
+            size = new Point(40, 40);
         }
 
         public void Move(Point pos, MainWindow player)
