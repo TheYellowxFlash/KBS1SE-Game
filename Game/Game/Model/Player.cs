@@ -9,9 +9,13 @@ using System.Windows.Input;
 
 namespace Game.Model
 {
-    class Player : Prop
+    class Player
     {
-        public Player(Point position) : base(position)
+        public Point Locatie { get; set; }
+
+        public Point Size { get; set; }
+
+        public Player(Point position)
         {
             position = new Point(0,0);
         }
