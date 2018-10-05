@@ -19,7 +19,7 @@ namespace Game
     public partial class Level1 : Window
     {
         private World world;
-        private Rectangle rectangle;
+        private Rectangle playerBox;
 
         DispatcherTimer timer = new DispatcherTimer();
 
@@ -43,18 +43,18 @@ namespace Game
         private void UpdateWorld()
         {
             Player player = world.Player;
-            Canvas.SetLeft(rectangle, player.Locatie.X);
-            Canvas.SetTop(rectangle, player.Locatie.Y);
-            rectangle.Width = player.Size.X;
-            rectangle.Height = player.Size.Y;
-            rectangle.Fill = Brushes.Blue;
+            Canvas.SetLeft(playerBox, player.Locatie.X);
+            Canvas.SetTop(playerBox, player.Locatie.Y);
+            playerBox.Width = player.Size.X;
+            playerBox.Height = player.Size.Y;
+            playerBox.Fill = Brushes.Blue;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             world = new World();
-            rectangle = new Rectangle();
-            level1.Children.Add(rectangle);
+            playerBox = new Rectangle();
+            level1.Children.Add(playerBox);
             world.StartGame();
         }
     }
