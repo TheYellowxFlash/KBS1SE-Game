@@ -15,7 +15,6 @@ namespace Game.Model
 
         public Player(Point position) : base(position)
         {
-            Position = position;
             Size = new Point(40, 40);
         }
 
@@ -24,19 +23,19 @@ namespace Game.Model
             y = Position.Y;
             x = Position.X;
 
-            if (Keyboard.IsKeyDown(Key.S))
+            if (Keyboard.IsKeyDown(Key.Down))
             {
                 y += 1;
             }
-            if (Keyboard.IsKeyDown(Key.W))
+            if (Keyboard.IsKeyDown(Key.Up))
             {
                 y -= 1;
             }
-            if (Keyboard.IsKeyDown(Key.A))
+            if (Keyboard.IsKeyDown(Key.Left))
             {
                 x -= 1;
             }
-            if (Keyboard.IsKeyDown(Key.D))
+            if (Keyboard.IsKeyDown(Key.Right))
             {
                 x += 1;
             }

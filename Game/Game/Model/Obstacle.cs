@@ -10,7 +10,7 @@ using TreeHelper = System.Windows.Media.VisualTreeHelper;
 
 namespace Game.Model
 {
-    class Obstacle : Prop
+    /*class Obstacle : Prop
     {
         
 
@@ -22,5 +22,5 @@ namespace Game.Model
 
             //this.Position = new Point(obstacle.);
         }
-    }
+    }*/
 }
