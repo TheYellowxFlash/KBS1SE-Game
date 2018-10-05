@@ -1,0 +1,31 @@
+﻿<Window x:Class="CustomizeCharacter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomizeCharacter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Customize Character" HorizontalAlignment="center" VerticalAlignment="top" Height="89" Width="495" FontSize="50" FontFamily="/Game;component/#Hallowen Inline" Panel.ZIndex="1"/>
+        <Label Content="Select a Character" Margin="315,66,255.333,306.667" FontSize="16"></Label>
+        <Button x:Name="back" Content="Back" HorizontalAlignment="Left" Margin="126,0,0,10.4" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" RenderTransformOrigin="0.864,-0.714" Foreground="White" />
+        <Button x:Name="exit" Content="Exit" HorizontalAlignment="Left" Margin="160,0,0,9.667" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" RenderTransformOrigin="0.864,-0.714" Foreground="White" />
+
+        <Button x:Name="female" Margin="126,146,554.333,146.667" FontFamily="Hallowen Inline" Background="{x:Null}" BorderBrush="Black">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="female/idle (1).png" Stretch="Uniform" Height="128" Width="92"/>
+            </StackPanel>
+        </Button>
+        <Label Content="Female" HorizontalAlignment="center" Margin="126,293,554.333,94.667" FontFamily="#Hallowen Inline" Foreground="White" ></Label>
+        <Button x:Name="male" Margin="531,146,149.333,146.667" FontFamily="Hallowen Inline" Background="{x:Null}" BorderBrush="Black" Foreground="#FFF60F0F">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="male/idle (1).png" Stretch="Uniform" Height="128" Width="92"/>
+            </StackPanel>
+        </Button>
+        <Label Content="Male" HorizontalAlignment="center" Margin="531,293,149.333,94.667" FontFamily="#Hallowen Inline" Foreground="White" ></Label>
+        <Grid.Background>
+            <ImageBrush ImageSource="Background_Menu2.jpg"></ImageBrush>
+        </Grid.Background>
+    </Grid>
+</Window>
