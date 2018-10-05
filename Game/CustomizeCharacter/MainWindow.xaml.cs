@@ -20,9 +20,26 @@ namespace CustomizeCharacter
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string character = "";
+      
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void character_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("You chose " + ((Button)sender).Name.ToString());
+            Button targetButton = (sender as Button);
+            if(targetButton != null && targetButton.Name == "female") {
+                character = "Female";
+            }
+            else if (targetButton != null && targetButton.Name == "male")
+            {
+                character = "Male";
+            }
+          
+            MessageBox.Show(character);
         }
     }
 }

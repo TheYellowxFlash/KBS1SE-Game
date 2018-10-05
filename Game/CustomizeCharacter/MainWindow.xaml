@@ -12,13 +12,13 @@
         <Button x:Name="back" Content="Back" HorizontalAlignment="Left" Margin="126,0,0,10.4" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" RenderTransformOrigin="0.864,-0.714" Foreground="White" />
         <Button x:Name="exit" Content="Exit" HorizontalAlignment="Left" Margin="160,0,0,9.667" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" RenderTransformOrigin="0.864,-0.714" Foreground="White" />
 
-        <Button x:Name="female" Margin="126,146,554.333,146.667" FontFamily="Hallowen Inline" Background="{x:Null}" BorderBrush="Black">
+        <Button Name="female"  Margin="126,146,554.333,146.667" FontFamily="Hallowen Inline" Background="{x:Null}" BorderBrush="Black" Click="character_Click" >
             <StackPanel Orientation="Horizontal">
                 <Image Source="female/idle (1).png" Stretch="Uniform" Height="128" Width="92"/>
             </StackPanel>
         </Button>
         <Label Content="Female" HorizontalAlignment="center" Margin="126,293,554.333,94.667" FontFamily="#Hallowen Inline" Foreground="White" ></Label>
-        <Button x:Name="male" Margin="531,146,149.333,146.667" FontFamily="Hallowen Inline" Background="{x:Null}" BorderBrush="Black" Foreground="#FFF60F0F">
+        <Button Name="male" Margin="531,146,149.333,146.667" FontFamily="Hallowen Inline" Background="{x:Null}" BorderBrush="Black" Foreground="#FFF60F0F" Click="character_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="male/idle (1).png" Stretch="Uniform" Height="128" Width="92"/>
             </StackPanel>
