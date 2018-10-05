@@ -12,7 +12,7 @@ namespace Game.Model
         public Point Position { get; set; }
         public Point Size { get; set; }
 
-        public Prop(Point position,Point size)
+        public Prop(Point position, Point size)
         {
             Position = position;
             Size = size;
@@ -23,5 +23,6 @@ namespace Game.Model
         {
             Position = position;
         }
+        public Prop() { } 
     }
 }
