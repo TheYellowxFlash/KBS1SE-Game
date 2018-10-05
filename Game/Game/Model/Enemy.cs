@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,5 +23,24 @@ namespace Game.Model
         {
             Position = position;
         }
+
+        public bool InRange(Player player)
+        {
+            Point enemyCenter = getCenterPoint();
+            Point playerCenter = player.getCenterPoint();
+
+            if (checkInRange(enemyCenter.X, playerCenter.X, AttackRange) ||
+                checkInRange(enemyCenter.Y, playerCenter.Y, AttackRange))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        
     }
 }

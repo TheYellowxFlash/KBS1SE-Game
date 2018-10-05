@@ -17,32 +17,38 @@ namespace Game.Model
             Size = new Point(32,32);
             MoveSpeed = .5;
             AttackRange = 100;
+            
         }
 
         public void Move(Player player)
         {
-            y = Position.Y;
-            x = Position.X;
-            
-            if (player.Position.Y > y)
+            while (InRange(player))
             {
-                y += MoveSpeed;
-            }
-            else
-            {
-                y -= MoveSpeed;
-            }
+                y = Position.Y;
+                x = Position.X;
 
-            if (player.Position.X < x)
-            {
-                x -= MoveSpeed;
-            }
-            else
-            {
-                x += MoveSpeed;
-            }
+                if (player.Position.Y > y)
+                {
+                    y += MoveSpeed;
+                }
+                else
+                {
+                    y -= MoveSpeed;
+                }
 
-            Position = new Point(x, y);
+                if (player.Position.X < x)
+                {
+                    x -= MoveSpeed;
+                }
+                else
+                {
+                    x += MoveSpeed;
+                }
+
+                Position = new Point(x, y);
+            }
         }
+
+        
     }
 }
