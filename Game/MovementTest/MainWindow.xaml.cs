@@ -104,7 +104,7 @@ namespace MovementTest
         //{
         //    Rect r1 = BoundsRelativeTo(Player, PlayingField);
         //    Rect r2 = BoundsRelativeTo(enemy, PlayingField);
-        //    Rect r3 = BoundsRelativeTo(enemy2, PlayingField);
+        //   Rect r3 = BoundsRelativeTo(enemy2, PlayingField);
 
         //    if (r1.IntersectsWith(r2) || r1.IntersectsWith(r3))
         //    {
