@@ -15,7 +15,7 @@ namespace Game.Model
         {
             Position = position;
             Size = new Point(32,32);
-            MoveSpeed = .5;
+            MoveSpeed = .6;
             AttackRange = 200;
             
         }

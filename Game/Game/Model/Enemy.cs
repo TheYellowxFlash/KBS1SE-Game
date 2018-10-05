@@ -31,7 +31,7 @@ namespace Game.Model
 
            
             return (checkInRange(enemyCenter.X, playerCenter.X, AttackRange) &&
-                        checkInRange(enemyCenter.Y, playerCenter.Y, AttackRange));
+                    checkInRange(enemyCenter.Y, playerCenter.Y, AttackRange));
 
         }
 

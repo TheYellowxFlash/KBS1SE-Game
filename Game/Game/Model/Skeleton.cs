@@ -16,7 +16,7 @@ namespace Game.Model
             Position = position;
             Size = new Point(20, 40);
             MoveSpeed = .4;
-            AttackRange = 250;
+            AttackRange = 300;
         }
 
         public void Move(Player player)
