@@ -9,41 +9,41 @@ using System.Windows.Input;
 
 namespace Game.Model
 {
-    class Player : Prop
+    class Player
     {
         public Point Locatie { get; set; }
-
         public Point Size { get; set; }
+        private double x, y;
 
-        public Player(Point position, Point size) : base(position, size)
+        public Player(Point position)
         {
-            position = new Point(0,0);
-            size = new Point(40, 40);
+            Locatie = position;
+            Size = new Point(40, 40);
         }
 
-        public void Move(Point pos, MainWindow player)
+        public void Move()
         {
+            y = Locatie.Y;
+            x = Locatie.X;
+
             if (Keyboard.IsKeyDown(Key.S))
             {
-                pos.Y += 1;
-                Canvas.SetTop(player, pos.Y);
+                y += 1;
             }
             if (Keyboard.IsKeyDown(Key.W))
             {
-                pos.Y -= 1;
-                Canvas.SetTop(player, pos.Y);
+                y -= 1;
             }
             if (Keyboard.IsKeyDown(Key.A))
             {
-                pos.X -= 1;
-                Canvas.SetLeft(player, pos.X);
+                x -= 1;
             }
             if (Keyboard.IsKeyDown(Key.D))
             {
-                pos.X += 1;
-                Canvas.SetLeft(player, pos.X);
+                x += 1;
             }
 
+            Locatie = new Point(x,y);
         }
     }
 }

@@ -16,20 +16,16 @@ using System.Windows.Threading;
 
 namespace Game
 {
-    /// <summary>
-    /// Interaction logic for Level1.xaml
-    /// </summary>
     public partial class Level1 : Window
     {
+        private World world;
+        private Rectangle rectangle;
+
         DispatcherTimer timer = new DispatcherTimer();
 
-        public Player Player { get; set; }
-         
         public Level1()
         {
             InitializeComponent();
-
-            Player = new Player(new Point(0,0));
 
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
@@ -38,7 +34,28 @@ namespace Game
 
         private void TimerOnTick(object sender, EventArgs e)
         {
-            Player.Move(Player.Locatie, Player);
+            if (world != null)
+            {
+                UpdateWorld();
+            }
+        }
+
+        private void UpdateWorld()
+        {
+            Player player = world.Player;
+            Canvas.SetLeft(rectangle, player.Locatie.X);
+            Canvas.SetTop(rectangle, player.Locatie.Y);
+            rectangle.Width = player.Size.X;
+            rectangle.Height = player.Size.Y;
+            rectangle.Fill = Brushes.Blue;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            world = new World();
+            rectangle = new Rectangle();
+            level1.Children.Add(rectangle);
+            world.StartGame();
         }
     }
 }
