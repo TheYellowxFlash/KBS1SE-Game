@@ -13,16 +13,11 @@ namespace Game.Model
     class Obstacle : Prop
     {
 
-        bool isSolid = true;
-
         public Obstacle(Image obstacle)
         {
             Vector test = TreeHelper.GetOffset(obstacle);
             this.Position = new Point(test.X, test.Y);
             this.Size = new Point(obstacle.ActualHeight, obstacle.ActualWidth);
-            this.isSolid = obstacle.IsEnabled;
-
-            //this.Position = new Point(obstacle.);
         }
     }
 }

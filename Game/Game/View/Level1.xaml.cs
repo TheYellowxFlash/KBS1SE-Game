@@ -66,7 +66,8 @@ namespace Game
                 if(child is Image)
                 {
                     Image obstacle = (Image)child;
-                    obstacles.Add(new Obstacle(obstacle));
+                    if(obstacle.IsEnabled)
+                        obstacles.Add(new Obstacle(obstacle));
                 }
             }
             world = new World();
