@@ -7,33 +7,58 @@
         mc:Ignorable="d"
         Title="Level1" Height="1080" Width="1920"  WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Canvas x:Name="level1">
-        <Image Height="73" Canvas.Left="189" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="182" Width="77" RenderTransformOrigin="2.381,2.789"/>
-        <Image Height="80" Canvas.Left="189" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="258" Width="77" RenderTransformOrigin="0.467,1.666"/>
-        <Image Height="72" Canvas.Left="392" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="182" Width="77" RenderTransformOrigin="0.4,2.442"/>
+        <Image Height="105" Canvas.Left="159" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="341" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="255" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="341" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="346" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="341" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="442" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="341" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="527" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="342" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="623" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="342" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="714" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="341" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="810" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="341" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="159" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="434" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="255" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="434" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="346" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="434" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="442" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="434" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="527" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="434" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="623" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="434" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="714" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="434" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="810" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="434" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="159" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="81" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="255" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="81" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="346" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="81" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="442" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="81" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="527" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="81" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="623" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="81" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="714" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="81" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="159" Source="/Game;component/path.jpg" Stretch="Fill" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="255" Source="/Game;component/path.jpg" Stretch="Fill" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="346" Source="/Game;component/path.jpg" Stretch="Fill" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="442" Source="/Game;component/path.jpg" Stretch="Fill" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="527" Source="/Game;component/path.jpg" Stretch="Fill" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="623" Source="/Game;component/path.jpg" Stretch="Fill" Width="102" IsEnabled="False"/>
+        <Image Height="105" Canvas.Left="714" Source="/Game;component/path.jpg" Stretch="Fill" Width="102" IsEnabled="False"/>
+        <Image Height="158" Canvas.Left="266" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126"/>
+        <Image Height="158" Canvas.Left="387" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126" IsEnabled="False"/>
+        <Image Height="158" Canvas.Left="469" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126" IsEnabled="False"/>
+        <Image Height="158" Canvas.Left="708" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126" IsEnabled="False"/>
+        <Image Height="158" Canvas.Left="159" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126" IsEnabled="False"/>
+        <Image Height="158" Canvas.Left="583" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126" IsEnabled="False" Panel.ZIndex="5"/>
+        <Image Height="73" Canvas.Left="189" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="186" Width="77" RenderTransformOrigin="2.381,2.789"/>
+        <Image Height="80" Canvas.Left="189" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="258" Width="77" RenderTransformOrigin="0.467,1.666"/>
+        <Image Height="72" Canvas.Left="392" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="182" Width="77" RenderTransformOrigin="0.4,2.442"/>
         <Image Height="169" Canvas.Left="259" Source="/Game;component/house.png" Stretch="Fill" Canvas.Top="12" Width="145"/>
-        <Image Height="72" Canvas.Left="392" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="182" Width="77" RenderTransformOrigin="0.4,2.442"/>
-        <Image Height="71" Canvas.Left="392" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="268" Width="77" RenderTransformOrigin="0.4,2.442"/>
-        <Image Height="73" Canvas.Left="496" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="182" Width="77" RenderTransformOrigin="2.381,2.789"/>
-        <Image Height="80" Canvas.Left="496" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="258" Width="77" RenderTransformOrigin="0.467,1.666"/>
-        <Image Height="72" Canvas.Left="699" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="182" Width="77" RenderTransformOrigin="0.4,2.442"/>
+        <Image Height="72" Canvas.Left="392" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="182" Width="77" RenderTransformOrigin="0.4,2.442"/>
+        <Image Height="71" Canvas.Left="392" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="268" Width="77" RenderTransformOrigin="0.4,2.442"/>
+        <Image Height="73" Canvas.Left="496" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="182" Width="77" RenderTransformOrigin="2.381,2.789"/>
+        <Image Height="80" Canvas.Left="501" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="260" Width="77" RenderTransformOrigin="0.467,1.666"/>
         <Image Height="169" Canvas.Left="566" Source="/Game;component/house.png" Stretch="Fill" Canvas.Top="12" Width="145"/>
-        <Image Height="72" Canvas.Left="699" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="182" Width="77" RenderTransformOrigin="0.4,2.442"/>
-        <Image Height="71" Canvas.Left="699" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="268" Width="77" RenderTransformOrigin="0.4,2.442"/>
-        <Image Height="105" Canvas.Left="189" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="343" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="285" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="343" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="375" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="343" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="471" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="343" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="557" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="344" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="653" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="344" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="743" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="343" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="839" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="343" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="189" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="448" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="285" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="448" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="375" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="448" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="471" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="448" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="557" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="449" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="653" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="449" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="743" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="448" Width="102" IsEnabled="False"/>
-        <Image Height="105" Canvas.Left="839" Source="/Game;component/path.jpg" Stretch="Fill" Canvas.Top="448" Width="102" IsEnabled="False"/>
+        <Image Height="72" Canvas.Left="709" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="190" Width="77" RenderTransformOrigin="0.4,2.442" Panel.ZIndex="10"/>
+        <Image Height="71" Canvas.Left="709" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="267" Width="77" RenderTransformOrigin="0.4,2.442" Panel.ZIndex="10"/>
+        <Image Height="71" Canvas.Left="708.8" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="267.3" Width="77" RenderTransformOrigin="0.4,2.442" Panel.ZIndex="10"/>
+        <Image Height="71" Canvas.Left="708.8" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="267.3" Width="77" RenderTransformOrigin="0.4,2.442" Panel.ZIndex="10"/>
+        <Image Height="71" Canvas.Left="708.8" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="267.3" Width="77" RenderTransformOrigin="0.4,2.442" Panel.ZIndex="10"/>
+
+
+
     </Canvas>
 </Window>
