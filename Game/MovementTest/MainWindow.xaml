@@ -8,10 +8,28 @@
         Title="MainWindow" Height="450" Width="800"
         WindowStartupLocation="CenterScreen" WindowState="Maximized" MouseDoubleClick="Window_MouseDoubleClick">
 
+    <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Canvas x:Name="PlayingField" HorizontalAlignment="Left" Height="418" VerticalAlignment="Top" Width="790">
+            <Rectangle x:Name="Player" Fill="#FF7EA4DA" Height="39" Stroke="Black" Width="40"/>
+            <Rectangle x:Name="enemy" Fill="#FF42C02E" Height="100" Canvas.Left="259" Stroke="Black" Canvas.Top="260" Width="100"/>
+            <Rectangle x:Name="enemy2" Fill="#FFC02E9D" Height="25" Canvas.Left="612" Stroke="Black" Canvas.Top="232" Width="25"/>
+            
+        </Canvas>
+        
+        <Rectangle x:Name="pausemenu" Fill="#FF595959" Opacity="0"></Rectangle>
+        <Image x:Name="plaatje" HorizontalAlignment="Right" VerticalAlignment="Bottom" Source="MenuBackground.png" Stretch="Fill" Visibility="Hidden"/>
+        <TextBlock x:Name="title" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/MovementTest;component/#YouMurderer BB" TextWrapping="Wrap" Text="PAUSED" VerticalAlignment="Top" FontSize="130" Margin="235,66,226.6,0" Foreground="DarkRed"/>
+        <Button x:Name="resume" Content="Resume" Width="208" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden" Click="resume_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="/MovementTest;component/#YouMurderer BB" FontSize="54" Margin="292,254,293.6,0" Foreground="DarkRed"/>
+        <Button x:Name="exit" Content="Exit" Width="208" FontFamily="/MovementTest;component/#YouMurderer BB" FontSize="54" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Hidden" Click="exit_Click" Margin="292,351,293.6,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="DarkRed"/>
+        
+        
 
-    <Canvas x:Name="PlayingField" HorizontalAlignment="Left" Height="418" VerticalAlignment="Top" Width="790">
-        <Rectangle x:Name="Player" Fill="#FF7EA4DA" Height="39" Stroke="Black" Width="40"/>
-        <!--<Rectangle x:Name="enemy" Fill="#FF42C02E" Height="100" Canvas.Left="259" Stroke="Black" Canvas.Top="260" Width="100"/>
-        <Rectangle x:Name="enemy2" Fill="#FFC02E9D" Height="25" Canvas.Left="612" Stroke="Black" Canvas.Top="232" Width="25"/>-->
-    </Canvas>
+
+
+    </Grid>
+
+
 </Window>
