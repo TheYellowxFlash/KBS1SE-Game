@@ -37,14 +37,7 @@ namespace Game.Model
 
         public static bool checkInRange(double getal1, double getal2, double range)
         {
-            if (getal1 + range > getal2 && getal2 > getal1 - range )
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (getal1 + range > getal2 && getal2 > getal1 - range);
 
         }
     }

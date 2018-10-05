@@ -29,15 +29,9 @@ namespace Game.Model
             Point enemyCenter = getCenterPoint();
             Point playerCenter = player.getCenterPoint();
 
-            if (checkInRange(enemyCenter.X, playerCenter.X, AttackRange) ||
-                checkInRange(enemyCenter.Y, playerCenter.Y, AttackRange))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+           
+            return (checkInRange(enemyCenter.X, playerCenter.X, AttackRange) &&
+                        checkInRange(enemyCenter.Y, playerCenter.Y, AttackRange));
 
         }
 
