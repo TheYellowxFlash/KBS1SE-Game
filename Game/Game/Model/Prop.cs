@@ -24,6 +24,8 @@ namespace Game.Model
             Position = position;
         }
 
+        public Prop() { }
+
 
         public Point getCenterPoint()
         {
