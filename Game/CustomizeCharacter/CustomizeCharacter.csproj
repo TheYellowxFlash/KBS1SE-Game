@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75E70490-EE48-426C-A6B8-035951BC9B55}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CustomizeCharacter</RootNamespace>
+    <AssemblyName>CustomizeCharacter</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="HallowenInline.otf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Background_Menu2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="female\Attack %281%29.png" />
+    <Resource Include="female\Attack %282%29.png" />
+    <Resource Include="female\Attack %283%29.png" />
+    <Resource Include="female\Attack %284%29.png" />
+    <Resource Include="female\Attack %285%29.png" />
+    <Resource Include="female\Attack %286%29.png" />
+    <Resource Include="female\Attack %287%29.png" />
+    <Resource Include="female\Attack %288%29.png" />
+    <Resource Include="female\Dead %281%29.png" />
+    <Resource Include="female\Dead %2810%29.png" />
+    <Resource Include="female\Dead %2811%29.png" />
+    <Resource Include="female\Dead %2812%29.png" />
+    <Resource Include="female\Dead %282%29.png" />
+    <Resource Include="female\Dead %283%29.png" />
+    <Resource Include="female\Dead %284%29.png" />
+    <Resource Include="female\Dead %285%29.png" />
+    <Resource Include="female\Dead %286%29.png" />
+    <Resource Include="female\Dead %287%29.png" />
+    <Resource Include="female\Dead %288%29.png" />
+    <Resource Include="female\Dead %289%29.png" />
+    <Resource Include="female\Idle %281%29.png" />
+    <Resource Include="female\Idle %2810%29.png" />
+    <Resource Include="female\Idle %2811%29.png" />
+    <Resource Include="female\Idle %2812%29.png" />
+    <Resource Include="female\Idle %2813%29.png" />
+    <Resource Include="female\Idle %2814%29.png" />
+    <Resource Include="female\Idle %2815%29.png" />
+    <Resource Include="female\Idle %282%29.png" />
+    <Resource Include="female\Idle %283%29.png" />
+    <Resource Include="female\Idle %284%29.png" />
+    <Resource Include="female\Idle %285%29.png" />
+    <Resource Include="female\Idle %286%29.png" />
+    <Resource Include="female\Idle %287%29.png" />
+    <Resource Include="female\Idle %288%29.png" />
+    <Resource Include="female\Idle %289%29.png" />
+    <Resource Include="female\Walk %281%29.png" />
+    <Resource Include="female\Walk %2810%29.png" />
+    <Resource Include="female\Walk %282%29.png" />
+    <Resource Include="female\Walk %283%29.png" />
+    <Resource Include="female\Walk %284%29.png" />
+    <Resource Include="female\Walk %285%29.png" />
+    <Resource Include="female\Walk %286%29.png" />
+    <Resource Include="female\Walk %287%29.png" />
+    <Resource Include="female\Walk %288%29.png" />
+    <Resource Include="female\Walk %289%29.png" />
+    <Resource Include="male\Attack %281%29.png" />
+    <Resource Include="male\Attack %282%29.png" />
+    <Resource Include="male\Attack %283%29.png" />
+    <Resource Include="male\Attack %284%29.png" />
+    <Resource Include="male\Attack %285%29.png" />
+    <Resource Include="male\Attack %286%29.png" />
+    <Resource Include="male\Attack %287%29.png" />
+    <Resource Include="male\Attack %288%29.png" />
+    <Resource Include="male\Dead %281%29.png" />
+    <Resource Include="male\Dead %2810%29.png" />
+    <Resource Include="male\Dead %2811%29.png" />
+    <Resource Include="male\Dead %2812%29.png" />
+    <Resource Include="male\Dead %282%29.png" />
+    <Resource Include="male\Dead %283%29.png" />
+    <Resource Include="male\Dead %284%29.png" />
+    <Resource Include="male\Dead %285%29.png" />
+    <Resource Include="male\Dead %286%29.png" />
+    <Resource Include="male\Dead %287%29.png" />
+    <Resource Include="male\Dead %288%29.png" />
+    <Resource Include="male\Dead %289%29.png" />
+    <Resource Include="male\Idle %281%29.png" />
+    <Resource Include="male\Idle %2810%29.png" />
+    <Resource Include="male\Idle %2811%29.png" />
+    <Resource Include="male\Idle %2812%29.png" />
+    <Resource Include="male\Idle %2813%29.png" />
+    <Resource Include="male\Idle %2814%29.png" />
+    <Resource Include="male\Idle %2815%29.png" />
+    <Resource Include="male\Idle %282%29.png" />
+    <Resource Include="male\Idle %283%29.png" />
+    <Resource Include="male\Idle %284%29.png" />
+    <Resource Include="male\Idle %285%29.png" />
+    <Resource Include="male\Idle %286%29.png" />
+    <Resource Include="male\Idle %287%29.png" />
+    <Resource Include="male\Idle %288%29.png" />
+    <Resource Include="male\Idle %289%29.png" />
+    <Resource Include="male\Walk %281%29.png" />
+    <Resource Include="male\Walk %2810%29.png" />
+    <Resource Include="male\Walk %282%29.png" />
+    <Resource Include="male\Walk %283%29.png" />
+    <Resource Include="male\Walk %284%29.png" />
+    <Resource Include="male\Walk %285%29.png" />
+    <Resource Include="male\Walk %286%29.png" />
+    <Resource Include="male\Walk %287%29.png" />
+    <Resource Include="male\Walk %288%29.png" />
+    <Resource Include="male\Walk %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Characters\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
