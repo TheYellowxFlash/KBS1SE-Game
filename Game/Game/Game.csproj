@@ -123,5 +123,11 @@
       <Name>MovementTest</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tree.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="house.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

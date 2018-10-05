@@ -6,5 +6,12 @@
         xmlns:local="clr-namespace:Game"
         mc:Ignorable="d"
         Title="Level1" Height="1080" Width="1920"  WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" ResizeMode="NoResize" Loaded="Window_Loaded">
-    <Canvas x:Name="level1"/>
+    <Canvas x:Name="level1">
+        <Image Height="119" Canvas.Left="189" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="320" Width="122" RenderTransformOrigin="2.381,2.789"/>
+        <Image Height="132" Canvas.Left="189" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="444" Width="122" RenderTransformOrigin="0.467,1.666"/>
+        <Image Height="116" Canvas.Left="510" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="320" Width="122" RenderTransformOrigin="0.4,2.442"/>
+        <Image Height="277" Canvas.Left="299" Source="/Game;component/house.png" Stretch="Fill" Canvas.Top="38" Width="230"/>
+        <Image Height="116" Canvas.Left="510.4" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="320" Width="122" RenderTransformOrigin="0.4,2.442"/>
+        <Image Height="116" Canvas.Left="510" Source="/Game;component/tree.jpg" Stretch="Fill" Canvas.Top="460" Width="122" RenderTransformOrigin="0.4,2.442"/>
+    </Canvas>
 </Window>

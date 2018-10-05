@@ -21,6 +21,8 @@ namespace Game
         private World world;
         private Rectangle playerBox;
 
+        private List<Obstacle> obstacles = new List<Obstacle>();
+
         DispatcherTimer timer = new DispatcherTimer();
 
         public Level1()
@@ -52,6 +54,14 @@ namespace Game
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            foreach(var child in level1.Children)
+            {
+                if(child is Image)
+                {
+                    Image obstacle = (Image)child;
+                    obstacles.Add(new Obstacle(obstacle));
+                }
+            }
             world = new World();
             playerBox = new Rectangle();
             level1.Children.Add(playerBox);
