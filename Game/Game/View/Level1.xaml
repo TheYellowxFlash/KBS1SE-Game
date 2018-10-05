@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Game"
         mc:Ignorable="d"
-        Title="Level1" Height="450" Width="800">
+        Title="Level1" Height="450" Width="800"  WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" ResizeMode="NoResize" >
     <Canvas x:Name="level1">
-        
+        <Rectangle x:Name="player" Fill="#FF1B1BE8" Height="52" Stroke="Black" Width="56"/>
+
     </Canvas>
 </Window>
