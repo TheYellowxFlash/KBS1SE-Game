@@ -17,5 +17,10 @@ namespace Game.Model
             Position = position;
             Size = size;
         }
+
+        public Enemy(Point position) : base(position)
+        {
+            Position = position;
+        }
     }
 }
