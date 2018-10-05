@@ -22,7 +22,7 @@ namespace Game.Model
 
         public void Move(Player player)
         {
-            while (InRange(player))
+            if (InRange(player))
             {
                 y = Position.Y;
                 x = Position.X;
