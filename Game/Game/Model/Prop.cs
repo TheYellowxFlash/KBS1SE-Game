@@ -17,6 +17,11 @@ namespace Game.Model
             Position = position;
             Size = size;
         }
-        public Prop() { }
+
+
+        public Prop(Point position)
+        {
+            Position = position;
+        }
     }
 }

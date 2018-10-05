@@ -9,22 +9,20 @@ using System.Windows.Input;
 
 namespace Game.Model
 {
-    class Player
+    class Player : Prop
     {
-        public Point Locatie { get; set; }
-        public Point Size { get; set; }
         private double x, y;
 
-        public Player(Point position)
+        public Player(Point position) : base(position)
         {
-            Locatie = position;
+            Position = position;
             Size = new Point(40, 40);
         }
 
         public void Move()
         {
-            y = Locatie.Y;
-            x = Locatie.X;
+            y = Position.Y;
+            x = Position.X;
 
             if (Keyboard.IsKeyDown(Key.S))
             {
@@ -43,7 +41,7 @@ namespace Game.Model
                 x += 1;
             }
 
-            Locatie = new Point(x,y);
+            Position = new Point(x,y);
         }
     }
 }

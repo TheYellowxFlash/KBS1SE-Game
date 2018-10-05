@@ -43,8 +43,8 @@ namespace Game
         private void UpdateWorld()
         {
             Player player = world.Player;
-            Canvas.SetLeft(playerBox, player.Locatie.X);
-            Canvas.SetTop(playerBox, player.Locatie.Y);
+            Canvas.SetLeft(playerBox, player.Position.X);
+            Canvas.SetTop(playerBox, player.Position.Y);
             playerBox.Width = player.Size.X;
             playerBox.Height = player.Size.Y;
             playerBox.Fill = Brushes.Blue;

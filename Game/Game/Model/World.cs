@@ -30,7 +30,7 @@ namespace Game.Model
 
         private void TimerOnTick(object sender, EventArgs e)
         {
-            Player.Collide();
+            
             Player.Move();
         }
 
