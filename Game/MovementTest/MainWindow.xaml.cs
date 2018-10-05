@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
+
 namespace MovementTest
 {
     /// <summary>
@@ -24,7 +26,23 @@ namespace MovementTest
         private double x, y, xE, yE, pX, pY, startPosX, startPosY;
         private double maxWidth, maxHeight;
 
-        DispatcherTimer timer = new DispatcherTimer();
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void resume_Click(object sender, RoutedEventArgs e)
+        {
+
+            resume.Visibility = Visibility.Hidden;
+            exit.Visibility = Visibility.Hidden;
+            title.Visibility = Visibility.Hidden;
+            plaatje.Visibility = Visibility.Hidden;
+            pausebool = false;
+        }
+
+        public DispatcherTimer timer = new DispatcherTimer();
 
         private void Window_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -37,95 +55,120 @@ namespace MovementTest
         {
             InitializeComponent();
 
-            //startPosX = Canvas.GetLeft(enemy2);
-            //startPosY = Canvas.GetTop(enemy2);
+            startPosX = Canvas.GetLeft(enemy2);
+            startPosY = Canvas.GetTop(enemy2);
 
             timer.Tick += TimerOnTick;
-            //timer.Tick += RecalculateCollision;
-            timer.Interval = new TimeSpan(0,0,0,0,1);
+            timer.Tick += RecalculateCollision;
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             timer.Start();
 
-            
+
         }
 
-        private void TimerOnTick(object sender, EventArgs eventArgs)
+        public bool pausebool = false;
+
+
+
+
+        public void TimerOnTick(object sender, EventArgs eventArgs)
         {
+            if (Keyboard.IsKeyDown(Key.Escape))
+            {
+                if (!pausebool)
+                {
 
-            if (Keyboard.IsKeyDown(Key.Down))
-            {
-                y += 1;
-                Canvas.SetTop(Player, y);
-            }
-            if (Keyboard.IsKeyDown(Key.Up))
-            {
-                y -= 1;
-                Canvas.SetTop(Player, y);
-            }
-            if (Keyboard.IsKeyDown(Key.Left))
-            {
-                x -= 1;
-                Canvas.SetLeft(Player, x);
-            }
-            if (Keyboard.IsKeyDown(Key.Right))
-            {
-                x += 1;
-                Canvas.SetLeft(Player, x);
+                    resume.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
+                    pausemenu.Opacity = 0.8;
+                    title.Visibility = Visibility.Visible;
+                    plaatje.Visibility = Visibility.Visible;
+                    pausebool = true;
+
+                }
             }
 
-            //pX = Canvas.GetLeft(Player);
-            //pY = Canvas.GetTop(Player);
 
-            //xE = Canvas.GetLeft(enemy2);
-            //yE = Canvas.GetTop(enemy2);
+            if (!pausebool)
+            {
+                pausemenu.Opacity = 0;
+                if (Keyboard.IsKeyDown(Key.Down))
+                {
+                    y += 2;
+                    Canvas.SetTop(Player, y);
+                }
+                if (Keyboard.IsKeyDown(Key.Up))
+                {
+                    y -= 2;
+                    Canvas.SetTop(Player, y);
+                }
+                if (Keyboard.IsKeyDown(Key.Left))
+                {
+                    x -= 2;
+                    Canvas.SetLeft(Player, x);
+                }
+                if (Keyboard.IsKeyDown(Key.Right))
+                {
+                    x += 2;
+                    Canvas.SetLeft(Player, x);
+                }
 
-            //if (pX < xE)
-            //{
-            //    xE -= .5;
-            //}
-            //else
-            //{
-            //    xE += .5;
-            //}
+                pX = Canvas.GetLeft(Player);
+                pY = Canvas.GetTop(Player);
 
-            //if (pY < yE)
-            //{
-            //    yE -= .5;
-            //}
-            //else
-            //{
-            //    yE += .5;
-            //}
+                xE = Canvas.GetLeft(enemy2);
+                yE = Canvas.GetTop(enemy2);
 
-            //Canvas.SetLeft(enemy2, xE);
-            //Canvas.SetTop(enemy2, yE);
+                if (pX < xE)
+                {
+                    xE -= .5;
+                }
+                else
+                {
+                    xE += .5;
+                }
+
+                if (pY < yE)
+                {
+                    yE -= .5;
+                }
+                else
+                {
+                    yE += .5;
+                }
+
+                Canvas.SetLeft(enemy2, xE);
+                Canvas.SetTop(enemy2, yE);
+            }
+
         }
 
-        //public void RecalculateCollision(object sender, EventArgs e)
-        //{
-        //    Rect r1 = BoundsRelativeTo(Player, PlayingField);
-        //    Rect r2 = BoundsRelativeTo(enemy, PlayingField);
-        //   Rect r3 = BoundsRelativeTo(enemy2, PlayingField);
+        public void RecalculateCollision(object sender, EventArgs e)
+        {
+            Rect r1 = BoundsRelativeTo(Player, PlayingField);
+            Rect r2 = BoundsRelativeTo(enemy, PlayingField);
+            Rect r3 = BoundsRelativeTo(enemy2, PlayingField);
 
-        //    if (r1.IntersectsWith(r2) || r1.IntersectsWith(r3))
-        //    {
-        //        MessageBox.Show("Game over");
+            if (r1.IntersectsWith(r2) || r1.IntersectsWith(r3))
+            {
+                MessageBox.Show("Game over");
 
-        //        // hier moet de reset functie
-        //        x = 0;
-        //        y = 0;
-        //        xE = startPosX;
-        //        yE = startPosY;
-        //        Canvas.SetLeft(enemy2, xE);
-        //        Canvas.SetTop(enemy2, yE);
-        //        Canvas.SetLeft(Player, x);
-        //        Canvas.SetTop(Player, y);
-        //    }
-        //}
+                // hier moet de reset functie
+                x = 0;
+                y = 0;
+                xE = startPosX;
+                yE = startPosY;
+                Canvas.SetLeft(enemy2, xE);
+                Canvas.SetTop(enemy2, yE);
+                Canvas.SetLeft(Player, x);
+                Canvas.SetTop(Player, y);
+            }
+        }
 
-        //public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
-        //{
-        //    return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
-        //}
+        public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
+        {
+            return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
+        }
 
     }
 }
