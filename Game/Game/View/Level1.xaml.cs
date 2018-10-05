@@ -56,7 +56,7 @@ namespace Game
             Canvas.SetTop(ghostBox, ghost.Position.Y);
             ghostBox.Width = ghost.Size.X;
             ghostBox.Height = ghost.Size.Y;
-            ghostBox.Fill = Brushes.Blue;
+            ghostBox.Fill = Brushes.Gray;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

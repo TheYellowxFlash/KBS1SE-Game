@@ -20,7 +20,7 @@ namespace Game.Model
         {
             Player = new Player(new Point(0,0));
 
-            Ghost = new Ghost(new Point(50,50));
+            Ghost = new Ghost(new Point(500,500));
 
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
