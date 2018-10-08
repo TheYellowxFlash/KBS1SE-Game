@@ -21,7 +21,6 @@ namespace Game
         private World world;
         private Rectangle playerBox, ghostBox, skeletonBox, zombieBox;
 
-        private List<Obstacle> obstacles = new List<Obstacle>();
 
         DispatcherTimer timer = new DispatcherTimer();
 
@@ -53,6 +52,9 @@ namespace Game
             playerBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + player.Image, UriKind.RelativeOrAbsolute));
             playerBox.Fill = playerBrush;
 
+            double x = Canvas.GetLeft(playerBox);
+            double y = Canvas.GetTop(playerBox);
+
             Ghost ghost = world.Ghost;
             Canvas.SetLeft(ghostBox, ghost.Position.X);
             Canvas.SetTop(ghostBox, ghost.Position.Y);
@@ -83,17 +85,17 @@ namespace Game
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            foreach(var child in level1.Children)
+            world = new World();
+
+            foreach (var child in level1.Children)
             {
                 if(child is Image)
                 {
                     Image obstacle = (Image)child;
                     if(obstacle.IsEnabled)
-                        obstacles.Add(new Obstacle(obstacle));
+                        world.obstacles.Add(new Obstacle(obstacle));
                 }
             }
-            world = new World();
-
             playerBox = new Rectangle();
             level1.Children.Add(playerBox);
 

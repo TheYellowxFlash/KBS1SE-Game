@@ -17,7 +17,7 @@ namespace Game.Model
         {
             Vector test = TreeHelper.GetOffset(obstacle);
             this.Position = new Point(test.X, test.Y);
-            this.Size = new Point(obstacle.ActualHeight, obstacle.ActualWidth);
+            this.Size = new Point(obstacle.ActualWidth, obstacle.ActualHeight);
         }
     }
 }

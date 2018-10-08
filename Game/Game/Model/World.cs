@@ -18,6 +18,8 @@ namespace Game.Model
         public double XPos { get; set; }
         public double YPos { get; set; }
 
+        public List<Obstacle> obstacles = new List<Obstacle>();
+
         public World()
         {
             Player = new Player(new Point(0,0));
@@ -38,8 +40,8 @@ namespace Game.Model
         {
             Skeleton.Move(Player);
             Ghost.Move(Player);
+            Player.Move(obstacles);
             Zombie.Move(Player);
-            Player.Move();
         }
 
     }
