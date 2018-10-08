@@ -42,7 +42,7 @@
         <Image Height="158" Canvas.Left="469" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126" IsEnabled="False"/>
         <Image Height="158" Canvas.Left="708" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126" IsEnabled="False"/>
         <Image Height="158" Canvas.Left="159" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126" IsEnabled="False"/>
-        <Image Height="158" Canvas.Left="583" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126" IsEnabled="False" Panel.ZIndex="5"/>
+        <Image Height="158" Canvas.Left="583" Source="/Game;component/grass.png" Stretch="Fill" Canvas.Top="186" Width="126" IsEnabled="False"/>
         <Image Height="73" Canvas.Left="189" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="186" Width="77" RenderTransformOrigin="2.381,2.789"/>
         <Image Height="80" Canvas.Left="189" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="258" Width="77" RenderTransformOrigin="0.467,1.666"/>
         <Image Height="72" Canvas.Left="392" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="182" Width="77" RenderTransformOrigin="0.4,2.442"/>
