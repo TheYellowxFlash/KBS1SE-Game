@@ -14,9 +14,9 @@ namespace Game.Model
         public Zombie(Point position) : base(position)
         {
             Position = position;
-            Size = new Point(48, 48);
+            Size = new Point(54, 54);
             MoveSpeed = .3;
-            AttackRange = 500;
+            AttackRange = 450;
             Image = "zombie.png";
         }
 

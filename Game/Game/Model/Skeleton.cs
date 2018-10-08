@@ -14,8 +14,8 @@ namespace Game.Model
         public Skeleton(Point position) : base(position)
         {
             Position = position;
-            Size = new Point(20, 40);
-            MoveSpeed = .4;
+            Size = new Point(40, 40);
+            MoveSpeed = .5;
             AttackRange = 300;
             Image = "skeleton.png";
         }

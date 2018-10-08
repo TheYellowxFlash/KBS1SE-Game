@@ -14,10 +14,10 @@ namespace Game.Model
         public Ghost(Point position) : base(position)
         {
             Position = position;
-            Size = new Point(50,32);
-            MoveSpeed = .6;
-            AttackRange = 200;
-            Image = "ghost.gif";
+            Size = new Point(36,36);
+            MoveSpeed = .4;
+            AttackRange = 240;
+            Image = "ghost.png";
         }
 
         public void Move(Player player)

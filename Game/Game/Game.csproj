@@ -150,7 +150,10 @@
     <Resource Include="PropIcons\zombie.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\ghost.gif" />
+    <Resource Include="PropIcons\ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\player-steve.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
