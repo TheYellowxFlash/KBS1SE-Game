@@ -16,6 +16,7 @@ namespace Game.Model
         public Player(Point position) : base(position)
         {
             Size = new Point(40, 40);
+            Image = "player-idle.png";
         }
 
         public void Move()

@@ -49,32 +49,36 @@ namespace Game
             Canvas.SetTop(playerBox, player.Position.Y);
             playerBox.Width = player.Size.X;
             playerBox.Height = player.Size.Y;
-            playerBox.Fill = Brushes.Blue;
+            ImageBrush playerBrush = new ImageBrush();
+            playerBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + player.Image, UriKind.RelativeOrAbsolute));
+            playerBox.Fill = playerBrush;
 
             Ghost ghost = world.Ghost;
             Canvas.SetLeft(ghostBox, ghost.Position.X);
             Canvas.SetTop(ghostBox, ghost.Position.Y);
             ghostBox.Width = ghost.Size.X;
             ghostBox.Height = ghost.Size.Y;
-            ghostBox.Fill = Brushes.Gray;
+            ImageBrush ghostBrush = new ImageBrush();
+            ghostBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + ghost.Image, UriKind.RelativeOrAbsolute));
+            ghostBox.Fill = ghostBrush;
 
             Skeleton skeleton = world.Skeleton;
             Canvas.SetLeft(skeletonBox, skeleton.Position.X);
             Canvas.SetTop(skeletonBox, skeleton.Position.Y);
             skeletonBox.Width = skeleton.Size.X;
             skeletonBox.Height = skeleton.Size.Y;
-            skeletonBox.Fill = Brushes.Yellow;
+            ImageBrush skeletonBrush = new ImageBrush();
+            skeletonBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + skeleton.Image, UriKind.RelativeOrAbsolute));
+            skeletonBox.Fill = skeletonBrush;
 
             Zombie zombie = world.Zombie;
             Canvas.SetLeft(zombieBox, zombie.Position.X);
             Canvas.SetTop(zombieBox, zombie.Position.Y);
             zombieBox.Width = zombie.Size.X;
             zombieBox.Height = zombie.Size.Y;
-            zombieBox.Fill = Brushes.DarkGreen;
-
-            ImageBrush skeletonBrush = new ImageBrush();
-            //skeletonBrush.ImageSource = new BitmapImage(new Uri(@"C:\Users\xuwei010\Pictures\random\big-skeleton-face.png", UriKind.Relative));
-            zombieBox.Fill = skeletonBrush;
+            ImageBrush zombieBrush = new ImageBrush();
+            zombieBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + zombie.Image, UriKind.RelativeOrAbsolute));
+            zombieBox.Fill = zombieBrush;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

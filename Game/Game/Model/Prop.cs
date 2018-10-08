@@ -11,13 +11,21 @@ namespace Game.Model
     {
         public Point Position { get; set; }
         public Point Size { get; set; }
+        public String Image { get; set; }
 
-        public Prop(Point position, Point size)
+        public Prop(Point position, Point size, String image)
         {
             Position = position;
             Size = size;
+            Image = image;
         }
 
+
+        public Prop(Point position, String image)
+        {
+            Position = position;
+            Image = image;
+        }
 
         public Prop(Point position)
         {

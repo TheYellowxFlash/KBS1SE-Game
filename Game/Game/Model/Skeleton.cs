@@ -17,6 +17,7 @@ namespace Game.Model
             Size = new Point(20, 40);
             MoveSpeed = .4;
             AttackRange = 300;
+            Image = "skeleton.png";
         }
 
         public void Move(Player player)

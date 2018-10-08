@@ -17,7 +17,7 @@ namespace Game.Model
             Size = new Point(48, 48);
             MoveSpeed = .3;
             AttackRange = 500;
-
+            Image = "zombie.png";
         }
 
         public void Move(Player player)

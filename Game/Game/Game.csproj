@@ -136,5 +136,21 @@
   <ItemGroup>
     <Resource Include="tree.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background_Menu.jpg" />
+    <Resource Include="Images\Background_Menu2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\skeleton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\player-idle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\zombie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\ghost.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
