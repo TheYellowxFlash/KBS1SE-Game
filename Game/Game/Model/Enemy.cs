@@ -13,10 +13,17 @@ namespace Game.Model
         public double MoveSpeed{ get; set; }
         public double AttackRange { get; set; }
 
-        public Enemy(Point position, Point size) : base(position, size)
+        public Enemy(Point position, Point size, String image) : base(position, size, image)
         {
             Position = position;
             Size = size;
+            Image = image;
+        }
+
+        public Enemy(Point position, String image) : base(position, image)
+        {
+            Position = position;
+            Image = image;
         }
 
         public Enemy(Point position) : base(position)

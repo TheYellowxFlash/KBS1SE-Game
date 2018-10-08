@@ -7,17 +7,17 @@ using System.Windows;
 
 namespace Game.Model
 {
-    class Ghost : Enemy
+    class Zombie : Enemy
     {
+       
         private double x, y;
-
-        public Ghost(Point position) : base(position)
+        public Zombie(Point position) : base(position)
         {
             Position = position;
-            Size = new Point(36,36);
-            MoveSpeed = .4;
-            AttackRange = 240;
-            Image = "ghost.png";
+            Size = new Point(54, 54);
+            MoveSpeed = .3;
+            AttackRange = 450;
+            Image = "zombie.png";
         }
 
         public void Move(Player player)
@@ -48,7 +48,5 @@ namespace Game.Model
                 Position = new Point(x, y);
             }
         }
-
-        
     }
 }
