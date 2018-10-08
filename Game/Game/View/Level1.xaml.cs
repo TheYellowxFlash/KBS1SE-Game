@@ -71,6 +71,10 @@ namespace Game
             zombieBox.Width = zombie.Size.X;
             zombieBox.Height = zombie.Size.Y;
             zombieBox.Fill = Brushes.DarkGreen;
+
+            ImageBrush skeletonBrush = new ImageBrush();
+            //skeletonBrush.ImageSource = new BitmapImage(new Uri(@"C:\Users\xuwei010\Pictures\random\big-skeleton-face.png", UriKind.Relative));
+            zombieBox.Fill = skeletonBrush;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

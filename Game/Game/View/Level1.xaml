@@ -57,6 +57,11 @@
         <Image Height="71" Canvas.Left="708.8" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="267.3" Width="77" RenderTransformOrigin="0.4,2.442" Panel.ZIndex="10"/>
         <Image Height="71" Canvas.Left="708.8" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="267.3" Width="77" RenderTransformOrigin="0.4,2.442" Panel.ZIndex="10"/>
         <Image Height="71" Canvas.Left="708.8" Source="/Game;component/tree.png" Stretch="Fill" Canvas.Top="267.3" Width="77" RenderTransformOrigin="0.4,2.442" Panel.ZIndex="10"/>
+        <Rectangle Height="40" Canvas.Left="1017" Stroke="Black" Canvas.Top="304" Width="46">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Game;component/grass.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
 
 
 
