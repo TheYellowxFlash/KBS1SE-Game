@@ -68,11 +68,11 @@ namespace Game.Model
             {
                 y += 1;
             }
-            if (Keyboard.IsKeyDown(Key.Up) && canMoveUp)
+            if (Keyboard.IsKeyDown(Key.Up) && canMoveUp && y > 0)
             {
                 y -= 1;
             }
-            if (Keyboard.IsKeyDown(Key.Left) && canMoveLeft)
+            if (Keyboard.IsKeyDown(Key.Left) && canMoveLeft && x > 0)
             {
                 x -= 1;
             }
