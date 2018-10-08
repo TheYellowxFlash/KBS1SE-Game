@@ -19,7 +19,7 @@ namespace Game
     public partial class Level1 : Window
     {
         private World world;
-        private Rectangle playerBox, ghostBox, skeletonBox;
+        private Rectangle playerBox, ghostBox, skeletonBox, zombieBox;
 
         private List<Obstacle> obstacles = new List<Obstacle>();
 
@@ -64,6 +64,13 @@ namespace Game
             skeletonBox.Width = skeleton.Size.X;
             skeletonBox.Height = skeleton.Size.Y;
             skeletonBox.Fill = Brushes.Yellow;
+
+            Zombie zombie = world.Zombie;
+            Canvas.SetLeft(zombieBox, zombie.Position.X);
+            Canvas.SetTop(zombieBox, zombie.Position.Y);
+            zombieBox.Width = zombie.Size.X;
+            zombieBox.Height = zombie.Size.Y;
+            zombieBox.Fill = Brushes.DarkGreen;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -87,6 +94,9 @@ namespace Game
 
             skeletonBox = new Rectangle();
             level1.Children.Add(skeletonBox);
+
+            zombieBox = new Rectangle();
+            level1.Children.Add(zombieBox);
 
             world.StartGame();
         }

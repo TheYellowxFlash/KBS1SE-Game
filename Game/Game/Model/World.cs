@@ -13,6 +13,7 @@ namespace Game.Model
         public Player Player { get; set; }
         public Ghost Ghost { get; set; }
         public Skeleton Skeleton { get; set; }
+        public Zombie Zombie { get; set; }
         private DispatcherTimer timer = new DispatcherTimer();
         public double XPos { get; set; }
         public double YPos { get; set; }
@@ -22,6 +23,7 @@ namespace Game.Model
             Player = new Player(new Point(0,0));
             Ghost = new Ghost(new Point(500,500));
             Skeleton = new Skeleton(new Point(200, 200));
+            Zombie = new Zombie(new Point(860,860));
 
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
@@ -36,6 +38,7 @@ namespace Game.Model
         {
             Skeleton.Move(Player);
             Ghost.Move(Player);
+            Zombie.Move(Player);
             Player.Move();
         }
 

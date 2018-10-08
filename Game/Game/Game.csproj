@@ -70,6 +70,7 @@
     <Compile Include="Model\Ghost.cs" />
     <Compile Include="Model\Skeleton.cs" />
     <Compile Include="Model\World.cs" />
+    <Compile Include="Model\Zombie.cs" />
     <Compile Include="View\Level1.xaml.cs">
       <DependentUpon>Level1.xaml</DependentUpon>
     </Compile>
