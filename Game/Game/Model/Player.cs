@@ -9,9 +9,8 @@ using System.Windows.Input;
 
 namespace Game.Model
 {
-    class Player : Prop
+    class Player : Walker
     {
-        private double x, y;
 
         public Player(Point position) : base(position)
         {
@@ -21,13 +20,16 @@ namespace Game.Model
 
         public void Move(List<Obstacle> obstacles)
         {
+
+            /*
             y = Position.Y;
             x = Position.X;
-
+            
             bool canMoveRight = true;
             bool canMoveLeft = true;
             bool canMoveDown = true;
             bool canMoveUp = true;
+
             foreach(var obstacle in obstacles)
             {
 
@@ -63,24 +65,26 @@ namespace Game.Model
                 }
 
             }
-
-            if (Keyboard.IsKeyDown(Key.Down) && canMoveDown)
+            */
+            Walker.HorizontalDirection hor = Walker.HorizontalDirection.none;
+            Walker.VerticalDirection ver = Walker.VerticalDirection.none;
+            if (Keyboard.IsKeyDown(Key.Down))
             {
-                y += 1;
+                ver = Walker.VerticalDirection.down;
             }
-            if (Keyboard.IsKeyDown(Key.Up) && canMoveUp && y > 0)
+            else if (Keyboard.IsKeyDown(Key.Up))
             {
-                y -= 1;
+                ver = Walker.VerticalDirection.up;
             }
-            if (Keyboard.IsKeyDown(Key.Left) && canMoveLeft && x > 0)
+            if (Keyboard.IsKeyDown(Key.Left))
             {
-                x -= 1;
+                hor = Walker.HorizontalDirection.left;
             }
-            if (Keyboard.IsKeyDown(Key.Right) && canMoveRight)
+            else if (Keyboard.IsKeyDown(Key.Right))
             {
-                x += 1;
+                hor = Walker.HorizontalDirection.right;
             }
-            Position = new Point(x,y);
+            Move(hor, ver, obstacles,1);
         }
     }
 }
