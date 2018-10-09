@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
@@ -20,7 +21,7 @@ namespace Game
     {
         private World world;
         private Rectangle playerBox, ghostBox, skeletonBox, zombieBox;
-        private Ellipse playerLight;
+        //private Ellipse playerLight, worldLight;
 
         DispatcherTimer timer = new DispatcherTimer();
 
@@ -52,8 +53,27 @@ namespace Game
             playerBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + player.Image, UriKind.RelativeOrAbsolute));
             playerBox.Fill = playerBrush;
 
-            //double x = Canvas.GetLeft(playerBox);
-            //double y = Canvas.GetTop(playerBox);
+            double x = player.Size.X * 2;
+            double y = player.Size.Y * 2;
+
+            //Canvas.SetLeft(playerLight, player.Position.X - x);
+            //Canvas.SetTop(playerLight, player.Position.Y - y);
+            //playerLight.Width = 200;
+            //playerLight.Height = 200;
+            //playerLight.Fill = Brushes.Yellow;
+            //playerLight.Opacity = .4;
+            //playerLight.Stroke = Brushes.Black;
+            //playerLight.StrokeThickness = 200;
+
+            //Canvas.SetLeft(worldLight, player.Position.X - 350);
+            //Canvas.SetTop(worldLight, player.Position.Y - 350);
+            //worldLight.Width = 500;
+            //worldLight.Height = 500;
+            //worldLight.Fill = Brushes.Transparent;
+            //worldLight.Opacity = 0.5;
+            //Canvas.SetZIndex(worldLight, 10);
+            //worldLight.Stroke = Brushes.Black;
+            //worldLight.StrokeThickness = 200;
 
             Ghost ghost = world.Ghost;
             Canvas.SetLeft(ghostBox, ghost.Position.X);
@@ -107,6 +127,12 @@ namespace Game
 
             zombieBox = new Rectangle();
             level1.Children.Add(zombieBox);
+
+            ////worldLight = new Ellipse();
+            //level1.Children.Add(worldLight);
+
+            //playerLight = new Ellipse();
+            //level1.Children.Add(playerLight);
 
             world.StartGame();
         }
