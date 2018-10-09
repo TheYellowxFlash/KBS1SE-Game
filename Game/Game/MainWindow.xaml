@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Game"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280"
-        WindowStyle="None" ResizeMode="NoResize"  
-        WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="MainWindow"
+        Height="704" Width="1280"  WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize">
 
 
     <Grid>

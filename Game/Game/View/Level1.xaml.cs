@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
@@ -19,11 +20,30 @@ namespace Game
     public partial class Level1 : Window
     {
         private World world;
-        private Rectangle playerBox, ghostBox, skeletonBox, zombieBox;
+        private Rectangle playerBox, ghostBox, skeletonBox, zombieBox, worldLight;
         private Ellipse playerLight;
         private List<Rectangle> enemyBoxes = new List<Rectangle>();
+        public bool pausebool = false;
 
         DispatcherTimer timer = new DispatcherTimer();
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void resume_Click(object sender, RoutedEventArgs e)
+        {
+
+            resume.Visibility = Visibility.Hidden;
+            exit.Visibility = Visibility.Hidden;
+            title.Visibility = Visibility.Hidden;
+            plaatje.Visibility = Visibility.Hidden;
+            pausebool = false;
+            world.StartGame();
+            pausemenu.Opacity = 0;
+        }
 
         public Level1()
         {
@@ -40,12 +60,30 @@ namespace Game
         {
             if (world != null)
             {
-                UpdateWorld();
+                    UpdateWorld();
+                
+            }
+
+            if (Keyboard.IsKeyDown(Key.Escape))
+            {
+                if (!pausebool)
+                {
+
+                    resume.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
+                    pausemenu.Opacity = 0.8;
+                    title.Visibility = Visibility.Visible;
+                    plaatje.Visibility = Visibility.Visible;
+                    pausebool = true;
+                    world.TimerPause();
+
+                }
             }
         }
 
         private void UpdateWorld()
         {
+            
             Player player = world.Player;
             Canvas.SetLeft(playerBox, player.Position.X);
             Canvas.SetTop(playerBox, player.Position.Y);
@@ -54,9 +92,55 @@ namespace Game
             ImageBrush playerBrush = new ImageBrush();
             playerBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + player.Image, UriKind.RelativeOrAbsolute));
             playerBox.Fill = playerBrush;
+            playerBox.Opacity = 1;
 
-            //double x = Canvas.GetLeft(playerBox);
-            //double y = Canvas.GetTop(playerBox);
+
+            double x = player.Size.X * 2;
+            double y = player.Size.Y * 2;
+
+            Canvas.SetLeft(playerLight, player.Position.X - x);
+            Canvas.SetTop(playerLight, player.Position.Y - y);
+            playerLight.Width = 200;
+            playerLight.Height = 200;
+            playerLight.Opacity = .15;
+
+            RadialGradientBrush LightGradient = new RadialGradientBrush();
+
+            LightGradient.GradientOrigin = new Point(0.5 , 0.5);
+
+            LightGradient.Center = new Point(0.5, 0.5);
+
+            playerLight.Fill = LightGradient;
+
+            // Create and add Gradient stops
+
+            GradientStop WhiteGS = new GradientStop();
+
+            WhiteGS.Color = Colors.White;
+
+            WhiteGS.Offset = 0.0;
+
+            LightGradient.GradientStops.Add(WhiteGS);
+
+
+
+            GradientStop BlackGS = new GradientStop();
+
+            BlackGS.Color = Colors.Transparent;
+
+            BlackGS.Offset = 0.85;
+
+            LightGradient.GradientStops.Add(BlackGS);
+
+            //playerLight.Stroke = Brushes.Black;
+            //playerLight.StrokeThickness = 200;
+
+            Canvas.SetLeft(worldLight, 0);
+            Canvas.SetTop(worldLight, 0);
+            worldLight.Width = 1280;
+            worldLight.Height = 704;
+            worldLight.Fill = Brushes.Black;
+            worldLight.Opacity = 0.92;
 
             Ghost ghost = world.Ghost;
             enemyBoxes.Add(ghostBox);
@@ -129,8 +213,7 @@ namespace Game
                         world.obstacles.Add(new Obstacle(obstacle));
                 }
             }
-            playerBox = new Rectangle();
-            level1.Children.Add(playerBox);
+            
 
             ghostBox = new Rectangle();
             level1.Children.Add(ghostBox);
@@ -140,6 +223,19 @@ namespace Game
 
             zombieBox = new Rectangle();
             level1.Children.Add(zombieBox);
+
+            playerBox = new Rectangle();
+            level1.Children.Add(playerBox);
+
+            worldLight = new Rectangle();
+            level1.Children.Add(worldLight);
+
+            playerLight = new Ellipse();
+            level1.Children.Add(playerLight);
+
+            
+
+
 
             world.StartGame();
         }

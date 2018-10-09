@@ -150,5 +150,11 @@
     <Resource Include="View\Images\path.jpg" />
     <Resource Include="View\Images\tree.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\DirtRoad_Hor.png" />
+    <Resource Include="View\Images\DirtRoad_Ver.png" />
+    <Resource Include="View\Images\Level1.png" />
+    <Resource Include="View\Images\MenuBackground.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
