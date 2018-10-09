@@ -24,12 +24,7 @@ namespace Game
 
         public CustomizeCharacter()
         {
-            InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
+           InitializeComponent();
         }
 
         private void character_Click(object sender, RoutedEventArgs e)
