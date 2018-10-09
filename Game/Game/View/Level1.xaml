@@ -27,7 +27,7 @@
 
 
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\s1118419\Documents\WINDESHEIM\2e Jaar\KBS\KBS1SE-Game\Game\Game\View\Images\Level1.png"></ImageBrush>
+            <ImageBrush ImageSource="Images\Level1.png"></ImageBrush>
         </Grid.Background>
     </Grid>
 </Window>
