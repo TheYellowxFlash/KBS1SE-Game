@@ -15,6 +15,7 @@
             <Image Source="Images/house.png" Canvas.Left="490" Canvas.Top="10"/>
             <Image Source="Images/tree.png" Canvas.Left="117" Canvas.Top="173" IsEnabled="False" Panel.ZIndex="100"/>
             <Image Source="Images/tree.png" Canvas.Left="55" Canvas.Top="304" IsEnabled="False"/>
+            
 
 
         </Canvas>

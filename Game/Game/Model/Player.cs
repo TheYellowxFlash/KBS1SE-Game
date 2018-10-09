@@ -16,6 +16,7 @@ namespace Game.Model
         {
             Size = new Point(40, 40);
             Image = "player-steve.png";
+            movementSpeed = 1;
         }
 
         public void Move(List<Obstacle> obstacles)
@@ -38,7 +39,7 @@ namespace Game.Model
             {
                 hor = Walker.HorizontalDirection.right;
             }
-            Move(hor, ver, obstacles,1);
+            Move(hor, ver, obstacles);
         }
     }
 }

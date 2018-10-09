@@ -11,6 +11,8 @@ namespace Game.Model
 {
     class World
     {
+        public const int windowWidth = 1280, windowHeight = 704;
+
         public Player Player { get; set; }
         public Ghost Ghost { get; set; }
         public Skeleton Skeleton { get; set; }
@@ -28,8 +30,8 @@ namespace Game.Model
             
             Player = new Player(new Point(0,0));
             Ghost = new Ghost(new Point(500,500));
-            Skeleton = new Skeleton(new Point(200, 200));
-            Zombie = new Zombie(new Point(750,750));
+            Skeleton = new Skeleton(new Point(400, 200));
+            Zombie = new Zombie(new Point(600,250));
             
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
@@ -48,10 +50,10 @@ namespace Game.Model
         private void TimerOnTick(object sender, EventArgs e)
         {
             
-            Skeleton.Move(Player);
-            Ghost.Move(Player);
+            Skeleton.Move(Player,obstacles);
+            Ghost.Move(Player,obstacles);
             Player.Move(obstacles);
-            Zombie.Move(Player);
+            Zombie.Move(Player,obstacles);
             
         }
 
