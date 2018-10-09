@@ -8,7 +8,7 @@ using System.Windows;
 
 namespace Game.Model
 {
-    class Enemy : Prop
+    class Enemy : Walker
     {
         public double MoveSpeed{ get; set; }
         public double AttackRange { get; set; }

@@ -11,6 +11,8 @@ namespace Game.Model
 {
     class World
     {
+        public const int windowWidth = 1280, windowHeight = 704;
+
         public Player Player { get; set; }
         public Ghost Ghost { get; set; }
         public Skeleton Skeleton { get; set; }
@@ -48,7 +50,7 @@ namespace Game.Model
         private void TimerOnTick(object sender, EventArgs e)
         {
             
-            Skeleton.Move(Player);
+            Skeleton.Move(Player,obstacles);
             Ghost.Move(Player);
             Player.Move(obstacles);
             Zombie.Move(Player);

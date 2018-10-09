@@ -20,32 +20,33 @@ namespace Game.Model
             Image = "skeleton.png";
         }
 
-        public void Move(Player player)
+        public void Move(Player player, List<Obstacle> obstacles)
         {
             if (InRange(player))
             {
                 y = Position.Y;
                 x = Position.X;
+                Walker.VerticalDirection vert = Walker.VerticalDirection.none;
+                Walker.HorizontalDirection hor = Walker.HorizontalDirection.none;
 
                 if (player.Position.Y > y)
                 {
-                    y += MoveSpeed;
+                    vert = Walker.VerticalDirection.down;
                 }
                 else
                 {
-                    y -= MoveSpeed;
+                    vert = Walker.VerticalDirection.up;
                 }
 
                 if (player.Position.X < x)
                 {
-                    x -= MoveSpeed;
+                    hor = Walker.HorizontalDirection.left;
                 }
                 else
                 {
-                    x += MoveSpeed;
+                    hor = Walker.HorizontalDirection.right;
                 }
-
-                Position = new Point(x, y);
+                Move(hor, vert, obstacles,MoveSpeed);
             }
         }
 
