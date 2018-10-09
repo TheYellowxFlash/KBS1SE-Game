@@ -30,12 +30,10 @@ namespace Game
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-
         }
 
         private void resume_Click(object sender, RoutedEventArgs e)
         {
-
             resume.Visibility = Visibility.Hidden;
             exit.Visibility = Visibility.Hidden;
             title.Visibility = Visibility.Hidden;
@@ -49,7 +47,6 @@ namespace Game
         {
             InitializeComponent();
 
-            
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
@@ -61,14 +58,12 @@ namespace Game
             if (world != null)
             {
                     UpdateWorld();
-                
             }
 
             if (Keyboard.IsKeyDown(Key.Escape))
             {
                 if (!pausebool)
                 {
-
                     resume.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
                     pausemenu.Opacity = 0.8;
@@ -76,7 +71,6 @@ namespace Game
                     plaatje.Visibility = Visibility.Visible;
                     pausebool = true;
                     world.TimerPause();
-
                 }
             }
         }
@@ -154,8 +148,6 @@ namespace Game
             ImageBrush zombieBrush = new ImageBrush();
             zombieBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + zombie.Image, UriKind.RelativeOrAbsolute));
             zombieBox.Fill = zombieBrush;
-
-            
         }
 
         public void RecalculateCollision(object sender, EventArgs e)
