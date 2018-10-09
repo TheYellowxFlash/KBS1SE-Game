@@ -21,9 +21,28 @@ namespace Game
     {
         private World world;
         private Rectangle playerBox, ghostBox, skeletonBox, zombieBox;
-        //private Ellipse playerLight, worldLight;
+        private Ellipse playerLight;
+        public bool pausebool = false;
 
         DispatcherTimer timer = new DispatcherTimer();
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void resume_Click(object sender, RoutedEventArgs e)
+        {
+
+            resume.Visibility = Visibility.Hidden;
+            exit.Visibility = Visibility.Hidden;
+            title.Visibility = Visibility.Hidden;
+            plaatje.Visibility = Visibility.Hidden;
+            pausebool = false;
+            world.StartGame();
+            pausemenu.Opacity = 0;
+        }
 
         public Level1()
         {
@@ -38,12 +57,30 @@ namespace Game
         {
             if (world != null)
             {
-                UpdateWorld();
+                    UpdateWorld();
+                
+            }
+
+            if (Keyboard.IsKeyDown(Key.Escape))
+            {
+                if (!pausebool)
+                {
+
+                    resume.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
+                    pausemenu.Opacity = 0.8;
+                    title.Visibility = Visibility.Visible;
+                    plaatje.Visibility = Visibility.Visible;
+                    pausebool = true;
+                    world.TimerPause();
+
+                }
             }
         }
 
         private void UpdateWorld()
         {
+            
             Player player = world.Player;
             Canvas.SetLeft(playerBox, player.Position.X);
             Canvas.SetTop(playerBox, player.Position.Y);
