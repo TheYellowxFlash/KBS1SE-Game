@@ -36,7 +36,9 @@ namespace Game
         
         private void customize_Click(object sender, RoutedEventArgs e)
         {
-
+            CustomizeCharacter CustomCharacter = new CustomizeCharacter();
+            CustomCharacter.Show();
+            this.Close();
         }
 
         private void highscore_Click(object sender, RoutedEventArgs e)

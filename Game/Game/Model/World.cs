@@ -31,7 +31,7 @@ namespace Game.Model
             Player = new Player(new Point(0,0));
             Ghost = new Ghost(new Point(500,500));
             Skeleton = new Skeleton(new Point(400, 200));
-            Zombie = new Zombie(new Point(750,750));
+            Zombie = new Zombie(new Point(600,250));
             
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);

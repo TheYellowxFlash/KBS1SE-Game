@@ -92,6 +92,7 @@ namespace Game
             double x = player.Size.X * 2;
             double y = player.Size.Y * 2;
 
+            Canvas.SetZIndex(playerLight, 6);
             Canvas.SetLeft(playerLight, player.Position.X - x - 55);
             Canvas.SetTop(playerLight, player.Position.Y - y - 55);
             playerLight.Width = 300;
@@ -120,6 +121,7 @@ namespace Game
             worldLight.Height = 704;
             worldLight.Fill = Brushes.Black;
             worldLight.Opacity = 0.85;
+            Canvas.SetZIndex(worldLight, 5);
 
             Ghost ghost = world.Ghost;
             enemyBoxes.Add(ghostBox);
