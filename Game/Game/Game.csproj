@@ -125,18 +125,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="house.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="path.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="grass.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="tree.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Background_Menu.jpg" />
     <Resource Include="Images\Background_Menu2.jpg" />
   </ItemGroup>
@@ -154,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="PropIcons\player-steve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\grass.png" />
+    <Resource Include="View\Images\house.png" />
+    <Resource Include="View\Images\path.jpg" />
+    <Resource Include="View\Images\tree.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

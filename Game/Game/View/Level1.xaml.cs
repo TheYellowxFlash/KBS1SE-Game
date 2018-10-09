@@ -20,7 +20,7 @@ namespace Game
     {
         private World world;
         private Rectangle playerBox, ghostBox, skeletonBox, zombieBox;
-
+        private Ellipse playerLight;
 
         DispatcherTimer timer = new DispatcherTimer();
 
@@ -52,8 +52,8 @@ namespace Game
             playerBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + player.Image, UriKind.RelativeOrAbsolute));
             playerBox.Fill = playerBrush;
 
-            double x = Canvas.GetLeft(playerBox);
-            double y = Canvas.GetTop(playerBox);
+            //double x = Canvas.GetLeft(playerBox);
+            //double y = Canvas.GetTop(playerBox);
 
             Ghost ghost = world.Ghost;
             Canvas.SetLeft(ghostBox, ghost.Position.X);
