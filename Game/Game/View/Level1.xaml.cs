@@ -22,6 +22,7 @@ namespace Game
         private World world;
         private Rectangle playerBox, ghostBox, skeletonBox, zombieBox, worldLight;
         private Ellipse playerLight;
+        private List<Rectangle> enemyBoxes = new List<Rectangle>();
         public bool pausebool = false;
 
         DispatcherTimer timer = new DispatcherTimer();
@@ -48,6 +49,8 @@ namespace Game
         {
             InitializeComponent();
 
+            
+            timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             timer.Start();
@@ -140,6 +143,7 @@ namespace Game
             worldLight.Opacity = 0.92;
 
             Ghost ghost = world.Ghost;
+            enemyBoxes.Add(ghostBox);
             Canvas.SetLeft(ghostBox, ghost.Position.X);
             Canvas.SetTop(ghostBox, ghost.Position.Y);
             ghostBox.Width = ghost.Size.X;
@@ -149,6 +153,7 @@ namespace Game
             ghostBox.Fill = ghostBrush;
 
             Skeleton skeleton = world.Skeleton;
+            enemyBoxes.Add(skeletonBox);
             Canvas.SetLeft(skeletonBox, skeleton.Position.X);
             Canvas.SetTop(skeletonBox, skeleton.Position.Y);
             skeletonBox.Width = skeleton.Size.X;
@@ -158,6 +163,7 @@ namespace Game
             skeletonBox.Fill = skeletonBrush;
 
             Zombie zombie = world.Zombie;
+            enemyBoxes.Add(zombieBox);
             Canvas.SetLeft(zombieBox, zombie.Position.X);
             Canvas.SetTop(zombieBox, zombie.Position.Y);
             zombieBox.Width = zombie.Size.X;
@@ -165,6 +171,33 @@ namespace Game
             ImageBrush zombieBrush = new ImageBrush();
             zombieBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + zombie.Image, UriKind.RelativeOrAbsolute));
             zombieBox.Fill = zombieBrush;
+
+            
+        }
+
+        public void RecalculateCollision(object sender, EventArgs e)
+        {
+            Rect playerBounds = BoundsRelativeTo(playerBox, level1);
+
+            List<Rect> enemyBounds = new List<Rect>();
+            foreach (Rectangle enemyBox in enemyBoxes)
+            {
+                Rect item = BoundsRelativeTo(enemyBox, level1);
+                enemyBounds.Add(item);
+            }
+
+            foreach (var enemy in enemyBounds)
+            {
+                if (playerBounds.IntersectsWith(enemy))
+                {
+                    MessageBox.Show("YOU DIED!");
+                }
+            }   
+        }
+
+        public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
+        {
+            return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
