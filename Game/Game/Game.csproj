@@ -163,7 +163,9 @@
     <Resource Include="View\Images\Level1.png" />
     <Resource Include="View\Images\MenuBackground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="View\Images\player-house.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Skins\finn.png" />
     <Resource Include="View\Skins\zombie.png" />
