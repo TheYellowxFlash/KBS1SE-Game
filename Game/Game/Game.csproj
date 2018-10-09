@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\CustomizeCharacter.xaml.cs">
+      <DependentUpon>CustomizeCharacter.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\Level1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,6 +82,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\CustomizeCharacter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Enemy.cs" />
@@ -155,6 +162,14 @@
     <Resource Include="View\Images\DirtRoad_Ver.png" />
     <Resource Include="View\Images\Level1.png" />
     <Resource Include="View\Images\MenuBackground.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="View\Skins\finn.png" />
+    <Resource Include="View\Skins\zombie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Skins\mario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
