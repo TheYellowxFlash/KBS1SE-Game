@@ -29,6 +29,8 @@ namespace Game
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainMenu = new MainWindow();
+            mainMenu.Show();
             this.Close();
         }
 
@@ -165,7 +167,14 @@ namespace Game
             {
                 if (playerBounds.IntersectsWith(enemy))
                 {
-                    MessageBox.Show("YOU DIED!");
+                    if (!pausebool)
+                    {
+                        exit.Visibility = Visibility.Visible;
+                        pausemenu.Opacity = 0.8;
+                        died.Visibility = Visibility.Visible;
+                        plaatje.Visibility = Visibility.Visible;
+                        world.TimerPause();
+                    }
                 }
             }   
         }
