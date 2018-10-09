@@ -11,6 +11,8 @@ namespace Game.Model
     {
         public enum HorizontalDirection { left,right, none};
         public enum VerticalDirection { up, down, none}
+        public bool canMoveThroughWalls = false;
+        public double movementSpeed;
 
         public Walker(Point point) : base(point)
         {
@@ -30,7 +32,7 @@ namespace Game.Model
             Image = image;
         }
 
-        public void Move(HorizontalDirection horizontal, VerticalDirection vertical, List<Obstacle> obstacles, double movementSpeed,bool canMoveThroughWalls = false)
+        protected void Move(HorizontalDirection horizontal, VerticalDirection vertical, List<Obstacle> obstacles)
         {
             //if both directions are none the walker doesn't want to move
             if (horizontal == Walker.HorizontalDirection.none && vertical == Walker.VerticalDirection.none)

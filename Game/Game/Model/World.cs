@@ -51,9 +51,9 @@ namespace Game.Model
         {
             
             Skeleton.Move(Player,obstacles);
-            Ghost.Move(Player);
+            Ghost.Move(Player,obstacles);
             Player.Move(obstacles);
-            Zombie.Move(Player);
+            Zombie.Move(Player,obstacles);
             
         }
 

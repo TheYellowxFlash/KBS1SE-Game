@@ -10,7 +10,6 @@ namespace Game.Model
 {
     class Enemy : Walker
     {
-        public double MoveSpeed{ get; set; }
         public double AttackRange { get; set; }
 
         public Enemy(Point position, Point size, String image) : base(position, size, image)
@@ -42,6 +41,37 @@ namespace Game.Model
 
         }
 
-        
+        public void Move(Player player, List<Obstacle> obstacles)
+        {
+            if (InRange(player))
+            {
+                double y = Position.Y;
+                double x = Position.X;
+                Walker.VerticalDirection vert = Walker.VerticalDirection.none;
+                Walker.HorizontalDirection hor = Walker.HorizontalDirection.none;
+
+                if (player.Position.Y > y)
+                {
+                    vert = Walker.VerticalDirection.down;
+                }
+                else
+                {
+                    vert = Walker.VerticalDirection.up;
+                }
+
+                if (player.Position.X < x)
+                {
+                    hor = Walker.HorizontalDirection.left;
+                }
+                else
+                {
+                    hor = Walker.HorizontalDirection.right;
+                }
+                Move(hor, vert, obstacles);
+            }
+        }
     }
+
+        
+    
 }
