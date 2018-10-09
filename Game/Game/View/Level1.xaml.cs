@@ -22,7 +22,6 @@ namespace Game
         private World world;
         private Rectangle playerBox, ghostBox, skeletonBox, zombieBox, worldLight;
         private Ellipse playerLight;
-        private List<Rectangle> enemyBoxes = new List<Rectangle>();
         public bool pausebool = false;
 
         DispatcherTimer timer = new DispatcherTimer();
@@ -90,6 +89,12 @@ namespace Game
             double x = player.Size.X * 2;
             double y = player.Size.Y * 2;
 
+            Canvas.SetLeft(playerLight, player.Position.X - x);
+            Canvas.SetTop(playerLight, player.Position.Y - y);
+            playerLight.Width = 200;
+            playerLight.Height = 200;
+            playerLight.Opacity = .15;
+            Canvas.SetZIndex(playerLight, 6);
             Canvas.SetLeft(playerLight, player.Position.X - x - 55);
             Canvas.SetTop(playerLight, player.Position.Y - y - 55);
             playerLight.Width = 300;
@@ -117,6 +122,8 @@ namespace Game
             worldLight.Width = 1280;
             worldLight.Height = 704;
             worldLight.Fill = Brushes.Black;
+            worldLight.Opacity = 0.92;
+            Canvas.SetZIndex(worldLight, 5);
             worldLight.Opacity = 0.85;
 
             Ghost ghost = world.Ghost;
