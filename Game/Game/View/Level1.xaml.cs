@@ -20,7 +20,7 @@ namespace Game
     public partial class Level1 : Window
     {
         private World world;
-        private Rectangle playerBox, ghostBox, skeletonBox, zombieBox;
+        private Rectangle playerBox, ghostBox, skeletonBox, zombieBox, worldLight;
         private Ellipse playerLight;
         public bool pausebool = false;
 
@@ -89,28 +89,55 @@ namespace Game
             ImageBrush playerBrush = new ImageBrush();
             playerBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + player.Image, UriKind.RelativeOrAbsolute));
             playerBox.Fill = playerBrush;
+            playerBox.Opacity = 1;
+
 
             double x = player.Size.X * 2;
             double y = player.Size.Y * 2;
 
-            //Canvas.SetLeft(playerLight, player.Position.X - x);
-            //Canvas.SetTop(playerLight, player.Position.Y - y);
-            //playerLight.Width = 200;
-            //playerLight.Height = 200;
-            //playerLight.Fill = Brushes.Yellow;
-            //playerLight.Opacity = .4;
+            Canvas.SetLeft(playerLight, player.Position.X - x);
+            Canvas.SetTop(playerLight, player.Position.Y - y);
+            playerLight.Width = 200;
+            playerLight.Height = 200;
+            playerLight.Opacity = .15;
+
+            RadialGradientBrush LightGradient = new RadialGradientBrush();
+
+            LightGradient.GradientOrigin = new Point(0.5 , 0.5);
+
+            LightGradient.Center = new Point(0.5, 0.5);
+
+            playerLight.Fill = LightGradient;
+
+            // Create and add Gradient stops
+
+            GradientStop WhiteGS = new GradientStop();
+
+            WhiteGS.Color = Colors.White;
+
+            WhiteGS.Offset = 0.0;
+
+            LightGradient.GradientStops.Add(WhiteGS);
+
+
+
+            GradientStop BlackGS = new GradientStop();
+
+            BlackGS.Color = Colors.Transparent;
+
+            BlackGS.Offset = 0.85;
+
+            LightGradient.GradientStops.Add(BlackGS);
+
             //playerLight.Stroke = Brushes.Black;
             //playerLight.StrokeThickness = 200;
 
-            //Canvas.SetLeft(worldLight, player.Position.X - 350);
-            //Canvas.SetTop(worldLight, player.Position.Y - 350);
-            //worldLight.Width = 500;
-            //worldLight.Height = 500;
-            //worldLight.Fill = Brushes.Transparent;
-            //worldLight.Opacity = 0.5;
-            //Canvas.SetZIndex(worldLight, 10);
-            //worldLight.Stroke = Brushes.Black;
-            //worldLight.StrokeThickness = 200;
+            Canvas.SetLeft(worldLight, 0);
+            Canvas.SetTop(worldLight, 0);
+            worldLight.Width = 1280;
+            worldLight.Height = 704;
+            worldLight.Fill = Brushes.Black;
+            worldLight.Opacity = 0.92;
 
             Ghost ghost = world.Ghost;
             Canvas.SetLeft(ghostBox, ghost.Position.X);
@@ -153,8 +180,7 @@ namespace Game
                         world.obstacles.Add(new Obstacle(obstacle));
                 }
             }
-            playerBox = new Rectangle();
-            level1.Children.Add(playerBox);
+            
 
             ghostBox = new Rectangle();
             level1.Children.Add(ghostBox);
@@ -165,11 +191,18 @@ namespace Game
             zombieBox = new Rectangle();
             level1.Children.Add(zombieBox);
 
-            ////worldLight = new Ellipse();
-            //level1.Children.Add(worldLight);
+            playerBox = new Rectangle();
+            level1.Children.Add(playerBox);
 
-            //playerLight = new Ellipse();
-            //level1.Children.Add(playerLight);
+            worldLight = new Rectangle();
+            level1.Children.Add(worldLight);
+
+            playerLight = new Ellipse();
+            level1.Children.Add(playerLight);
+
+            
+
+
 
             world.StartGame();
         }
