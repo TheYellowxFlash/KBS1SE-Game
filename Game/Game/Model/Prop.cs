@@ -13,14 +13,12 @@ namespace Game.Model
         public Point Position { get; set; }
         public Point Size { get; set; }
         public String Image { get; set; }
-        public static List<Prop> PropList = new List<Prop>();
 
         public Prop(Point position, Point size, String image)
         {
             Position = position;
             Size = size;
             Image = image;
-            PropList.Add(this);
         }
 
 
@@ -28,13 +26,11 @@ namespace Game.Model
         {
             Position = position;
             Image = image;
-            PropList.Add(this);
         }
 
         public Prop(Point position)
         {
             Position = position;
-            PropList.Add(this);
         }
 
         public Prop() { }
