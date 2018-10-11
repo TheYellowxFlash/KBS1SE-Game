@@ -11,23 +11,23 @@ namespace Game.Model
 {
     class Player : Walker
     {
-
+        String CC = CustomizeCharacter.character;
         public Player(Point position) : base(position)
         {
-            CustomizeCharacter CC = new CustomizeCharacter();
-            Size = new Point(40, 40);
-            if(CC.character == "Finn")
+          
+           Size = new Point(40, 40);
+            if(CC == "Finn")
             {
                 Image = "finn.png";
-            }else if(CC.character == "Mario")
+            }else if(CC == "Mario")
             {
                 Image = "mario.png";
-            }else if(CC.character == "Zombie")
+            }else if(CC == "Zombie")
             {
                 Image = "player-zombie.png";
             }
             else
-            {
+            { 
                 Image = "finn.png";
             }
             movementSpeed = 1;
