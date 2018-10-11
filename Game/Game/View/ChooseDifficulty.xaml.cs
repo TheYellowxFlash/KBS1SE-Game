@@ -19,6 +19,8 @@ namespace Game.View
     /// </summary>
     public partial class ChooseDifficulty : Window
     {
+        public static int Difficulty = 0;
+
         public ChooseDifficulty()
         {
             InitializeComponent();
@@ -26,7 +28,8 @@ namespace Game.View
 
         private void easy_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Easy");
+            Difficulty = 1;
+
             Level1 level1 = new Level1();
             level1.Show();
             this.Close();
@@ -34,7 +37,7 @@ namespace Game.View
 
         private void medium_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Medium");
+            Difficulty = 2;
             Level1 level1 = new Level1();
             level1.Show();
             this.Close();
@@ -42,7 +45,7 @@ namespace Game.View
 
         private void hard_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hard");
+            Difficulty = 3;
             Level1 level1 = new Level1();
             level1.Show();
             this.Close();

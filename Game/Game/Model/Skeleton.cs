@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,15 +10,29 @@ namespace Game.Model
 {
     class Skeleton : Enemy
     {
-        private double x, y;
+        int Diff = ChooseDifficulty.Difficulty;
 
         public Skeleton(Point position) : base(position)
         {
             Position = position;
             Size = new Point(40, 40);
-            movementSpeed = .5;
-            AttackRange = 300;
             Image = "skeleton.png";
+
+            if (Diff == 1)
+            {
+                movementSpeed = .4;
+                AttackRange = 275;
+            }
+            else if (Diff == 2)
+            {
+                movementSpeed = .5;
+                AttackRange = 300;
+            }
+            else if (Diff == 3)
+            {
+                movementSpeed = 0.55;
+                AttackRange = 325;
+            }
         }
       
 
