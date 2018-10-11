@@ -24,6 +24,7 @@ namespace Game
         private Ellipse playerLight;
         private List<Rectangle> enemyBoxes = new List<Rectangle>();
         public bool pausebool = false;
+        private bool gameOverBool = false;
 
         DispatcherTimer timer = new DispatcherTimer();
 
@@ -64,7 +65,7 @@ namespace Game
 
             if (Keyboard.IsKeyDown(Key.Escape))
             {
-                if (!pausebool)
+                if (!pausebool && !gameOverBool)
                 {
                     resume.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
@@ -176,6 +177,7 @@ namespace Game
                         died.Visibility = Visibility.Visible;
                         plaatje.Visibility = Visibility.Visible;
                         world.TimerPause();
+                        gameOverBool = true;
                     }
                 }
             }   
