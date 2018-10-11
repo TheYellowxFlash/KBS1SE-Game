@@ -29,7 +29,6 @@ namespace Game.View
         private void easy_Click(object sender, RoutedEventArgs e)
         {
             Difficulty = 1;
-
             Level1 level1 = new Level1();
             level1.Show();
             this.Close();
