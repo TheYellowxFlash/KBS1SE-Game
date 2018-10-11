@@ -124,7 +124,7 @@ namespace Game
             worldLight.Width = 1280;
             worldLight.Height = 704;
             worldLight.Fill = Brushes.Black;
-            worldLight.Opacity = 0.85;
+            worldLight.Opacity = 0.75;
             Canvas.SetZIndex(worldLight, 5);
 
             Ghost ghost = world.Ghost;
