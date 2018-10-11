@@ -41,10 +41,10 @@ namespace Game
             this.Close();
         }
 
-        //private void highscore_Click(object sender, RoutedEventArgs e)
-        //{
+        private void highscore_Click(object sender, RoutedEventArgs e)
+        {
 
-        //}
+        }
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
