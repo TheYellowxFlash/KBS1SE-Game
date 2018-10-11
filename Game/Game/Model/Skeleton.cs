@@ -9,7 +9,7 @@ namespace Game.Model
 {
     class Skeleton : Enemy
     {
-        private double x, y;
+        
 
         public Skeleton(Point position) : base(position)
         {

@@ -14,9 +14,10 @@ namespace Game.Model
         public const int windowWidth = 1280, windowHeight = 704;
 
         public Player Player { get; set; }
-        public Ghost Ghost { get; set; }
-        public Skeleton Skeleton { get; set; }
-        public Zombie Zombie { get; set; }
+        public Ghost Ghost;
+
+        public List<Enemy> enemies = new List<Enemy>();
+
         private DispatcherTimer timer = new DispatcherTimer();
         public double XPos { get; set; }
         public double YPos { get; set; }
@@ -29,9 +30,9 @@ namespace Game.Model
         {
             
             Player = new Player(new Point(0,0));
-            Ghost = new Ghost(new Point(500,500));
-            Skeleton = new Skeleton(new Point(400, 200));
-            Zombie = new Zombie(new Point(600,250));
+            enemies.Add(new Ghost(new Point(500,500)));
+            enemies.Add(new Skeleton(new Point(400, 200)));
+            enemies.Add(new Zombie(new Point(600,250)));
             
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
@@ -49,11 +50,11 @@ namespace Game.Model
 
         private void TimerOnTick(object sender, EventArgs e)
         {
-            
-            Skeleton.Move(Player,obstacles);
-            Ghost.Move(Player,obstacles);
             Player.Move(obstacles);
-            Zombie.Move(Player,obstacles);
+            foreach(Enemy enemy in enemies)
+            {
+                enemy.Move(Player, obstacles);
+            }
             
         }
 

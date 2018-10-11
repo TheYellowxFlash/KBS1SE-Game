@@ -9,7 +9,7 @@ namespace Game.Model
 {
     class Ghost : Enemy
     {
-        private double x, y;
+        
 
         public Ghost(Point position) : base(position)
         {

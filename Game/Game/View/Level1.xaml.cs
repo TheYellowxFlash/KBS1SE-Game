@@ -21,8 +21,9 @@ namespace Game
     {
         private World world;
         private Rectangle playerBox, ghostBox, skeletonBox, zombieBox, worldLight;
+        private List<Rectangle> enemyRectangles = new List<Rectangle>();
         private Ellipse playerLight;
-        private List<Rectangle> enemyBoxes = new List<Rectangle>();
+        //private List<Rectangle> enemyBoxes = new List<Rectangle>();
         public bool pausebool = false;
 
         DispatcherTimer timer = new DispatcherTimer();
@@ -119,6 +120,8 @@ namespace Game
             worldLight.Fill = Brushes.Black;
             worldLight.Opacity = 0.85;
 
+            LoadEnemies();
+            /*
             Ghost ghost = world.Ghost;
             enemyBoxes.Add(ghostBox);
             Canvas.SetLeft(ghostBox, ghost.Position.X);
@@ -147,7 +150,24 @@ namespace Game
             zombieBox.Height = zombie.Size.Y;
             ImageBrush zombieBrush = new ImageBrush();
             zombieBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + zombie.Image, UriKind.RelativeOrAbsolute));
-            zombieBox.Fill = zombieBrush;
+            zombieBox.Fill = zombieBrush;*/
+        }
+
+        public void LoadEnemies()
+        {
+            foreach (Enemy enemy in world.enemies)
+            {
+                Rectangle rectangle = new Rectangle();
+                //enemyBoxes.Add(rectangle);
+                Canvas.SetLeft(rectangle, enemy.Position.X);
+                Canvas.SetTop(rectangle, enemy.Position.Y);
+                rectangle.Width = enemy.Size.X;
+                rectangle.Height = enemy.Size.Y;
+                ImageBrush enemyBrush = new ImageBrush();
+                enemyBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + enemy.Image, UriKind.RelativeOrAbsolute));
+                rectangle.Fill = enemyBrush;
+                enemyRectangles.Add(rectangle);
+            }
         }
 
         public void RecalculateCollision(object sender, EventArgs e)
@@ -155,7 +175,7 @@ namespace Game
             Rect playerBounds = BoundsRelativeTo(playerBox, level1);
 
             List<Rect> enemyBounds = new List<Rect>();
-            foreach (Rectangle enemyBox in enemyBoxes)
+            foreach (Rectangle enemyBox in enemyRectangles)
             {
                 Rect item = BoundsRelativeTo(enemyBox, level1);
                 enemyBounds.Add(item);
@@ -188,7 +208,12 @@ namespace Game
                         world.obstacles.Add(new Obstacle(obstacle));
                 }
             }
-
+            LoadEnemies();
+            foreach(Rectangle rectangle in enemyRectangles)
+            {
+                level1.Children.Add(rectangle);
+            }
+            /*
             ghostBox = new Rectangle();
             level1.Children.Add(ghostBox);
 
@@ -197,7 +222,7 @@ namespace Game
 
             zombieBox = new Rectangle();
             level1.Children.Add(zombieBox);
-
+            */
             playerBox = new Rectangle();
             level1.Children.Add(playerBox);
 

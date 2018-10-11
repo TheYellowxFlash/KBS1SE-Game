@@ -10,7 +10,7 @@ namespace Game.Model
     class Zombie : Enemy
     {
        
-        private double x, y;
+        
         public Zombie(Point position) : base(position)
         {
             Position = position;
