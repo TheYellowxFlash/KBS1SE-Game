@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -33,6 +34,8 @@ namespace Game
             MainWindow mainMenu = new MainWindow();
             mainMenu.Show();
             this.Close();
+            Thread.EndThreadAffinity();
+
         }
 
         private void resume_Click(object sender, RoutedEventArgs e)
@@ -93,36 +96,36 @@ namespace Game
             double x = player.Size.X * 2;
             double y = player.Size.Y * 2;
 
-            Canvas.SetZIndex(playerLight, 6);
-            Canvas.SetLeft(playerLight, player.Position.X - x - 55);
-            Canvas.SetTop(playerLight, player.Position.Y - y - 55);
-            playerLight.Width = 300;
-            playerLight.Height = 300;
-            playerLight.Opacity = .25;
+            //Canvas.SetZIndex(playerLight, 6);
+            //Canvas.SetLeft(playerLight, player.Position.X - x - 55);
+            //Canvas.SetTop(playerLight, player.Position.Y - y - 55);
+            //playerLight.Width = 300;
+            //playerLight.Height = 300;
+            //playerLight.Opacity = .25;
 
-            RadialGradientBrush LightGradient = new RadialGradientBrush();
-            LightGradient.GradientOrigin = new Point(0.5 , 0.5);
-            LightGradient.Center = new Point(0.5, 0.5);
+            //RadialGradientBrush LightGradient = new RadialGradientBrush();
+            //LightGradient.GradientOrigin = new Point(0.5 , 0.5);
+            //LightGradient.Center = new Point(0.5, 0.5);
 
-            playerLight.Fill = LightGradient;
+            //playerLight.Fill = LightGradient;
 
-            GradientStop WhiteGS = new GradientStop();
-            WhiteGS.Color = Colors.White;
-            WhiteGS.Offset = 0.0;
-            LightGradient.GradientStops.Add(WhiteGS);
+            //GradientStop WhiteGS = new GradientStop();
+            //WhiteGS.Color = Colors.White;
+            //WhiteGS.Offset = 0.0;
+            //LightGradient.GradientStops.Add(WhiteGS);
 
-            GradientStop BlackGS = new GradientStop();
-            BlackGS.Color = Colors.Transparent;
-            BlackGS.Offset = 0.85;
-            LightGradient.GradientStops.Add(BlackGS);
+            //GradientStop BlackGS = new GradientStop();
+            //BlackGS.Color = Colors.Transparent;
+            //BlackGS.Offset = 0.85;
+            //LightGradient.GradientStops.Add(BlackGS);
 
-            Canvas.SetLeft(worldLight, 0);
-            Canvas.SetTop(worldLight, 0);
-            worldLight.Width = 1280;
-            worldLight.Height = 704;
-            worldLight.Fill = Brushes.Black;
-            worldLight.Opacity = 0.85;
-            Canvas.SetZIndex(worldLight, 5);
+            //Canvas.SetLeft(worldLight, 0);
+            //Canvas.SetTop(worldLight, 0);
+            //worldLight.Width = 1280;
+            //worldLight.Height = 704;
+            //worldLight.Fill = Brushes.Black;
+            //worldLight.Opacity = 0.85;
+            //Canvas.SetZIndex(worldLight, 5);
 
             Ghost ghost = world.Ghost;
             enemyBoxes.Add(ghostBox);
@@ -214,11 +217,11 @@ namespace Game
             playerBox = new Rectangle();
             level1.Children.Add(playerBox);
 
-            worldLight = new Rectangle();
-            level1.Children.Add(worldLight);
+            //worldLight = new Rectangle();
+            //level1.Children.Add(worldLight);
 
-            playerLight = new Ellipse();
-            level1.Children.Add(playerLight);
+            //playerLight = new Ellipse();
+            //level1.Children.Add(playerLight);
             
             world.StartGame();
         }
