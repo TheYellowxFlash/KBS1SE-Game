@@ -18,8 +18,8 @@
         </Grid.ColumnDefinitions>
         <Label Grid.Row="0" Grid.Column="1" Content="Customize Character" HorizontalAlignment="center" VerticalAlignment="top" Height="89" Width="auto" FontSize="40" FontFamily="/Game;component/#Hallowen Inline" Panel.ZIndex="1"/>
         <Label Grid.Row="0" Grid.Column="1" Content="Select a Character" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="/Game;component/#Hallowen Inline"></Label>
-        <Button Grid.Row="2" Grid.Column="0" x:Name="back" Content="Back" HorizontalAlignment="Left" Margin="126,0,0,10.4" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" RenderTransformOrigin="0.864,-0.714" Foreground="White" />
-        <Button Grid.Row="2" Grid.Column="0" x:Name="exit" Content="Exit" HorizontalAlignment="Left" Margin="160,0,0,9.667" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" RenderTransformOrigin="0.864,-0.714" Foreground="White" />
+        <Button Grid.Row="2" Grid.Column="0" x:Name="back" Content="Back" HorizontalAlignment="Left" Margin="126,0,0,10.4" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" RenderTransformOrigin="0.864,-0.714" Foreground="White" Click="back_Click" />
+        
 
         <Button Grid.Row="1" Grid.Column="0" Name="Player1" Background="{x:Null}" BorderBrush="Black" Click="character_Click" >
             <Image Source="Skins/finn.png" Stretch="Uniform" Height="auto" Width="92"/>
@@ -36,7 +36,7 @@
         <Label Grid.Row="1" Grid.Column="2" Content="PLayer 3" HorizontalAlignment="center" FontFamily="/Game;component/#Hallowen Inline" Foreground="White" ></Label>
 
         <Grid.Background>
-            <ImageBrush ImageSource="Background_Menu2.jpg"></ImageBrush>
+            <ImageBrush ImageSource="Images/Background_Menu2.jpg"></ImageBrush>
         </Grid.Background>
     </Grid>
 </Window>

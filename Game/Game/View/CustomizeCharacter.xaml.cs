@@ -36,5 +36,12 @@ namespace Game
 
             MessageBox.Show(character);
         }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainMenu = new MainWindow();
+            mainMenu.Show();
+            this.Close();
+        }
     }
 }

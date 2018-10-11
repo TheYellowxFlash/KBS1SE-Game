@@ -176,5 +176,20 @@
   <ItemGroup>
     <Resource Include="View\Skins\mario.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\tree_part1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\tree_part2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\tree_part3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\tree_part4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\Background_Menu2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
