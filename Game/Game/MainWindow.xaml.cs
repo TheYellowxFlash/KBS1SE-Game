@@ -45,12 +45,14 @@ namespace Game
 
         private void highscore_Click(object sender, RoutedEventArgs e)
         {
-
+            var h = new View.HighscoreWindow();
+            h.Show();
+            Close();
         }
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            Application.Current.Shutdown();
         }
     }
 }

@@ -64,6 +64,10 @@
     <Compile Include="View\CustomizeCharacter.xaml.cs">
       <DependentUpon>CustomizeCharacter.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\HighscoreWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ChooseDifficulty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +89,9 @@
     <Compile Include="Model\Walker.cs" />
     <Compile Include="Model\World.cs" />
     <Compile Include="Model\Zombie.cs" />
+    <Compile Include="View\HighscoreWindow.xaml.cs">
+      <DependentUpon>HighscoreWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Level1.xaml.cs">
       <DependentUpon>Level1.xaml</DependentUpon>
     </Compile>
@@ -202,9 +209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Skins\zombie.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="TrickOrTreat.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
