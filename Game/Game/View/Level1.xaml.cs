@@ -34,7 +34,7 @@ namespace Game
             MainWindow mainMenu = new MainWindow();
             mainMenu.Show();
             this.Close();
-            Thread.EndThreadAffinity();
+            
 
         }
 

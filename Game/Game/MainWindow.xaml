@@ -13,7 +13,7 @@
         <Label Content="Trick || Treat" HorizontalAlignment="center" VerticalAlignment="top" Height="89" Width="495" FontSize="80" FontFamily="/Game;component/#Hallowen Inline" Panel.ZIndex="1"/>
         <Button x:Name="play" Content="Play"  Margin="126,0,0,477" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="play_Click" FontWeight="Bold" HorizontalAlignment="Left"/>
         <Button x:Name="customize" Content="Customize" HorizontalAlignment="Left" Margin="126,0,0,372" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="customize_Click"/>
-        <Button x:Name="highscore" Content="Highscore" HorizontalAlignment="Left" Margin="126,0,0,272" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="highscore_Click" />
+        <!--<Button x:Name="highscore" Content="Highscore" HorizontalAlignment="Left" Margin="126,0,0,272" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="highscore_Click" />-->
         <Button x:Name="exit" Content="Exit" HorizontalAlignment="Left" Margin="126,0,0,10.4" VerticalAlignment="Bottom" FontFamily="/Game;component/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="exit_Click" RenderTransformOrigin="0.864,-0.714" />
         <Grid.Background>
             <ImageBrush ImageSource="Background_Menu2.jpg"></ImageBrush>
