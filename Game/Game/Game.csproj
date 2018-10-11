@@ -171,7 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Skins\finn.png" />
-    <Resource Include="View\Skins\zombie.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Skins\mario.png" />
@@ -190,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\Background_Menu2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Skins\zombie.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

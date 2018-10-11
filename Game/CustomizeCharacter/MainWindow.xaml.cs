@@ -31,13 +31,7 @@ namespace CustomizeCharacter
         {
             MessageBox.Show("You chose " + ((Button)sender).Name.ToString());
             Button targetButton = (sender as Button);
-            if(targetButton != null && targetButton.Name == "female") {
-                character = "Female";
-            }
-            else if (targetButton != null && targetButton.Name == "male")
-            {
-                character = "Male";
-            }
+ 
           
             MessageBox.Show(character);
         }

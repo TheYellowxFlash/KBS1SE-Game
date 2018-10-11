@@ -33,8 +33,6 @@ namespace Game
             Button targetButton = (sender as Button);
             
             character = targetButton.Name;
-
-            MessageBox.Show(character);
         }
 
         private void back_Click(object sender, RoutedEventArgs e)

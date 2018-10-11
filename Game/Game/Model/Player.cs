@@ -14,8 +14,22 @@ namespace Game.Model
 
         public Player(Point position) : base(position)
         {
+            CustomizeCharacter CC = new CustomizeCharacter();
             Size = new Point(40, 40);
-            Image = "player-steve.png";
+            if(CC.character == "Finn")
+            {
+                Image = "finn.png";
+            }else if(CC.character == "Mario")
+            {
+                Image = "mario.png";
+            }else if(CC.character == "Zombie")
+            {
+                Image = "player-zombie.png";
+            }
+            else
+            {
+                Image = "finn.png";
+            }
             movementSpeed = 1;
         }
 
