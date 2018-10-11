@@ -14,7 +14,7 @@ namespace Game.Model
         public bool canMoveThroughWalls = false;
         public double movementSpeed;
 
-        public Walker(Point point) : base(point)
+        public Walker(Point positionPoint) : base(positionPoint)
         {
 
         }
