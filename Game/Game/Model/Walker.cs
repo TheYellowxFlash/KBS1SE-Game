@@ -67,7 +67,6 @@ namespace Game.Model
                     {
                         moveDown = false;
                     }
-                    //a.start < b.end && b.start < a.end;
                     else if (moveUp && (Position.Y == (int)(obstacle.Position.Y + obstacle.Size.Y) && (Position.X < obstacle.Position.X + obstacle.Size.X) && (obstacle.Position.X < Position.X + Size.X)))
                     {
                         moveUp = false;
