@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -33,6 +34,8 @@ namespace Game
             MainWindow mainMenu = new MainWindow();
             mainMenu.Show();
             this.Close();
+            Thread.EndThreadAffinity();
+
         }
 
         private void resume_Click(object sender, RoutedEventArgs e)
