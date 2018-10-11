@@ -41,6 +41,7 @@ namespace Game
         private void resume_Click(object sender, RoutedEventArgs e)
         {
             resume.Visibility = Visibility.Hidden;
+            restart.Visibility = Visibility.Hidden;
             exit.Visibility = Visibility.Hidden;
             title.Visibility = Visibility.Hidden;
             plaatje.Visibility = Visibility.Hidden;
@@ -71,6 +72,7 @@ namespace Game
                 if (!pausebool && !gameOverBool)
                 {
                     resume.Visibility = Visibility.Visible;
+                    restart.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
                     pausemenu.Opacity = 0.8;
                     title.Visibility = Visibility.Visible;
@@ -79,6 +81,13 @@ namespace Game
                     world.TimerPause();
                 }
             }
+        }
+
+        private void restart_Click(object sender, RoutedEventArgs e)
+        {
+            Level1 levelreload = new Level1();
+            levelreload.Show();
+            this.Close();
         }
 
         private void UpdateWorld()
@@ -149,6 +158,7 @@ namespace Game
 
             Zombie zombie = world.Zombie;
             enemyBoxes.Add(zombieBox);
+            
             Canvas.SetLeft(zombieBox, zombie.Position.X);
             Canvas.SetTop(zombieBox, zombie.Position.Y);
             zombieBox.Width = zombie.Size.X;
@@ -183,7 +193,8 @@ namespace Game
                         gameOverBool = true;
                     }
                 }
-            }   
+            }
+            enemyBoxes.Clear();
         }
 
         public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)

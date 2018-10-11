@@ -29,18 +29,19 @@
 
         </Canvas>
 
-             
-        <Rectangle x:Name="pausemenu" Fill="#FF595959" Opacity="0"></Rectangle>
-        <Image x:Name="plaatje" HorizontalAlignment="Right" VerticalAlignment="Bottom" Source="Images/MenuBackground.png" Stretch="Fill" Visibility="Hidden"/>
-        <TextBlock x:Name="title" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="PAUSED" VerticalAlignment="Top" FontSize="130" Margin="235,66,226.6,0" Foreground="DarkRed"/>
 
+        <Rectangle x:Name="pausemenu" Fill="#FF595959" Opacity="0"></Rectangle>
         <Rectangle x:Name="gameOver" Fill="#FF595959" Opacity="0"></Rectangle>
-        <Button x:Name="resume" Content="Resume" Width="208" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden" Click="resume_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" FontSize="54" Margin="292,254,293.6,0" Foreground="DarkRed"/>
-        <TextBlock x:Name="died" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="YOU DIED" VerticalAlignment="Top" FontSize="130" Margin="235,66,226.6,0" Foreground="DarkRed"/>
-        
-        <Button x:Name="exit" Content="Exit" Width="208" FontFamily="/MovementTest;component/#YouMurderer BB" FontSize="54" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Hidden" Click="exit_Click" Margin="292,351,293.6,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="DarkRed"/>
-        
-        
+
+        <Image x:Name="plaatje" HorizontalAlignment="Right" VerticalAlignment="Bottom" Source="Images/MenuBackground.png" Stretch="Fill" Visibility="Hidden"/>
+        <TextBlock x:Name="title" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="PAUSED" VerticalAlignment="Top" FontSize="130" Margin="512,10,504,0" Foreground="DarkRed"/>
+        <Button x:Name="resume" Content="Resume" Width="208" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden" Click="resume_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" FontSize="54" Margin="533,166,539,0" Foreground="DarkRed"/>
+        <Button x:Name="restart" Content="Restart" Width="208" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden" Click="restart_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" FontSize="54" Margin="533,220,539,0" Foreground="DarkRed"/>
+
+        <TextBlock x:Name="died" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="YOU DIED" VerticalAlignment="Top" FontSize="130" Margin="512,10,504,0" Foreground="DarkRed"/>
+        <Button x:Name="exit" Content="Exit" Width="208" FontFamily="/MovementTest;component/#YouMurderer BB" FontSize="54" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Hidden" Click="exit_Click" Margin="533,277,539,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="DarkRed"/>
+
+
         <Grid.Background>
             <ImageBrush ImageSource="Images\Level1.png"></ImageBrush>
         </Grid.Background>
