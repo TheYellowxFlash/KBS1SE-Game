@@ -20,7 +20,7 @@ namespace Game
     /// </summary>
     public partial class CustomizeCharacter : Window
     {
-        public string character = "";
+        public static string character = "";
 
         public CustomizeCharacter()
         {
@@ -33,6 +33,7 @@ namespace Game
             Button targetButton = (sender as Button);
             
             character = targetButton.Name;
+
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
