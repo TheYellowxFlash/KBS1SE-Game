@@ -17,20 +17,21 @@ namespace Game.Model
             Position = position;
             Size = new Point(40, 40);
             Image = "skeleton.png";
+            movementSpeed = .5;
 
             if (Diff == 1)
             {
-                movementSpeed = .4;
+                //movementSpeed = .4;
                 AttackRange = 275;
             }
             else if (Diff == 2)
             {
-                movementSpeed = .5;
+                //movementSpeed = .5;
                 AttackRange = 300;
             }
             else if (Diff == 3)
             {
-                movementSpeed = 0.55;
+                //movementSpeed = .55;
                 AttackRange = 325;
             }
         }
