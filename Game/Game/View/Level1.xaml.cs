@@ -1,4 +1,5 @@
 ﻿using Game.Model;
+using Game.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,11 +22,13 @@ namespace Game
     public partial class Level1 : Window
     {
         private World world;
+        private int diff = ChooseDifficulty.Difficulty;
         private Rectangle playerBox, ghostBox, skeletonBox, zombieBox, worldLight;
         private Ellipse playerLight;
         private List<Rectangle> enemyBoxes = new List<Rectangle>();
         public bool pausebool = false;
         private bool gameOverBool = false;
+        private double lightDiff;
 
         DispatcherTimer timer = new DispatcherTimer();
 
@@ -126,12 +129,25 @@ namespace Game
             BlackGS.Offset = 0.85;
             LightGradient.GradientStops.Add(BlackGS);
 
+            if (diff == 1)
+            {
+                lightDiff = .65;
+            }
+            else if (diff == 2)
+            {
+                lightDiff = .75;
+            }
+            else if (diff == 3)
+            {
+                lightDiff = .85;
+            }
+
             Canvas.SetLeft(worldLight, 0);
             Canvas.SetTop(worldLight, 0);
             worldLight.Width = 1280;
             worldLight.Height = 704;
             worldLight.Fill = Brushes.Black;
-            worldLight.Opacity = 0.75;
+            worldLight.Opacity = lightDiff;
             Canvas.SetZIndex(worldLight, 5);
 
             Ghost ghost = world.Ghost;

@@ -33,16 +33,18 @@ namespace Game.Model
                 Image = "finn.png";
             }
 
-            if(Diff == 1)
-            {
-                movementSpeed = 1.25;
-            } else if(Diff == 2)
-            {
-                movementSpeed = 1;
-            } else if(Diff == 3)
-            {
-                movementSpeed = 0.85;
-            }
+            movementSpeed = 1;
+
+            //if(Diff == 1)
+            //{
+            //    movementSpeed = 1.25;
+            //} else if(Diff == 2)
+            //{
+            //    movementSpeed = 1;
+            //} else if(Diff == 3)
+            //{
+            //    movementSpeed = 0.75;
+            //}
         }
 
         public void Move(List<Obstacle> obstacles)
