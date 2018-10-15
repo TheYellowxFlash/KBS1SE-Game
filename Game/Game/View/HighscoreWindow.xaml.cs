@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,13 +31,24 @@ namespace Game.View
         {
             XmlDocument highScoreXML = new XmlDocument();
             highScoreXML.Load("../../Scores.xml");
-            foreach(XmlNode node in highScoreXML.DocumentElement)
-            {
-                MessageBox.Show(node.ChildNodes.ToString());
-            }
-            MessageBox.Show(highScoreXML.ToString());
-            //highScoreXML.
 
+            XmlNode root = highScoreXML.FirstChild.NextSibling;
+
+            var list = new ObservableCollection<DataObject>();
+            foreach (XmlNode scores in root.ChildNodes)
+            {
+                string name = scores.ChildNodes[0].InnerText;
+                string score = scores.ChildNodes[1].InnerText;
+                list.Add(new DataObject() { Name = name, Score = score });
+            }
+            
+            this.table.ItemsSource = list.OrderByDescending(d => d.Score); ;
+        }
+
+        public class DataObject
+        {
+            public string Name { get; set; }
+            public string Score { get; set; }
         }
     }
 }

@@ -52,7 +52,7 @@ namespace Game.Model
                     if (!(moveUp || moveDown || moveLeft || moveRight))
                         break;
 
-                    if (moveRight && (Position.X + Size.X == obstacle.Position.X && 
+                    if (moveRight && ((double)(Position.X + Size.X) == obstacle.Position.X && 
                         (Position.Y < obstacle.Position.Y + obstacle.Size.Y) && (obstacle.Position.Y < Position.Y + Size.Y)))
                     {
                         moveRight = false;

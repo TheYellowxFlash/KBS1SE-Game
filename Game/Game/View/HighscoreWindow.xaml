@@ -7,7 +7,12 @@
         mc:Ignorable="d"
         Title="HighscoreWindow" Height="450" Width="800">
     <Grid Loaded="Grid_Loaded">
-        <TextBlock x:Name="txbScore" HorizontalAlignment="Left" Margin="28,32,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="221" Width="236"/>
+        <DataGrid AutoGenerateColumns="False" x:Name="table" HorizontalAlignment="Left" Height="221" Margin="10,10,0,0" VerticalAlignment="Top" Width="100">
+            <DataGrid.Columns >
+                <DataGridTextColumn Binding="{Binding Path=Name}" MinWidth="50" />
+                <DataGridTextColumn Binding="{Binding Path=Score}" MinWidth="50" />
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
