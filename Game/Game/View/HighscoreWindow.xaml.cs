@@ -42,7 +42,7 @@ namespace Game.View
                 list.Add(new DataObject() { Name = name, Score = score });
             }
             
-            this.table.ItemsSource = list.OrderByDescending(d => d.Score); ;
+            this.table.ItemsSource = list.OrderByDescending(d => int.Parse(d.Score)); ;
         }
 
         public class DataObject
