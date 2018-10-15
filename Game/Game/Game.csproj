@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Candy.cs" />
     <Compile Include="View\CustomizeCharacter.xaml.cs">
       <DependentUpon>CustomizeCharacter.xaml</DependentUpon>
     </Compile>
@@ -191,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Skins\zombie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\candy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
