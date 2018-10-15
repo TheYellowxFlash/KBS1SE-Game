@@ -9,13 +9,15 @@ namespace Game.Model
 {
     class Candy : Prop
     {
+        public int CandyId;
         public int Score = 100;
+        public static string ImageCandy = "candy.png";
 
-        public Candy(Point position)
+        public Candy(int id, Point position)
         {
+            CandyId = id;
             Position = position;
             Size = new Point(36, 36);
-            Image = "candy.png";
         }
         
     }

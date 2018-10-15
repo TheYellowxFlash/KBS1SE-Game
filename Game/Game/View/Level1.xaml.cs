@@ -24,18 +24,75 @@ namespace Game
         private Rectangle playerBox, ghostBox, skeletonBox, zombieBox, worldLight;
         private Ellipse playerLight;
         private List<Rectangle> enemyBoxes = new List<Rectangle>();
+        private Rectangle [] candyBoxes = new Rectangle[3];
         public bool pausebool = false;
         private bool gameOverBool = false;
 
         DispatcherTimer timer = new DispatcherTimer();
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            world = new World();
+
+            foreach (var child in level1.Children)
+            {
+                if (child is Image)
+                {
+                    Image obstacle = (Image)child;
+                    if (obstacle.IsEnabled)
+                        world.obstacles.Add(new Obstacle(obstacle));
+                }
+            }
+
+            world.GenerateCandy();
+
+            ghostBox = new Rectangle();
+            level1.Children.Add(ghostBox);
+
+            skeletonBox = new Rectangle();
+            level1.Children.Add(skeletonBox);
+
+            zombieBox = new Rectangle();
+            level1.Children.Add(zombieBox);
+
+            playerBox = new Rectangle();
+            level1.Children.Add(playerBox);
+
+            //worldLight = new Rectangle();
+            //level1.Children.Add(worldLight);
+
+            //playerLight = new Ellipse();
+            //level1.Children.Add(playerLight);
+
+            world.StartGame();
+
+            candyBoxes[0] = new Rectangle();
+            candyBoxes[1] = new Rectangle();
+            candyBoxes[2] = new Rectangle();
+
+            ImageBrush candyBrush = new ImageBrush();
+            candyBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
+            foreach (var cBox in candyBoxes)
+            {
+                Candy candy = world.GetCandyNotInGame();
+
+                Canvas.SetLeft(cBox, candy.Position.X);
+                Canvas.SetTop(cBox, candy.Position.Y);
+                cBox.Width = candy.Size.X;
+                cBox.Height = candy.Size.Y;
+
+                world.CandiesInGame.Add(candy);
+                cBox.Fill = candyBrush;
+                level1.Children.Add(cBox);
+
+            }
+        }
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainMenu = new MainWindow();
             mainMenu.Show();
             this.Close();
-            
-
         }
 
         private void resume_Click(object sender, RoutedEventArgs e)
@@ -63,7 +120,7 @@ namespace Game
         {
             if (world != null)
             {
-                    UpdateWorld();
+                UpdateWorld();
             }
 
             if (Keyboard.IsKeyDown(Key.Escape))
@@ -80,6 +137,7 @@ namespace Game
                 }
             }
         }
+
 
         private void UpdateWorld()
         {
@@ -127,6 +185,8 @@ namespace Game
             //worldLight.Opacity = 0.85;
             //Canvas.SetZIndex(worldLight, 5);
 
+            
+
             Ghost ghost = world.Ghost;
             enemyBoxes.Add(ghostBox);
             Canvas.SetLeft(ghostBox, ghost.Position.X);
@@ -156,6 +216,7 @@ namespace Game
             ImageBrush zombieBrush = new ImageBrush();
             zombieBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + zombie.Image, UriKind.RelativeOrAbsolute));
             zombieBox.Fill = zombieBrush;
+            
         }
 
         public void RecalculateCollision(object sender, EventArgs e)
@@ -191,39 +252,5 @@ namespace Game
             return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            world = new World();
-
-            foreach (var child in level1.Children)
-            {
-                if(child is Image)
-                {
-                    Image obstacle = (Image)child;
-                    if(obstacle.IsEnabled)
-                        world.obstacles.Add(new Obstacle(obstacle));
-                }
-            }
-
-            ghostBox = new Rectangle();
-            level1.Children.Add(ghostBox);
-
-            skeletonBox = new Rectangle();
-            level1.Children.Add(skeletonBox);
-
-            zombieBox = new Rectangle();
-            level1.Children.Add(zombieBox);
-
-            playerBox = new Rectangle();
-            level1.Children.Add(playerBox);
-
-            //worldLight = new Rectangle();
-            //level1.Children.Add(worldLight);
-
-            //playerLight = new Ellipse();
-            //level1.Children.Add(playerLight);
-            
-            world.StartGame();
-        }
     }
 }

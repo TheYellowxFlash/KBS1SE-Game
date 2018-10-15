@@ -18,21 +18,17 @@ namespace Game.Model
         public Skeleton Skeleton { get; set; }
         public Zombie Zombie { get; set; }
         private DispatcherTimer timer = new DispatcherTimer();
-        public double XPos { get; set; }
-        public double YPos { get; set; }
-
-        
 
         public List<Obstacle> obstacles = new List<Obstacle>();
+        public List<Candy> AllCandies = new List<Candy>();
+        public List<Candy> CandiesInGame = new List<Candy>();
 
         public World()
         {
-            
             Player = new Player(new Point(0,0));
             Ghost = new Ghost(new Point(500,500));
             Skeleton = new Skeleton(new Point(400, 200));
-            Zombie = new Zombie(new Point(600,250));
-            
+            Zombie = new Zombie(new Point(600,250)); 
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
         }
@@ -40,6 +36,7 @@ namespace Game.Model
         public void StartGame()
         {
             timer.Start();
+            GenerateCandy();
         }
 
         public void TimerPause()
@@ -48,13 +45,49 @@ namespace Game.Model
         }
 
         private void TimerOnTick(object sender, EventArgs e)
-        {
-            
+        { 
             Skeleton.Move(Player,obstacles);
             Ghost.Move(Player,obstacles);
             Player.Move(obstacles);
             Zombie.Move(Player,obstacles);
             
+        }
+
+        public void GenerateCandy()
+        {
+            AllCandies.Add(new Candy(1, new Point(900,500)));
+            AllCandies.Add(new Candy(2, new Point(450,650)));
+            AllCandies.Add(new Candy(3, new Point(340,120)));
+            AllCandies.Add(new Candy(4, new Point(600,600)));
+            AllCandies.Add(new Candy(5, new Point(800,400)));
+        }
+
+        public Candy GetRandomCandy()
+        {
+            Random rnd = new Random();
+            int i = rnd.Next((AllCandies.Count));
+            return AllCandies[i];
+        }
+
+        public Candy GetCandyNotInGame()
+        {
+            Candy candy = GetRandomCandy();
+            while (CandiesInGame.Contains(candy))
+            {
+                candy = GetRandomCandy();
+            }
+
+            return candy;
+        }
+
+        public Point GenerateRandomPoint()
+        {
+            Random rnd = new Random();
+
+            int randomX = rnd.Next(windowWidth);
+            int randomY = rnd.Next(windowHeight);
+
+            return new Point(randomX, randomY);
         }
 
     }
