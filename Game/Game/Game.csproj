@@ -254,5 +254,13 @@
     <Resource Include="View\Skins\Adventure.png" />
     <Resource Include="View\Skins\Pirate.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Player4\Down\Down.png" />
+    <Resource Include="PropIcons\Player4\Left\Left.png" />
+    <Resource Include="PropIcons\Player4\Right\Right.png" />
+    <Resource Include="PropIcons\Player4\Still\Back.png" />
+    <Resource Include="PropIcons\Player4\Still\Front.png" />
+    <Resource Include="PropIcons\Player4\Up\Up.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
