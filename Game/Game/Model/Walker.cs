@@ -52,22 +52,22 @@ namespace Game.Model
                     if (!(moveUp || moveDown || moveLeft || moveRight))
                         break;
 
-                    if (moveRight && ((double)(Position.X + Size.X) == obstacle.Position.X && 
+                    if (moveRight && (Position.X + Size.X == (int)obstacle.Position.X && 
                         (Position.Y < obstacle.Position.Y + obstacle.Size.Y) && (obstacle.Position.Y < Position.Y + Size.Y)))
                     {
                         moveRight = false;
                     }
-                    else if (moveLeft && (Position.X == (double)(obstacle.Position.X + obstacle.Size.X) && 
+                    else if (moveLeft && (Position.X == (int)(obstacle.Position.X + obstacle.Size.X) && 
                         (Position.Y < obstacle.Position.Y + obstacle.Size.Y) && (obstacle.Position.Y < Position.Y + Size.Y)))
                     {
                         moveLeft = false;
                     }
-                    if (moveDown && (Position.Y + Size.Y == (double)(obstacle.Position.Y) && 
+                    if (moveDown && (Position.Y + Size.Y == (int)(obstacle.Position.Y) && 
                         (Position.X < obstacle.Position.X + obstacle.Size.X) && (obstacle.Position.X < Position.X + Size.X)))
                     {
                         moveDown = false;
                     }
-                    else if (moveUp && (Position.Y == (double)(obstacle.Position.Y + obstacle.Size.Y) && (Position.X < obstacle.Position.X + obstacle.Size.X) && (obstacle.Position.X < Position.X + Size.X)))
+                    else if (moveUp && (Position.Y == (int)(obstacle.Position.Y + obstacle.Size.Y) && (Position.X < obstacle.Position.X + obstacle.Size.X) && (obstacle.Position.X < Position.X + Size.X)))
                     {
                         moveUp = false;
                     }
