@@ -16,6 +16,7 @@ using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Xml;
 
 namespace Game
 {
@@ -89,6 +90,22 @@ namespace Game
             Level1 levelreload = new Level1();
             levelreload.Show();
             this.Close();
+        }
+
+        private void TempWinButton_Click(object sender, RoutedEventArgs e)
+        {
+            string fileLocation = "../../Scores.xml";
+            XmlDocument highScoreXML = new XmlDocument();
+            highScoreXML.Load(fileLocation);
+
+            XmlNode root = highScoreXML.FirstChild.NextSibling;
+
+            XmlElement element = highScoreXML.CreateElement("entry");
+
+            element.InnerXml = "<name>testyboy</name><score>3434</score>";
+
+            root.AppendChild(element);
+            highScoreXML.Save(fileLocation);
         }
 
         private void UpdateWorld()

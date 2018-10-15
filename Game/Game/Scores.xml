@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <scores>
-	<entry>
-		<name>Jhonny</name>
-		<score>420</score>
-	</entry>
+  <entry>
+    <name>Jhonny</name>
+    <score>420</score>
+  </entry>
   <entry>
     <name>Klaas</name>
     <score>500</score>
@@ -11,5 +11,13 @@
   <entry>
     <name>Bronimo</name>
     <score>3300</score>
+  </entry>
+  <entry>
+    <name>testyboy</name>
+    <score>3434</score>
+  </entry>
+  <entry>
+    <name>testyboy</name>
+    <score>3434</score>
   </entry>
 </scores>
