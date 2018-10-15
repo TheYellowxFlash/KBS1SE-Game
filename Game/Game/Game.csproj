@@ -198,7 +198,9 @@
   <ItemGroup>
     <Resource Include="TrickOrTreat.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="View\Images\TrickOrTreat.ico" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="PropIcons\Player1\Down\Down.png" />
     <Resource Include="PropIcons\Player1\Left\Left.png" />
@@ -258,6 +260,10 @@
     <Resource Include="PropIcons\Ghost\Still\Back.png" />
     <Resource Include="PropIcons\Ghost\Still\Front.png" />
     <Resource Include="PropIcons\Ghost\Up\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\Player_House_Part1.png" />
+    <Resource Include="View\Images\Player_House_Part2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

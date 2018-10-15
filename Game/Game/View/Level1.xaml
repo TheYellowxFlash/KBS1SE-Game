@@ -10,7 +10,8 @@
 
 
         <Canvas x:Name="level1">
-            <Image Source="Images/player-house.png" Canvas.Left="135" Canvas.Top="13" Height="182" Width="182"/>
+            <Image Source="Images/Player_House_part1.png" Canvas.Left="144" Canvas.Top="75" Height="117" Width="161" />
+            <Image Source="Images/Player_House_part2.png" Canvas.Left="139" Canvas.Top="30" Height="46" Width="171" Panel.ZIndex="1" />
             <Image Source="Images/house.png" Canvas.Left="811" Canvas.Top="10"/>
             <Image Source="Images/house.png" Canvas.Left="490" Canvas.Top="10"/>
             <Image Source="Images/tree_part3.png" Canvas.Left="153" Canvas.Top="246"/>
