@@ -11,6 +11,12 @@ namespace Game.Model
     class Enemy : Walker
     {
         public double AttackRange { get; set; }
+        public string Name { get; set; }
+
+        private string Left  = "/Left/Left.png";
+        private string Right = "/Right/Right.png";
+        private string Up  = "/Up/Up.png";
+        private string Down  = "/Down/Down.png";
 
         public Enemy(Point position, Point size, String image) : base(position, size, image)
         {
@@ -53,19 +59,23 @@ namespace Game.Model
                 if (player.Position.Y > y)
                 {
                     vert = Walker.VerticalDirection.down;
+                    Image = Name + Down;
                 }
                 else
                 {
                     vert = Walker.VerticalDirection.up;
+                    Image = Name + Up;
                 }
 
                 if (player.Position.X < x)
                 {
                     hor = Walker.HorizontalDirection.left;
+                    Image = Name + Left;
                 }
                 else
                 {
                     hor = Walker.HorizontalDirection.right;
+                    Image = Name + Right;
                 }
                 Move(hor, vert, obstacles);
             }

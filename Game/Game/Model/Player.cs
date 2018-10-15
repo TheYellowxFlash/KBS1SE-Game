@@ -18,8 +18,6 @@ namespace Game.Model
         string Right = "/Right/Right.png";
         string Up  = "/Up/Up.png";
         string Down  = "/Down/Down.png";
-        string StillF = "/Still/Front.png";
-        string StillB = "/Still/Back.png";
 
         int player = 1;
 

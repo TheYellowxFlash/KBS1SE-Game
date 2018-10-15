@@ -16,7 +16,8 @@ namespace Game.Model
         {
             Position = position;
             Size = new Point(36,36);
-            Image = "ghost.png";
+            Image = "Ghost/Still/Front.png";
+            Name = "Ghost";
             canMoveThroughWalls = true;
 
             if (Diff == 1)

@@ -16,7 +16,8 @@ namespace Game.Model
         {
             Position = position;
             Size = new Point(40, 40);
-            Image = "skeleton.png";
+            Image = "Skeleton/Still/Front.png";
+            Name = "Skeleton";
             movementSpeed = .5;
 
             if (Diff == 1)
