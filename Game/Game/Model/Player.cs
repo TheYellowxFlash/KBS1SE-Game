@@ -12,25 +12,41 @@ namespace Game.Model
 {
     class Player : Walker
     {
-        String CC = CustomizeCharacter.character;
+        string CC = CustomizeCharacter.character;
         int Diff = ChooseDifficulty.Difficulty;
+        string Left  = "/Left/Left.png";
+        string Right = "/Right/Right.png";
+        string Up  = "/Up/Up.png";
+        string Down  = "/Down/Down.png";
+        string StillF = "/Still/Front.png";
+        string StillB = "/Still/Back.png";
+
+        int player = 1;
+
         public Player(Point position) : base(position)
         {
-          
-           Size = new Point(40, 40);
-            if(CC == "Finn")
+
+            
+            Size = new Point(30, 46);
+            if(CC == "Adventure")
             {
-                Image = "finn.png";
-            }else if(CC == "Mario")
+                Image = "Player1/Still/Front.png";
+                player = 1;
+            }
+            else if(CC == "Skeleton")
             {
-                Image = "mario.png";
-            }else if(CC == "Zombie")
+                Image = "Player2/Still/Front.png";
+                player = 2;
+            }
+            else if(CC == "Pirate")
             {
-                Image = "player-zombie.png";
+                Image = "Player3/Still/Front.png";
+                player = 3;
             }
             else
             { 
-                Image = "finn.png";
+                Image = "Player1/Still/Front.png";
+                player = 1;
             }
 
             movementSpeed = 1;
@@ -54,18 +70,71 @@ namespace Game.Model
             if (Keyboard.IsKeyDown(Key.Down))
             {
                 ver = Walker.VerticalDirection.down;
+                if (player == 1)
+                {
+                    Image = "Player1" + Down;
+                } else if (player == 2)
+                {
+                    Image = "Player2" + Down;
+
+                } else if (player == 3)
+                {
+                    Image = "Player3" + Down;
+                }
+
+                
             }
             else if (Keyboard.IsKeyDown(Key.Up))
             {
                 ver = Walker.VerticalDirection.up;
+                if (player == 1)
+                {
+                    Image = "Player1" + Up;
+                }
+                else if (player == 2)
+                {
+                    Image = "Player2" + Up;
+
+                }
+                else if (player == 3)
+                {
+                    Image = "Player3" + Up;
+                }
             }
             if (Keyboard.IsKeyDown(Key.Left))
             {
                 hor = Walker.HorizontalDirection.left;
+                if (player == 1)
+                {
+                    Image = "Player1" + Left;
+                }
+                else if (player == 2)
+                {
+                    Image = "Player2" + Left;
+
+                }
+                else if (player == 3)
+                {
+                    Image = "Player3" + Left;
+                }
+
             }
             else if (Keyboard.IsKeyDown(Key.Right))
             {
                 hor = Walker.HorizontalDirection.right;
+                if (player == 1)
+                {
+                    Image = "Player1" + Right;
+                }
+                else if (player == 2)
+                {
+                    Image = "Player2" + Right;
+
+                }
+                else if (player == 3)
+                {
+                    Image = "Player3" + Right;
+                }
             }
             Move(hor, ver, obstacles);
         }

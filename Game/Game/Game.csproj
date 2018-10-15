@@ -64,10 +64,6 @@
     <Compile Include="View\CustomizeCharacter.xaml.cs">
       <DependentUpon>CustomizeCharacter.xaml</DependentUpon>
     </Compile>
-    <Page Include="View\HighscoreWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\ChooseDifficulty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -209,6 +205,50 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Skins\zombie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TrickOrTreat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PropIcons\Player2\Down\" />
+    <Folder Include="PropIcons\Player2\Left\" />
+    <Folder Include="PropIcons\Player2\Right\" />
+    <Folder Include="PropIcons\Player2\Still\" />
+    <Folder Include="PropIcons\Player2\Up\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Player1\Down\Down.png" />
+    <Resource Include="PropIcons\Player1\Left\Left.png" />
+    <Resource Include="PropIcons\Player1\Player1.png" />
+    <Resource Include="PropIcons\Player1\Right\Right.png" />
+    <Resource Include="PropIcons\Player1\Up\Up.png" />
+    <Resource Include="PropIcons\Player2\Player2.png" />
+    <Resource Include="PropIcons\Player3\Player3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Player1\Still\Back.png" />
+    <Resource Include="PropIcons\Player1\Still\Front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Player3\Down\Down.png" />
+    <Resource Include="PropIcons\Player3\Left\Left.png" />
+    <Resource Include="PropIcons\Player3\Right\Right.png" />
+    <Resource Include="PropIcons\Player3\Still\Back.png" />
+    <Resource Include="PropIcons\Player3\Still\Front.png" />
+    <Resource Include="PropIcons\Player3\Up\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Skeleton\Down\Down.png" />
+    <Resource Include="PropIcons\Skeleton\Left\Left.png" />
+    <Resource Include="PropIcons\Skeleton\Player2.png" />
+    <Resource Include="PropIcons\Skeleton\Right\Right.png" />
+    <Resource Include="PropIcons\Skeleton\Still\Back.png" />
+    <Resource Include="PropIcons\Skeleton\Still\Front.png" />
+    <Resource Include="PropIcons\Skeleton\Up\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Skins\Adventure.png" />
+    <Resource Include="View\Skins\Pirate.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,17 +21,17 @@
         <Button Grid.Row="2" Grid.Column="0" x:Name="back" Content="Back" HorizontalAlignment="Left" Margin="126,0,0,10.4" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" RenderTransformOrigin="0.864,-0.714" Foreground="White" Click="back_Click" />
 
 
-        <Button Grid.Row="1" Grid.Column="0" Name="Finn" Background="{x:Null}" BorderBrush="black" Click="character_Click"  Height="auto" Width="400">
-            <Image Source="Skins/finn.png" Stretch="Uniform" Height="auto" Width="92"/>
+        <Button Grid.Row="1" Grid.Column="0" Name="Adventure" Background="{x:Null}" BorderBrush="black" Click="character_Click"  Height="auto" Width="400">
+            <Image Source="Skins/Adventure.png" Stretch="Fill" Height="144" Width="80"/>
         </Button>
-        <Label Grid.Row="1" Grid.Column="0" Content="Finn" HorizontalAlignment="center" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Foreground="White" ></Label>
-        <Button Grid.Row="1" Grid.Column="1" Name="Mario"  Background="{x:Null}" BorderBrush="Black" Foreground="#FFF60F0F" Click="character_Click" Height="auto" Width="400">
-            <Image Source="Skins/mario.png" Stretch="Uniform" Height="auto" Width="92"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Adventure" HorizontalAlignment="center" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Foreground="White" ></Label>
+        <Button Grid.Row="1" Grid.Column="1" Name="Skeleton"  Background="{x:Null}" BorderBrush="Black" Foreground="#FFF60F0F" Click="character_Click" Height="auto" Width="400">
+            <!--<Image Source="Skins/Female.png" Stretch="Fill" Height="144" Width="80"/>-->
         </Button>
         <Label Grid.Row="1" Grid.Column="1" Content="Mario" HorizontalAlignment="center" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Foreground="White" ></Label>
 
-        <Button Grid.Row="1" Grid.Column="2" Name="Zombie"  Background="{x:Null}" BorderBrush="Black" Foreground="#FFF60F0F" Click="character_Click" Height="auto" Width="400">
-            <Image Source="Skins/zombie.png" Stretch="Uniform" Height="auto" Width="92"/>
+        <Button Grid.Row="1" Grid.Column="2" Name="Pirate"  Background="{x:Null}" BorderBrush="Black" Foreground="#FFF60F0F" Click="character_Click" Height="auto" Width="400">
+            <Image Source="Skins/Pirate.png" Stretch="Fill" Height="144" Width="80"/>
         </Button>
         <Label Grid.Row="1" Grid.Column="2" Content="Zombie" HorizontalAlignment="center" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Foreground="White" ></Label>
 
