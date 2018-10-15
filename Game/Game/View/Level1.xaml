@@ -40,6 +40,7 @@
 
         <TextBlock x:Name="died" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="YOU DIED" VerticalAlignment="Top" FontSize="130" Margin="512,10,504,0" Foreground="DarkRed"/>
         <Button x:Name="exit" Content="Exit" Width="208" FontFamily="/MovementTest;component/#YouMurderer BB" FontSize="54" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Hidden" Click="exit_Click" Margin="533,277,539,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="DarkRed"/>
+        <Button x:Name="TempWinButton" Content="Button" HorizontalAlignment="Left" Margin="106,291,0,0" VerticalAlignment="Top" Width="75" Click="TempWinButton_Click"/>
 
 
         <Grid.Background>
