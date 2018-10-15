@@ -24,7 +24,7 @@
         <Button Name="Adventure" Content="Adventure"  Margin="68,0,0,208" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" Grid.RowSpan="2" Foreground="White" Click="character_Click" />
 
         <Image Source="Skins/Female.png" Grid.ColumnSpan="2" Margin="426,28,0,46" Grid.Row="1" Height="160"/>
-        <Button Name="Female" Content="Female"  Margin="79,0,0,208" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Foreground="White" Click="character_Click"/>
+        <Button Name="Elf" Content="Elf"  Margin="79,0,0,208" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Foreground="White" Click="character_Click"/>
 
         <Image Source="Skins/Pirate.png"  Height="160" Margin="5,28,-5,46" Grid.Row="1" Grid.Column="2"></Image>
         <Button Name="Pirate" Content="Pirate"  Margin="78,0,0,208" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Foreground="White" Click="character_Click"/>
