@@ -34,8 +34,6 @@ namespace Game
             MainWindow mainMenu = new MainWindow();
             mainMenu.Show();
             this.Close();
-            
-
         }
 
         private void resume_Click(object sender, RoutedEventArgs e)
@@ -56,7 +54,7 @@ namespace Game
 
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
-            timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 5);
             timer.Start();
         }
 

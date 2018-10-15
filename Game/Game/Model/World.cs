@@ -34,7 +34,7 @@ namespace Game.Model
             Zombie = new Zombie(new Point(600,250));
             
             timer.Tick += TimerOnTick;
-            timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 5);
         }
 
         public void StartGame()
