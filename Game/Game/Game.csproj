@@ -161,16 +161,10 @@
     <Resource Include="PropIcons\skeleton.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\player-idle.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="PropIcons\zombie.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="PropIcons\ghost.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="PropIcons\player-steve.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\grass.png" />
@@ -185,12 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\player-house.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="View\Skins\finn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="View\Skins\mario.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\tree_part1.png" />
@@ -208,25 +196,15 @@
     <Resource Include="View\Images\Background_Menu2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\Skins\zombie.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="TrickOrTreat.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PropIcons\Player2\Down\" />
-    <Folder Include="PropIcons\Player2\Left\" />
-    <Folder Include="PropIcons\Player2\Right\" />
-    <Folder Include="PropIcons\Player2\Still\" />
-    <Folder Include="PropIcons\Player2\Up\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="PropIcons\Player1\Down\Down.png" />
     <Resource Include="PropIcons\Player1\Left\Left.png" />
     <Resource Include="PropIcons\Player1\Player1.png" />
     <Resource Include="PropIcons\Player1\Right\Right.png" />
     <Resource Include="PropIcons\Player1\Up\Up.png" />
-    <Resource Include="PropIcons\Player2\Player2.png" />
     <Resource Include="PropIcons\Player3\Player3.png" />
   </ItemGroup>
   <ItemGroup>
@@ -255,12 +233,15 @@
     <Resource Include="View\Skins\Pirate.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\Player4\Down\Down.png" />
-    <Resource Include="PropIcons\Player4\Left\Left.png" />
-    <Resource Include="PropIcons\Player4\Right\Right.png" />
-    <Resource Include="PropIcons\Player4\Still\Back.png" />
-    <Resource Include="PropIcons\Player4\Still\Front.png" />
-    <Resource Include="PropIcons\Player4\Up\Up.png" />
+    <Resource Include="PropIcons\Player2\Down\Down.png" />
+    <Resource Include="PropIcons\Player2\Left\Left.png" />
+    <Resource Include="PropIcons\Player2\Right\Right.png" />
+    <Resource Include="PropIcons\Player2\Still\Back.png" />
+    <Resource Include="PropIcons\Player2\Still\Front.png" />
+    <Resource Include="PropIcons\Player2\Up\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Skins\Female.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
