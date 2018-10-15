@@ -12,8 +12,8 @@
         <Canvas x:Name="level1">
             <Image Source="Images/Player_House_Part1.png" Canvas.Left="144" Canvas.Top="75" Height="117" Width="161" />
             <Image Source="Images/Player_House_Part2.png" Canvas.Left="140" Canvas.Top="30" Height="46" Width="171" IsEnabled="False" Panel.ZIndex="1" />
-            <Image Source="Images/house.png" Canvas.Left="811" Canvas.Top="10"/>
-            <Image Source="Images/house.png" Canvas.Left="490" Canvas.Top="10"/>
+            <Image Source="Images/House_Part1.png" Canvas.Left="477" Canvas.Top="63" Height="129" Width="123"/>
+            <Image Source="Images/House_Part2.png" Canvas.Left="481" Canvas.Top="11" Height="52" Width="114" IsEnabled="False" Panel.ZIndex="1"/>
             <Image Source="Images/tree_part3.png" Canvas.Left="153" Canvas.Top="246"/>
             <Image Source="Images/tree_part4.png" Canvas.Left="134" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
             <Image Source="Images/tree_part3.png" Canvas.Left="256" Canvas.Top="246"/>
@@ -26,6 +26,22 @@
             <Image Source="Images/tree_part4.png" Canvas.Left="773" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
             <Image Source="Images/tree_part3.png" Canvas.Left="896" Canvas.Top="246"/>
             <Image Source="Images/tree_part4.png" Canvas.Left="877" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
+            <Image Source="Images/House_Part1.png" Canvas.Left="801" Canvas.Top="62" Height="129" Width="123"/>
+            <Image Source="Images/House_Part2.png" Canvas.Left="805" Canvas.Top="10" Height="52" Width="113" IsEnabled="False" Panel.ZIndex="1" RenderTransformOrigin="0.5,0.5"/>
+            <Image Source="Images/tree_part3.png" Canvas.Left="1216" Canvas.Top="382"/>
+            <Image Source="Images/tree_part4.png" Canvas.Left="1197" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
+            <Image Source="Images/tree_part3.png" Canvas.Left="1038" Canvas.Top="382"/>
+            <Image Source="Images/tree_part4.png" Canvas.Left="1019" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
+            <Image Source="Images/tree_part3.png" Canvas.Left="792" Canvas.Top="246"/>
+            <Image Source="Images/tree_part4.png" Canvas.Left="773" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
+            <Image Source="Images/tree_part3.png" Canvas.Left="820" Canvas.Top="382"/>
+            <Image Source="Images/tree_part4.png" Canvas.Left="801" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
+            <Image Source="Images/tree_part3.png" Canvas.Left="642" Canvas.Top="382"/>
+            <Image Source="Images/tree_part4.png" Canvas.Left="623" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
+            <Image Source="Images/tree_part3.png" Canvas.Left="398" Canvas.Top="382"/>
+            <Image Source="Images/tree_part4.png" Canvas.Left="379" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
+            <Image Source="Images/tree_part3.png" Canvas.Left="220" Canvas.Top="382"/>
+            <Image Source="Images/tree_part4.png" Canvas.Left="201" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
 
 
         </Canvas>
@@ -39,7 +55,7 @@
         <Button x:Name="resume" Content="Resume" Width="208" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden" Click="resume_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" FontSize="54" Margin="533,166,539,0" Foreground="DarkRed"/>
         <Button x:Name="restart" Content="Restart" Width="208" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden" Click="restart_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" FontSize="54" Margin="533,220,539,0" Foreground="DarkRed"/>
 
-        <TextBlock x:Name="died" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="YOU DIED" VerticalAlignment="Top" FontSize="130" Margin="512,10,504,0" Foreground="DarkRed"/>
+        <TextBlock x:Name="died" Visibility="Visible" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="YOU DIED" VerticalAlignment="Top" FontSize="130" Foreground="DarkRed" Width="382"/>
         <Button x:Name="exit" Content="Exit" Width="208" FontFamily="/MovementTest;component/#YouMurderer BB" FontSize="54" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Hidden" Click="exit_Click" Margin="533,277,539,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="DarkRed"/>
         <Button x:Name="TempWinButton" Content="Button" HorizontalAlignment="Left" Margin="106,291,0,0" VerticalAlignment="Top" Width="75" Click="TempWinButton_Click"/>
 
