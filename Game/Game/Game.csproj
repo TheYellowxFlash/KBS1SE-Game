@@ -262,5 +262,21 @@
     <Resource Include="PropIcons\Player4\Still\Front.png" />
     <Resource Include="PropIcons\Player4\Up\Up.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Zombie\Down\Down.png" />
+    <Resource Include="PropIcons\Zombie\Left\Left.png" />
+    <Resource Include="PropIcons\Zombie\Right\Right.png" />
+    <Resource Include="PropIcons\Zombie\Still\Back.png" />
+    <Resource Include="PropIcons\Zombie\Still\Front.png" />
+    <Resource Include="PropIcons\Zombie\Up\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Ghost\Down\Down.png" />
+    <Resource Include="PropIcons\Ghost\Left\Left.png" />
+    <Resource Include="PropIcons\Ghost\Right\Right.png" />
+    <Resource Include="PropIcons\Ghost\Still\Back.png" />
+    <Resource Include="PropIcons\Ghost\Still\Front.png" />
+    <Resource Include="PropIcons\Ghost\Up\Up.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
