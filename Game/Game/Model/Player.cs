@@ -33,7 +33,7 @@ namespace Game.Model
                 Image = "Player1/Still/Front.png";
                 player = 1;
             }
-            else if(CC == "Skeleton")
+            else if(CC == "Female")
             {
                 Image = "Player2/Still/Front.png";
                 player = 2;
