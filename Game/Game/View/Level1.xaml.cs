@@ -285,6 +285,7 @@ namespace Game
                         pausemenu.Opacity = 0.8;
                         died.Visibility = Visibility.Visible;
                         plaatje.Visibility = Visibility.Visible;
+                        restart.Visibility = Visibility.Visible;
                         world.TimerPause();
                         gameOverBool = true;
                     }

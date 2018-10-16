@@ -16,19 +16,19 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="1" Content="Customize Character" HorizontalAlignment="center" VerticalAlignment="top" Height="89" Width="auto" FontSize="40" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Panel.ZIndex="1"/>
-        <Label Grid.Row="0" Grid.Column="1" Content="Select a Character" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline"></Label>
-        <Button Grid.Row="2" Grid.Column="0" x:Name="back" Content="Back" HorizontalAlignment="Left" Margin="126,0,0,10.4" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" RenderTransformOrigin="0.864,-0.714" Foreground="White" Click="back_Click" />
+        <Label Grid.Row="0" Content="Customize Character" HorizontalAlignment="center" VerticalAlignment="top" Height="89" Width="754" FontSize="80
+               " FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Panel.ZIndex="1" Grid.ColumnSpan="3" Margin="259,46,267.333,0"/>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="back" Content="Back" HorizontalAlignment="Left" Margin="146.333,0,0,10" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" RenderTransformOrigin="0.864,-0.714" Foreground="White" Click="back_Click" />
 
-        <Image Source="Skins/Adventure.png"  Height="160" Margin="0,28,0,46" Grid.Row="1"></Image>
+        <Image Name="Ad" Source="Skins/Adventure.png"  Height="140" Margin="0,28,0,46" Grid.Row="1"></Image>
         <Button Name="Adventure" Content="Adventure"  Margin="68,0,0,208" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" Grid.RowSpan="2" Foreground="White" Click="character_Click" />
 
-        <Image Source="Skins/Female.png" Grid.ColumnSpan="2" Margin="426,28,0,46" Grid.Row="1" Height="160"/>
+        <Image Name="El" Source="Skins/Female.png" Grid.ColumnSpan="2" Margin="426,28,0,46" Grid.Row="1" Height="140"/>
         <Button Name="Elf" Content="Elf"  Margin="79,0,0,208" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Foreground="White" Click="character_Click"/>
 
-        <Image Source="Skins/Pirate.png"  Height="160" Margin="5,28,-5,46" Grid.Row="1" Grid.Column="2"></Image>
+        <Image Name="Pi" Source="Skins/Pirate.png"  Height="140" Margin="5,28,-5,46" Grid.Row="1" Grid.Column="2"></Image>
         <Button Name="Pirate" Content="Pirate"  Margin="78,0,0,208" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Foreground="White" Click="character_Click"/>
-        
+
         <Grid.Background>
             <ImageBrush ImageSource="Images/Background_Menu2.jpg"></ImageBrush>
         </Grid.Background>
