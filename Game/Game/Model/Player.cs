@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Xml;
 
 namespace Game.Model
 {
@@ -18,13 +19,15 @@ namespace Game.Model
         string Right = "/Right/Right.png";
         string Up  = "/Up/Up.png";
         string Down  = "/Down/Down.png";
+        private Level1 level;
+        private bool playerIsDead = false;
 
         int player = 1;
 
-        public Player(Point position) : base(position)
+        public Player(Point position,Level1 level) : base(position)
         {
 
-            
+            this.level = level;
             Size = new Point(30, 46);
             if(CC == "Adventure")
             {
@@ -47,7 +50,7 @@ namespace Game.Model
                 player = 1;
             }
 
-            movementSpeed = 1;
+            movementSpeed = 5;
 
             //if(Diff == 1)
             //{
@@ -63,6 +66,8 @@ namespace Game.Model
 
         public void Move(List<Obstacle> obstacles)
         {
+            if (playerIsDead)
+                return;
             Walker.HorizontalDirection hor = Walker.HorizontalDirection.none;
             Walker.VerticalDirection ver = Walker.VerticalDirection.none;
             if (Keyboard.IsKeyDown(Key.Down))
@@ -135,6 +140,11 @@ namespace Game.Model
                 }
             }
             Move(hor, ver, obstacles);
+            if (Position.X + Size.X > 1270)
+            {
+                level.gameWon.Visibility = level.plaatje.Visibility = level.titleWin.Visibility = level.txbPlayerName.Visibility = level.btnSubmitScore.Visibility = Visibility.Visible;
+                playerIsDead = true;
+            }
         }
     }
 }

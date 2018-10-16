@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Xml;
 using Point = System.Windows.Point;
 
 namespace Game.Model
@@ -40,9 +42,9 @@ namespace Game.Model
             double y = Position.Y;
             double x = Position.X;
             
-            bool moveRight = horizontal == HorizontalDirection.right && x + Size.X != World.windowWidth;
+            bool moveRight = horizontal == HorizontalDirection.right && x + Size.X + movementSpeed < World.windowWidth;
             bool moveLeft = horizontal == HorizontalDirection.left && x != 0;
-            bool moveDown = vertical == VerticalDirection.down && y + Size.Y != World.windowHeight;
+            bool moveDown = vertical == VerticalDirection.down && y + Size.Y + movementSpeed < World.windowHeight;
             bool moveUp = vertical == VerticalDirection.up && y != 0;
             if (!canMoveThroughWalls)
             {
@@ -52,7 +54,7 @@ namespace Game.Model
                     if (!(moveUp || moveDown || moveLeft || moveRight))
                         break;
 
-                    if (moveRight && (Position.X + Size.X == (int)obstacle.Position.X && 
+                    if (moveRight && ((Position.X + Size.X + movementSpeed > obstacle.Position.X) && (Position.X + Size.X + movementSpeed < obstacle.Position.X + obstacle.Size.X) &&
                         (Position.Y < obstacle.Position.Y + obstacle.Size.Y) && (obstacle.Position.Y < Position.Y + Size.Y)))
                     {
                         moveRight = false;
@@ -62,7 +64,7 @@ namespace Game.Model
                     {
                         moveLeft = false;
                     }
-                    if (moveDown && (Position.Y + Size.Y == (int)(obstacle.Position.Y) && 
+                    if (moveDown && ((Position.Y + Size.Y + movementSpeed > obstacle.Position.Y) && (Position.Y + Size.Y + movementSpeed < obstacle.Position.Y + obstacle.Size.Y) &&
                         (Position.X < obstacle.Position.X + obstacle.Size.X) && (obstacle.Position.X < Position.X + Size.X)))
                     {
                         moveDown = false;
@@ -92,6 +94,7 @@ namespace Game.Model
                 x += movementSpeed;
             }
             Position = new Point(x, y);
+
         }
     }
 }

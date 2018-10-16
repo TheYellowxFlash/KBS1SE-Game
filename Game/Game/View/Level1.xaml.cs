@@ -93,7 +93,7 @@ namespace Game
             this.Close();
         }
 
-        private void TempWinButton_Click(object sender, RoutedEventArgs e)
+        private void btnSubmitScore_Click(object sender, RoutedEventArgs e)
         {
             string fileLocation = "../../Scores.xml";
             XmlDocument highScoreXML = new XmlDocument();
@@ -101,12 +101,39 @@ namespace Game
 
             XmlNode root = highScoreXML.FirstChild.NextSibling;
 
-            XmlElement element = highScoreXML.CreateElement("entry");
+            int playerScore = 10; //hier later de echte score van maken
 
-            element.InnerXml = "<name>testyboy</name><score>3434</score>";
+            bool scoreChanged = false;
+            var list = new LinkedList<Score>();
+            foreach (XmlNode scores in root.ChildNodes)
+            {
+                Score currentScore = new Score(scores.ChildNodes[0].InnerText, int.Parse(scores.ChildNodes[1].InnerText));
+                LinkedListNode<Score> currentScoreNode =  list.AddLast(currentScore);
+                if(playerScore > currentScore.score && !scoreChanged)
+                {
+                    list.AddBefore(currentScoreNode, new Score(txbPlayerName.Text, playerScore));
+                    scoreChanged = true;
+                }
+            }
+            if (scoreChanged)
+            {
+                list.RemoveLast();
+                root.InnerXml = "";
+                foreach (Score score in list)
+                {
+                    XmlElement element = highScoreXML.CreateElement("entry");
+                    element.InnerXml = "<name>" + score.name + "</name><score>"+ score.score.ToString() +"</score>";
 
-            root.AppendChild(element);
-            highScoreXML.Save(fileLocation);
+                    root.AppendChild(element);
+                }
+                highScoreXML.Save(fileLocation);
+            }
+            gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Hidden;
+
+            MainWindow mainMenu = new MainWindow();
+            mainMenu.Show();
+            this.Close();
+
         }
 
         private void UpdateWorld()
@@ -324,7 +351,7 @@ namespace Game
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            world = new World();
+            world = new World(this);
 
             foreach (var child in level1.Children)
             {
@@ -387,6 +414,17 @@ namespace Game
             }
 
             world.StartGame();
+        }
+        private class Score
+        {
+            public string name;
+            public int score;
+
+            public Score(string n,int s)
+            {
+                name = n;
+                score = s;
+            }
         }
     }
 }

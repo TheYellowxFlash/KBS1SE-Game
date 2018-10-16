@@ -25,10 +25,11 @@ namespace Game.Model
         public double XPos { get; set; }
         public double YPos { get; set; }
         public List<Obstacle> obstacles = new List<Obstacle>();
+        
 
-        public World()
+        public World(Level1 level)
         {
-            Player = new Player(new Point(203,200));
+            Player = new Player(new Point(203,200),level);
             Ghost1 = new Ghost(new Point(500,200));
             Ghost2 = new Ghost(new Point(500, 600));
             Skeleton1 = new Skeleton(new Point(800, 600));
