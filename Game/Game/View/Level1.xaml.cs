@@ -100,7 +100,7 @@ namespace Game
 
             XmlNode root = highScoreXML.FirstChild.NextSibling;
 
-            int playerScore = 10; //hier later de echte score van maken
+            int playerScore = 250; //hier later de echte score van maken
 
             bool scoreChanged = false;
             var list = new LinkedList<Score>();
@@ -389,6 +389,13 @@ namespace Game
                 level1.Children.Add(zombieBox3);
 
             }
+            XmlDocument highScoreXML = new XmlDocument();
+            highScoreXML.Load("../../Scores.xml");
+
+            //get the highest score
+            string score = highScoreXML.FirstChild.NextSibling.FirstChild.ChildNodes[1].InnerText;
+
+            lblHighscore.Text = "Highscore: " + score;
 
             world.StartGame();
         }

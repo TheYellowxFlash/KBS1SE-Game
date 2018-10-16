@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <scores>
   <entry>
+    <name>qwerty</name>
+    <score>250</score>
+  </entry>
+  <entry>
+    <name>dfdf</name>
+    <score>250</score>
+  </entry>
+  <entry>
+    <name>zfd</name>
+    <score>250</score>
+  </entry>
+  <entry>
     <name>ik</name>
     <score>200</score>
   </entry>
@@ -27,17 +39,5 @@
   <entry>
     <name>Derde 5</name>
     <score>5</score>
-  </entry>
-  <entry>
-    <name>blank</name>
-    <score>0</score>
-  </entry>
-  <entry>
-    <name>blank</name>
-    <score>0</score>
-  </entry>
-  <entry>
-    <name>blank</name>
-    <score>0</score>
   </entry>
 </scores>

@@ -29,26 +29,28 @@ namespace Game.View
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
+            
             XmlDocument highScoreXML = new XmlDocument();
             highScoreXML.Load("../../Scores.xml");
 
             XmlNode root = highScoreXML.FirstChild.NextSibling;
 
-            var list = new ObservableCollection<DataObject>();
+            int position = 1;
             foreach (XmlNode scores in root.ChildNodes)
             {
                 string name = scores.ChildNodes[0].InnerText;
                 string score = scores.ChildNodes[1].InnerText;
-                list.Add(new DataObject() { Name = name, Score = score });
+                txbHighscoresNames.Text += position++.ToString() + ": " + name + Environment.NewLine;
+                txbHighscoresScores.Text += ": " + score + Environment.NewLine;
             }
             
-            this.table.ItemsSource = list.OrderByDescending(d => int.Parse(d.Score)); ;
         }
 
-        public class DataObject
+        private void exit_Click(object sender, RoutedEventArgs e)
         {
-            public string Name { get; set; }
-            public string Score { get; set; }
+            MainWindow mainMenu = new MainWindow();
+            mainMenu.Show();
+            this.Close();
         }
     }
 }
