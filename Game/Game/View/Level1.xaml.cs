@@ -188,7 +188,7 @@ namespace Game
 
             
 
-            /*Ghost ghost = world.Ghost;
+            Ghost ghost = world.Ghost;
             enemyBoxes.Add(ghostBox);
             Canvas.SetLeft(ghostBox, ghost.Position.X);
             Canvas.SetTop(ghostBox, ghost.Position.Y);
@@ -216,7 +216,7 @@ namespace Game
             zombieBox.Height = zombie.Size.Y;
             ImageBrush zombieBrush = new ImageBrush();
             zombieBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + zombie.Image, UriKind.RelativeOrAbsolute));
-            zombieBox.Fill = zombieBrush;*/
+            zombieBox.Fill = zombieBrush;
             
         }
 

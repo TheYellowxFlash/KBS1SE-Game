@@ -20,6 +20,7 @@ namespace Game.Model
         public Skeleton Skeleton { get; set; }
         public Zombie Zombie { get; set; }
         private DispatcherTimer timer = new DispatcherTimer();
+        private Random random = new Random();
 
         public List<Obstacle> obstacles = new List<Obstacle>();
         public List<Candy> AllCandies = new List<Candy>();
@@ -68,20 +69,29 @@ namespace Game.Model
 
         public Candy GetRandomCandy()
         {
-            Random rnd = new Random();
-            int i = rnd.Next((AllCandies.Count));
+            int i = random.Next((AllCandies.Count));
             return AllCandies[i];
         }
 
         public Candy GetCandyNotInGame()
         {
             Candy candy = GetRandomCandy();
-            while (CandiesInGame.Contains(candy))
+
+            while (ListContainsCandyID(candy))
             {
                 candy = GetRandomCandy();
             }
-
+            
             return candy;
+        }
+        public bool ListContainsCandyID(Candy c)
+        {
+            foreach(Candy candy in CandiesInGame)
+            {
+                if (candy.CandyId == c.CandyId)
+                    return true;
+            }
+            return false;
         }
 
         public void CandyPickedUp(Point candyP)
