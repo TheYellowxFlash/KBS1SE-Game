@@ -18,7 +18,7 @@ namespace Game.Model
             Size = new Point(54, 54);
             Image = "Zombie/Still/Front.png";
             Name = "Zombie";
-            movementSpeed = .25;
+            movementSpeed = .3;
 
             if (Diff == 1)
             {

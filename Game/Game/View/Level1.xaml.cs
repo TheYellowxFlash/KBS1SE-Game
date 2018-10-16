@@ -24,7 +24,7 @@ namespace Game
     {
         private World world;
         private int diff = ChooseDifficulty.Difficulty;
-        private Rectangle playerBox, ghostBox, skeletonBox, zombieBox, worldLight;
+        private Rectangle playerBox, ghostBox1, ghostBox2, skeletonBox1, skeletonBox2, zombieBox1, zombieBox2, zombieBox3, worldLight;
         private Ellipse playerLight;
         private List<Rectangle> enemyBoxes = new List<Rectangle>();
         public bool pausebool = false;
@@ -167,36 +167,101 @@ namespace Game
             worldLight.Opacity = lightDiff;
             Canvas.SetZIndex(worldLight, 5);
 
-            Ghost ghost = world.Ghost;
-            enemyBoxes.Add(ghostBox);
-            Canvas.SetLeft(ghostBox, ghost.Position.X);
-            Canvas.SetTop(ghostBox, ghost.Position.Y);
-            ghostBox.Width = ghost.Size.X;
-            ghostBox.Height = ghost.Size.Y;
-            ImageBrush ghostBrush = new ImageBrush();
-            ghostBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + ghost.Image, UriKind.RelativeOrAbsolute));
-            ghostBox.Fill = ghostBrush;
+            #region Ghost
+            if (ghostBox1 != null) {
+                Ghost ghost1 = world.Ghost1;
+                enemyBoxes.Add(ghostBox1);
+                Canvas.SetLeft(ghostBox1, ghost1.Position.X);
+                Canvas.SetTop(ghostBox1, ghost1.Position.Y);
+                ghostBox1.Width = ghost1.Size.X;
+                ghostBox1.Height = ghost1.Size.Y;
+                ImageBrush ghostBrush = new ImageBrush();
+                ghostBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + ghost1.Image, UriKind.RelativeOrAbsolute));
+                ghostBox1.Fill = ghostBrush;
+            }
 
-            Skeleton skeleton = world.Skeleton;
-            enemyBoxes.Add(skeletonBox);
-            Canvas.SetLeft(skeletonBox, skeleton.Position.X);
-            Canvas.SetTop(skeletonBox, skeleton.Position.Y);
-            skeletonBox.Width = skeleton.Size.X;
-            skeletonBox.Height = skeleton.Size.Y;
-            ImageBrush skeletonBrush = new ImageBrush();
-            skeletonBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + skeleton.Image, UriKind.RelativeOrAbsolute));
-            skeletonBox.Fill = skeletonBrush;
+            if (ghostBox2 != null)
+            {
+                Ghost ghost2 = world.Ghost2;
+                enemyBoxes.Add(ghostBox2);
+                Canvas.SetLeft(ghostBox2, ghost2.Position.X);
+                Canvas.SetTop(ghostBox2, ghost2.Position.Y);
+                ghostBox2.Width = ghost2.Size.X;
+                ghostBox2.Height = ghost2.Size.Y;
+                ImageBrush ghostBrush = new ImageBrush();
+                ghostBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + ghost2.Image, UriKind.RelativeOrAbsolute));
+                ghostBox2.Fill = ghostBrush;
+            }
+            #endregion
 
-            Zombie zombie = world.Zombie;
-            enemyBoxes.Add(zombieBox);
-            
-            Canvas.SetLeft(zombieBox, zombie.Position.X);
-            Canvas.SetTop(zombieBox, zombie.Position.Y);
-            zombieBox.Width = zombie.Size.X;
-            zombieBox.Height = zombie.Size.Y;
-            ImageBrush zombieBrush = new ImageBrush();
-            zombieBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + zombie.Image, UriKind.RelativeOrAbsolute));
-            zombieBox.Fill = zombieBrush;
+            #region Skeleton
+            if (skeletonBox1 != null)
+            {
+                Skeleton skeleton1 = world.Skeleton1;
+                enemyBoxes.Add(skeletonBox1);
+                Canvas.SetLeft(skeletonBox1, skeleton1.Position.X);
+                Canvas.SetTop(skeletonBox1, skeleton1.Position.Y);
+                skeletonBox1.Width = skeleton1.Size.X;
+                skeletonBox1.Height = skeleton1.Size.Y;
+                ImageBrush skeletonBrush = new ImageBrush();
+                skeletonBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + skeleton1.Image, UriKind.RelativeOrAbsolute));
+                skeletonBox1.Fill = skeletonBrush;
+            }
+
+            if (skeletonBox2 != null)
+            {
+                Skeleton skeleton2 = world.Skeleton2;
+                enemyBoxes.Add(skeletonBox2);
+                Canvas.SetLeft(skeletonBox2, skeleton2.Position.X);
+                Canvas.SetTop(skeletonBox2, skeleton2.Position.Y);
+                skeletonBox2.Width = skeleton2.Size.X;
+                skeletonBox2.Height = skeleton2.Size.Y;
+                ImageBrush skeletonBrush = new ImageBrush();
+                skeletonBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + skeleton2.Image, UriKind.RelativeOrAbsolute));
+                skeletonBox2.Fill = skeletonBrush;
+            }
+            #endregion
+
+            #region Zombie
+            if (zombieBox1 != null)
+            {
+                Zombie zombie1 = world.Zombie1;
+                enemyBoxes.Add(zombieBox1);
+                Canvas.SetLeft(zombieBox1, zombie1.Position.X);
+                Canvas.SetTop(zombieBox1, zombie1.Position.Y);
+                zombieBox1.Width = zombie1.Size.X;
+                zombieBox1.Height = zombie1.Size.Y;
+                ImageBrush zombieBrush = new ImageBrush();
+                zombieBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + zombie1.Image, UriKind.RelativeOrAbsolute));
+                zombieBox1.Fill = zombieBrush;
+            }
+
+            if (zombieBox2 != null)
+            {
+                Zombie zombie2 = world.Zombie2;
+                enemyBoxes.Add(zombieBox2);
+                Canvas.SetLeft(zombieBox2, zombie2.Position.X);
+                Canvas.SetTop(zombieBox2, zombie2.Position.Y);
+                zombieBox2.Width = zombie2.Size.X;
+                zombieBox2.Height = zombie2.Size.Y;
+                ImageBrush zombieBrush = new ImageBrush();
+                zombieBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + zombie2.Image, UriKind.RelativeOrAbsolute));
+                zombieBox2.Fill = zombieBrush;
+            }
+
+            if (zombieBox3 != null)
+            {
+                Zombie zombie3 = world.Zombie3;
+                enemyBoxes.Add(zombieBox3);
+                Canvas.SetLeft(zombieBox3, zombie3.Position.X);
+                Canvas.SetTop(zombieBox3, zombie3.Position.Y);
+                zombieBox3.Width = zombie3.Size.X;
+                zombieBox3.Height = zombie3.Size.Y;
+                ImageBrush zombieBrush = new ImageBrush();
+                zombieBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + zombie3.Image, UriKind.RelativeOrAbsolute));
+                zombieBox3.Fill = zombieBrush;
+            }
+            #endregion
         }
 
         public void RecalculateCollision(object sender, EventArgs e)
@@ -247,15 +312,6 @@ namespace Game
                 }
             }
 
-            ghostBox = new Rectangle();
-            level1.Children.Add(ghostBox);
-
-            skeletonBox = new Rectangle();
-            level1.Children.Add(skeletonBox);
-
-            zombieBox = new Rectangle();
-            level1.Children.Add(zombieBox);
-
             playerBox = new Rectangle();
             level1.Children.Add(playerBox);
 
@@ -264,6 +320,47 @@ namespace Game
 
             playerLight = new Ellipse();
             level1.Children.Add(playerLight);
+
+            if (diff == 1)
+            {
+                zombieBox1 = new Rectangle();
+                level1.Children.Add(zombieBox1);
+                zombieBox2 = new Rectangle();
+                level1.Children.Add(zombieBox2);
+                zombieBox3 = new Rectangle();
+                level1.Children.Add(zombieBox3);
+            }
+            else if (diff == 2)
+            {
+                ghostBox1 = new Rectangle();
+                level1.Children.Add(ghostBox1);
+
+                skeletonBox1 = new Rectangle();
+                level1.Children.Add(skeletonBox1);
+
+                zombieBox1 = new Rectangle();
+                level1.Children.Add(zombieBox1);
+            }
+            else if (diff == 3)
+            {
+                ghostBox1 = new Rectangle();
+                level1.Children.Add(ghostBox1);
+                ghostBox2 = new Rectangle();
+                level1.Children.Add(ghostBox2);
+
+                skeletonBox1 = new Rectangle();
+                level1.Children.Add(skeletonBox1);
+                skeletonBox2 = new Rectangle();
+                level1.Children.Add(skeletonBox2);
+
+                zombieBox1 = new Rectangle();
+                level1.Children.Add(zombieBox1);
+                zombieBox2 = new Rectangle();
+                level1.Children.Add(zombieBox2);
+                zombieBox3 = new Rectangle();
+                level1.Children.Add(zombieBox3);
+
+            }
 
             world.StartGame();
         }
