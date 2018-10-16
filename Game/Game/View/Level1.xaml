@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Level1" Height="704" Width="1280"  WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid>
-
-        <Label x:Name="Timer" Content="300" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" HorizontalAlignment="Center" Visibility="Visible" FontSize="100"></Label>
+        <Label Content="Time:" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" HorizontalAlignment="Right" Visibility="Visible" FontSize="48" Margin="0,0,67,0" Foreground="DarkRed"></Label>
+        <Label x:Name="Timer" Content="300" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" HorizontalAlignment="Right" Visibility="Visible" FontSize="48" Foreground="DarkRed"></Label>
 
 
         <Canvas x:Name="level1">
