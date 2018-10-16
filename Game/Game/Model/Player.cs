@@ -52,7 +52,7 @@ namespace Game.Model
 
             if(Diff == 1)
             {
-                movementSpeed = 1.25;
+                movementSpeed = 2;
             } else if(Diff == 2)
             {
                 movementSpeed = 1;
@@ -138,9 +138,11 @@ namespace Game.Model
                 }
             }
             Move(hor, ver, obstacles);
+            //temp win condition
             if (Position.X + Size.X > 1270)
             {
                 level.gameWon.Visibility = level.plaatje.Visibility = level.titleWin.Visibility = level.txbPlayerName.Visibility = level.btnSubmitScore.Visibility = Visibility.Visible;
+                level.lblHighscore.Visibility = level.lblScore.Visibility =  Visibility.Hidden;
                 playerIsDead = true;
             }
         }
