@@ -53,6 +53,7 @@ namespace Game
             pausebool = false;
             world.StartGame();
             pausemenu.Opacity = 0;
+            scoretimer.Start();
         }
 
         public Level1()
@@ -107,6 +108,7 @@ namespace Game
                     plaatje.Visibility = Visibility.Visible;
                     pausebool = true;
                     world.TimerPause();
+                    scoretimer.Stop();
                 }
             }
         }
@@ -341,6 +343,7 @@ namespace Game
                         restart.Visibility = Visibility.Visible;
                         world.TimerPause();
                         gameOverBool = true;
+                        scoretimer.Stop();
                     }
                 }
             }
