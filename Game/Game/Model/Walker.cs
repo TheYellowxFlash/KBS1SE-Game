@@ -59,7 +59,7 @@ namespace Game.Model
                     {
                         moveRight = false;
                     }
-                    else if (moveLeft && (Position.X == (int)(obstacle.Position.X + obstacle.Size.X) && 
+                    else if (moveLeft && ((Position.X - movementSpeed < obstacle.Position.X + obstacle.Size.X) && (Position.X - movementSpeed > obstacle.Position.X) &&
                         (Position.Y < obstacle.Position.Y + obstacle.Size.Y) && (obstacle.Position.Y < Position.Y + Size.Y)))
                     {
                         moveLeft = false;
@@ -69,7 +69,8 @@ namespace Game.Model
                     {
                         moveDown = false;
                     }
-                    else if (moveUp && (Position.Y == (int)(obstacle.Position.Y + obstacle.Size.Y) && (Position.X < obstacle.Position.X + obstacle.Size.X) && (obstacle.Position.X < Position.X + Size.X)))
+                    else if (moveUp && ((Position.Y - movementSpeed < obstacle.Position.Y + obstacle.Size.Y) && (Position.Y - movementSpeed > obstacle.Position.Y) &&
+                        (Position.X < obstacle.Position.X + obstacle.Size.X) && (obstacle.Position.X < Position.X + Size.X)))
                     {
                         moveUp = false;
                     }

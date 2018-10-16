@@ -13,6 +13,10 @@
     <score>10</score>
   </entry>
   <entry>
+    <name>ggez</name>
+    <score>10</score>
+  </entry>
+  <entry>
     <name>Baas</name>
     <score>5</score>
   </entry>
@@ -23,10 +27,6 @@
   <entry>
     <name>Derde 5</name>
     <score>5</score>
-  </entry>
-  <entry>
-    <name>blank</name>
-    <score>0</score>
   </entry>
   <entry>
     <name>blank</name>
