@@ -120,12 +120,12 @@ namespace Game
             playerBox.Fill = playerBrush;
             playerBox.Opacity = 1;
 
-            double x = player.Size.X * 2;
-            double y = player.Size.Y * 2;
+            double x = player.Size.X * 4.5;
+            double y = player.Size.Y * 2.8;
 
             Canvas.SetZIndex(playerLight, 6);
-            Canvas.SetLeft(playerLight, player.Position.X - x - 55);
-            Canvas.SetTop(playerLight, player.Position.Y - y - 55);
+            Canvas.SetLeft(playerLight, player.Position.X - x);
+            Canvas.SetTop(playerLight, player.Position.Y - y);
             playerLight.Width = 300;
             playerLight.Height = 300;
             playerLight.Opacity = .25;
