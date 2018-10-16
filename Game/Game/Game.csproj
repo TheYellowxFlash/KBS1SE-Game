@@ -282,5 +282,11 @@
     <Resource Include="View\Images\LevelProps\fence_1.png" />
     <Resource Include="View\Images\LevelProps\water_corner.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\LevelProps\fence_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\Level1v2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
