@@ -27,7 +27,6 @@ namespace Game
         private Rectangle playerBox, ghostBox1, ghostBox2, skeletonBox1, skeletonBox2, zombieBox1, zombieBox2, zombieBox3, worldLight;
         private Ellipse playerLight;
         private List<Rectangle> enemyBoxes = new List<Rectangle>();
-        private List<Ellipse> candleLight = new List<Ellipse>();
         public bool pausebool = false;
         private bool gameOverBool = false;
         private double lightDiff;
@@ -187,21 +186,6 @@ namespace Game
                 lightDiff = .85;
             }
 
-
-            RadialGradientBrush CandleGradient = new RadialGradientBrush();
-            LightGradient.GradientOrigin = new Point(0.5, 0.5);
-            LightGradient.Center = new Point(0.5, 0.5);
-
-            GradientStop WhiteCandle = new GradientStop();
-            WhiteGS.Color = Colors.White;
-            WhiteGS.Offset = 0.0;
-            LightGradient.GradientStops.Add(WhiteCandle);
-
-            GradientStop BlackCandle = new GradientStop();
-            BlackGS.Color = Colors.Transparent;
-            BlackGS.Offset = 0.85;
-            LightGradient.GradientStops.Add(BlackCandle);
-
             Canvas.SetLeft(worldLight, 0);
             Canvas.SetTop(worldLight, 0);
             worldLight.Width = 1280;
@@ -209,13 +193,6 @@ namespace Game
             worldLight.Fill = Brushes.Black;
             worldLight.Opacity = lightDiff;
             Canvas.SetZIndex(worldLight, 5);
-
-            for(int i = 1; i < 8; i++)
-            {
-                var candles = (Image)this.FindName("candle" + i);
-                Canvas.GetLeft(candles);
-                Canvas.GetTop(candles);
-            }
 
             #region Ghost
             if (ghostBox1 != null) {

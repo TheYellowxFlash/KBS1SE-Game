@@ -50,7 +50,7 @@ namespace Game.Model
                 player = 1;
             }
 
-            movementSpeed = 5;
+            movementSpeed = 1;
 
             //if(Diff == 1)
             //{
