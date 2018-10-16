@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
+using System.Windows.Shapes;
 using System.Windows.Threading;
 
 
@@ -22,6 +24,8 @@ namespace Game.Model
         public List<Obstacle> obstacles = new List<Obstacle>();
         public List<Candy> AllCandies = new List<Candy>();
         public List<Candy> CandiesInGame = new List<Candy>();
+
+        public static int Score = 0;
 
         public World()
         {
@@ -80,15 +84,14 @@ namespace Game.Model
             return candy;
         }
 
-        public Point GenerateRandomPoint()
+        public void CandyPickedUp(Point candyP)
         {
-            Random rnd = new Random();
-
-            int randomX = rnd.Next(windowWidth);
-            int randomY = rnd.Next(windowHeight);
-
-            return new Point(randomX, randomY);
+            CandiesInGame.RemoveAll(c => c.Position.Equals(candyP));
+            Score += 100;
         }
+
+        
+
 
     }
 }

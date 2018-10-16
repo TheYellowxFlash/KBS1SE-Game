@@ -84,7 +84,6 @@ namespace Game
                 world.CandiesInGame.Add(candy);
                 cBox.Fill = candyBrush;
                 level1.Children.Add(cBox);
-
             }
         }
 
@@ -110,8 +109,10 @@ namespace Game
         {
             InitializeComponent();
 
+            timer.Tick += CheckCandyPick;
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
+            
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             timer.Start();
         }
@@ -138,7 +139,7 @@ namespace Game
             }
         }
 
-
+       
         private void UpdateWorld()
         {
             Player player = world.Player;
@@ -219,20 +220,39 @@ namespace Game
             
         }
 
+        // Calculate if player picked up a candy
+        public void CheckCandyPick(object sender, EventArgs e)
+        {
+            Rect playerBounds = BoundsRelativeTo(playerBox, level1);
+
+            int pickedCandy = 0;
+            foreach (var candyBox in candyBoxes)
+            { 
+                Rect candy = BoundsRelativeTo(candyBox, level1);
+                if (playerBounds.IntersectsWith(candy))
+                {
+                    MessageBox.Show("Points!!");
+
+                    Point candyPosition = new Point(Canvas.GetLeft(candyBox), Canvas.GetTop(candyBox));
+                    world.CandyPickedUp(candyPosition);
+
+                    GenerateNewCandy(pickedCandy);
+                }
+
+                pickedCandy++;
+            }
+        }
+
+        // Calculate if player collided with enemy
         public void RecalculateCollision(object sender, EventArgs e)
         {
             Rect playerBounds = BoundsRelativeTo(playerBox, level1);
 
-            List<Rect> enemyBounds = new List<Rect>();
             foreach (Rectangle enemyBox in enemyBoxes)
             {
-                Rect item = BoundsRelativeTo(enemyBox, level1);
-                enemyBounds.Add(item);
-            }
-
-            foreach (var enemy in enemyBounds)
-            {
-                if (playerBounds.IntersectsWith(enemy))
+                Rect enemyBounds = BoundsRelativeTo(enemyBox, level1);
+                
+                if (playerBounds.IntersectsWith(enemyBounds))
                 {
                     if (!pausebool)
                     {
@@ -244,10 +264,27 @@ namespace Game
                         gameOverBool = true;
                     }
                 }
-            }   
+            }
         }
 
-        public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
+        public void GenerateNewCandy(int candyBox)
+        {
+            ImageBrush candyBrush = new ImageBrush();
+            candyBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
+
+            Candy candy = world.GetCandyNotInGame();
+
+            Canvas.SetLeft(candyBoxes[candyBox], candy.Position.X);
+            Canvas.SetTop(candyBoxes[candyBox], candy.Position.Y);
+            candyBoxes[candyBox].Width = candy.Size.X;
+            candyBoxes[candyBox].Height = candy.Size.Y;
+
+            world.CandiesInGame.Add(candy);
+            candyBoxes[candyBox].Fill = candyBrush;
+            //level1.Children.Add(candyBoxes[candyBox]);
+        }
+
+        public Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
         {
             return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
         }
