@@ -49,6 +49,7 @@ namespace Game.Model
 
         public void Move(Player player, List<Obstacle> obstacles)
         {
+            return;
             if (InRange(player))
             {
                 double y = Position.Y;
