@@ -140,10 +140,6 @@
     <Resource Include="Background_Menu2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomizeCharacter\CustomizeCharacter.csproj">
-      <Project>{75e70490-ee48-426c-a6b8-035951bc9b55}</Project>
-      <Name>CustomizeCharacter</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Game.Theme\Game.Theme.csproj">
       <Project>{4fc75aa6-0038-4de7-bd17-5d190466132b}</Project>
       <Name>Game.Theme</Name>

@@ -30,6 +30,9 @@ namespace Game
         public bool pausebool = false;
         private bool gameOverBool = false;
         private double lightDiff;
+        private int Time = 300;
+
+        DispatcherTimer scoretimer = new DispatcherTimer();
 
         DispatcherTimer timer = new DispatcherTimer();
 
@@ -60,6 +63,29 @@ namespace Game
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 5);
             timer.Start();
+
+            scoretimer.Interval = TimeSpan.FromSeconds(1);
+            scoretimer.Tick += Scoretimer_Tick;
+            scoretimer.Start();
+        }
+
+        private void Scoretimer_Tick(object sender, EventArgs e)
+        {
+            Time--;
+
+            Timer.Content = Time.ToString();
+
+            if(Time == 0)
+            {
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                pausemenu.Opacity = 0.8;
+                title.Visibility = Visibility.Visible;
+                plaatje.Visibility = Visibility.Visible;
+                pausebool = true;
+                world.TimerPause();
+                scoretimer.Stop();
+            }
         }
 
         private void TimerOnTick(object sender, EventArgs e)

@@ -8,6 +8,8 @@
         Title="Level1" Height="704" Width="1280"  WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid>
 
+        <Label x:Name="Timer" Content="300" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" HorizontalAlignment="Center" Visibility="Visible" FontSize="100"></Label>
+
 
         <Canvas x:Name="level1">
             <Image Source="Images/Player_House_Part1.png" Canvas.Left="144" Canvas.Top="75" Height="117" Width="161" />
