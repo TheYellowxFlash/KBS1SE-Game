@@ -66,6 +66,9 @@
             <Image Source="Images/LevelProps/Pumpkin_1.png" Canvas.Left="502" Canvas.Top="242" IsEnabled="False" Height="14" Width="14"/>
             <Image Source="Images/LevelProps/HalloweenCat.png" Canvas.Left="574" Canvas.Top="240" IsEnabled="False" Height="16" Width="16" Panel.ZIndex="2"/>
 
+            <!--water
+            <Image Source="Images/LevelProps/water_corner.png" Canvas.Top="516" IsEnabled="False" Height="188" Width="387" Canvas.Left="-31"/>-->
+
         </Canvas>
 
 

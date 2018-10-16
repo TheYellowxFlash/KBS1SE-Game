@@ -277,5 +277,10 @@
     <Resource Include="View\Images\LevelProps\Pumpkin_2.png" />
     <Resource Include="View\Images\LevelProps\Pumpkin_3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\LevelProps\candle.png" />
+    <Resource Include="View\Images\LevelProps\fence_1.png" />
+    <Resource Include="View\Images\LevelProps\water_corner.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
