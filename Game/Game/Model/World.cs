@@ -25,7 +25,7 @@ namespace Game.Model
         public List<Candy> AllCandies = new List<Candy>();
         public List<Candy> CandiesInGame = new List<Candy>();
 
-        public static int Score = 0;
+        public int Score = 0;
 
         public World()
         {
