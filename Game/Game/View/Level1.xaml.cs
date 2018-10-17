@@ -379,9 +379,10 @@ namespace Game
                 {
                     if (!pausebool)
                     {
-                        var diedAudio = new Uri(@"View/Audio/YouDied.mp3", UriKind.RelativeOrAbsolute);
-                        SoundPlayer player = new SoundPlayer(@"View/Audio/YouDied.mp3");
-                        player.Load();
+
+                        Uri uri = new Uri(@"../../Audio/YouDied.wav", UriKind.RelativeOrAbsolute);
+                        var player = new MediaPlayer();
+                        player.Open(uri);
                         player.Play();
 
                         exit.Visibility = Visibility.Visible;

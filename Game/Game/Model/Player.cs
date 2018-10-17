@@ -52,7 +52,7 @@ namespace Game.Model
 
             if(Diff == 1)
             {
-                movementSpeed = 2;
+                movementSpeed = 1.25;
             } else if(Diff == 2)
             {
                 movementSpeed = 1;
