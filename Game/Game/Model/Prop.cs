@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace Game.Model
 {
-    class Prop
+    public class Prop
     {
         public Point Position { get; set; }
         public Point Size { get; set; }
@@ -46,7 +46,7 @@ namespace Game.Model
 
         public static bool checkInRange(double getal1, double getal2, double range)
         {
-            return (getal1 + range > getal2 && getal2 > getal1 - range);
+            return (getal1 + range >= getal2 && getal2 >= getal1 - range);
 
         }
 

@@ -9,6 +9,10 @@
     <score>2000</score>
   </entry>
   <entry>
+    <name>piet</name>
+    <score>400</score>
+  </entry>
+  <entry>
     <name>Jeffrey</name>
     <score>300</score>
   </entry>
@@ -35,9 +39,5 @@
   <entry>
     <name>Jeffrey</name>
     <score>150</score>
-  </entry>
-  <entry>
-    <name>Jeffrey</name>
-    <score>60</score>
   </entry>
 </scores>
