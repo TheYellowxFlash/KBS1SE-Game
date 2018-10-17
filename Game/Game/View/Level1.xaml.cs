@@ -35,6 +35,103 @@ namespace Game
 
         DispatcherTimer timer = new DispatcherTimer();
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            world = new World(this);
+
+            foreach (var child in level1.Children)
+            {
+                if (child is Image)
+                {
+                    Image obstacle = (Image)child;
+                    if (obstacle.IsEnabled)
+                        world.obstacles.Add(new Obstacle(obstacle));
+                }
+            }
+
+            playerBox = new Rectangle();
+            level1.Children.Add(playerBox);
+
+            worldLight = new Rectangle();
+            level1.Children.Add(worldLight);
+
+            playerLight = new Ellipse();
+            level1.Children.Add(playerLight);
+
+            if (diff == 1)
+            {
+                zombieBox1 = new Rectangle();
+                level1.Children.Add(zombieBox1);
+                zombieBox2 = new Rectangle();
+                level1.Children.Add(zombieBox2);
+                zombieBox3 = new Rectangle();
+                level1.Children.Add(zombieBox3);
+            }
+            else if (diff == 2)
+            {
+                ghostBox1 = new Rectangle();
+                level1.Children.Add(ghostBox1);
+
+                skeletonBox1 = new Rectangle();
+                level1.Children.Add(skeletonBox1);
+
+                zombieBox1 = new Rectangle();
+                level1.Children.Add(zombieBox1);
+            }
+            else if (diff == 3)
+            {
+                ghostBox1 = new Rectangle();
+                level1.Children.Add(ghostBox1);
+                ghostBox2 = new Rectangle();
+                level1.Children.Add(ghostBox2);
+
+                skeletonBox1 = new Rectangle();
+                level1.Children.Add(skeletonBox1);
+                skeletonBox2 = new Rectangle();
+                level1.Children.Add(skeletonBox2);
+
+                zombieBox1 = new Rectangle();
+                level1.Children.Add(zombieBox1);
+                zombieBox2 = new Rectangle();
+                level1.Children.Add(zombieBox2);
+                zombieBox3 = new Rectangle();
+                level1.Children.Add(zombieBox3);
+
+            }
+
+            XmlDocument highScoreXML = new XmlDocument();
+            highScoreXML.Load("../../Scores.xml");
+
+            //get the highest score
+            string score = highScoreXML.FirstChild.NextSibling.FirstChild.ChildNodes[1].InnerText;
+            lblHighscore.Text = "Highscore: " + score;
+
+            world.StartGame();
+
+            #region CandyAanmaken
+            candyBoxes[0] = new Rectangle();
+            candyBoxes[1] = new Rectangle();
+            candyBoxes[2] = new Rectangle();
+
+            ImageBrush candyBrush = new ImageBrush();
+            candyBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
+            foreach (var cBox in candyBoxes)
+            {
+                Candy candy = world.GetCandyNotInGame();
+
+                Canvas.SetLeft(cBox, candy.Position.X);
+                Canvas.SetTop(cBox, candy.Position.Y);
+                cBox.Width = candy.Size.X;
+                cBox.Height = candy.Size.Y;
+
+                world.CandiesInGame.Add(candy);
+                cBox.Fill = candyBrush;
+                level1.Children.Add(cBox);
+            }
+
+            #endregion
+        }
+
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainMenu = new MainWindow();
@@ -112,6 +209,7 @@ namespace Game
             }
         }
 
+        // Game restart if player restarts
         private void restart_Click(object sender, RoutedEventArgs e)
         {
             Level1 levelreload = new Level1();
@@ -341,11 +439,11 @@ namespace Game
                     lblScore.Text = "Score: " + world.Score.ToString();
                     break;
                 }
-
                 pickedCandy++;
             }
         }
 
+        // Generate new candy location
         public void GenerateNewCandy(int candyBox)
         {
             ImageBrush candyBrush = new ImageBrush();
@@ -362,6 +460,7 @@ namespace Game
             candyBoxes[candyBox].Fill = candyBrush;
         }
 
+        // Check if player got hit by an enemy
         public void RecalculateCollision(object sender, EventArgs e)
         {
             Rect playerBounds = BoundsRelativeTo(playerBox, level1);
@@ -399,107 +498,12 @@ namespace Game
             enemyBoxes.Clear();
         }
 
+        // Ophalen Rect gegevens van bepaald element
         public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
         {
             return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            world = new World(this);
-
-            foreach (var child in level1.Children)
-            {
-                if (child is Image)
-                {
-                    Image obstacle = (Image)child;
-                    if (obstacle.IsEnabled)
-                        world.obstacles.Add(new Obstacle(obstacle));
-                }
-            }
-
-            playerBox = new Rectangle();
-            level1.Children.Add(playerBox);
-
-            worldLight = new Rectangle();
-            level1.Children.Add(worldLight);
-
-            playerLight = new Ellipse();
-            level1.Children.Add(playerLight);
-
-            if (diff == 1)
-            {
-                zombieBox1 = new Rectangle();
-                level1.Children.Add(zombieBox1);
-                zombieBox2 = new Rectangle();
-                level1.Children.Add(zombieBox2);
-                zombieBox3 = new Rectangle();
-                level1.Children.Add(zombieBox3);
-            }
-            else if (diff == 2)
-            {
-                ghostBox1 = new Rectangle();
-                level1.Children.Add(ghostBox1);
-
-                skeletonBox1 = new Rectangle();
-                level1.Children.Add(skeletonBox1);
-
-                zombieBox1 = new Rectangle();
-                level1.Children.Add(zombieBox1);
-            }
-            else if (diff == 3)
-            {
-                ghostBox1 = new Rectangle();
-                level1.Children.Add(ghostBox1);
-                ghostBox2 = new Rectangle();
-                level1.Children.Add(ghostBox2);
-
-                skeletonBox1 = new Rectangle();
-                level1.Children.Add(skeletonBox1);
-                skeletonBox2 = new Rectangle();
-                level1.Children.Add(skeletonBox2);
-
-                zombieBox1 = new Rectangle();
-                level1.Children.Add(zombieBox1);
-                zombieBox2 = new Rectangle();
-                level1.Children.Add(zombieBox2);
-                zombieBox3 = new Rectangle();
-                level1.Children.Add(zombieBox3);
-
-            }
-
-            XmlDocument highScoreXML = new XmlDocument();
-            highScoreXML.Load("../../Scores.xml");
-
-            //get the highest score
-            string score = highScoreXML.FirstChild.NextSibling.FirstChild.ChildNodes[1].InnerText;
-            lblHighscore.Text = "Highscore: " + score;
-
-            world.StartGame();
-
-            #region CandyAanmaken
-            candyBoxes[0] = new Rectangle();
-            candyBoxes[1] = new Rectangle();
-            candyBoxes[2] = new Rectangle();
-
-            ImageBrush candyBrush = new ImageBrush();
-            candyBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
-            foreach (var cBox in candyBoxes)
-            {
-                Candy candy = world.GetCandyNotInGame();
-
-                Canvas.SetLeft(cBox, candy.Position.X);
-                Canvas.SetTop(cBox, candy.Position.Y);
-                cBox.Width = candy.Size.X;
-                cBox.Height = candy.Size.Y;
-
-                world.CandiesInGame.Add(candy);
-                cBox.Fill = candyBrush;
-                level1.Children.Add(cBox);
-            }
-
-            #endregion
-        }
         private class Score
         {
             public string name;

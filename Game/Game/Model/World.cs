@@ -32,7 +32,7 @@ namespace Game.Model
         
         public World(Level1 level)
         {
-            Player = new Player(new Point(203,200),level);
+            Player = new Player(new Point(203,225),level);
             Ghost1 = new Ghost(new Point(500,400));
             Ghost2 = new Ghost(new Point(600, 600));
             Skeleton1 = new Skeleton(new Point(800, 600));
