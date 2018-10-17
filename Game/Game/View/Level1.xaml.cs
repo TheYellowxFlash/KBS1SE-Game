@@ -60,7 +60,7 @@ namespace Game
         public Level1()
         {
             InitializeComponent();
-
+            timer.Tick += CheckCandyPick;
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 5);
@@ -322,6 +322,46 @@ namespace Game
             #endregion
         }
 
+        // Calculate if player picked up a candy
+        public void CheckCandyPick(object sender, EventArgs e)
+        {
+            Rect playerBounds = BoundsRelativeTo(playerBox, level1);
+
+            int pickedCandy = 0;
+            foreach (var candyBox in candyBoxes)
+            {
+                Rect candy = BoundsRelativeTo(candyBox, level1);
+                if (playerBounds.IntersectsWith(candy))
+                {
+
+                    Point candyPosition = new Point(Canvas.GetLeft(candyBox), Canvas.GetTop(candyBox));
+
+                    GenerateNewCandy(pickedCandy);
+                    world.CandyPickedUp(candyPosition);
+
+                    MessageBox.Show("Points: " + world.Score);
+                }
+
+                pickedCandy++;
+            }
+        }
+
+        public void GenerateNewCandy(int candyBox)
+        {
+            ImageBrush candyBrush = new ImageBrush();
+            candyBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
+
+            Candy candy = world.GetCandyNotInGame();
+
+            Canvas.SetLeft(candyBoxes[candyBox], candy.Position.X);
+            Canvas.SetTop(candyBoxes[candyBox], candy.Position.Y);
+            candyBoxes[candyBox].Width = candy.Size.X;
+            candyBoxes[candyBox].Height = candy.Size.Y;
+
+            world.CandiesInGame.Add(candy);
+            candyBoxes[candyBox].Fill = candyBrush;
+        }
+
         public void RecalculateCollision(object sender, EventArgs e)
         {
             Rect playerBounds = BoundsRelativeTo(playerBox, level1);
@@ -421,15 +461,17 @@ namespace Game
                 level1.Children.Add(zombieBox3);
 
             }
+
             XmlDocument highScoreXML = new XmlDocument();
             highScoreXML.Load("../../Scores.xml");
 
             //get the highest score
             string score = highScoreXML.FirstChild.NextSibling.FirstChild.ChildNodes[1].InnerText;
-
             lblHighscore.Text = "Highscore: " + score;
 
             world.StartGame();
+
+            #region CandyAanmaken
             candyBoxes[0] = new Rectangle();
             candyBoxes[1] = new Rectangle();
             candyBoxes[2] = new Rectangle();
@@ -449,6 +491,8 @@ namespace Game
                 cBox.Fill = candyBrush;
                 level1.Children.Add(cBox);
             }
+
+            #endregion
         }
         private class Score
         {
