@@ -1,7 +1,9 @@
 using Game.Model;
 using Game.View;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -152,9 +154,12 @@ namespace Game
             scoretimer.Start();
         }
 
+        
+
         public Level1()
         {
             InitializeComponent();
+
             timer.Tick += CheckCandyPick;
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
@@ -214,7 +219,10 @@ namespace Game
         {
             Level1 levelreload = new Level1();
             levelreload.Show();
+            SoundPlayer player = new SoundPlayer(Game.Properties.Resources.died);
+            player.Play();
             this.Close();
+            
         }
 
         private void btnSubmitScore_Click(object sender, RoutedEventArgs e)
@@ -463,6 +471,8 @@ namespace Game
         // Check if player got hit by an enemy
         public void RecalculateCollision(object sender, EventArgs e)
         {
+            
+
             Rect playerBounds = BoundsRelativeTo(playerBox, level1);
 
             List<Rect> enemyBounds = new List<Rect>();
@@ -476,13 +486,12 @@ namespace Game
             {
                 if (playerBounds.IntersectsWith(enemy))
                 {
+                    
                     if (!pausebool)
                     {
-
-                        Uri uri = new Uri(@"../../Audio/YouDied.wav", UriKind.RelativeOrAbsolute);
-                        var player = new MediaPlayer();
-                        player.Open(uri);
-                        player.Play();
+                        SoundPlayer player = new SoundPlayer(Game.Properties.Resources.died);
+                       player.PlaySync();
+                        
 
                         exit.Visibility = Visibility.Visible;
                         pausemenu.Opacity = 0.8;
@@ -492,7 +501,9 @@ namespace Game
                         world.TimerPause();
                         gameOverBool = true;
                         scoretimer.Stop();
+                        
                     }
+                    
                 }
             }
             enemyBoxes.Clear();
