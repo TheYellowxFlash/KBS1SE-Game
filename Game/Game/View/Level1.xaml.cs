@@ -30,7 +30,7 @@ namespace Game
         public bool pausebool = false;
         private bool gameOverBool = false;
         private double lightDiff;
-        private int Time = 60;
+        private int Time = 144;
         private Rectangle[] candyBoxes = new Rectangle[3];
 
         DispatcherTimer scoretimer = new DispatcherTimer();
@@ -39,7 +39,7 @@ namespace Game
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            world = new World(this);
+            world = new World();
 
             foreach (var child in level1.Children)
             {
@@ -182,7 +182,7 @@ namespace Game
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 pausemenu.Opacity = 0.8;
-                title.Visibility = Visibility.Visible;
+                died.Visibility = Visibility.Visible;
                 plaatje.Visibility = Visibility.Visible;
                 pausebool = true;
                 world.TimerPause();
@@ -212,6 +212,12 @@ namespace Game
                     scoretimer.Stop();
                 }
             }
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var p = e.GetPosition(this);
+            MessageBox.Show(p.ToString());
         }
 
         // Game restart if player restarts
@@ -273,6 +279,18 @@ namespace Game
         private void UpdateWorld()
         {
             Player player = world.Player;
+
+            //temp win condition
+            int houseX = 144 + (161 / 2);
+            if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX &&
+                Math.Floor(player.Position.Y) == 75 + 117)
+            {
+                gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Visible;
+                lblHighscore.Visibility = lblScore.Visibility = Visibility.Hidden;
+                world.TimerPause();
+                player.playerIsDead = true;
+            }
+
             Canvas.SetLeft(playerBox, player.Position.X);
             Canvas.SetTop(playerBox, player.Position.Y);
             playerBox.Width = player.Size.X;
@@ -446,6 +464,8 @@ namespace Game
 
                     //MessageBox.Show("Points: " + world.Score);
                     lblScore.Text = "Score: " + world.Score.ToString();
+                    SoundPlayer player = new SoundPlayer(Game.Properties.Resources.Pickup);
+                    player.Play();
                     break;
                 }
                 pickedCandy++;

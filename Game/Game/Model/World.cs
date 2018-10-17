@@ -29,9 +29,9 @@ namespace Game.Model
 
         public int Score = 0;
         
-        public World(Level1 level)
+        public World()
         {
-            Player = new Player(new Point(203,225),level);
+            Player = new Player(new Point(203,225));
             Ghost1 = new Ghost(new Point(500,400));
             Ghost2 = new Ghost(new Point(600, 600));
             Skeleton1 = new Skeleton(new Point(800, 600));
