@@ -246,7 +246,7 @@ namespace Game
                 Score currentScore = new 
                     Score(scores.ChildNodes[0].InnerText, int.Parse(scores.ChildNodes[1].InnerText));
                 LinkedListNode<Score> currentScoreNode = list.AddLast(currentScore);
-                if (playerScore > currentScore.score && !scoreChanged)
+                if (playerScore > currentScore.PlayerScore && !scoreChanged)
                 {
                     list.AddBefore(currentScoreNode, new Score(txbPlayerName.Text, playerScore));
                     scoreChanged = true;
@@ -259,7 +259,7 @@ namespace Game
                 foreach (Score score in list)
                 {
                     XmlElement element = highScoreXML.CreateElement("entry");
-                    element.InnerXml = "<name>" + score.name + "</name><score>" + score.score.ToString() + "</score>";
+                    element.InnerXml = "<name>" + score.Name + "</name><score>" + score.PlayerScore.ToString() + "</score>";
 
                     root.AppendChild(element);
                 }
@@ -533,17 +533,6 @@ namespace Game
             return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
         }
 
-        private class Score
-        {
-            public string name;
-            public int score;
-
-            public Score(string n, int s)
-            {
-                name = n;
-                score = s;
-            }
-        }
     }
 
 }
