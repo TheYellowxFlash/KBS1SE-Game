@@ -382,6 +382,11 @@ namespace Game
                         var diedAudio = new Uri(@"Audio/YouDied.wav", UriKind.RelativeOrAbsolute);
                         SoundPlayer player = new SoundPlayer(@"Audio/YouDied.wav");
                         player.Load();
+                        player.Play();*/
+
+                        Uri uri = new Uri(@"Audio\YouDied.mp3");
+                        var player = new MediaPlayer();
+                        player.Open(uri);
                         player.Play();
 
                         exit.Visibility = Visibility.Visible;
