@@ -183,6 +183,8 @@ namespace Game
 
             if (Time == 0)
             {
+                SoundPlayer player = new SoundPlayer(Game.Properties.Resources.died);
+                player.Play();
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 pausemenu.Opacity = 0.8;
@@ -273,33 +275,34 @@ namespace Game
 
         }
 
-        // Update Wpf elements on every tick
+        bool finished = true;
         private void UpdateWorld()
         {
             Player player = world.Player;
 
             //temp win condition
             int houseX = 144 + (161 / 2);
-            if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX &&
-                Math.Floor(player.Position.Y) == 75 + 117)
-            {
-                
-                gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = Visibility.Visible;
-                lblHighscore.Visibility = lblScore.Visibility = lblTimer.Visibility = Timer.Visibility = Visibility.Hidden;
-                if (world.Score > getLastScore())
-                {
-                    txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Visible; 
-                }
-                else
-                {
-                    exit.Visibility = lblNoHighscore.Visibility = Visibility.Visible;
-                }
-                world.TimerPause();
-                scoretimer.Stop();
-                player.playerIsDead = true;
-                gameOverBool = true;
-                new SoundPlayer(Game.Properties.Resources.Finish).Play();
-            }
+            if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX && Math.Floor(player.Position.Y) == 75 + 117){
+                if (finished) {
+		                finished = false;
+		                gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = Visibility.Visible;
+		                lblHighscore.Visibility = lblScore.Visibility = lblTimer.Visibility = Timer.Visibility = Visibility.Hidden;
+                        pausemenu.Opacity = 0.8;
+		                if (world.Score > getLastScore())
+		                {
+		                    txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Visible; 
+		                }
+		                else
+		                {
+		                    exit.Visibility = lblNoHighscore.Visibility = Visibility.Visible;
+		                }
+		                world.TimerPause();
+		                scoretimer.Stop();
+		                player.playerIsDead = true;
+		                gameOverBool = true;
+		                new SoundPlayer(Game.Properties.Resources.Finish).Play();
+                	}
+                }          
 
             Canvas.SetLeft(playerBox, player.Position.X);
             Canvas.SetTop(playerBox, player.Position.Y);
