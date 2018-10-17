@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <scores>
   <entry>
+    <name>Xuwei</name>
+    <score>2700</score>
+  </entry>
+  <entry>
     <name>Rutger</name>
     <score>2000</score>
   </entry>
@@ -34,10 +38,6 @@
   </entry>
   <entry>
     <name>hallo</name>
-    <score>10</score>
-  </entry>
-  <entry>
-    <name>ggez</name>
     <score>10</score>
   </entry>
 </scores>
