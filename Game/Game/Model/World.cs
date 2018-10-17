@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
+using System.Windows.Shapes;
 using System.Windows.Threading;
 
 
@@ -22,11 +24,16 @@ namespace Game.Model
         public Zombie Zombie2 { get; set; }
         public Zombie Zombie3 { get; set; }
         private DispatcherTimer timer = new DispatcherTimer();
+        private Random random = new Random();
+
+        public List<Obstacle> obstacles = new List<Obstacle>();
+        public List<Candy> AllCandies = new List<Candy>();
+        public List<Candy> CandiesInGame = new List<Candy>();
         public double XPos { get; set; }
         public double YPos { get; set; }
-        public List<Obstacle> obstacles = new List<Obstacle>();
-        
 
+        public int Score = 0;
+        
         public World(Level1 level)
         {
             Player = new Player(new Point(203,200),level);
@@ -38,13 +45,16 @@ namespace Game.Model
             Zombie2 = new Zombie(new Point(760, 50));
             Zombie3 = new Zombie(new Point(10, 10));
 
+
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 5);
         }
 
+
         public void StartGame()
         {
             timer.Start();
+            GenerateCandy();
         }
 
         public void TimerPause()
@@ -54,6 +64,7 @@ namespace Game.Model
 
         private void TimerOnTick(object sender, EventArgs e)
         {
+            
             Player.Move(obstacles);
 
             Skeleton1.Move(Player,obstacles);
@@ -64,6 +75,51 @@ namespace Game.Model
             Zombie2.Move(Player, obstacles);
             Zombie3.Move(Player, obstacles);
         }
+
+        public void GenerateCandy()
+        {
+            AllCandies.Add(new Candy(1, new Point(900,500)));
+            AllCandies.Add(new Candy(2, new Point(450,650)));
+            AllCandies.Add(new Candy(3, new Point(340,120)));
+            AllCandies.Add(new Candy(4, new Point(600,600)));
+            AllCandies.Add(new Candy(5, new Point(800,400)));
+        }
+
+        public Candy GetRandomCandy()
+        {
+            int i = random.Next((AllCandies.Count));
+            return AllCandies[i];
+        }
+
+        public Candy GetCandyNotInGame()
+        {
+            Candy candy = GetRandomCandy();
+
+            while (ListContainsCandyID(candy))
+            {
+                candy = GetRandomCandy();
+            }
+            
+            return candy;
+        }
+        public bool ListContainsCandyID(Candy c)
+        {
+            foreach(Candy candy in CandiesInGame)
+            {
+                if (candy.CandyId == c.CandyId)
+                    return true;
+            }
+            return false;
+        }
+
+        public void CandyPickedUp(Point candyP)
+        {
+            CandiesInGame.RemoveAll(c => c.Position.Equals(candyP));
+            Score += 100;
+        }
+
+        
+
 
     }
 }

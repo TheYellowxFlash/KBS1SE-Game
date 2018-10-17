@@ -1,4 +1,4 @@
-﻿using Game.Model;
+using Game.Model;
 using Game.View;
 using System;
 using System.Collections.Generic;
@@ -31,6 +31,7 @@ namespace Game
         private bool gameOverBool = false;
         private double lightDiff;
         private int Time = 300;
+        private Rectangle[] candyBoxes = new Rectangle[3];
 
         DispatcherTimer scoretimer = new DispatcherTimer();
 
@@ -59,7 +60,7 @@ namespace Game
         public Level1()
         {
             InitializeComponent();
-
+            timer.Tick += CheckCandyPick;
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 5);
@@ -76,7 +77,7 @@ namespace Game
 
             Timer.Content = Time.ToString();
 
-            if(Time == 0)
+            if (Time == 0)
             {
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
@@ -93,7 +94,7 @@ namespace Game
         {
             if (world != null)
             {
-                    UpdateWorld();
+                UpdateWorld();
             }
 
             if (Keyboard.IsKeyDown(Key.Escape))
@@ -135,8 +136,8 @@ namespace Game
             foreach (XmlNode scores in root.ChildNodes)
             {
                 Score currentScore = new Score(scores.ChildNodes[0].InnerText, int.Parse(scores.ChildNodes[1].InnerText));
-                LinkedListNode<Score> currentScoreNode =  list.AddLast(currentScore);
-                if(playerScore > currentScore.score && !scoreChanged)
+                LinkedListNode<Score> currentScoreNode = list.AddLast(currentScore);
+                if (playerScore > currentScore.score && !scoreChanged)
                 {
                     list.AddBefore(currentScoreNode, new Score(txbPlayerName.Text, playerScore));
                     scoreChanged = true;
@@ -149,7 +150,7 @@ namespace Game
                 foreach (Score score in list)
                 {
                     XmlElement element = highScoreXML.CreateElement("entry");
-                    element.InnerXml = "<name>" + score.name + "</name><score>"+ score.score.ToString() +"</score>";
+                    element.InnerXml = "<name>" + score.name + "</name><score>" + score.score.ToString() + "</score>";
 
                     root.AppendChild(element);
                 }
@@ -162,6 +163,7 @@ namespace Game
             this.Close();
 
         }
+
 
         private void UpdateWorld()
         {
@@ -223,7 +225,8 @@ namespace Game
             Canvas.SetZIndex(worldLight, 5);
 
             #region Ghost
-            if (ghostBox1 != null) {
+            if (ghostBox1 != null)
+            {
                 Ghost ghost1 = world.Ghost1;
                 enemyBoxes.Add(ghostBox1);
                 Canvas.SetLeft(ghostBox1, ghost1.Position.X);
@@ -319,6 +322,46 @@ namespace Game
             #endregion
         }
 
+        // Calculate if player picked up a candy
+        public void CheckCandyPick(object sender, EventArgs e)
+        {
+            Rect playerBounds = BoundsRelativeTo(playerBox, level1);
+
+            int pickedCandy = 0;
+            foreach (var candyBox in candyBoxes)
+            {
+                Rect candy = BoundsRelativeTo(candyBox, level1);
+                if (playerBounds.IntersectsWith(candy))
+                {
+
+                    Point candyPosition = new Point(Canvas.GetLeft(candyBox), Canvas.GetTop(candyBox));
+
+                    GenerateNewCandy(pickedCandy);
+                    world.CandyPickedUp(candyPosition);
+
+                    MessageBox.Show("Points: " + world.Score);
+                }
+
+                pickedCandy++;
+            }
+        }
+
+        public void GenerateNewCandy(int candyBox)
+        {
+            ImageBrush candyBrush = new ImageBrush();
+            candyBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
+
+            Candy candy = world.GetCandyNotInGame();
+
+            Canvas.SetLeft(candyBoxes[candyBox], candy.Position.X);
+            Canvas.SetTop(candyBoxes[candyBox], candy.Position.Y);
+            candyBoxes[candyBox].Width = candy.Size.X;
+            candyBoxes[candyBox].Height = candy.Size.Y;
+
+            world.CandiesInGame.Add(candy);
+            candyBoxes[candyBox].Fill = candyBrush;
+        }
+
         public void RecalculateCollision(object sender, EventArgs e)
         {
             Rect playerBounds = BoundsRelativeTo(playerBox, level1);
@@ -361,10 +404,10 @@ namespace Game
 
             foreach (var child in level1.Children)
             {
-                if(child is Image)
+                if (child is Image)
                 {
                     Image obstacle = (Image)child;
-                    if(obstacle.IsEnabled)
+                    if (obstacle.IsEnabled)
                         world.obstacles.Add(new Obstacle(obstacle));
                 }
             }
@@ -418,26 +461,50 @@ namespace Game
                 level1.Children.Add(zombieBox3);
 
             }
+
             XmlDocument highScoreXML = new XmlDocument();
             highScoreXML.Load("../../Scores.xml");
 
             //get the highest score
             string score = highScoreXML.FirstChild.NextSibling.FirstChild.ChildNodes[1].InnerText;
-
             lblHighscore.Text = "Highscore: " + score;
 
             world.StartGame();
+
+            #region CandyAanmaken
+            candyBoxes[0] = new Rectangle();
+            candyBoxes[1] = new Rectangle();
+            candyBoxes[2] = new Rectangle();
+
+            ImageBrush candyBrush = new ImageBrush();
+            candyBrush.ImageSource = new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
+            foreach (var cBox in candyBoxes)
+            {
+                Candy candy = world.GetCandyNotInGame();
+
+                Canvas.SetLeft(cBox, candy.Position.X);
+                Canvas.SetTop(cBox, candy.Position.Y);
+                cBox.Width = candy.Size.X;
+                cBox.Height = candy.Size.Y;
+
+                world.CandiesInGame.Add(candy);
+                cBox.Fill = candyBrush;
+                level1.Children.Add(cBox);
+            }
+
+            #endregion
         }
         private class Score
         {
             public string name;
             public int score;
 
-            public Score(string n,int s)
+            public Score(string n, int s)
             {
                 name = n;
                 score = s;
             }
         }
     }
+
 }
