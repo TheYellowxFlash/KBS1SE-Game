@@ -30,8 +30,10 @@ namespace Game
         public bool pausebool = false;
         private bool gameOverBool = false;
         private double lightDiff;
-        private int Time = 60;
+        private int Time = 144;
         private Rectangle[] candyBoxes = new Rectangle[3];
+        private XmlDocument highScoreXML = new XmlDocument();
+        private const string highscoreLocation = "../../Scores.xml";
 
         DispatcherTimer scoretimer = new DispatcherTimer();
 
@@ -39,7 +41,7 @@ namespace Game
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            world = new World(this);
+            world = new World();
 
             foreach (var child in level1.Children)
             {
@@ -101,8 +103,7 @@ namespace Game
 
             }
 
-            XmlDocument highScoreXML = new XmlDocument();
-            highScoreXML.Load("../../Scores.xml");
+            
 
             //get the highest score
             string score = highScoreXML.FirstChild.NextSibling.FirstChild.ChildNodes[1].InnerText;
@@ -159,7 +160,7 @@ namespace Game
         public Level1()
         {
             InitializeComponent();
-
+            highScoreXML.Load(highscoreLocation);
             timer.Tick += CheckCandyPick;
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
@@ -182,7 +183,7 @@ namespace Game
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 pausemenu.Opacity = 0.8;
-                title.Visibility = Visibility.Visible;
+                died.Visibility = Visibility.Visible;
                 plaatje.Visibility = Visibility.Visible;
                 pausebool = true;
                 world.TimerPause();
@@ -213,6 +214,10 @@ namespace Game
                 }
             }
         }
+        private int getLastScore()
+        {
+            return int.Parse(highScoreXML.FirstChild.NextSibling.LastChild.ChildNodes[1].InnerText);
+        }
 
         // Game restart if player restarts
         private void restart_Click(object sender, RoutedEventArgs e)
@@ -227,10 +232,6 @@ namespace Game
         // Set new highscore
         private void btnSubmitScore_Click(object sender, RoutedEventArgs e)
         {
-            string fileLocation = "../../Scores.xml";
-            XmlDocument highScoreXML = new XmlDocument();
-            highScoreXML.Load(fileLocation);
-
             XmlNode root = highScoreXML.FirstChild.NextSibling;
 
             int playerScore = world.Score; //hier later de echte score van maken
@@ -259,7 +260,7 @@ namespace Game
 
                     root.AppendChild(element);
                 }
-                highScoreXML.Save(fileLocation);
+                highScoreXML.Save(highscoreLocation);
             }
             gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Hidden;
 
@@ -273,6 +274,30 @@ namespace Game
         private void UpdateWorld()
         {
             Player player = world.Player;
+
+            //temp win condition
+            int houseX = 144 + (161 / 2);
+            if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX &&
+                Math.Floor(player.Position.Y) == 75 + 117)
+            {
+                
+                gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = Visibility.Visible;
+                lblHighscore.Visibility = lblScore.Visibility = lblTimer.Visibility = Timer.Visibility = Visibility.Hidden;
+                if (world.Score > getLastScore())
+                {
+                    txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Visible; 
+                }
+                else
+                {
+                    exit.Visibility = lblNoHighscore.Visibility = Visibility.Visible;
+                }
+                world.TimerPause();
+                scoretimer.Stop();
+                player.playerIsDead = true;
+                gameOverBool = true;
+                new SoundPlayer(Game.Properties.Resources.Finish).Play();
+            }
+
             Canvas.SetLeft(playerBox, player.Position.X);
             Canvas.SetTop(playerBox, player.Position.Y);
             playerBox.Width = player.Size.X;
