@@ -490,8 +490,14 @@ namespace Game
                     if (!pausebool)
                     {
                         SoundPlayer player = new SoundPlayer(Game.Properties.Resources.died);
-                       player.PlaySync();
                         
+                        bool soundFinished = true;
+
+                        if (soundFinished)
+                        {
+                            soundFinished = false;
+                            Task.Factory.StartNew(() => { player.PlaySync(); soundFinished = true; });
+                        }
 
                         exit.Visibility = Visibility.Visible;
                         pausemenu.Opacity = 0.8;
