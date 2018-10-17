@@ -214,12 +214,6 @@ namespace Game
             }
         }
 
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            var p = e.GetPosition(this);
-            MessageBox.Show(p.ToString());
-        }
-
         // Game restart if player restarts
         private void restart_Click(object sender, RoutedEventArgs e)
         {
@@ -288,7 +282,9 @@ namespace Game
                 gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Visible;
                 lblHighscore.Visibility = lblScore.Visibility = Visibility.Hidden;
                 world.TimerPause();
+                scoretimer.Stop();
                 player.playerIsDead = true;
+                new SoundPlayer(Game.Properties.Resources.Finish).Play();
             }
 
             Canvas.SetLeft(playerBox, player.Position.X);

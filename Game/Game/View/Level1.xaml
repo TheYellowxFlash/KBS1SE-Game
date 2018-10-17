@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Game"
         mc:Ignorable="d"
         Title="Level1" Height="704" Width="1280"  WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" Loaded="Window_Loaded">
-    <Grid MouseDown="Grid_MouseDown">
+    <Grid>
         
 
         <Canvas x:Name="level1">
