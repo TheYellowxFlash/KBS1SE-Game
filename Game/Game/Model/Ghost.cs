@@ -28,7 +28,7 @@ namespace Game.Model
             else if (Diff == 2)
             {
                 movementSpeed = .4;
-                AttackRange = 225;
+                AttackRange = 250;
             }
             else if (Diff == 3)
             {
