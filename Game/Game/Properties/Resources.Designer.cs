@@ -68,5 +68,23 @@ namespace Game.Properties {
                 return ResourceManager.GetStream("died", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Finish {
+            get {
+                return ResourceManager.GetStream("Finish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Pickup {
+            get {
+                return ResourceManager.GetStream("Pickup", resourceCulture);
+            }
+        }
     }
 }
