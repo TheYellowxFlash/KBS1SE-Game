@@ -290,6 +290,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="View\Audio\YouDied.mp3" />
+    <Content Include="View\Audio\YouDied.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
