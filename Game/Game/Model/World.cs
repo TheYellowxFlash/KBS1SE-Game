@@ -31,7 +31,6 @@ namespace Game.Model
         public List<Candy> CandiesInGame = new List<Candy>();
         public double XPos { get; set; }
         public double YPos { get; set; }
-        public List<Obstacle> obstacles = new List<Obstacle>();
 
         public int Score = 0;
         

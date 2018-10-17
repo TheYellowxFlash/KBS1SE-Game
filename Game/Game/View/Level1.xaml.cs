@@ -1,4 +1,5 @@
 using Game.Model;
+using Game.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Xml;
 
 namespace Game
 {
@@ -29,6 +31,7 @@ namespace Game
         private bool gameOverBool = false;
         private double lightDiff;
         private int Time = 300;
+        private Rectangle[] candyBoxes = new Rectangle[3];
 
         DispatcherTimer scoretimer = new DispatcherTimer();
 
