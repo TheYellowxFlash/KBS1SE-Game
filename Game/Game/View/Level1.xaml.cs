@@ -9,11 +9,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
@@ -130,7 +127,7 @@ namespace Game
 
             XmlNode root = highScoreXML.FirstChild.NextSibling;
 
-            int playerScore = 250; //hier later de echte score van maken
+            int playerScore = world.Score; //hier later de echte score van maken
 
             bool scoreChanged = false;
             var list = new LinkedList<Score>();
@@ -340,7 +337,9 @@ namespace Game
                     GenerateNewCandy(pickedCandy);
                     world.CandyPickedUp(candyPosition);
 
-                    MessageBox.Show("Points: " + world.Score);
+                    //MessageBox.Show("Points: " + world.Score);
+                    lblScore.Text = "Score: " + world.Score.ToString();
+                    break;
                 }
 
                 pickedCandy++;

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <scores>
   <entry>
+    <name>Rutger</name>
+    <score>2000</score>
+  </entry>
+  <entry>
     <name>qwerty</name>
     <score>250</score>
   </entry>
@@ -34,10 +38,6 @@
   </entry>
   <entry>
     <name>Baas</name>
-    <score>5</score>
-  </entry>
-  <entry>
-    <name>Tweede vijf</name>
     <score>5</score>
   </entry>
 </scores>

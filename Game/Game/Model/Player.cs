@@ -14,7 +14,7 @@ namespace Game.Model
     class Player : Walker
     {
         string CC = CustomizeCharacter.character;
-        int Diff = ChooseDifficulty.Difficulty;
+        public int Diff = ChooseDifficulty.Difficulty;
         string Left  = "/Left/Left.png";
         string Right = "/Right/Right.png";
         string Up  = "/Up/Up.png";
@@ -58,7 +58,7 @@ namespace Game.Model
                 movementSpeed = 1;
             } else if(Diff == 3)
             {
-                movementSpeed = 0.75;
+                movementSpeed = 1;
             }
         }
 
