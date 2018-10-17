@@ -282,12 +282,12 @@ namespace Game
 
             //temp win condition
             int houseX = 144 + (161 / 2);
-            if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX &&
-                Math.Floor(player.Position.Y) == 75 + 117)
-            	{ if (finished) {
+            if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX && Math.Floor(player.Position.Y) == 75 + 117){
+                if (finished) {
 		                finished = false;
 		                gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = Visibility.Visible;
 		                lblHighscore.Visibility = lblScore.Visibility = lblTimer.Visibility = Timer.Visibility = Visibility.Hidden;
+                        pausemenu.Opacity = 0.8;
 		                if (world.Score > getLastScore())
 		                {
 		                    txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Visible; 
