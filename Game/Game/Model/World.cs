@@ -10,7 +10,6 @@ namespace Game.Model
     class World
     {
         public const int windowWidth = 1280, windowHeight = 704;
-
         public Player Player { get; set; }
         public Ghost Ghost1 { get; set; }
         public Ghost Ghost2 { get; set; }
@@ -46,21 +45,22 @@ namespace Game.Model
             timer.Interval = new TimeSpan(0, 0, 0, 0, 5);
         }
 
-
+        // Start timer
         public void StartGame()
         {
             timer.Start();
             GenerateCandy();
         }
 
+        // Stop the timer
         public void TimerPause()
         {
             timer.Stop();
         }
 
+        // Timer on tick listeners
         private void TimerOnTick(object sender, EventArgs e)
         {
-            
             Player.Move(obstacles);
 
             Skeleton1.Move(Player,obstacles);
@@ -72,6 +72,7 @@ namespace Game.Model
             Zombie3.Move(Player, obstacles);
         }
 
+        // Create all candy locations
         public void GenerateCandy()
         {
             int i = 1;
@@ -93,12 +94,14 @@ namespace Game.Model
             AllCandies.Add(new Candy(i++, new Point(352, 674)));
         }
 
+        // Get random candy from all candies
         public Candy GetRandomCandy()
         {
             int i = random.Next((AllCandies.Count));
             return AllCandies[i];
         }
 
+        // Get new random candy which is not in-game already
         public Candy GetCandyNotInGame()
         {
             Candy candy = GetRandomCandy();
@@ -110,6 +113,8 @@ namespace Game.Model
             
             return candy;
         }
+
+        // Check if Candies in game specific candy
         public bool ListContainsCandyID(Candy c)
         {
             foreach(Candy candy in CandiesInGame)
@@ -120,6 +125,7 @@ namespace Game.Model
             return false;
         }
 
+        // Method for candy pick up and score handling
         public void CandyPickedUp(Point candyP)
         {
             CandiesInGame.RemoveAll(c => c.Position.Equals(candyP));
