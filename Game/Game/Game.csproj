@@ -289,6 +289,8 @@
     <Resource Include="PropIcons\candy.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Finish.wav" />
+    <None Include="Resources\Pickup.wav" />
     <Content Include="View\died.wav" />
     <Content Include="View\Audio\YouDied.mp3" />
     <Content Include="View\Audio\YouDied.wav" />
