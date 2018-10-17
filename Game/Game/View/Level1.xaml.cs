@@ -225,6 +225,7 @@ namespace Game
             
         }
 
+        // Set new highscore
         private void btnSubmitScore_Click(object sender, RoutedEventArgs e)
         {
             string fileLocation = "../../Scores.xml";
@@ -239,7 +240,8 @@ namespace Game
             var list = new LinkedList<Score>();
             foreach (XmlNode scores in root.ChildNodes)
             {
-                Score currentScore = new Score(scores.ChildNodes[0].InnerText, int.Parse(scores.ChildNodes[1].InnerText));
+                Score currentScore = new 
+                    Score(scores.ChildNodes[0].InnerText, int.Parse(scores.ChildNodes[1].InnerText));
                 LinkedListNode<Score> currentScoreNode = list.AddLast(currentScore);
                 if (playerScore > currentScore.score && !scoreChanged)
                 {
@@ -489,10 +491,11 @@ namespace Game
                     
                     if (!pausebool)
                     {
+                        Canvas.SetLeft(playerBox, -2222); 
+                        
                         SoundPlayer player = new SoundPlayer(Game.Properties.Resources.died);
                         
                         bool soundFinished = true;
-
                         if (soundFinished)
                         {
                             soundFinished = false;
