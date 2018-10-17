@@ -290,7 +290,7 @@ namespace Game
                         pausemenu.Opacity = 0.8;
 		                if (world.Score > getLastScore())
 		                {
-		                    txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Visible; 
+		                    txbPlayerName.Visibility = playerName.Visibility = btnSubmitScore.Visibility = Visibility.Visible; 
 		                }
 		                else
 		                {

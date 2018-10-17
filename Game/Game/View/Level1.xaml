@@ -85,26 +85,34 @@
             <Image Name="candle8" Source="Images/LevelProps/candle.png" Canvas.Top="231" IsEnabled="False" Height="25" Width="15" Canvas.Left="1216" RenderTransformOrigin="0.262,0.711"/>
         </Canvas>
 
-        <!--pauze menu-->
+        <!--pause menu-->
         <Rectangle x:Name="pausemenu" Fill="#FF595959" Opacity="0"></Rectangle>
         <Rectangle x:Name="gameOver" Fill="#FF595959" Opacity="0"></Rectangle>
         <Rectangle x:Name="gameWon" Fill="#FF595959" Opacity="0"></Rectangle>
 
-        <TextBlock x:Name="playerName" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="Player name:" VerticalAlignment="Top" FontSize="48" Margin="478,179,614,0" Foreground="DarkRed" Height="68" Width="188"/>
 
+        <!--Basis Pause Menu-->
         <Image x:Name="plaatje" HorizontalAlignment="Right" VerticalAlignment="Bottom" Source="Images/MenuBackground.png" Stretch="Fill" Visibility="Hidden"/>
         <TextBlock x:Name="title" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="PAUSED" VerticalAlignment="Top" FontSize="130"  Foreground="DarkRed"/>
         <TextBlock x:Name="titleWin" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="You've won" VerticalAlignment="Top" FontSize="130"  Foreground="DarkRed"/>
-        <Button x:Name="resume" Content="Resume" Width="208" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden" Click="resume_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" FontSize="54" Margin="533,166,539,0" Foreground="DarkRed"/>
-        <Button x:Name="restart" Content="Restart" Width="208" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden" Click="restart_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" FontSize="54" Margin="533,220,539,0" Foreground="DarkRed"/>
 
-        <TextBlock x:Name="died" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="YOU DIED" VerticalAlignment="Top" FontSize="130" Foreground="DarkRed" Width="382" Margin="450,53,448,0"/>
-        <Button x:Name="exit" Content="Exit" Width="208" FontFamily="/MovementTest;component/#YouMurderer BB" FontSize="54" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Hidden" Click="exit_Click" Margin="533,277,539,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="DarkRed"/>
-        <TextBox x:Name="txbPlayerName" Visibility="Hidden"  HorizontalAlignment="Center" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="0,266,0,0"/>
+        <!--Escape button pressed-->
+        <Button x:Name="resume" Content="Resume"  Margin="492,0,0,438" Visibility="Hidden" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" HorizontalAlignment="Left" Foreground="DarkRed" Click="resume_Click"/>
+        <Button x:Name="restart" Content="Restart"  Margin="492,0,0,384" Visibility="Hidden" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" HorizontalAlignment="Left" Foreground="DarkRed" Click="restart_Click"/>
+        <Button x:Name="exit" Content="Exit"  Margin="492,0,0,338" Visibility="Hidden" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" HorizontalAlignment="Left" Foreground="DarkRed" Click="exit_Click"/>
+
+        <!--Died-->
+        <TextBlock x:Name="died" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="You Died" VerticalAlignment="Top" FontSize="130" Foreground="DarkRed" Width="382" Margin="450,53,448,0"/>
+
+
+        <!--HighScore-->
+        <TextBox x:Name="txbPlayerName" Visibility="Hidden"  HorizontalAlignment="Center" Height="42"  TextWrapping="Wrap" VerticalAlignment="Top" Width="197" Margin="575,256,508,0" RenderTransformOrigin="0.5,0.5" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Background="#7FFFFFFF" Text="Enter Your Name" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" FontSize="36"/>
         <Button x:Name="btnSubmitScore" Visibility="Hidden" HorizontalAlignment="Center" Content="Submit"  VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" Width="170" Foreground="DarkRed" Margin="0,0,0,239" Click="btnSubmitScore_Click"/>
         <TextBlock x:Name="lblHighscore" Visibility="Visible" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="Highscore: " VerticalAlignment="Top" FontSize="48"  Foreground="DarkRed"/>
         <TextBlock x:Name="lblScore" Visibility="Visible" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="Score: 0" VerticalAlignment="Top" FontSize="48"  Foreground="DarkRed" Margin="6,0,1094,0" Width="180"/>
+        <TextBlock x:Name="playerName" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="Player name:" VerticalAlignment="Top" FontSize="48" Margin="387,247,705,0" Foreground="DarkRed" Height="68" Width="188"/>
 
+        <!--Timer + Highscore-->
         <Label x:Name ="lblTimer" Content="Time:" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" HorizontalAlignment="Right" Visibility="Visible" FontSize="48" Margin="0,0,67,0" Foreground="DarkRed"></Label>
         <Label x:Name="Timer" Content="60" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" HorizontalAlignment="Right" Visibility="Visible" FontSize="48" Foreground="DarkRed"></Label>
         <TextBlock x:Name="lblNoHighscore" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="But you didn't make the highscores" VerticalAlignment="Top" FontSize="48"  Foreground="DarkRed" Margin="375,126,331,0" Height="55" Width="574"/>
