@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Media;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 
@@ -115,7 +110,14 @@ namespace Game.Model
         public void CandyPickedUp(Point candyP)
         {
             CandiesInGame.RemoveAll(c => c.Position.Equals(candyP));
-            Score += 100;
+            int addScore = 0;
+            if (Player.Diff == 1)
+                addScore = 30;
+            else if (Player.Diff == 2)
+                addScore = 50;
+            else if (Player.Diff == 3)
+                addScore = 100;
+            Score += addScore;
         }
 
         
