@@ -30,7 +30,7 @@ namespace Game
         public bool pausebool = false;
         private bool gameOverBool = false;
         private double lightDiff;
-        private int Time = 60;
+        private int Time = 144;
         private Rectangle[] candyBoxes = new Rectangle[3];
 
         DispatcherTimer scoretimer = new DispatcherTimer();
