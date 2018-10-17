@@ -2,6 +2,11 @@ using Game.Model;
 using Game.View;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Media;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -374,6 +379,11 @@ namespace Game
                 {
                     if (!pausebool)
                     {
+                        var diedAudio = new Uri(@"View/Audio/YouDied.mp3", UriKind.RelativeOrAbsolute);
+                        SoundPlayer player = new SoundPlayer(@"View/Audio/YouDied.mp3");
+                        player.Load();
+                        player.Play();
+
                         exit.Visibility = Visibility.Visible;
                         pausemenu.Opacity = 0.8;
                         died.Visibility = Visibility.Visible;
