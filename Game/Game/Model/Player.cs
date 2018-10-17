@@ -14,7 +14,7 @@ namespace Game.Model
     class Player : Walker
     {
         string CC = CustomizeCharacter.character;
-        public int Diff = ChooseDifficulty.Difficulty;
+        int Diff = ChooseDifficulty.Difficulty;
         string Left  = "/Left/Left.png";
         string Right = "/Right/Right.png";
         string Up  = "/Up/Up.png";

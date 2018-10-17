@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game.View;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Threading;
@@ -111,11 +112,11 @@ namespace Game.Model
         {
             CandiesInGame.RemoveAll(c => c.Position.Equals(candyP));
             int addScore = 0;
-            if (Player.Diff == 1)
+            if (ChooseDifficulty.Difficulty == 1)
                 addScore = 30;
-            else if (Player.Diff == 2)
+            else if (ChooseDifficulty.Difficulty == 2)
                 addScore = 50;
-            else if (Player.Diff == 3)
+            else if (ChooseDifficulty.Difficulty == 3)
                 addScore = 100;
             Score += addScore;
         }
