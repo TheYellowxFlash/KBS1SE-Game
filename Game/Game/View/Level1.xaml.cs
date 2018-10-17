@@ -446,6 +446,8 @@ namespace Game
 
                     //MessageBox.Show("Points: " + world.Score);
                     lblScore.Text = "Score: " + world.Score.ToString();
+                    SoundPlayer player = new SoundPlayer(Game.Properties.Resources.Pickup);
+                    player.Play();
                     break;
                 }
                 pickedCandy++;

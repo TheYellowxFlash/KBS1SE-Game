@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -144,6 +145,9 @@ namespace Game.Model
                 level.gameWon.Visibility = level.plaatje.Visibility = level.titleWin.Visibility = level.txbPlayerName.Visibility = level.btnSubmitScore.Visibility = Visibility.Visible;
                 level.lblHighscore.Visibility = level.lblScore.Visibility =  Visibility.Hidden;
                 playerIsDead = true;
+                
+                SoundPlayer player = new SoundPlayer(Game.Properties.Resources.Finish);
+                player.Play();
             }
         }
     }
