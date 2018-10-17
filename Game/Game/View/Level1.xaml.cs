@@ -182,7 +182,7 @@ namespace Game
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 pausemenu.Opacity = 0.8;
-                title.Visibility = Visibility.Visible;
+                died.Visibility = Visibility.Visible;
                 plaatje.Visibility = Visibility.Visible;
                 pausebool = true;
                 world.TimerPause();
