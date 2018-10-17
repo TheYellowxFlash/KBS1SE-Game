@@ -74,11 +74,23 @@ namespace Game.Model
 
         public void GenerateCandy()
         {
-            AllCandies.Add(new Candy(1, new Point(900,500)));
-            AllCandies.Add(new Candy(2, new Point(450,650)));
-            AllCandies.Add(new Candy(3, new Point(340,120)));
-            AllCandies.Add(new Candy(4, new Point(600,600)));
-            AllCandies.Add(new Candy(5, new Point(800,400)));
+            int i = 1;
+            AllCandies.Add(new Candy(i++, new Point(900,500)));
+            AllCandies.Add(new Candy(i++, new Point(450,650)));
+            AllCandies.Add(new Candy(i++, new Point(340,120)));
+            AllCandies.Add(new Candy(i++, new Point(600,600)));
+            AllCandies.Add(new Candy(i++, new Point(800,400)));
+            AllCandies.Add(new Candy(i++, new Point(820, 532)));
+
+            AllCandies.Add(new Candy(i++, new Point(679, 121)));
+            AllCandies.Add(new Candy(i++, new Point(1147, 83)));
+            AllCandies.Add(new Candy(i++, new Point(105, 400)));
+            AllCandies.Add(new Candy(i++, new Point(80, 125)));
+            AllCandies.Add(new Candy(i++, new Point(1203, 534)));
+            AllCandies.Add(new Candy(i++, new Point(49, 439)));
+            AllCandies.Add(new Candy(i++, new Point(864, 222)));
+            AllCandies.Add(new Candy(i++, new Point(544, 233)));
+            AllCandies.Add(new Candy(i++, new Point(352, 674)));
         }
 
         public Candy GetRandomCandy()
