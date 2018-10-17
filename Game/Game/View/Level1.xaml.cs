@@ -219,8 +219,7 @@ namespace Game
         {
             Level1 levelreload = new Level1();
             levelreload.Show();
-            SoundPlayer player = new SoundPlayer(Game.Properties.Resources.died);
-            player.Play();
+
             this.Close();
             
         }
@@ -489,18 +488,10 @@ namespace Game
                 if (playerBounds.IntersectsWith(enemy))
                 {
                     
-                    if (!pausebool)
+                    if (!gameOverBool)
                     {
-                        Canvas.SetLeft(playerBox, -2222); 
-                        
                         SoundPlayer player = new SoundPlayer(Game.Properties.Resources.died);
-                        
-                        bool soundFinished = true;
-                        if (soundFinished)
-                        {
-                            soundFinished = false;
-                            Task.Factory.StartNew(() => { player.PlaySync(); soundFinished = true; });
-                        }
+                        player.Play();
 
                         exit.Visibility = Visibility.Visible;
                         pausemenu.Opacity = 0.8;
@@ -510,13 +501,13 @@ namespace Game
                         world.TimerPause();
                         gameOverBool = true;
                         scoretimer.Stop();
-                        
                     }
                     
                 }
             }
             enemyBoxes.Clear();
         }
+
 
         // Ophalen Rect gegevens van bepaald element
         public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
