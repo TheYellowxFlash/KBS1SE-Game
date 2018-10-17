@@ -37,6 +37,7 @@ namespace Game
 
         DispatcherTimer timer = new DispatcherTimer();
 
+        // Windowload event, setting initial elements in game
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             world = new World();
@@ -133,7 +134,8 @@ namespace Game
 
             #endregion
         }
-
+        
+        // Button to end the game
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainMenu = new MainWindow();
@@ -141,6 +143,7 @@ namespace Game
             this.Close();
         }
 
+        // Button to resume the game
         private void resume_Click(object sender, RoutedEventArgs e)
         {
             resume.Visibility = Visibility.Hidden;
@@ -154,7 +157,6 @@ namespace Game
             scoretimer.Start();
         }
 
-        
 
         public Level1()
         {
@@ -171,6 +173,7 @@ namespace Game
             scoretimer.Start();
         }
 
+        // Time expires event
         private void Scoretimer_Tick(object sender, EventArgs e)
         {
             Time--;
@@ -190,6 +193,7 @@ namespace Game
             }
         }
 
+        // Timer method
         private void TimerOnTick(object sender, EventArgs e)
         {
             if (world != null)
@@ -221,7 +225,6 @@ namespace Game
             levelreload.Show();
 
             this.Close();
-            
         }
 
         // Set new highscore
@@ -269,7 +272,7 @@ namespace Game
 
         }
 
-
+        // Update Wpf elements on every tick
         private void UpdateWorld()
         {
             Player player = world.Player;
@@ -452,7 +455,6 @@ namespace Game
                 Rect candy = BoundsRelativeTo(candyBox, level1);
                 if (playerBounds.IntersectsWith(candy))
                 {
-
                     Point candyPosition = new Point(Canvas.GetLeft(candyBox), Canvas.GetTop(candyBox));
 
                     GenerateNewCandy(pickedCandy);
@@ -488,22 +490,13 @@ namespace Game
         // Check if player got hit by an enemy
         public void RecalculateCollision(object sender, EventArgs e)
         {
-            
-
             Rect playerBounds = BoundsRelativeTo(playerBox, level1);
 
-            List<Rect> enemyBounds = new List<Rect>();
-            foreach (Rectangle enemyBox in enemyBoxes)
+            foreach (var enemyBox in enemyBoxes)
             {
-                Rect item = BoundsRelativeTo(enemyBox, level1);
-                enemyBounds.Add(item);
-            }
-
-            foreach (var enemy in enemyBounds)
-            {
+                Rect enemy = BoundsRelativeTo(enemyBox, level1);
                 if (playerBounds.IntersectsWith(enemy))
                 {
-                    
                     if (!gameOverBool)
                     {
                         SoundPlayer player = new SoundPlayer(Game.Properties.Resources.died);
@@ -518,12 +511,10 @@ namespace Game
                         gameOverBool = true;
                         scoretimer.Stop();
                     }
-                    
                 }
             }
             enemyBoxes.Clear();
         }
-
 
         // Ophalen Rect gegevens van bepaald element
         public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
