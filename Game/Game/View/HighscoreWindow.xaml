@@ -1,0 +1,21 @@
+﻿<Window x:Class="Game.View.HighscoreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game.View"
+        mc:Ignorable="d"
+        Title="HighscoreWindow" Height="704" Width="1280"  WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize">
+    <Grid Loaded="Grid_Loaded">
+        <Grid>
+            <Label Content="Highscore" HorizontalAlignment="center" VerticalAlignment="top" Height="89" Width="361" FontSize="80" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Panel.ZIndex="1" Margin="0,0,0,0"/>
+            <TextBlock Name="txbHighscoresNames" TextWrapping="NoWrap" HorizontalAlignment="center" Margin="521,122,583,0" Text="" VerticalAlignment="Top" Height="482" Width="176" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" FontSize="24"/>
+            <TextBlock Name="txbHighscoresScores" TextWrapping="NoWrap" HorizontalAlignment="center" Margin="700,122,409,0" Text="" VerticalAlignment="Top" Height="482" Width="171" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" FontSize="24"/>
+            <Button Name="btnExit" Content="Back" HorizontalAlignment="Left" Margin="44,0,0,39" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="exit_Click" RenderTransformOrigin="0.864,-0.714" />
+
+            <Grid.Background>
+                <ImageBrush ImageSource="../Background_Menu2.jpg"></ImageBrush>
+            </Grid.Background>
+        </Grid>
+    </Grid>
+</Window>

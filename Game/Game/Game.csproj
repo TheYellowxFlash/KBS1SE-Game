@@ -7,7 +7,7 @@
     <ProjectGuid>{F80E50CA-A26B-4B65-A252-7FF04C2E3AAB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Game</RootNamespace>
-    <AssemblyName>Game</AssemblyName>
+    <AssemblyName>Trick Or Treat</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TrickOrTreat.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -55,10 +58,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\ChooseDifficulty.xaml.cs">
+      <DependentUpon>ChooseDifficulty.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\Candy.cs" />
     <Compile Include="View\CustomizeCharacter.xaml.cs">
       <DependentUpon>CustomizeCharacter.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\ChooseDifficulty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HighscoreWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\Level1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,6 +90,9 @@
     <Compile Include="Model\Walker.cs" />
     <Compile Include="Model\World.cs" />
     <Compile Include="Model\Zombie.cs" />
+    <Compile Include="View\HighscoreWindow.xaml.cs">
+      <DependentUpon>HighscoreWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Level1.xaml.cs">
       <DependentUpon>Level1.xaml</DependentUpon>
     </Compile>
@@ -110,7 +127,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="HallowenInline.otf" />
+    <Resource Include="View\Fonts\youmurdererbb_reg.otf" />
+    <Resource Include="View\Fonts\HallowenInline.otf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,10 +141,6 @@
     <Resource Include="Background_Menu2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomizeCharacter\CustomizeCharacter.csproj">
-      <Project>{75e70490-ee48-426c-a6b8-035951bc9b55}</Project>
-      <Name>CustomizeCharacter</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Game.Theme\Game.Theme.csproj">
       <Project>{4fc75aa6-0038-4de7-bd17-5d190466132b}</Project>
       <Name>Game.Theme</Name>
@@ -144,20 +158,15 @@
     <Resource Include="PropIcons\skeleton.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\player-idle.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="PropIcons\zombie.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="PropIcons\ghost.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\player-steve.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="View\Images\grass.png" />
     <Resource Include="View\Images\house.png" />
+    <Resource Include="View\Images\LevelProps\Tube_Stone.png" />
     <Resource Include="View\Images\path.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -168,12 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\player-house.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="View\Skins\finn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="View\Skins\mario.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\tree_part1.png" />
@@ -191,7 +194,96 @@
     <Resource Include="View\Images\Background_Menu2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\Skins\zombie.png" />
+    <Resource Include="TrickOrTreat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\TrickOrTreat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Player1\Down\Down.png" />
+    <Resource Include="PropIcons\Player1\Left\Left.png" />
+    <Resource Include="PropIcons\Player1\Player1.png" />
+    <Resource Include="PropIcons\Player1\Right\Right.png" />
+    <Resource Include="PropIcons\Player1\Up\Up.png" />
+    <Resource Include="PropIcons\Player3\Player3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Player1\Still\Back.png" />
+    <Resource Include="PropIcons\Player1\Still\Front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Player3\Down\Down.png" />
+    <Resource Include="PropIcons\Player3\Left\Left.png" />
+    <Resource Include="PropIcons\Player3\Right\Right.png" />
+    <Resource Include="PropIcons\Player3\Still\Back.png" />
+    <Resource Include="PropIcons\Player3\Still\Front.png" />
+    <Resource Include="PropIcons\Player3\Up\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Skeleton\Down\Down.png" />
+    <Resource Include="PropIcons\Skeleton\Left\Left.png" />
+    <Resource Include="PropIcons\Skeleton\Player2.png" />
+    <Resource Include="PropIcons\Skeleton\Right\Right.png" />
+    <Resource Include="PropIcons\Skeleton\Still\Back.png" />
+    <Resource Include="PropIcons\Skeleton\Still\Front.png" />
+    <Resource Include="PropIcons\Skeleton\Up\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Skins\Adventure.png" />
+    <Resource Include="View\Skins\Pirate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Player2\Down\Down.png" />
+    <Resource Include="PropIcons\Player2\Left\Left.png" />
+    <Resource Include="PropIcons\Player2\Right\Right.png" />
+    <Resource Include="PropIcons\Player2\Still\Back.png" />
+    <Resource Include="PropIcons\Player2\Still\Front.png" />
+    <Resource Include="PropIcons\Player2\Up\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Skins\Female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Zombie\Down\Down.png" />
+    <Resource Include="PropIcons\Zombie\Left\Left.png" />
+    <Resource Include="PropIcons\Zombie\Right\Right.png" />
+    <Resource Include="PropIcons\Zombie\Still\Back.png" />
+    <Resource Include="PropIcons\Zombie\Still\Front.png" />
+    <Resource Include="PropIcons\Zombie\Up\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PropIcons\Ghost\Down\Down.png" />
+    <Resource Include="PropIcons\Ghost\Left\Left.png" />
+    <Resource Include="PropIcons\Ghost\Right\Right.png" />
+    <Resource Include="PropIcons\Ghost\Still\Back.png" />
+    <Resource Include="PropIcons\Ghost\Still\Front.png" />
+    <Resource Include="PropIcons\Ghost\Up\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\Player_House_Part1.png" />
+    <Resource Include="View\Images\Player_House_Part2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\House_Part1.png" />
+    <Resource Include="View\Images\House_Part2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\LevelProps\DeadBody.png" />
+    <Resource Include="View\Images\LevelProps\HalloweenCat.png" />
+    <Resource Include="View\Images\LevelProps\Pumpkin_1.png" />
+    <Resource Include="View\Images\LevelProps\Pumpkin_2.png" />
+    <Resource Include="View\Images\LevelProps\Pumpkin_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\LevelProps\candle.png" />
+    <Resource Include="View\Images\LevelProps\fence_1.png" />
+    <Resource Include="View\Images\LevelProps\water_corner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\LevelProps\fence_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\Level1v2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="PropIcons\candy.png" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,8 +30,9 @@ namespace Game
         private void play_Click(object sender, RoutedEventArgs e)
         {
             //MovementTest.MainWindow m = new MovementTest.MainWindow();
-            Level1 level1 = new Level1();
-            level1.Show();
+            //Level1 level1 = new Level1();
+            ChooseDifficulty chooseDifficulty = new ChooseDifficulty();
+            chooseDifficulty.Show();
             this.Close();
         }
         
@@ -41,14 +43,16 @@ namespace Game
             this.Close();
         }
 
-        //private void highscore_Click(object sender, RoutedEventArgs e)
-        //{
-
-        //}
+        private void highscore_Click(object sender, RoutedEventArgs e)
+        {
+            var h = new View.HighscoreWindow();
+            h.Show();
+            Close();
+        }
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            Application.Current.Shutdown();
         }
     }
 }

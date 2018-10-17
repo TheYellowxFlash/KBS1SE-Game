@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,31 @@ namespace Game.Model
 {
     class Ghost : Enemy
     {
-        private double x, y;
+        int Diff = ChooseDifficulty.Difficulty;
 
         public Ghost(Point position) : base(position)
         {
             Position = position;
             Size = new Point(36,36);
-            movementSpeed = .4;
-            AttackRange = 240;
-            Image = "ghost.png";
+            Image = "Ghost/Still/Front.png";
+            Name = "Ghost";
             canMoveThroughWalls = true;
+
+            if (Diff == 1)
+            {
+                movementSpeed = .35;
+                AttackRange = 210;
+            }
+            else if (Diff == 2)
+            {
+                movementSpeed = .44;
+                AttackRange = 240;
+            }
+            else if (Diff == 3)
+            {
+                movementSpeed = .5;
+                AttackRange = 270;
+            }
         }
         
         
