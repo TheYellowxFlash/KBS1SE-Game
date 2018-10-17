@@ -62,8 +62,6 @@ namespace Game.Model
 
         public void Move(List<Obstacle> obstacles)
         {
-            if (playerIsDead)
-                return;
             Walker.HorizontalDirection hor = Walker.HorizontalDirection.none;
             Walker.VerticalDirection ver = Walker.VerticalDirection.none;
             if (Keyboard.IsKeyDown(Key.Down))

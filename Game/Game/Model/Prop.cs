@@ -49,25 +49,5 @@ namespace Game.Model
             return (getal1 + range >= getal2 && getal2 >= getal1 - range);
 
         }
-
-        public void RecalculateCollision(object sender, EventArgs e)
-        {
-        //    Rect r1 = BoundsRelativeTo(Player, Level1);
-        //    Rect r2 = BoundsRelativeTo(enemy, PlayingField);
-        //    Rect r3 = BoundsRelativeTo(enemy2, PlayingField);
-
-            //if (r1.IntersectsWith(r2) || r1.IntersectsWith(r3))
-            //{
-            //    MessageBox.Show("Game over");
-            
-            //    // hier moet de reset functie
-                
-            //}
-        }
-
-        public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
-        {
-            return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
-        }
     }
 }

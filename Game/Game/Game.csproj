@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Score.cs" />
     <Compile Include="View\ChooseDifficulty.xaml.cs">
       <DependentUpon>ChooseDifficulty.xaml</DependentUpon>
     </Compile>
