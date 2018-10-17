@@ -20,15 +20,12 @@ namespace Game.Model
         string Right = "/Right/Right.png";
         string Up  = "/Up/Up.png";
         string Down  = "/Down/Down.png";
-        private Level1 level;
-        private bool playerIsDead = false;
+        public bool playerIsDead = false;
 
         int player = 1;
 
-        public Player(Point position,Level1 level) : base(position)
+        public Player(Point position) : base(position)
         {
-
-            this.level = level;
             Size = new Point(30, 46);
             if(CC == "Adventure")
             {
@@ -139,16 +136,7 @@ namespace Game.Model
                 }
             }
             Move(hor, ver, obstacles);
-            //temp win condition
-            if (Position.X + Size.X > 1270)
-            {
-                level.gameWon.Visibility = level.plaatje.Visibility = level.titleWin.Visibility = level.txbPlayerName.Visibility = level.btnSubmitScore.Visibility = Visibility.Visible;
-                level.lblHighscore.Visibility = level.lblScore.Visibility =  Visibility.Hidden;
-                playerIsDead = true;
-                
-                SoundPlayer player = new SoundPlayer(Game.Properties.Resources.Finish);
-                player.Play();
-            }
-        }
+
+        }    
     }
 }

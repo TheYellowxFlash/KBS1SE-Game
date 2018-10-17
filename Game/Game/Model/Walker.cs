@@ -43,9 +43,9 @@ namespace Game.Model
             double x = Position.X;
             
             bool moveRight = horizontal == HorizontalDirection.right && x + Size.X + movementSpeed < World.windowWidth;
-            bool moveLeft = horizontal == HorizontalDirection.left && x != 0;
+            bool moveLeft = horizontal == HorizontalDirection.left && x - movementSpeed >= 0;
             bool moveDown = vertical == VerticalDirection.down && y + Size.Y + movementSpeed < World.windowHeight;
-            bool moveUp = vertical == VerticalDirection.up && y != 0;
+            bool moveUp = vertical == VerticalDirection.up && y - movementSpeed >= 0;
             if (!canMoveThroughWalls)
             {
                 foreach (var obstacle in obstacles)

@@ -39,7 +39,7 @@ namespace Game
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            world = new World(this);
+            world = new World();
 
             foreach (var child in level1.Children)
             {
@@ -214,6 +214,12 @@ namespace Game
             }
         }
 
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var p = e.GetPosition(this);
+            MessageBox.Show(p.ToString());
+        }
+
         // Game restart if player restarts
         private void restart_Click(object sender, RoutedEventArgs e)
         {
@@ -273,6 +279,18 @@ namespace Game
         private void UpdateWorld()
         {
             Player player = world.Player;
+
+            //temp win condition
+            int houseX = 144 + (161 / 2);
+            if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX &&
+                Math.Floor(player.Position.Y) == 75 + 117)
+            {
+                gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Visible;
+                lblHighscore.Visibility = lblScore.Visibility = Visibility.Hidden;
+                world.TimerPause();
+                player.playerIsDead = true;
+            }
+
             Canvas.SetLeft(playerBox, player.Position.X);
             Canvas.SetTop(playerBox, player.Position.Y);
             playerBox.Width = player.Size.X;
