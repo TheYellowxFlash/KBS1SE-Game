@@ -23,17 +23,17 @@ namespace Game.Model
             if (Diff == 1)
             {
                 movementSpeed = .35;
-                AttackRange = 210;
+                AttackRange = 200;
             }
             else if (Diff == 2)
             {
-                movementSpeed = .44;
-                AttackRange = 240;
+                movementSpeed = .4;
+                AttackRange = 225;
             }
             else if (Diff == 3)
             {
-                movementSpeed = .5;
-                AttackRange = 270;
+                movementSpeed = .4;
+                AttackRange = 250;
             }
         }
         

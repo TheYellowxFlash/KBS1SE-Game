@@ -18,22 +18,21 @@ namespace Game.Model
             Size = new Point(54, 54);
             Image = "Zombie/Still/Front.png";
             Name = "Zombie";
-            movementSpeed = .3;
 
             if (Diff == 1)
             {
-                //movementSpeed = .2;
-                AttackRange = 400;
+                movementSpeed = .2;
+                AttackRange = 350;
             }
             else if (Diff == 2)
             {
-                //movementSpeed = .25;
-                AttackRange = 450;
+                movementSpeed = .25;
+                AttackRange = 375;
             }
             else if (Diff == 3)
             {
-                //movementSpeed = 0.35;
-                AttackRange = 475;
+                movementSpeed = .35;
+                AttackRange = 400;
             }
         }
         
