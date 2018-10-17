@@ -7,9 +7,7 @@
         mc:Ignorable="d"
         Title="Level1" Height="704" Width="1280"  WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid>
-        <Label Content="Time:" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" HorizontalAlignment="Right" Visibility="Visible" FontSize="48" Margin="0,0,67,0" Foreground="DarkRed"></Label>
-        <Label x:Name="Timer" Content="300" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" HorizontalAlignment="Right" Visibility="Visible" FontSize="48" Foreground="DarkRed"></Label>
-
+        
 
         <Canvas x:Name="level1">
             <Image Source="Images/Player_House_Part1.png" Canvas.Left="144" Canvas.Top="75" Height="117" Width="161" />
@@ -106,6 +104,9 @@
         <Button x:Name="btnSubmitScore" Visibility="Hidden" HorizontalAlignment="Center" Content="Submit"  VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" Width="170" Foreground="DarkRed" Margin="0,0,0,239" Click="btnSubmitScore_Click"/>
         <TextBlock x:Name="lblHighscore" Visibility="Visible" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="Highscore: " VerticalAlignment="Top" FontSize="48"  Foreground="DarkRed"/>
         <TextBlock x:Name="lblScore" Visibility="Visible" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="Score: 0" VerticalAlignment="Top" FontSize="48"  Foreground="DarkRed" Margin="6,0,1094,0" Width="180"/>
+
+        <Label Content="Time:" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" HorizontalAlignment="Right" Visibility="Visible" FontSize="48" Margin="0,0,67,0" Foreground="DarkRed"></Label>
+        <Label x:Name="Timer" Content="60" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" HorizontalAlignment="Right" Visibility="Visible" FontSize="48" Foreground="DarkRed"></Label>
 
 
         <Grid.Background>
