@@ -5,6 +5,10 @@
     <score>2000</score>
   </entry>
   <entry>
+    <name>kaasgg</name>
+    <score>300</score>
+  </entry>
+  <entry>
     <name>qwerty</name>
     <score>250</score>
   </entry>
@@ -35,9 +39,5 @@
   <entry>
     <name>ggez</name>
     <score>10</score>
-  </entry>
-  <entry>
-    <name>Baas</name>
-    <score>5</score>
   </entry>
 </scores>
