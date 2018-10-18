@@ -12,11 +12,20 @@ namespace Game.Model
         public List<Candy> AllCandies = new List<Candy>();
         public List<Candy> CandiesInGame = new List<Candy>();
 
-        public List<Obstacle> obstacles = new List<Obstacle>();
+        public List<Obstacle> Obstacles = new List<Obstacle>();
         private readonly Random random = new Random();
 
         public int Score;
         private readonly DispatcherTimer timer = new DispatcherTimer();
+
+        public Player Player { get; set; }
+        public Ghost Ghost1 { get; set; }
+        public Ghost Ghost2 { get; set; }
+        public Skeleton Skeleton1 { get; set; }
+        public Skeleton Skeleton2 { get; set; }
+        public Zombie Zombie1 { get; set; }
+        public Zombie Zombie2 { get; set; }
+        public Zombie Zombie3 { get; set; }
 
         // Props aanmaken
         public World()
@@ -34,15 +43,6 @@ namespace Game.Model
             timer.Interval = new TimeSpan(0, 0, 0, 0, 5);
         }
 
-        public Player Player { get; set; }
-        public Ghost Ghost1 { get; set; }
-        public Ghost Ghost2 { get; set; }
-        public Skeleton Skeleton1 { get; set; }
-        public Skeleton Skeleton2 { get; set; }
-        public Zombie Zombie1 { get; set; }
-        public Zombie Zombie2 { get; set; }
-        public Zombie Zombie3 { get; set; }
-
         // Start timer
         public void StartGame()
         {
@@ -59,15 +59,15 @@ namespace Game.Model
         // Timer on tick listeners
         private void TimerOnTick(object sender, EventArgs e)
         {
-            Player.Move(obstacles);
+            Player.Move(Obstacles);
 
-            Skeleton1.Move(Player, obstacles);
-            Skeleton2.Move(Player, obstacles);
-            Ghost1.Move(Player, obstacles);
-            Ghost2.Move(Player, obstacles);
-            Zombie1.Move(Player, obstacles);
-            Zombie2.Move(Player, obstacles);
-            Zombie3.Move(Player, obstacles);
+            Skeleton1.Move(Player, Obstacles);
+            Skeleton2.Move(Player, Obstacles);
+            Ghost1.Move(Player, Obstacles);
+            Ghost2.Move(Player, Obstacles);
+            Zombie1.Move(Player, Obstacles);
+            Zombie2.Move(Player, Obstacles);
+            Zombie3.Move(Player, Obstacles);
         }
 
         // Create all candy locations

@@ -17,7 +17,7 @@ namespace Game.Model
         /// </summary>
         /// <param name="horizontal">The Horizontal direction(Left, Right or none)</param>
         /// <param name="vertical">The Vertical direction(Up, Down or none)</param>
-        /// <param name="obstacles">A list of all the obstacles the walker can't move through</param>
+        /// <param name="obstacles">A list of all the Obstacles the walker can't move through</param>
         protected void Move(HorizontalDirection horizontal, VerticalDirection vertical, List<Obstacle> obstacles)
         {
             //if both directions are none the walker doesn't want to move

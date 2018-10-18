@@ -73,7 +73,7 @@ namespace Game
                 {
                     var obstacle = (Image) child;
                     if (obstacle.IsEnabled)
-                        world.obstacles.Add(new Obstacle(obstacle));
+                        world.Obstacles.Add(new Obstacle(obstacle));
                 }
 
             playerBox = new Rectangle();
