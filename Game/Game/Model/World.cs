@@ -6,8 +6,12 @@ using Game.View;
 
 namespace Game.Model
 {
+    /// <summary>
+    /// This handles the object and candy logic.
+    /// </summary>
     internal class World
     {
+        //the height and width of the window
         public const int windowWidth = 1280, windowHeight = 704;
         public List<Candy> AllCandies = new List<Candy>();
         public List<Candy> CandiesInGame = new List<Candy>();
@@ -59,6 +63,7 @@ namespace Game.Model
         // Timer on tick listeners
         private void TimerOnTick(object sender, EventArgs e)
         {
+            //move all the Walkers
             Player.Move(Obstacles);
 
             Skeleton1.Move(Player, Obstacles);
@@ -94,7 +99,7 @@ namespace Game.Model
         // Get random candy from all candies
         public Candy GetRandomCandy()
         {
-            var i = random.Next(AllCandies.Count);
+            int i = random.Next(AllCandies.Count);
             return AllCandies[i];
         }
 

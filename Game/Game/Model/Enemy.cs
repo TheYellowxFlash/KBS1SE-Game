@@ -4,11 +4,13 @@ using Game.View;
 
 namespace Game.Model
 {
+    /// <summary>
+    /// Enemy that follows the player and kills it if they collide
+    /// </summary>
     internal class Enemy : Walker
     {
-        private readonly string Down = "/Down/Down.png";
-
         // Different images for moving directions
+        private readonly string Down = "/Down/Down.png";
         private readonly string Left = "/Left/Left.png";
         private readonly string Right = "/Right/Right.png";
         private readonly string Up = "/Up/Up.png";
@@ -18,12 +20,20 @@ namespace Game.Model
 
         protected readonly int Diff = ChooseDifficulty.Difficulty;
 
+        /// <summary>
+        /// Enemy constructor
+        /// </summary>
+        /// <param name="position">The intended start position of the Enemy</param>
         public Enemy(Point position) : base(position)
         {
             Position = position;
         }
 
-        // Method for checking if player is in atack range
+        /// <summary>
+        /// checks if the Enemy is in range of the given player
+        /// </summary>
+        /// <param name="player">The Player to check it is in range with</param>
+        /// <returns></returns>
         public bool InRange(Player player)
         {
             var enemyCenter = GetCenterPoint();
@@ -33,7 +43,11 @@ namespace Game.Model
                    CheckInRange(enemyCenter.Y, playerCenter.Y, AttackRange);
         }
 
-        // Enemy move to player method
+        /// <summary>
+        /// Move the Enemy to the given Player if in range
+        /// </summary>
+        /// <param name="player">The Player to move towards</param>
+        /// <param name="obstacles">A list of obstacles for collision detection</param>
         public void Move(Player player, List<Obstacle> obstacles)
         {
             if (InRange(player))
@@ -65,6 +79,7 @@ namespace Game.Model
                     Image = Name + Right;
                 }
 
+                //call Walker.Move to handle collision detection
                 Move(hor, vert, obstacles);
             }
         }
