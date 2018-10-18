@@ -6,7 +6,6 @@ namespace Game.Model
     {
         public static string ImageCandy = "candy.png";
         public int CandyId;
-        public int Score = 100;
 
         public Candy(int id, Point position)
         {

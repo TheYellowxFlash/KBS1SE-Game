@@ -13,7 +13,6 @@ namespace Game.Model
         private readonly string Left = "/Left/Left.png";
 
         private readonly int player = 1;
-        public bool playerIsDead = false;
         private readonly string Right = "/Right/Right.png";
         private readonly string Up = "/Up/Up.png";
 
