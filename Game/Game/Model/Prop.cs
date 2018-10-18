@@ -12,7 +12,7 @@ namespace Game.Model
     {
         public Point Position { get; set; }
         public Point Size { get; set; }
-        public String Image { get; set; }
+        public string Image { get; set; }
 
         public Prop(Point position, Point size, String image)
         {
