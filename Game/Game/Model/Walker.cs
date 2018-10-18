@@ -3,17 +3,24 @@ using System.Windows;
 
 namespace Game.Model
 {
+    /// <summary>
+    /// Class meant to be extended by moving Props. Handles movement. Creating an instance of this class is not possible
+    /// </summary>
     internal class Walker : Prop
     {
         protected bool canMoveThroughWalls = false;
         protected double movementSpeed;
 
+        /// <summary>
+        /// Creates the walker
+        /// </summary>
+        /// <param name="positionPoint">The point of the Walker</param>
         protected Walker(Point positionPoint) : base(positionPoint)
         {
         }
 
         /// <summary>
-        ///     Checks if a walker can and wants to move and then moves it
+        /// Checks if a walker can and wants to move and then moves it
         /// </summary>
         /// <param name="horizontal">The Horizontal direction(Left, Right or none)</param>
         /// <param name="vertical">The Vertical direction(Up, Down or none)</param>
@@ -65,13 +72,18 @@ namespace Game.Model
             Position = new Point(x, y);
         }
 
+        /// <summary>
+        /// Enumerator for horizontal direction
+        /// </summary>
         protected enum HorizontalDirection
         {
             left,
             right,
             none
         }
-
+        /// <summary>
+        /// Enumerator for vertical direction
+        /// </summary>
         protected enum VerticalDirection
         {
             up,

@@ -1,5 +1,8 @@
 ﻿namespace Game.Model
 {
+    /// <summary>
+    /// Handles and saves player score
+    /// </summary>
     internal class Score
     {
         public string Name;

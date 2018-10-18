@@ -5,6 +5,9 @@ using Game.View;
 
 namespace Game.Model
 {
+    /// <summary>
+    /// Class where the player logic is handled
+    /// </summary>
     internal class Player : Walker
     {
         private readonly string CC = CustomizeCharacter.character;
@@ -16,7 +19,10 @@ namespace Game.Model
         private readonly string Right = "/Right/Right.png";
         private readonly string Up = "/Up/Up.png";
 
-        // Player constructor with character customization options and movement speeds
+        /// <summary>
+        /// Player constructor with character customization options and movement speeds 
+        /// </summary>
+        /// <param name="position">The intended start position of the Player</param>
         public Player(Point position) : base(position)
         {
             Size = new Point(30, 46);
@@ -48,11 +54,16 @@ namespace Game.Model
             else if (Diff == 3) movementSpeed = 1;
         }
 
-        // Player move method including different images for moving directions
+        /// <summary>
+        /// Move the player in the intended direction
+        /// </summary>
+        /// <param name="obstacles">A list of obstacles the player can collide with</param>
         public void Move(List<Obstacle> obstacles)
         {
+            //Enumerators for storing the player direction
             var hor = HorizontalDirection.none;
             var ver = VerticalDirection.none;
+            //check if the player wants to walk down
             if (Keyboard.IsKeyDown(Key.Down))
             {
                 ver = VerticalDirection.down;
@@ -62,6 +73,7 @@ namespace Game.Model
                     Image = "Player2" + Down;
                 else if (player == 3) Image = "Player3" + Down;
             }
+            //check if the player wants to walk up
             else if (Keyboard.IsKeyDown(Key.Up))
             {
                 ver = VerticalDirection.up;
@@ -71,7 +83,7 @@ namespace Game.Model
                     Image = "Player2" + Up;
                 else if (player == 3) Image = "Player3" + Up;
             }
-
+            //check if the player wants to walk left
             if (Keyboard.IsKeyDown(Key.Left))
             {
                 hor = HorizontalDirection.left;
@@ -81,6 +93,7 @@ namespace Game.Model
                     Image = "Player2" + Left;
                 else if (player == 3) Image = "Player3" + Left;
             }
+            //check if the player wants to walk right
             else if (Keyboard.IsKeyDown(Key.Right))
             {
                 hor = HorizontalDirection.right;
@@ -90,7 +103,7 @@ namespace Game.Model
                     Image = "Player2" + Right;
                 else if (player == 3) Image = "Player3" + Right;
             }
-
+            //call Walker.Move to handle collision detection
             Move(hor, ver, obstacles);
         }
     }

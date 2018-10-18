@@ -2,10 +2,13 @@
 
 namespace Game.Model
 {
+    /// <summary>
+    /// Contains candy properties
+    /// </summary>
     internal class Candy : Prop
     {
         public static string ImageCandy = "candy.png";
-        public int CandyId;
+        public int CandyId { get; set; }
 
         public Candy(int id, Point position)
         {
@@ -14,4 +17,4 @@ namespace Game.Model
             Size = new Point(36, 36);
         }
     }
-}
+}   
