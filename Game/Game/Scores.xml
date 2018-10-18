@@ -21,6 +21,10 @@
     <score>1330</score>
   </entry>
   <entry>
+    <name>RAge</name>
+    <score>1100</score>
+  </entry>
+  <entry>
     <name>Xiaumay</name>
     <score>990</score>
   </entry>
@@ -35,9 +39,5 @@
   <entry>
     <name>Tom</name>
     <score>200</score>
-  </entry>
-  <entry>
-    <name>Bem</name>
-    <score>30</score>
   </entry>
 </scores>

@@ -130,6 +130,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Resource Include="View\Fonts\youmurdererbb_reg.otf" />
     <Resource Include="View\Fonts\HallowenInline.otf" />
@@ -291,9 +292,6 @@
   <ItemGroup>
     <None Include="Resources\Finish.wav" />
     <None Include="Resources\Pickup.wav" />
-    <Content Include="View\died.wav" />
-    <Content Include="View\Audio\YouDied.mp3" />
-    <Content Include="View\Audio\YouDied.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

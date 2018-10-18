@@ -4,19 +4,9 @@ namespace Game.Model
 {
     public class Prop
     {
-        public Prop(Point position, Point size, string image)
-        {
-            Position = position;
-            Size = size;
-            Image = image;
-        }
-
-
-        public Prop(Point position, string image)
-        {
-            Position = position;
-            Image = image;
-        }
+        public Point Position { get; set; }
+        public Point Size { get; set; }
+        public string Image { get; set; }
 
         public Prop(Point position)
         {
@@ -27,11 +17,7 @@ namespace Game.Model
         {
         }
 
-        public Point Position { get; set; }
-        public Point Size { get; set; }
-        public string Image { get; set; }
-
-
+        // Calculates and returns the center position(Point) of a prop element
         public Point GetCenterPoint()
         {
             var centerX = Position.X + Size.X / 2;
@@ -40,6 +26,7 @@ namespace Game.Model
             return new Point(centerX, centerY);
         }
 
+        // Checks if first number(double) is in a specified range with the second number
         public static bool CheckInRange(double getal1, double getal2, double range)
         {
             return getal1 + range >= getal2 && getal2 >= getal1 - range;
