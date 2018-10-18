@@ -16,24 +16,24 @@
         "Entry"
         {
         "MsmKey" = "8:_02A1E87BE2D2D8E79D133ABFCA1ED525"
-        "OwnerKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+        "OwnerKey" = "8:_07548F6B0035417893E16CE6F30850B5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6C4A2001ADDB5BBDF7A7A018D304998B"
-        "OwnerKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
+        "MsmKey" = "8:_07548F6B0035417893E16CE6F30850B5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+        "MsmKey" = "8:_6E1229AF9AB58A8C20FE6FC7097F0EA2"
+        "OwnerKey" = "8:_07548F6B0035417893E16CE6F30850B5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -46,13 +46,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6C4A2001ADDB5BBDF7A7A018D304998B"
+        "OwnerKey" = "8:_07548F6B0035417893E16CE6F30850B5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+        "OwnerKey" = "8:_6E1229AF9AB58A8C20FE6FC7097F0EA2"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -67,12 +67,20 @@
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
-        "Compression" = "3:2"
+        "Compression" = "3:1"
         "SignOutput" = "11:FALSE"
         "CertificateFile" = "8:"
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -80,15 +88,31 @@
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
         "OutputFilename" = "8:Release\\TrickOrTreatSetup.msi"
-        "PackageFilesAs" = "3:2"
+        "PackageFilesAs" = "3:1"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
-        "Compression" = "3:2"
+        "Compression" = "3:3"
         "SignOutput" = "11:FALSE"
         "CertificateFile" = "8:"
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -149,14 +173,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6C4A2001ADDB5BBDF7A7A018D304998B"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6E1229AF9AB58A8C20FE6FC7097F0EA2"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Game.Theme, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6C4A2001ADDB5BBDF7A7A018D304998B"
+                    "_6E1229AF9AB58A8C20FE6FC7097F0EA2"
                     {
                     "Name" = "8:Game.Theme.dll"
                     "Attributes" = "3:512"
@@ -257,7 +281,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TrickOrTreat"
         "ProductCode" = "8:{D11B2D0B-3B1E-4365-A66D-4F2FE6ABB19B}"
-        "PackageCode" = "8:{87920A4C-33CC-4FAF-A824-3A0DE34BE2D5}"
+        "PackageCode" = "8:{548E7861-DF4D-4E77-AC68-3E1D9E181F2D}"
         "UpgradeCode" = "8:{A00BF3E6-31B1-4813-8D4D-1823278BE2AA}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -377,34 +401,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_98A992C2B99D430BB3783963B575E068"
-            {
-            "Name" = "8:TrickOrTreat"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
-            "Folder" = "8:_9C5792DE94954B72AAB7563C51D41DA0"
-            "WorkingFolder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
-            "Icon" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A4EE411444F54B2088C2C43901387222"
-            {
-            "Name" = "8:TrickOrTreat"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
-            "Folder" = "8:_B4FD4FAD3BF54D2D833D10038F6B3272"
-            "WorkingFolder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
-            "Icon" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
-            "Feature" = "8:"
-            }
         }
         "UserInterface"
         {
@@ -804,9 +800,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F40F3C030A6F4BF5A7890A618CF98E82"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_07548F6B0035417893E16CE6F30850B5"
             {
-            "SourcePath" = "8:..\\Game\\obj\\Release\\Trick Or Treat.exe"
+            "SourcePath" = "8:..\\Game\\obj\\Debug\\Trick Or Treat.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
@@ -824,7 +820,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
+            "OutputConfiguration" = "8:Debug|Any CPU"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{F80E50CA-A26B-4B65-A252-7FF04C2E3AAB}"
             "ShowKeyOutput" = "11:TRUE"
