@@ -65,6 +65,7 @@ namespace Game
         // Windowload event, setting initial elements in game
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            Timer.Content = Time.ToString();
             world = new World();
 
             foreach (var child in level1.Children)
@@ -311,7 +312,6 @@ namespace Game
                         exit.Visibility = lblNoHighscore.Visibility = Visibility.Visible;
                     world.TimerPause();
                     scoretimer.Stop();
-                    player.playerIsDead = true;
                     gameOverBool = true;
                     new SoundPlayer(Properties.Resources.Finish).Play();
                 }

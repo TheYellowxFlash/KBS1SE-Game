@@ -42,8 +42,6 @@ namespace Game.Model
         public Zombie Zombie1 { get; set; }
         public Zombie Zombie2 { get; set; }
         public Zombie Zombie3 { get; set; }
-        public double XPos { get; set; }
-        public double YPos { get; set; }
 
         // Start timer
         public void StartGame()
