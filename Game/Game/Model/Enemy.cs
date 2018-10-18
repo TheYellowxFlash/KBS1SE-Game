@@ -13,40 +13,28 @@ namespace Game.Model
         public double AttackRange { get; set; }
         public string Name { get; set; }
 
+        // Different images for moving directions
         private string Left  = "/Left/Left.png";
         private string Right = "/Right/Right.png";
         private string Up  = "/Up/Up.png";
         private string Down  = "/Down/Down.png";
-
-        public Enemy(Point position, Point size, String image) : base(position, size, image)
-        {
-            Position = position;
-            Size = size;
-            Image = image;
-        }
-
-        public Enemy(Point position, String image) : base(position, image)
-        {
-            Position = position;
-            Image = image;
-        }
 
         public Enemy(Point position) : base(position)
         {
             Position = position;
         }
 
+        // Method for checking if player is in atack range
         public bool InRange(Player player)
         {
-            Point enemyCenter = GetCenterPoint();
-            Point playerCenter = player.GetCenterPoint();
-
+            Point enemyCenter = getCenterPoint();
+            Point playerCenter = player.getCenterPoint();
            
-            return (CheckInRange(enemyCenter.X, playerCenter.X, AttackRange) &&
-                    CheckInRange(enemyCenter.Y, playerCenter.Y, AttackRange));
-
+            return (checkInRange(enemyCenter.X, playerCenter.X, AttackRange) &&
+                    checkInRange(enemyCenter.Y, playerCenter.Y, AttackRange));
         }
 
+        // Enemy move to player method
         public void Move(Player player, List<Obstacle> obstacles)
         {
             if (InRange(player))

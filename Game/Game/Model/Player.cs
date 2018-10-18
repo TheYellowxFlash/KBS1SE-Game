@@ -24,6 +24,7 @@ namespace Game.Model
 
         int player = 1;
 
+        // Player constructor with character customization options and movement speeds
         public Player(Point position) : base(position)
         {
             Size = new Point(30, 46);
@@ -60,6 +61,7 @@ namespace Game.Model
             }
         }
 
+        // Player move method including different images for moving directions
         public void Move(List<Obstacle> obstacles)
         {
             Walker.HorizontalDirection hor = Walker.HorizontalDirection.none;
@@ -77,9 +79,7 @@ namespace Game.Model
                 } else if (player == 3)
                 {
                     Image = "Player3" + Down;
-                }
-
-                
+                }   
             }
             else if (Keyboard.IsKeyDown(Key.Up))
             {
@@ -114,7 +114,6 @@ namespace Game.Model
                 {
                     Image = "Player3" + Left;
                 }
-
             }
             else if (Keyboard.IsKeyDown(Key.Right))
             {

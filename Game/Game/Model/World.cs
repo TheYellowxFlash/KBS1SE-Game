@@ -29,6 +29,7 @@ namespace Game.Model
 
         public int Score = 0;
         
+        // Props aanmaken
         public World()
         {
             Player = new Player(new Point(203,225));

@@ -12,7 +12,6 @@ namespace Game.Model
 {
     class Obstacle : Prop
     {
-
         public Obstacle(Image obstacle)
         {
             Vector test = TreeHelper.GetOffset(obstacle);
