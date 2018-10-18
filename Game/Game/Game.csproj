@@ -295,6 +295,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\YouDied.wav" />
+    <Resource Include="View\level.xml" />
     <Resource Include="Scores.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
