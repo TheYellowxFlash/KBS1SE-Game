@@ -106,7 +106,7 @@
 
 
         <!--HighScore-->
-        <TextBox x:Name="txbPlayerName" Visibility="Hidden"  HorizontalAlignment="Center" Height="42"  TextWrapping="Wrap" VerticalAlignment="Top" Width="197" Margin="575,256,508,0" RenderTransformOrigin="0.5,0.5" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Background="#7FFFFFFF" Text="Enter Your Name" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" FontSize="36"/>
+        <TextBox x:Name="txbPlayerName" Visibility="Hidden" Foreground="Gray"  HorizontalAlignment="Center" Height="42"  TextWrapping="Wrap" VerticalAlignment="Top" Width="197" Margin="575,256,508,0" RenderTransformOrigin="0.5,0.5" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Background="#7FFFFFFF" Text="Enter Your Name" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" FontSize="36" GotFocus="txbPlayerName_GotFocus"/>
         <Button x:Name="btnSubmitScore" Visibility="Hidden" HorizontalAlignment="Center" Content="Submit"  VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" FontWeight="Bold" Width="170" Foreground="DarkRed" Margin="0,0,0,239" Click="btnSubmitScore_Click"/>
         <TextBlock x:Name="lblHighscore" Visibility="Visible" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="Highscore: " VerticalAlignment="Top" FontSize="48"  Foreground="DarkRed"/>
         <TextBlock x:Name="lblScore" Visibility="Visible" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="Score: 0" VerticalAlignment="Top" FontSize="48"  Foreground="DarkRed" Margin="6,0,1094,0" Width="180"/>

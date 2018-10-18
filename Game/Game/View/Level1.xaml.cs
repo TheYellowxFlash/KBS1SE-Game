@@ -224,6 +224,17 @@ namespace Game
         {
             return int.Parse(highScoreXML.FirstChild.NextSibling.LastChild.ChildNodes[1].InnerText);
         }
+        bool clickedPlayertxb = false;
+        private void txbPlayerName_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (!clickedPlayertxb)
+            {
+                txbPlayerName.Text = "";
+                txbPlayerName.Foreground = new SolidColorBrush(Colors.Black);
+                clickedPlayertxb = true;
+                btnSubmitScore.Visibility = Visibility.Visible;
+            }
+        }
 
         // Game restart if player restarts
         private void restart_Click(object sender, RoutedEventArgs e)
@@ -267,7 +278,7 @@ namespace Game
                 }
                 highScoreXML.Save(highscoreLocation);
             }
-            gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = txbPlayerName.Visibility = btnSubmitScore.Visibility = Visibility.Hidden;
+            gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = txbPlayerName.Visibility = Visibility.Hidden;
 
             MainWindow mainMenu = new MainWindow();
             mainMenu.Show();
@@ -290,7 +301,7 @@ namespace Game
                         pausemenu.Opacity = 0.8;
 		                if (world.Score > getLastScore())
 		                {
-		                    txbPlayerName.Visibility = playerName.Visibility = btnSubmitScore.Visibility = Visibility.Visible; 
+		                    txbPlayerName.Visibility = playerName.Visibility = Visibility.Visible; 
 		                }
 		                else
 		                {
