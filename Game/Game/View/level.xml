@@ -1,1 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<grid>
+  <canvas>
+    <image src="Images/Player_House_Part1.png" left="144" top="75" height="117" width="161"></image>
+  </canvas>
+</grid>
