@@ -293,5 +293,8 @@
     <None Include="Resources\Finish.wav" />
     <None Include="Resources\Pickup.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\YouDied.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
