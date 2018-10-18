@@ -23,7 +23,7 @@ namespace Game
     /// </summary>
     public partial class Level1 : Window
     {
-        private const string highscoreLocation = "../../Scores.xml";
+        private const string highscoreLocation = "Scores.xml";
         private readonly Rectangle[] candyBoxes = new Rectangle[3];
         private bool clickedPlayertxb;
         private readonly int diff = ChooseDifficulty.Difficulty;
