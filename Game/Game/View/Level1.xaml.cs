@@ -17,7 +17,7 @@ namespace Game
     //a
     public partial class Level1 : Window
     {
-        private const string highscoreLocation = "../../Scores.xml";
+        private string highscoreLocation = "Game.Properties.Resources.Scores";
         private readonly Rectangle[] candyBoxes = new Rectangle[3];
         private bool clickedPlayertxb;
         private readonly int diff = ChooseDifficulty.Difficulty;
@@ -51,7 +51,7 @@ namespace Game
         public Level1()
         {
             InitializeComponent();
-            highScoreXML.Load(highscoreLocation);
+            highScoreXML.LoadXml(Game.Properties.Resources.Scores);
             timer.Tick += CheckCandyPick;
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
@@ -283,7 +283,7 @@ namespace Game
                     root.AppendChild(element);
                 }
 
-                highScoreXML.Save(highscoreLocation);
+                highScoreXML.Save(Game.Properties.Resources.Scores);
             }
 
             gameWon.Visibility =
