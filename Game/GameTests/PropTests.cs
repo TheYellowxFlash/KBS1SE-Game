@@ -18,7 +18,7 @@ namespace Game.Tests
             double getal2 = 0;
             double range = 0;
 
-            bool actual = Prop.checkInRange(getal1, getal2, range);
+            bool actual = Prop.CheckInRange(getal1, getal2, range);
 
             Assert.IsTrue(actual, "Zero in range");
         }
@@ -30,7 +30,7 @@ namespace Game.Tests
             double getal2 = 100;
             double range = 100;
 
-            bool actual = Prop.checkInRange(getal1, getal2, range);
+            bool actual = Prop.CheckInRange(getal1, getal2, range);
 
             Assert.IsTrue(actual, "Onehunderd is in range");
         }
@@ -42,7 +42,7 @@ namespace Game.Tests
             double getal2 = 100;
             double range = 1000;
 
-            bool actual = Prop.checkInRange(getal1, getal2, range);
+            bool actual = Prop.CheckInRange(getal1, getal2, range);
 
             Assert.IsTrue(actual, "Large range is in range");
         }
@@ -54,7 +54,7 @@ namespace Game.Tests
             double getal2 = 0;
             double range = 100;
 
-            bool actual = Prop.checkInRange(getal1, getal2, range);
+            bool actual = Prop.CheckInRange(getal1, getal2, range);
 
             Assert.IsTrue(actual, "Small number is in range");
         }
@@ -66,7 +66,7 @@ namespace Game.Tests
             double getal2 = 2000;
             double range = 1000;
 
-            bool actual = Prop.checkInRange(getal1, getal2, range);
+            bool actual = Prop.CheckInRange(getal1, getal2, range);
 
             Assert.IsFalse(actual, "Large range is not in range");
         }
@@ -78,7 +78,7 @@ namespace Game.Tests
             double getal2 = 0;
             double range = 5;
 
-            bool actual = Prop.checkInRange(getal1, getal2, range);
+            bool actual = Prop.CheckInRange(getal1, getal2, range);
 
             Assert.IsFalse(actual, "Small number is not in range");
         }
@@ -90,7 +90,7 @@ namespace Game.Tests
             double getal2 = 77.77;
             double range = 99.99;
 
-            bool actual = Prop.checkInRange(getal1, getal2, range);
+            bool actual = Prop.CheckInRange(getal1, getal2, range);
 
             Assert.IsTrue(actual, "Double is in range");
         }
@@ -102,7 +102,7 @@ namespace Game.Tests
             double getal2 = 77.77;
             double range = 11.11;
 
-            bool actual = Prop.checkInRange(getal1, getal2, range);
+            bool actual = Prop.CheckInRange(getal1, getal2, range);
 
             Assert.IsFalse(actual, "Double is not in range");
         }
@@ -114,7 +114,7 @@ namespace Game.Tests
             double getal2 = -50;
             double range = 100;
 
-            bool actual = Prop.checkInRange(getal1, getal2, range);
+            bool actual = Prop.CheckInRange(getal1, getal2, range);
 
             Assert.IsTrue(actual, "Minus is in range");
         }
@@ -126,7 +126,7 @@ namespace Game.Tests
             double getal2 = -50;
             double range = 20;
 
-            bool actual = Prop.checkInRange(getal1, getal2, range);
+            bool actual = Prop.CheckInRange(getal1, getal2, range);
 
             Assert.IsFalse(actual, "Minus is not in range");
         }

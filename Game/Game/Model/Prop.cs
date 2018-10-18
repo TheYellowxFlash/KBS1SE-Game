@@ -22,7 +22,7 @@ namespace Game.Model
         }
 
 
-        public Prop(Point position, String image)
+        public Prop(Point position, string image)
         {
             Position = position;
             Image = image;
@@ -36,7 +36,7 @@ namespace Game.Model
         public Prop() { }
 
 
-        public Point getCenterPoint()
+        public Point GetCenterPoint()
         {
             double centerX = Position.X + (Size.X / 2);
             double centerY = Position.Y + (Size.Y / 2);
@@ -44,7 +44,7 @@ namespace Game.Model
             return new Point(centerX, centerY);
         }
 
-        public static bool checkInRange(double getal1, double getal2, double range)
+        public static bool CheckInRange(double getal1, double getal2, double range)
         {
             return (getal1 + range >= getal2 && getal2 >= getal1 - range);
 
