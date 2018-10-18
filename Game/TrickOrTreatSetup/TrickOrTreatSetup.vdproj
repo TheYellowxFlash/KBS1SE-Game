@@ -15,44 +15,38 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_01FD73CC2DB0422581B43B6A750305DA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_02A1E87BE2D2D8E79D133ABFCA1ED525"
-        "OwnerKey" = "8:_07548F6B0035417893E16CE6F30850B5"
+        "OwnerKey" = "8:_01FD73CC2DB0422581B43B6A750305DA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_07548F6B0035417893E16CE6F30850B5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6E1229AF9AB58A8C20FE6FC7097F0EA2"
-        "OwnerKey" = "8:_07548F6B0035417893E16CE6F30850B5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_07548F6B0035417893E16CE6F30850B5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6E1229AF9AB58A8C20FE6FC7097F0EA2"
+        "MsmKey" = "8:_6C4A2001ADDB5BBDF7A7A018D304998B"
+        "OwnerKey" = "8:_01FD73CC2DB0422581B43B6A750305DA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_02A1E87BE2D2D8E79D133ABFCA1ED525"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_01FD73CC2DB0422581B43B6A750305DA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6C4A2001ADDB5BBDF7A7A018D304998B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -181,14 +175,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6E1229AF9AB58A8C20FE6FC7097F0EA2"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6C4A2001ADDB5BBDF7A7A018D304998B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Game.Theme, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6E1229AF9AB58A8C20FE6FC7097F0EA2"
+                    "_6C4A2001ADDB5BBDF7A7A018D304998B"
                     {
                     "Name" = "8:Game.Theme.dll"
                     "Attributes" = "3:512"
@@ -210,26 +204,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D76B2E469C7E4933A6F21D99E3923B6B"
-            {
-            "SourcePath" = "8:..\\Game\\TrickOrTreat.ico"
-            "TargetName" = "8:TrickOrTreat.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -289,7 +263,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TrickOrTreat"
         "ProductCode" = "8:{D11B2D0B-3B1E-4365-A66D-4F2FE6ABB19B}"
-        "PackageCode" = "8:{261E4DFC-2DE6-45CE-9656-CE7F832ADF2C}"
+        "PackageCode" = "8:{75471060-5E70-427C-9C40-55045EA208EE}"
         "UpgradeCode" = "8:{A00BF3E6-31B1-4813-8D4D-1823278BE2AA}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -409,20 +383,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8ACA6FBA956647D69509A03E8651EF4E"
-            {
-            "Name" = "8:TrickOrTreat"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_07548F6B0035417893E16CE6F30850B5"
-            "Folder" = "8:_B4FD4FAD3BF54D2D833D10038F6B3272"
-            "WorkingFolder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
-            "Icon" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
-            "Feature" = "8:"
-            }
         }
         "UserInterface"
         {
@@ -822,9 +782,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_07548F6B0035417893E16CE6F30850B5"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_01FD73CC2DB0422581B43B6A750305DA"
             {
-            "SourcePath" = "8:..\\Game\\obj\\Debug\\Trick Or Treat.exe"
+            "SourcePath" = "8:..\\Game\\obj\\Release\\Trick Or Treat.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
@@ -842,8 +802,36 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:Debug|Any CPU"
+            "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{F80E50CA-A26B-4B65-A252-7FF04C2E3AAB}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_264BEDE33F6D4169A1D9DBD843D1FED8"
+            {
+            "SourcePath" = "8:"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:LocalizedResourceDlls"
             "OutputProjectGuid" = "8:{F80E50CA-A26B-4B65-A252-7FF04C2E3AAB}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
