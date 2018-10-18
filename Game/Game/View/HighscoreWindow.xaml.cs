@@ -14,6 +14,7 @@ namespace Game.View
             InitializeComponent();
         }
 
+        // Get scores from xml document
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
             var highScoreXML = new XmlDocument();
@@ -31,6 +32,7 @@ namespace Game.View
             }
         }
 
+        // Button to exit highscore screen
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             var mainMenu = new MainWindow();

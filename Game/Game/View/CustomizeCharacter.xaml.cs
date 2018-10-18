@@ -20,6 +20,7 @@ namespace Game
             Pi.Opacity = 0.5;
         }
 
+        // Choose character handling
         private void character_Click(object sender, RoutedEventArgs e)
         {
             var targetButton = sender as Button;
@@ -54,6 +55,7 @@ namespace Game
             }
         }
 
+        // Back button handling
         private void back_Click(object sender, RoutedEventArgs e)
         {
             var mainMenu = new MainWindow();

@@ -14,6 +14,7 @@ namespace Game.View
             InitializeComponent();
         }
 
+        // Click on easy difficulty
         private void easy_Click(object sender, RoutedEventArgs e)
         {
             Difficulty = 1;
@@ -22,7 +23,8 @@ namespace Game.View
             Close();
         }
 
-        private void medium_Click(object sender, RoutedEventArgs e)
+        // Click on normal difficulty
+        private void normal_Click(object sender, RoutedEventArgs e)
         {
             Difficulty = 2;
             var level1 = new Level1();
@@ -30,6 +32,7 @@ namespace Game.View
             Close();
         }
 
+        // Click on hard difficulty
         private void hard_Click(object sender, RoutedEventArgs e)
         {
             Difficulty = 3;
@@ -38,6 +41,7 @@ namespace Game.View
             Close();
         }
 
+        // Click on back button
         private void back_Click(object sender, RoutedEventArgs e)
         {
             var mainMenu = new MainWindow();

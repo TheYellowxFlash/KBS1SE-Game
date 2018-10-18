@@ -10,7 +10,7 @@
     <Grid>
         <Label Content="Choose a Difficulty" HorizontalAlignment="center" VerticalAlignment="top" Height="89" Width="539" FontSize="60" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Panel.ZIndex="1" Margin="370,10,371,0"/>
         <Button x:Name="easy" Content="Easy"  Margin="494,0,0,467" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="easy_Click" HorizontalAlignment="Left"/>
-        <Button x:Name="medium" Content="Medium" HorizontalAlignment="Left" Margin="494,0,0,367" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="medium_Click"/>
+        <Button x:Name="medium" Content="Normal" HorizontalAlignment="Left" Margin="494,0,0,367" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="normal_Click"/>
         <Button x:Name="hard" Content="Hard" HorizontalAlignment="Left" Margin="494,0,0,267" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="hard_Click" />
         <Button x:Name="back" Content="Back" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" FontFamily="/Trick Or Treat;component/View/Fonts/#Hallowen Inline" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Arrow" Click="back_Click" RenderTransformOrigin="0.864,-0.714" />
         <Grid.Background>

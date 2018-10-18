@@ -221,11 +221,13 @@ namespace Game
                 }
         }
 
-        private int getLastScore()
+        // Get score of last position on highscore board
+        private int GetLastScore()
         {
             return int.Parse(highScoreXML.FirstChild.NextSibling.LastChild.ChildNodes[1].InnerText);
         }
 
+        // Remove placeholder on textbox for highscore form
         private void txbPlayerName_GotFocus(object sender, RoutedEventArgs e)
         {
             if (!clickedPlayertxb)
@@ -290,11 +292,13 @@ namespace Game
             Close();
         }
 
+        // Update elements in game world on timer tick
         private void UpdateWorld()
         {
             var player = world.Player;
 
-            //temp win condition
+            // Endpoint of game
+            #region GameEndpoint
             var houseX = 144 + 161 / 2;
             if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX &&
                 Math.Floor(player.Position.Y) == 75 + 117)
@@ -305,7 +309,7 @@ namespace Game
                     lblHighscore.Visibility =
                         lblScore.Visibility = lblTimer.Visibility = Timer.Visibility = Visibility.Hidden;
                     pausemenu.Opacity = 0.8;
-                    if (world.Score > getLastScore())
+                    if (world.Score > GetLastScore())
                         txbPlayerName.Visibility = playerName.Visibility = Visibility.Visible;
                     else
                         exit.Visibility = lblNoHighscore.Visibility = Visibility.Visible;
@@ -315,7 +319,10 @@ namespace Game
                     gameOverBool = true;
                     new SoundPlayer(Properties.Resources.Finish).Play();
                 }
+            #endregion
 
+            // Player element
+            #region Player
             Canvas.SetLeft(playerBox, player.Position.X);
             Canvas.SetTop(playerBox, player.Position.Y);
             playerBox.Width = player.Size.X;
@@ -328,7 +335,10 @@ namespace Game
 
             var x = player.Size.X * 4.5;
             var y = player.Size.Y * 2.8;
+            #endregion
 
+            // Lightning effects
+            #region LightningEffects
             Panel.SetZIndex(playerLight, 6);
             Canvas.SetLeft(playerLight, player.Position.X - x);
             Canvas.SetTop(playerLight, player.Position.Y - y);
@@ -366,6 +376,9 @@ namespace Game
             worldLight.Opacity = lightDiff;
             Panel.SetZIndex(worldLight, 5);
 
+            #endregion
+
+            // Enemy ghosts
             #region Ghost
 
             if (ghostBox1 != null)
@@ -398,6 +411,7 @@ namespace Game
 
             #endregion
 
+            // Enemy skeletons
             #region Skeleton
 
             if (skeletonBox1 != null)
@@ -430,6 +444,7 @@ namespace Game
 
             #endregion
 
+            // Enemy zombies
             #region Zombie
 
             if (zombieBox1 != null)

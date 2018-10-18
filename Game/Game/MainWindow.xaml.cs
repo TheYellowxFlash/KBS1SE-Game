@@ -13,15 +13,15 @@ namespace Game
             InitializeComponent();
         }
 
+        // Playbutton clicked
         private void play_Click(object sender, RoutedEventArgs e)
         {
-            //MovementTest.MainWindow m = new MovementTest.MainWindow();
-            //Level1 level1 = new Level1();
             var chooseDifficulty = new ChooseDifficulty();
             chooseDifficulty.Show();
             Close();
         }
 
+        // Customize button clicked
         private void customize_Click(object sender, RoutedEventArgs e)
         {
             var CustomCharacter = new CustomizeCharacter();
@@ -29,6 +29,7 @@ namespace Game
             Close();
         }
 
+        // Highscore button clicked
         private void highscore_Click(object sender, RoutedEventArgs e)
         {
             var h = new HighscoreWindow();
@@ -36,6 +37,7 @@ namespace Game
             Close();
         }
 
+        // Exit button clicked
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
