@@ -132,6 +132,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Content Include="View\Scores.xml" />
     <Resource Include="View\Fonts\youmurdererbb_reg.otf" />
     <Resource Include="View\Fonts\HallowenInline.otf" />
     <None Include="Properties\Settings.settings">
@@ -295,7 +296,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\YouDied.wav" />
-    <Resource Include="Scores.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
