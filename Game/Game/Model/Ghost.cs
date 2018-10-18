@@ -3,6 +3,9 @@ using Game.View;
 
 namespace Game.Model
 {
+    /// <summary>
+    /// Contains properties for skeletons and settings for different difficulty levels.
+    /// </summary>
     internal class Ghost : Enemy
     {
         public Ghost(Point position) : base(position)
