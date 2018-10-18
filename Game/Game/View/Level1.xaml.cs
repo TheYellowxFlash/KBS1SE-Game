@@ -14,6 +14,7 @@ using Game.View;
 
 namespace Game
 {
+    //a
     public partial class Level1 : Window
     {
         private const string highscoreLocation = "../../Scores.xml";
@@ -46,7 +47,7 @@ namespace Game
         private readonly DispatcherTimer timer = new DispatcherTimer();
         private World world;
 
-
+        
         public Level1()
         {
             InitializeComponent();
