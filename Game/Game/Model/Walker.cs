@@ -63,6 +63,7 @@ namespace Game.Model
                         break;
                     //check if the walker is not colliding with an object to its right
                     if (moveRight && 
+                        //checks if x AND y position in the next tick overlap with the object
                         ((Position.X + Size.X + movementSpeed > obstacle.Position.X) && (Position.X + Size.X + movementSpeed < obstacle.Position.X + obstacle.Size.X) &&
                         (Position.Y < obstacle.Position.Y + obstacle.Size.Y) && (obstacle.Position.Y < Position.Y + Size.Y)))
                     {
@@ -87,6 +88,7 @@ namespace Game.Model
 
                 }
             }
+            //if the Walker is still allowed to move move it
             if (moveUp)
             {
                 y -= movementSpeed;
@@ -104,7 +106,6 @@ namespace Game.Model
                 x += movementSpeed;
             }
             Position = new Point(x, y);
-
         }
     }
 }

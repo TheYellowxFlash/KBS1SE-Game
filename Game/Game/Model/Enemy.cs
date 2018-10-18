@@ -27,11 +27,11 @@ namespace Game.Model
         // Method for checking if player is in atack range
         public bool InRange(Player player)
         {
-            Point enemyCenter = getCenterPoint();
-            Point playerCenter = player.getCenterPoint();
+            Point enemyCenter = GetCenterPoint();
+            Point playerCenter = player.GetCenterPoint();
            
-            return (checkInRange(enemyCenter.X, playerCenter.X, AttackRange) &&
-                    checkInRange(enemyCenter.Y, playerCenter.Y, AttackRange));
+            return (CheckInRange(enemyCenter.X, playerCenter.X, AttackRange) &&
+                    CheckInRange(enemyCenter.Y, playerCenter.Y, AttackRange));
         }
 
         // Enemy move to player method
