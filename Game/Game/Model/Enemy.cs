@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
+using Game.View;
 
 namespace Game.Model
 {
@@ -12,13 +13,15 @@ namespace Game.Model
         private readonly string Right = "/Right/Right.png";
         private readonly string Up = "/Up/Up.png";
 
+        public double AttackRange { get; set; }
+        public string Name { get; set; }
+
+        protected readonly int Diff = ChooseDifficulty.Difficulty;
+
         public Enemy(Point position) : base(position)
         {
             Position = position;
         }
-
-        public double AttackRange { get; set; }
-        public string Name { get; set; }
 
         // Method for checking if player is in atack range
         public bool InRange(Player player)

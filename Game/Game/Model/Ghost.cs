@@ -5,8 +5,6 @@ namespace Game.Model
 {
     internal class Ghost : Enemy
     {
-        private readonly int Diff = ChooseDifficulty.Difficulty;
-
         public Ghost(Point position) : base(position)
         {
             Position = position;

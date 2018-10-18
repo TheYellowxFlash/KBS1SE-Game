@@ -5,8 +5,6 @@ namespace Game.Model
 {
     internal class Zombie : Enemy
     {
-        private readonly int Diff = ChooseDifficulty.Difficulty;
-
         public Zombie(Point position) : base(position)
         {
             Position = position;
