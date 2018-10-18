@@ -1,37 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 
 namespace Game.Model
 {
-    class Enemy : Walker
+    internal class Enemy : Walker
     {
-        public double AttackRange { get; set; }
-        public string Name { get; set; }
+        private readonly string Down = "/Down/Down.png";
 
         // Different images for moving directions
-        private string Left  = "/Left/Left.png";
-        private string Right = "/Right/Right.png";
-        private string Up  = "/Up/Up.png";
-        private string Down  = "/Down/Down.png";
+        private readonly string Left = "/Left/Left.png";
+        private readonly string Right = "/Right/Right.png";
+        private readonly string Up = "/Up/Up.png";
 
         public Enemy(Point position) : base(position)
         {
             Position = position;
         }
 
+        public double AttackRange { get; set; }
+        public string Name { get; set; }
+
         // Method for checking if player is in atack range
         public bool InRange(Player player)
         {
-            Point enemyCenter = GetCenterPoint();
-            Point playerCenter = player.GetCenterPoint();
-           
-            return (CheckInRange(enemyCenter.X, playerCenter.X, AttackRange) &&
-                    CheckInRange(enemyCenter.Y, playerCenter.Y, AttackRange));
+            var enemyCenter = GetCenterPoint();
+            var playerCenter = player.GetCenterPoint();
+
+            return CheckInRange(enemyCenter.X, playerCenter.X, AttackRange) &&
+                   CheckInRange(enemyCenter.Y, playerCenter.Y, AttackRange);
         }
 
         // Enemy move to player method
@@ -39,37 +35,35 @@ namespace Game.Model
         {
             if (InRange(player))
             {
-                double y = Position.Y;
-                double x = Position.X;
-                Walker.VerticalDirection vert = Walker.VerticalDirection.none;
-                Walker.HorizontalDirection hor = Walker.HorizontalDirection.none;
+                var y = Position.Y;
+                var x = Position.X;
+                var vert = VerticalDirection.none;
+                var hor = HorizontalDirection.none;
 
                 if (player.Position.Y > y)
                 {
-                    vert = Walker.VerticalDirection.down;
+                    vert = VerticalDirection.down;
                     Image = Name + Down;
                 }
                 else
                 {
-                    vert = Walker.VerticalDirection.up;
+                    vert = VerticalDirection.up;
                     Image = Name + Up;
                 }
 
                 if (player.Position.X < x)
                 {
-                    hor = Walker.HorizontalDirection.left;
+                    hor = HorizontalDirection.left;
                     Image = Name + Left;
                 }
                 else
                 {
-                    hor = Walker.HorizontalDirection.right;
+                    hor = HorizontalDirection.right;
                     Image = Name + Right;
                 }
+
                 Move(hor, vert, obstacles);
             }
         }
     }
-
-        
-    
 }

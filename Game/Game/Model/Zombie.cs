@@ -1,16 +1,11 @@
-﻿using Game.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using Game.View;
 
 namespace Game.Model
 {
-    class Zombie : Enemy
+    internal class Zombie : Enemy
     {
-        int Diff = ChooseDifficulty.Difficulty;
+        private readonly int Diff = ChooseDifficulty.Difficulty;
 
         public Zombie(Point position) : base(position)
         {
@@ -35,6 +30,5 @@ namespace Game.Model
                 AttackRange = 400;
             }
         }
-        
     }
 }

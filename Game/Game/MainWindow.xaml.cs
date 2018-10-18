@@ -1,27 +1,13 @@
-﻿using Game.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using Game.View;
 
 namespace Game
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
-        
         public MainWindow()
         {
             InitializeComponent();
@@ -31,21 +17,21 @@ namespace Game
         {
             //MovementTest.MainWindow m = new MovementTest.MainWindow();
             //Level1 level1 = new Level1();
-            ChooseDifficulty chooseDifficulty = new ChooseDifficulty();
+            var chooseDifficulty = new ChooseDifficulty();
             chooseDifficulty.Show();
-            this.Close();
+            Close();
         }
-        
+
         private void customize_Click(object sender, RoutedEventArgs e)
         {
-            CustomizeCharacter CustomCharacter = new CustomizeCharacter();
+            var CustomCharacter = new CustomizeCharacter();
             CustomCharacter.Show();
-            this.Close();
+            Close();
         }
 
         private void highscore_Click(object sender, RoutedEventArgs e)
         {
-            var h = new View.HighscoreWindow();
+            var h = new HighscoreWindow();
             h.Show();
             Close();
         }

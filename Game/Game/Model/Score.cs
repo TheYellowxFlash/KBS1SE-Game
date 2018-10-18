@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Game.Model
+﻿namespace Game.Model
 {
-    class Score
+    internal class Score
     {
         public string Name;
         public int PlayerScore;
@@ -16,6 +10,5 @@ namespace Game.Model
             Name = n;
             PlayerScore = s;
         }
-        
     }
 }

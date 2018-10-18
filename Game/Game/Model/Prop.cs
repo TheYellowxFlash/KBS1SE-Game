@@ -1,20 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Media;
+﻿using System.Windows;
 
 namespace Game.Model
 {
     public class Prop
     {
-        public Point Position { get; set; }
-        public Point Size { get; set; }
-        public string Image { get; set; }
-
-        public Prop(Point position, Point size, String image)
+        public Prop(Point position, Point size, string image)
         {
             Position = position;
             Size = size;
@@ -33,21 +23,26 @@ namespace Game.Model
             Position = position;
         }
 
-        public Prop() { }
+        public Prop()
+        {
+        }
+
+        public Point Position { get; set; }
+        public Point Size { get; set; }
+        public string Image { get; set; }
 
 
         public Point GetCenterPoint()
         {
-            double centerX = Position.X + (Size.X / 2);
-            double centerY = Position.Y + (Size.Y / 2);
+            var centerX = Position.X + Size.X / 2;
+            var centerY = Position.Y + Size.Y / 2;
 
             return new Point(centerX, centerY);
         }
 
         public static bool CheckInRange(double getal1, double getal2, double range)
         {
-            return (getal1 + range >= getal2 && getal2 >= getal1 - range);
-
+            return getal1 + range >= getal2 && getal2 >= getal1 - range;
         }
     }
 }

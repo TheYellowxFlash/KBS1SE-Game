@@ -1,21 +1,16 @@
-﻿using Game.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using Game.View;
 
 namespace Game.Model
 {
-    class Ghost : Enemy
+    internal class Ghost : Enemy
     {
-        int Diff = ChooseDifficulty.Difficulty;
+        private readonly int Diff = ChooseDifficulty.Difficulty;
 
         public Ghost(Point position) : base(position)
         {
             Position = position;
-            Size = new Point(36,36);
+            Size = new Point(36, 36);
             Image = "Ghost/Still/Front.png";
             Name = "Ghost";
             canMoveThroughWalls = true;
@@ -36,7 +31,5 @@ namespace Game.Model
                 AttackRange = 250;
             }
         }
-        
-        
     }
 }
