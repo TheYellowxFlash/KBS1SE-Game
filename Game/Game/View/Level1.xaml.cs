@@ -14,16 +14,10 @@ using Game.View;
 
 namespace Game
 {
-    /// <summary>
-    /// Class for building the level.
-    /// In the window loaded method all canvas elements will be initialised.
-    /// For making the game flow there is a DispatchTimer being used with a timer on tick method which will call the UpdateWorld method on every tick.
-    /// The update world method contains all in game updates, position updates for player, enemy, candies etc... 
-    /// Further more this class handles events directly send from in-game and handles collision detection
-    /// </summary>
+    //a
     public partial class Level1 : Window
     {
-        private const string highscoreLocation = "Scores.xml";
+        private const string highscoreLocation = "../../Scores.xml";
         private readonly Rectangle[] candyBoxes = new Rectangle[3];
         private bool clickedPlayertxb;
         private readonly int diff = ChooseDifficulty.Difficulty;
@@ -53,7 +47,7 @@ namespace Game
         private readonly DispatcherTimer timer = new DispatcherTimer();
         private World world;
 
-
+        
         public Level1()
         {
             InitializeComponent();
