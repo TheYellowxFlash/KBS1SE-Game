@@ -19,7 +19,7 @@ namespace Game
     /// In the window loaded method all canvas elements will be initialised.
     /// For making the game flow there is a DispatchTimer being used with a timer on tick method which will call the UpdateWorld method on every tick.
     /// The update world method contains all in game updates, position updates for player, enemy, candies etc... 
-    /// Further more this class handles events directly send from in-game
+    /// Further more this class handles events directly send from in-game and handles collision detection
     /// </summary>
     public partial class Level1 : Window
     {
