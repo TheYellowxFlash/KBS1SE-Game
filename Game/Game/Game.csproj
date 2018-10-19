@@ -40,6 +40,9 @@
   <PropertyGroup>
     <ApplicationIcon>TrickOrTreat.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -135,6 +138,7 @@
     </EmbeddedResource>
     <Resource Include="View\Fonts\youmurdererbb_reg.otf" />
     <Resource Include="View\Fonts\HallowenInline.otf" />
+    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -157,13 +161,19 @@
     <Resource Include="Images\Background_Menu2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\skeleton.png" />
+    <Content Include="View\PropIcons\skeleton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\zombie.png" />
+    <Content Include="View\PropIcons\zombie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\ghost.png" />
+    <Content Include="View\PropIcons\ghost.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\grass.png" />
@@ -202,64 +212,140 @@
     <Resource Include="View\Images\TrickOrTreat.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\Player1\Down\Down.png" />
-    <Resource Include="View\PropIcons\Player1\Left\Left.png" />
-    <Resource Include="View\PropIcons\Player1\Player1.png" />
-    <Resource Include="View\PropIcons\Player1\Right\Right.png" />
-    <Resource Include="View\PropIcons\Player1\Up\Up.png" />
-    <Resource Include="View\PropIcons\Player3\Player3.png" />
+    <Content Include="View\PropIcons\Player1\Down\Down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player1\Left\Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player1\Player1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player1\Right\Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player1\Up\Up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player3\Player3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\Player1\Still\Back.png" />
-    <Resource Include="View\PropIcons\Player1\Still\Front.png" />
+    <Content Include="View\PropIcons\Player1\Still\Back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player1\Still\Front.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\Player3\Down\Down.png" />
-    <Resource Include="View\PropIcons\Player3\Left\Left.png" />
-    <Resource Include="View\PropIcons\Player3\Right\Right.png" />
-    <Resource Include="View\PropIcons\Player3\Still\Back.png" />
-    <Resource Include="View\PropIcons\Player3\Still\Front.png" />
-    <Resource Include="View\PropIcons\Player3\Up\Up.png" />
+    <Content Include="View\PropIcons\Player3\Down\Down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player3\Left\Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player3\Right\Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player3\Still\Back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player3\Still\Front.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player3\Up\Up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\Skeleton\Down\Down.png" />
-    <Resource Include="View\PropIcons\Skeleton\Left\Left.png" />
-    <Resource Include="View\PropIcons\Skeleton\Player2.png" />
-    <Resource Include="View\PropIcons\Skeleton\Right\Right.png" />
-    <Resource Include="View\PropIcons\Skeleton\Still\Back.png" />
-    <Resource Include="View\PropIcons\Skeleton\Still\Front.png" />
-    <Resource Include="View\PropIcons\Skeleton\Up\Up.png" />
+    <Content Include="View\PropIcons\Skeleton\Down\Down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Skeleton\Left\Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Skeleton\Player2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Skeleton\Right\Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Skeleton\Still\Back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Skeleton\Still\Front.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Skeleton\Up\Up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Skins\Adventure.png" />
     <Resource Include="View\Skins\Pirate.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\Player2\Down\Down.png" />
-    <Resource Include="View\PropIcons\Player2\Left\Left.png" />
-    <Resource Include="View\PropIcons\Player2\Right\Right.png" />
-    <Resource Include="View\PropIcons\Player2\Still\Back.png" />
-    <Resource Include="View\PropIcons\Player2\Still\Front.png" />
-    <Resource Include="View\PropIcons\Player2\Up\Up.png" />
+    <Content Include="View\PropIcons\Player2\Down\Down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player2\Left\Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player2\Right\Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player2\Still\Back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player2\Still\Front.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Player2\Up\Up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Skins\Female.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\Zombie\Down\Down.png" />
-    <Resource Include="View\PropIcons\Zombie\Left\Left.png" />
-    <Resource Include="View\PropIcons\Zombie\Right\Right.png" />
-    <Resource Include="View\PropIcons\Zombie\Still\Back.png" />
-    <Resource Include="View\PropIcons\Zombie\Still\Front.png" />
-    <Resource Include="View\PropIcons\Zombie\Up\Up.png" />
+    <Content Include="View\PropIcons\Zombie\Down\Down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Zombie\Left\Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Zombie\Right\Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Zombie\Still\Back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Zombie\Still\Front.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Zombie\Up\Up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\Ghost\Down\Down.png" />
-    <Resource Include="View\PropIcons\Ghost\Left\Left.png" />
-    <Resource Include="View\PropIcons\Ghost\Right\Right.png" />
+    <Content Include="View\PropIcons\Ghost\Down\Down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Ghost\Left\Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Ghost\Right\Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="View\PropIcons\Ghost\Still\Back.png" />
-    <Resource Include="View\PropIcons\Ghost\Still\Front.png" />
-    <Resource Include="View\PropIcons\Ghost\Up\Up.png" />
+    <Content Include="View\PropIcons\Ghost\Still\Front.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\PropIcons\Ghost\Up\Up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\Player_House_Part1.png" />
@@ -288,7 +374,9 @@
     <Resource Include="View\Images\Level1v2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\PropIcons\candy.png" />
+    <Content Include="View\PropIcons\candy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Finish.wav" />
