@@ -3,8 +3,15 @@ using Game.View;
 
 namespace Game.Model
 {
+    /// <summary>
+    /// Contains properties for Zombie and settings for different difficulty levels.
+    /// </summary>
     internal class Zombie : Enemy
     {
+        /// <summary>
+        /// Creates a new zombie instance
+        /// </summary>
+        /// <param name="position">Zombie starting position</param>
         public Zombie(Point position) : base(position)
         {
             Position = position;

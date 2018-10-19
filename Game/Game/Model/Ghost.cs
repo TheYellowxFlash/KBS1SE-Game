@@ -3,8 +3,15 @@ using Game.View;
 
 namespace Game.Model
 {
+    /// <summary>
+    /// Contains properties for skeletons and settings for different difficulty levels.
+    /// </summary>
     internal class Ghost : Enemy
     {
+        /// <summary>
+        /// Creates instance of ghost
+        /// </summary>
+        /// <param name="position">Ghost starting position</param>
         public Ghost(Point position) : base(position)
         {
             Position = position;
