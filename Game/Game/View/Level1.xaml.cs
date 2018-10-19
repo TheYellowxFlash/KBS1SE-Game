@@ -14,7 +14,9 @@ using Game.View;
 
 namespace Game
 {
-    //a
+    /// <summary>
+    /// Class for building the level and handling events directly send from in-game.
+    /// </summary>
     public partial class Level1 : Window
     {
         private const string highscoreLocation = "../../Scores.xml";
@@ -47,7 +49,10 @@ namespace Game
         private readonly DispatcherTimer timer = new DispatcherTimer();
         private World world;
 
-        
+
+        /// <summary>
+        /// For making the game flow there is a DispatchTimer being used with a timer on tick method.
+        /// </summary>
         public Level1()
         {
             InitializeComponent();
@@ -63,7 +68,9 @@ namespace Game
             scoretimer.Start();
         }
 
-        // Windowload event, setting initial elements in game
+        /// <summary>
+        /// This method initializes all canvas elements and will be called on the window load event.
+        /// </summary>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Timer.Content = Time.ToString();
@@ -203,7 +210,9 @@ namespace Game
             }
         }
 
-        // Timer method
+        /// <summary>
+        /// Timer on tick method which will call the UpdateWorld method on every tick.
+        /// </summary>
         private void TimerOnTick(object sender, EventArgs e)
         {
             if (world != null) UpdateWorld();
@@ -293,7 +302,9 @@ namespace Game
             mainMenu.Show();
             Close();
         }
-
+        /// <summary>
+        /// The update world method contains all in game updates, position updates for player, enemy, candies etc...
+        /// </summary>
         // Update elements in game world on timer tick
         private void UpdateWorld()
         {
@@ -493,8 +504,8 @@ namespace Game
             #endregion
         }
 
-        // Calculate if player picked up a candy
-        public void CheckCandyPick(object sender, EventArgs e)
+        // Calculate if player picked up a candy, this method is called on every tick
+        private void CheckCandyPick(object sender, EventArgs e)
         {
             var playerBounds = BoundsRelativeTo(playerBox, level1);
 
@@ -520,8 +531,8 @@ namespace Game
             }
         }
 
-        // Generate new candy location
-        public void GenerateNewCandy(int candyBox)
+        // Generate new candy location, this method is called on every tick
+        private void GenerateNewCandy(int candyBox)
         {
             var candyBrush = new ImageBrush();
             candyBrush.ImageSource =
@@ -539,7 +550,7 @@ namespace Game
         }
 
         // Check if player got hit by an enemy
-        public void RecalculateCollision(object sender, EventArgs e)
+        private void RecalculateCollision(object sender, EventArgs e)
         {
             var playerBounds = BoundsRelativeTo(playerBox, level1);
 
