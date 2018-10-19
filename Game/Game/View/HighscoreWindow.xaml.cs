@@ -18,7 +18,7 @@ namespace Game.View
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
             var highScoreXML = new XmlDocument();
-            highScoreXML.LoadXml("../Resources/Scores.xml");
+            highScoreXML.LoadXml("XML/Scores.xml");
 
             var root = highScoreXML.FirstChild.NextSibling;
 

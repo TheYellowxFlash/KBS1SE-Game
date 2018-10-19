@@ -295,13 +295,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\YouDied.wav" />
-    <Resource Include="Resources\Scores.xml">
+    <Resource Include="View\XML\Scores.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\NewFolder1\" />
-    <Folder Include="View\XML\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
