@@ -295,6 +295,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\YouDied.wav" />
+    <Resource Include="View\Scores.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Scores.xml" />
   </ItemGroup>
   <ItemGroup>

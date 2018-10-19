@@ -281,7 +281,7 @@ namespace Game
 
                     root.AppendChild(element);
                 }
-                highScoreXML.Save("../../Resources/Scores.xml");
+                highScoreXML.Save("Scores.xml");
             }
 
             gameWon.Visibility =
