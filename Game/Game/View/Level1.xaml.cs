@@ -17,7 +17,6 @@ namespace Game
     //a
     public partial class Level1 : Window
     {
-        private string highscoreLocation = "Game.Properties.Resources.Scores";
         private readonly Rectangle[] candyBoxes = new Rectangle[3];
         private bool clickedPlayertxb;
         private readonly int diff = ChooseDifficulty.Difficulty;
@@ -282,8 +281,8 @@ namespace Game
 
                     root.AppendChild(element);
                 }
-
-                highScoreXML.Save(Game.Properties.Resources.Scores);
+                String savelocation = Game.Properties.Resources.Scores.ToString();
+                highScoreXML.Save("Scores.xml");
             }
 
             gameWon.Visibility =

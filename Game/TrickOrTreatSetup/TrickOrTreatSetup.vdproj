@@ -16,24 +16,24 @@
         "Entry"
         {
         "MsmKey" = "8:_02A1E87BE2D2D8E79D133ABFCA1ED525"
-        "OwnerKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+        "OwnerKey" = "8:_1F2104193A6B4878A9F2A7088713EA22"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6C4A2001ADDB5BBDF7A7A018D304998B"
-        "OwnerKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
+        "MsmKey" = "8:_1F2104193A6B4878A9F2A7088713EA22"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+        "MsmKey" = "8:_6C4A2001ADDB5BBDF7A7A018D304998B"
+        "OwnerKey" = "8:_1F2104193A6B4878A9F2A7088713EA22"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -46,13 +46,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6C4A2001ADDB5BBDF7A7A018D304998B"
+        "OwnerKey" = "8:_1F2104193A6B4878A9F2A7088713EA22"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+        "OwnerKey" = "8:_6C4A2001ADDB5BBDF7A7A018D304998B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -73,6 +73,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -89,6 +97,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -377,7 +393,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_98A992C2B99D430BB3783963B575E068"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9882AFC4D13543D6A07D589869BA6630"
             {
             "Name" = "8:TrickOrTreat"
             "Arguments" = "8:"
@@ -385,13 +401,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+            "Target" = "8:_1F2104193A6B4878A9F2A7088713EA22"
             "Folder" = "8:_9C5792DE94954B72AAB7563C51D41DA0"
             "WorkingFolder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
             "Icon" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A4EE411444F54B2088C2C43901387222"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_CE1B3DFD8BCB4CCBB66AED9A9F19BF21"
             {
             "Name" = "8:TrickOrTreat"
             "Arguments" = "8:"
@@ -399,10 +415,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+            "Target" = "8:_1F2104193A6B4878A9F2A7088713EA22"
             "Folder" = "8:_B4FD4FAD3BF54D2D833D10038F6B3272"
             "WorkingFolder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
-            "Icon" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
@@ -804,7 +820,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F40F3C030A6F4BF5A7890A618CF98E82"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1F2104193A6B4878A9F2A7088713EA22"
             {
             "SourcePath" = "8:..\\Game\\obj\\Release\\Trick Or Treat.exe"
             "TargetName" = "8:"
