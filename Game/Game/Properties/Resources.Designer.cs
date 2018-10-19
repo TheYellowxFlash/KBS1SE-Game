@@ -22,7 +22,7 @@ namespace Game.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Game.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Game.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Game.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream died {
+        public static System.IO.UnmanagedMemoryStream died {
             get {
                 return ResourceManager.GetStream("died", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Finish {
+        public static System.IO.UnmanagedMemoryStream Finish {
             get {
                 return ResourceManager.GetStream("Finish", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Pickup {
+        public static System.IO.UnmanagedMemoryStream Pickup {
             get {
                 return ResourceManager.GetStream("Pickup", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Game.Properties {
         ///  &lt;entry&gt;
         ///    &lt;name&gt;Xiauma [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Scores {
+        public static string Scores {
             get {
                 return ResourceManager.GetString("Scores", resourceCulture);
             }
