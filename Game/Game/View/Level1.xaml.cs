@@ -24,7 +24,7 @@ namespace Game
 
         private bool finished = true;
         private bool gameOverBool;
-        private readonly XmlDocument highScoreXML = new XmlDocument();
+        private XmlDocument highScoreXML = new XmlDocument();
         private double lightDiff;
         public bool pausebool;
 
@@ -281,8 +281,7 @@ namespace Game
 
                     root.AppendChild(element);
                 }
-                String savelocation = Game.Properties.Resources.Scores.ToString();
-                highScoreXML.Save("Scores.xml");
+                highScoreXML.Save("../../Resources/Scores.xml");
             }
 
             gameWon.Visibility =
