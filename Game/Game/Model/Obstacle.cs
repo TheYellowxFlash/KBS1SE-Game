@@ -13,11 +13,10 @@ namespace Game.Model
         /// create the obstacle and set its image
         /// </summary>
         /// <param name="obstacle"></param>
-        public Obstacle(Image obstacle)
+        public Obstacle(double width,double height,double xpos, double ypos)
         {
-            var test = TreeHelper.GetOffset(obstacle);
-            Position = new Point(test.X, test.Y);
-            Size = new Point(obstacle.ActualWidth, obstacle.ActualHeight);
+            Position = new Point(xpos, ypos);
+            Size = new Point(width, height);
         }
     }
 }

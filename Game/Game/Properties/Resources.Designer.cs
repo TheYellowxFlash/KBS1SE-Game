@@ -86,5 +86,15 @@ namespace Game.Properties {
                 return ResourceManager.GetStream("Pickup", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Player_House_Part1 {
+            get {
+                object obj = ResourceManager.GetObject("Player_House_Part1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -94,6 +95,7 @@
     <Compile Include="Model\Walker.cs" />
     <Compile Include="Model\World.cs" />
     <Compile Include="Model\Zombie.cs" />
+    <Compile Include="View\FileReader.cs" />
     <Compile Include="View\HighscoreWindow.xaml.cs">
       <DependentUpon>HighscoreWindow.xaml</DependentUpon>
     </Compile>
@@ -261,7 +263,7 @@
     <Resource Include="PropIcons\Ghost\Up\Up.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\Images\Player_House_Part1.png" />
+    <Content Include="View\Images\Player_House_Part1.png" />
     <Resource Include="View\Images\Player_House_Part2.png" />
   </ItemGroup>
   <ItemGroup>
