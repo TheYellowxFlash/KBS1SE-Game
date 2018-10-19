@@ -22,7 +22,7 @@ namespace Game.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Game.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Game.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Game.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,9 +61,19 @@ namespace Game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap candy {
+            get {
+                object obj = ResourceManager.GetObject("candy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream died {
+        internal static System.IO.UnmanagedMemoryStream died {
             get {
                 return ResourceManager.GetStream("died", resourceCulture);
             }
@@ -72,7 +82,7 @@ namespace Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream Finish {
+        internal static System.IO.UnmanagedMemoryStream Finish {
             get {
                 return ResourceManager.GetStream("Finish", resourceCulture);
             }
@@ -81,9 +91,45 @@ namespace Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream Pickup {
+        internal static System.IO.UnmanagedMemoryStream Pickup {
             get {
                 return ResourceManager.GetStream("Pickup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;us-ascii&quot;?&gt;
+        ///&lt;scores&gt;
+        ///  &lt;entry&gt;
+        ///    &lt;name&gt;John&lt;/name&gt;
+        ///    &lt;score&gt;2100&lt;/score&gt;
+        ///  &lt;/entry&gt;
+        ///  &lt;entry&gt;
+        ///    &lt;name&gt;Jeffrey&lt;/name&gt;
+        ///    &lt;score&gt;2000&lt;/score&gt;
+        ///  &lt;/entry&gt;
+        ///  &lt;entry&gt;
+        ///    &lt;name&gt;Xuwei&lt;/name&gt;
+        ///    &lt;score&gt;1950&lt;/score&gt;
+        ///  &lt;/entry&gt;
+        ///  &lt;entry&gt;
+        ///    &lt;name&gt;Mike&lt;/name&gt;
+        ///    &lt;score&gt;1500&lt;/score&gt;
+        ///  &lt;/entry&gt;
+        ///  &lt;entry&gt;
+        ///    &lt;name&gt;Rutger&lt;/name&gt;
+        ///    &lt;score&gt;1330&lt;/score&gt;
+        ///  &lt;/entry&gt;
+        ///  &lt;entry&gt;
+        ///    &lt;name&gt;RAge&lt;/name&gt;
+        ///    &lt;score&gt;1100&lt;/score&gt;
+        ///  &lt;/entry&gt;
+        ///  &lt;entry&gt;
+        ///    &lt;name&gt;Xiauma [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Scores {
+            get {
+                return ResourceManager.GetString("Scores", resourceCulture);
             }
         }
     }

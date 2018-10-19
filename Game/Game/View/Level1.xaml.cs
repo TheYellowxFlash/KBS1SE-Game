@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Media;
 using System.Windows;
 using System.Windows.Controls;
@@ -50,9 +51,19 @@ namespace Game
         public Level1()
         {
             InitializeComponent();
-            highScoreXML.LoadXml("Resources/Scores.xml");
-            timer.Tick += CheckCandyPick;
-            timer.Tick += RecalculateCollision;
+            bool bestand = File.Exists("View/XML/Scores.xml");
+            if (bestand)
+            {
+                highScoreXML.Load("View/XML/Scores.xml");
+            }
+            else
+            {
+                MessageBox.Show("kan bestand niet laden");
+            }
+
+
+            //timer.Tick += CheckCandyPick;
+            //timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 5);
             timer.Start();
@@ -62,7 +73,7 @@ namespace Game
             scoretimer.Start();
         }
 
-        // Windowload event, setting initial elements in game
+        //// Windowload event, setting initial elements in game
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Timer.Content = Time.ToString();
@@ -71,7 +82,7 @@ namespace Game
             foreach (var child in level1.Children)
                 if (child is Image)
                 {
-                    var obstacle = (Image) child;
+                    var obstacle = (Image)child;
                     if (obstacle.IsEnabled)
                         world.Obstacles.Add(new Obstacle(obstacle));
                 }
@@ -127,8 +138,8 @@ namespace Game
 
 
             //get the highest score
-            var score = highScoreXML.FirstChild.NextSibling.FirstChild.ChildNodes[1].InnerText;
-            lblHighscore.Text = "Highscore: " + score;
+            //var score = highScoreXML.FirstChild.NextSibling.FirstChild.ChildNodes[1].InnerText;
+            //lblHighscore.Text = "Highscore: " + score;
 
             world.StartGame();
 
@@ -140,7 +151,7 @@ namespace Game
 
             var candyBrush = new ImageBrush();
             candyBrush.ImageSource =
-                new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
+                new BitmapImage(new Uri(@"PropIcons/candy.png", UriKind.RelativeOrAbsolute));
             foreach (var cBox in candyBoxes)
             {
                 var candy = world.GetCandyNotInGame();
@@ -202,7 +213,7 @@ namespace Game
             }
         }
 
-        // Timer method
+        //// Timer method
         private void TimerOnTick(object sender, EventArgs e)
         {
             if (world != null) UpdateWorld();
@@ -222,23 +233,23 @@ namespace Game
                 }
         }
 
-        // Get score of last position on highscore board
-        private int GetLastScore()
-        {
-            return int.Parse(highScoreXML.FirstChild.NextSibling.LastChild.ChildNodes[1].InnerText);
-        }
+        //// Get score of last position on highscore board
+        //private int GetLastScore()
+        //{
+        //    return int.Parse(highScoreXML.FirstChild.NextSibling.LastChild.ChildNodes[1].InnerText);
+        //}
 
-        // Remove placeholder on textbox for highscore form
-        private void txbPlayerName_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (!clickedPlayertxb)
-            {
-                txbPlayerName.Text = "";
-                txbPlayerName.Foreground = new SolidColorBrush(Colors.Black);
-                clickedPlayertxb = true;
-                btnSubmitScore.Visibility = Visibility.Visible;
-            }
-        }
+        //// Remove placeholder on textbox for highscore form
+        //private void txbPlayerName_GotFocus(object sender, RoutedEventArgs e)
+        //{
+        //    if (!clickedPlayertxb)
+        //    {
+        //        txbPlayerName.Text = "";
+        //        txbPlayerName.Foreground = new SolidColorBrush(Colors.Black);
+        //        clickedPlayertxb = true;
+        //        btnSubmitScore.Visibility = Visibility.Visible;
+        //    }
+        //}
 
         // Game restart if player restarts
         private void restart_Click(object sender, RoutedEventArgs e)
@@ -249,75 +260,75 @@ namespace Game
             Close();
         }
 
-        // Set new highscore
-        private void btnSubmitScore_Click(object sender, RoutedEventArgs e)
-        {
-            var root = highScoreXML.FirstChild.NextSibling;
+        //// Set new highscore
+        //private void btnSubmitScore_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //    var root = highScoreXML.FirstChild.NextSibling;
 
-            var playerScore = world.Score; //hier later de echte score van maken
+        //    //    var playerScore = world.Score; //hier later de echte score van maken
 
-            var scoreChanged = false;
-            var list = new LinkedList<Score>();
-            foreach (XmlNode scores in root.ChildNodes)
-            {
-                var currentScore = new
-                    Score(scores.ChildNodes[0].InnerText, int.Parse(scores.ChildNodes[1].InnerText));
-                var currentScoreNode = list.AddLast(currentScore);
-                if (playerScore > currentScore.PlayerScore && !scoreChanged)
-                {
-                    list.AddBefore(currentScoreNode, new Score(txbPlayerName.Text, playerScore));
-                    scoreChanged = true;
-                }
-            }
+        //    //    var scoreChanged = false;
+        //    //    var list = new LinkedList<Score>();
+        //    //    foreach (XmlNode scores in root.ChildNodes)
+        //    //    {
+        //    //        var currentScore = new
+        //    //            Score(scores.ChildNodes[0].InnerText, int.Parse(scores.ChildNodes[1].InnerText));
+        //    //        var currentScoreNode = list.AddLast(currentScore);
+        //    //        if (playerScore > currentScore.PlayerScore && !scoreChanged)
+        //    //        {
+        //    //            list.AddBefore(currentScoreNode, new Score(txbPlayerName.Text, playerScore));
+        //    //            scoreChanged = true;
+        //    //        }
+        //    //    }
 
-            if (scoreChanged)
-            {
-                list.RemoveLast();
-                root.InnerXml = "";
-                foreach (var score in list)
-                {
-                    var element = highScoreXML.CreateElement("entry");
-                    element.InnerXml = "<name>" + score.Name + "</name><score>" + score.PlayerScore + "</score>";
+        //    //    if (scoreChanged)
+        //    //    {
+        //    //        list.RemoveLast();
+        //    //        root.InnerXml = "";
+        //    //        foreach (var score in list)
+        //    //        {
+        //    //            var element = highScoreXML.CreateElement("entry");
+        //    //            element.InnerXml = "<name>" + score.Name + "</name><score>" + score.PlayerScore + "</score>";
 
-                    root.AppendChild(element);
-                }
-                highScoreXML.Save("../../Scores.xml");
-            }
+        //    //            root.AppendChild(element);
+        //    //        }
+        //    //        highScoreXML.Save("View/XML/Scores.xml");
+        //    //    }
 
-            gameWon.Visibility =
-                plaatje.Visibility = titleWin.Visibility = txbPlayerName.Visibility = Visibility.Hidden;
+        //    //    gameWon.Visibility =
+        //    //        plaatje.Visibility = titleWin.Visibility = txbPlayerName.Visibility = Visibility.Hidden;
 
-            var mainMenu = new MainWindow();
-            mainMenu.Show();
-            Close();
-        }
+        //    //    var mainMenu = new MainWindow();
+        //    //    mainMenu.Show();
+        //    //    Close();
+        //}
 
-        // Update elements in game world on timer tick
+        //// Update elements in game world on timer tick
         private void UpdateWorld()
         {
             var player = world.Player;
 
             // Endpoint of game
             #region GameEndpoint
-            var houseX = 144 + 161 / 2;
-            if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX &&
-                Math.Floor(player.Position.Y) == 75 + 117)
-                if (finished)
-                {
-                    finished = false;
-                    gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = Visibility.Visible;
-                    lblHighscore.Visibility =
-                        lblScore.Visibility = lblTimer.Visibility = Timer.Visibility = Visibility.Hidden;
-                    pausemenu.Opacity = 0.8;
-                    if (world.Score > GetLastScore())
-                        txbPlayerName.Visibility = playerName.Visibility = Visibility.Visible;
-                    else
-                        exit.Visibility = lblNoHighscore.Visibility = Visibility.Visible;
-                    world.TimerPause();
-                    scoretimer.Stop();
-                    gameOverBool = true;
-                    new SoundPlayer(Properties.Resources.Finish).Play();
-                }
+            //var houseX = 144 + 161 / 2;
+            //if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX &&
+            //    Math.Floor(player.Position.Y) == 75 + 117)
+            //    if (finished)
+            //    {
+            //        finished = false;
+            //        gameWon.Visibility = plaatje.Visibility = titleWin.Visibility = Visibility.Visible;
+            //        lblHighscore.Visibility =
+            //            lblScore.Visibility = lblTimer.Visibility = Timer.Visibility = Visibility.Hidden;
+            //        pausemenu.Opacity = 0.8;
+            //        if (world.Score > GetLastScore())
+            //            txbPlayerName.Visibility = playerName.Visibility = Visibility.Visible;
+            //        else
+            //            exit.Visibility = lblNoHighscore.Visibility = Visibility.Visible;
+            //        world.TimerPause();
+            //        scoretimer.Stop();
+            //        gameOverBool = true;
+            //        new SoundPlayer(Properties.Resources.Finish).Play();
+            //    }
             #endregion
 
             // Player element
@@ -328,7 +339,7 @@ namespace Game
             playerBox.Height = player.Size.Y;
             var playerBrush = new ImageBrush();
             playerBrush.ImageSource =
-                new BitmapImage(new Uri(@"../../PropIcons/" + player.Image, UriKind.RelativeOrAbsolute));
+                new BitmapImage(new Uri(@"../PropIcons/" + player.Image, UriKind.RelativeOrAbsolute));
             playerBox.Fill = playerBrush;
             playerBox.Opacity = 1;
 
@@ -390,7 +401,7 @@ namespace Game
                 ghostBox1.Height = ghost1.Size.Y;
                 var ghostBrush = new ImageBrush();
                 ghostBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + ghost1.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"PropIcons/" + ghost1.Image, UriKind.RelativeOrAbsolute));
                 ghostBox1.Fill = ghostBrush;
             }
 
@@ -404,7 +415,7 @@ namespace Game
                 ghostBox2.Height = ghost2.Size.Y;
                 var ghostBrush = new ImageBrush();
                 ghostBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + ghost2.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"PropIcons/" + ghost2.Image, UriKind.RelativeOrAbsolute));
                 ghostBox2.Fill = ghostBrush;
             }
 
@@ -423,7 +434,7 @@ namespace Game
                 skeletonBox1.Height = skeleton1.Size.Y;
                 var skeletonBrush = new ImageBrush();
                 skeletonBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + skeleton1.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"PropIcons/" + skeleton1.Image, UriKind.RelativeOrAbsolute));
                 skeletonBox1.Fill = skeletonBrush;
             }
 
@@ -437,7 +448,7 @@ namespace Game
                 skeletonBox2.Height = skeleton2.Size.Y;
                 var skeletonBrush = new ImageBrush();
                 skeletonBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + skeleton2.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"PropIcons/" + skeleton2.Image, UriKind.RelativeOrAbsolute));
                 skeletonBox2.Fill = skeletonBrush;
             }
 
@@ -456,7 +467,7 @@ namespace Game
                 zombieBox1.Height = zombie1.Size.Y;
                 var zombieBrush = new ImageBrush();
                 zombieBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + zombie1.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"PropIcons/" + zombie1.Image, UriKind.RelativeOrAbsolute));
                 zombieBox1.Fill = zombieBrush;
             }
 
@@ -470,7 +481,7 @@ namespace Game
                 zombieBox2.Height = zombie2.Size.Y;
                 var zombieBrush = new ImageBrush();
                 zombieBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + zombie2.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"PropIcons/" + zombie2.Image, UriKind.RelativeOrAbsolute));
                 zombieBox2.Fill = zombieBrush;
             }
 
@@ -484,90 +495,90 @@ namespace Game
                 zombieBox3.Height = zombie3.Size.Y;
                 var zombieBrush = new ImageBrush();
                 zombieBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + zombie3.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"PropIcons/" + zombie3.Image, UriKind.RelativeOrAbsolute));
                 zombieBox3.Fill = zombieBrush;
             }
 
             #endregion
         }
 
-        // Calculate if player picked up a candy
-        public void CheckCandyPick(object sender, EventArgs e)
-        {
-            var playerBounds = BoundsRelativeTo(playerBox, level1);
+        //// Calculate if player picked up a candy
+        //public void CheckCandyPick(object sender, EventArgs e)
+        //{
+        //    var playerBounds = BoundsRelativeTo(playerBox, level1);
 
-            var pickedCandy = 0;
-            foreach (var candyBox in candyBoxes)
-            {
-                var candy = BoundsRelativeTo(candyBox, level1);
-                if (playerBounds.IntersectsWith(candy))
-                {
-                    var candyPosition = new Point(Canvas.GetLeft(candyBox), Canvas.GetTop(candyBox));
+        //    var pickedCandy = 0;
+        //    foreach (var candyBox in candyBoxes)
+        //    {
+        //        var candy = BoundsRelativeTo(candyBox, level1);
+        //        if (playerBounds.IntersectsWith(candy))
+        //        {
+        //            var candyPosition = new Point(Canvas.GetLeft(candyBox), Canvas.GetTop(candyBox));
 
-                    GenerateNewCandy(pickedCandy);
-                    world.CandyPickedUp(candyPosition);
+        //            GenerateNewCandy(pickedCandy);
+        //            world.CandyPickedUp(candyPosition);
 
-                    //MessageBox.Show("Points: " + world.Score);
-                    lblScore.Text = "Score: " + world.Score;
-                    var player = new SoundPlayer(Properties.Resources.Pickup);
-                    player.Play();
-                    break;
-                }
+        //            //MessageBox.Show("Points: " + world.Score);
+        //            lblScore.Text = "Score: " + world.Score;
+        //            var player = new SoundPlayer(Properties.Resources.Pickup);
+        //            player.Play();
+        //            break;
+        //        }
 
-                pickedCandy++;
-            }
-        }
+        //        pickedCandy++;
+        //    }
+        //}
 
-        // Generate new candy location
-        public void GenerateNewCandy(int candyBox)
-        {
-            var candyBrush = new ImageBrush();
-            candyBrush.ImageSource =
-                new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
+        //// Generate new candy location
+        //public void GenerateNewCandy(int candyBox)
+        //{
+        //    var candyBrush = new ImageBrush();
+        //    candyBrush.ImageSource =
+        //        new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
 
-            var candy = world.GetCandyNotInGame();
+        //    var candy = world.GetCandyNotInGame();
 
-            Canvas.SetLeft(candyBoxes[candyBox], candy.Position.X);
-            Canvas.SetTop(candyBoxes[candyBox], candy.Position.Y);
-            candyBoxes[candyBox].Width = candy.Size.X;
-            candyBoxes[candyBox].Height = candy.Size.Y;
+        //    Canvas.SetLeft(candyBoxes[candyBox], candy.Position.X);
+        //    Canvas.SetTop(candyBoxes[candyBox], candy.Position.Y);
+        //    candyBoxes[candyBox].Width = candy.Size.X;
+        //    candyBoxes[candyBox].Height = candy.Size.Y;
 
-            world.CandiesInGame.Add(candy);
-            candyBoxes[candyBox].Fill = candyBrush;
-        }
+        //    world.CandiesInGame.Add(candy);
+        //    candyBoxes[candyBox].Fill = candyBrush;
+        //}
 
-        // Check if player got hit by an enemy
-        public void RecalculateCollision(object sender, EventArgs e)
-        {
-            var playerBounds = BoundsRelativeTo(playerBox, level1);
+        //// Check if player got hit by an enemy
+        //public void RecalculateCollision(object sender, EventArgs e)
+        //{
+        //    var playerBounds = BoundsRelativeTo(playerBox, level1);
 
-            foreach (var enemyBox in enemyBoxes)
-            {
-                var enemy = BoundsRelativeTo(enemyBox, level1);
-                if (playerBounds.IntersectsWith(enemy))
-                    if (!gameOverBool)
-                    {
-                        var player = new SoundPlayer(Properties.Resources.died);
-                        player.Play();
+        //    foreach (var enemyBox in enemyBoxes)
+        //    {
+        //        var enemy = BoundsRelativeTo(enemyBox, level1);
+        //        if (playerBounds.IntersectsWith(enemy))
+        //            if (!gameOverBool)
+        //            {
+        //                var player = new SoundPlayer(Properties.Resources.died);
+        //                player.Play();
 
-                        exit.Visibility = Visibility.Visible;
-                        pausemenu.Opacity = 0.8;
-                        died.Visibility = Visibility.Visible;
-                        plaatje.Visibility = Visibility.Visible;
-                        restart.Visibility = Visibility.Visible;
-                        world.TimerPause();
-                        gameOverBool = true;
-                        scoretimer.Stop();
-                    }
-            }
+        //                exit.Visibility = Visibility.Visible;
+        //                pausemenu.Opacity = 0.8;
+        //                died.Visibility = Visibility.Visible;
+        //                plaatje.Visibility = Visibility.Visible;
+        //                restart.Visibility = Visibility.Visible;
+        //                world.TimerPause();
+        //                gameOverBool = true;
+        //                scoretimer.Stop();
+        //            }
+        //    }
 
-            enemyBoxes.Clear();
-        }
+        //    enemyBoxes.Clear();
+        //}
 
-        // Ophalen Rect gegevens van bepaald element
-        public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
-        {
-            return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
-        }
+        //// Ophalen Rect gegevens van bepaald element
+        //public static Rect BoundsRelativeTo(FrameworkElement element, Visual relativeTo)
+        //{
+        //    return element.TransformToVisual(relativeTo).TransformBounds(new Rect(element.RenderSize));
+        //}
     }
 }

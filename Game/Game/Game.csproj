@@ -43,6 +43,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -128,7 +129,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -156,13 +157,13 @@
     <Resource Include="Images\Background_Menu2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\skeleton.png" />
+    <Resource Include="View\PropIcons\skeleton.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\zombie.png" />
+    <Resource Include="View\PropIcons\zombie.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\ghost.png" />
+    <Resource Include="View\PropIcons\ghost.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\grass.png" />
@@ -201,64 +202,64 @@
     <Resource Include="View\Images\TrickOrTreat.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\Player1\Down\Down.png" />
-    <Resource Include="PropIcons\Player1\Left\Left.png" />
-    <Resource Include="PropIcons\Player1\Player1.png" />
-    <Resource Include="PropIcons\Player1\Right\Right.png" />
-    <Resource Include="PropIcons\Player1\Up\Up.png" />
-    <Resource Include="PropIcons\Player3\Player3.png" />
+    <Resource Include="View\PropIcons\Player1\Down\Down.png" />
+    <Resource Include="View\PropIcons\Player1\Left\Left.png" />
+    <Resource Include="View\PropIcons\Player1\Player1.png" />
+    <Resource Include="View\PropIcons\Player1\Right\Right.png" />
+    <Resource Include="View\PropIcons\Player1\Up\Up.png" />
+    <Resource Include="View\PropIcons\Player3\Player3.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\Player1\Still\Back.png" />
-    <Resource Include="PropIcons\Player1\Still\Front.png" />
+    <Resource Include="View\PropIcons\Player1\Still\Back.png" />
+    <Resource Include="View\PropIcons\Player1\Still\Front.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\Player3\Down\Down.png" />
-    <Resource Include="PropIcons\Player3\Left\Left.png" />
-    <Resource Include="PropIcons\Player3\Right\Right.png" />
-    <Resource Include="PropIcons\Player3\Still\Back.png" />
-    <Resource Include="PropIcons\Player3\Still\Front.png" />
-    <Resource Include="PropIcons\Player3\Up\Up.png" />
+    <Resource Include="View\PropIcons\Player3\Down\Down.png" />
+    <Resource Include="View\PropIcons\Player3\Left\Left.png" />
+    <Resource Include="View\PropIcons\Player3\Right\Right.png" />
+    <Resource Include="View\PropIcons\Player3\Still\Back.png" />
+    <Resource Include="View\PropIcons\Player3\Still\Front.png" />
+    <Resource Include="View\PropIcons\Player3\Up\Up.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\Skeleton\Down\Down.png" />
-    <Resource Include="PropIcons\Skeleton\Left\Left.png" />
-    <Resource Include="PropIcons\Skeleton\Player2.png" />
-    <Resource Include="PropIcons\Skeleton\Right\Right.png" />
-    <Resource Include="PropIcons\Skeleton\Still\Back.png" />
-    <Resource Include="PropIcons\Skeleton\Still\Front.png" />
-    <Resource Include="PropIcons\Skeleton\Up\Up.png" />
+    <Resource Include="View\PropIcons\Skeleton\Down\Down.png" />
+    <Resource Include="View\PropIcons\Skeleton\Left\Left.png" />
+    <Resource Include="View\PropIcons\Skeleton\Player2.png" />
+    <Resource Include="View\PropIcons\Skeleton\Right\Right.png" />
+    <Resource Include="View\PropIcons\Skeleton\Still\Back.png" />
+    <Resource Include="View\PropIcons\Skeleton\Still\Front.png" />
+    <Resource Include="View\PropIcons\Skeleton\Up\Up.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Skins\Adventure.png" />
     <Resource Include="View\Skins\Pirate.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\Player2\Down\Down.png" />
-    <Resource Include="PropIcons\Player2\Left\Left.png" />
-    <Resource Include="PropIcons\Player2\Right\Right.png" />
-    <Resource Include="PropIcons\Player2\Still\Back.png" />
-    <Resource Include="PropIcons\Player2\Still\Front.png" />
-    <Resource Include="PropIcons\Player2\Up\Up.png" />
+    <Resource Include="View\PropIcons\Player2\Down\Down.png" />
+    <Resource Include="View\PropIcons\Player2\Left\Left.png" />
+    <Resource Include="View\PropIcons\Player2\Right\Right.png" />
+    <Resource Include="View\PropIcons\Player2\Still\Back.png" />
+    <Resource Include="View\PropIcons\Player2\Still\Front.png" />
+    <Resource Include="View\PropIcons\Player2\Up\Up.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Skins\Female.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\Zombie\Down\Down.png" />
-    <Resource Include="PropIcons\Zombie\Left\Left.png" />
-    <Resource Include="PropIcons\Zombie\Right\Right.png" />
-    <Resource Include="PropIcons\Zombie\Still\Back.png" />
-    <Resource Include="PropIcons\Zombie\Still\Front.png" />
-    <Resource Include="PropIcons\Zombie\Up\Up.png" />
+    <Resource Include="View\PropIcons\Zombie\Down\Down.png" />
+    <Resource Include="View\PropIcons\Zombie\Left\Left.png" />
+    <Resource Include="View\PropIcons\Zombie\Right\Right.png" />
+    <Resource Include="View\PropIcons\Zombie\Still\Back.png" />
+    <Resource Include="View\PropIcons\Zombie\Still\Front.png" />
+    <Resource Include="View\PropIcons\Zombie\Up\Up.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\Ghost\Down\Down.png" />
-    <Resource Include="PropIcons\Ghost\Left\Left.png" />
-    <Resource Include="PropIcons\Ghost\Right\Right.png" />
-    <Resource Include="PropIcons\Ghost\Still\Back.png" />
-    <Resource Include="PropIcons\Ghost\Still\Front.png" />
-    <Resource Include="PropIcons\Ghost\Up\Up.png" />
+    <Resource Include="View\PropIcons\Ghost\Down\Down.png" />
+    <Resource Include="View\PropIcons\Ghost\Left\Left.png" />
+    <Resource Include="View\PropIcons\Ghost\Right\Right.png" />
+    <Resource Include="View\PropIcons\Ghost\Still\Back.png" />
+    <Resource Include="View\PropIcons\Ghost\Still\Front.png" />
+    <Resource Include="View\PropIcons\Ghost\Up\Up.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\Player_House_Part1.png" />
@@ -287,7 +288,7 @@
     <Resource Include="View\Images\Level1v2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PropIcons\candy.png" />
+    <Resource Include="View\PropIcons\candy.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Finish.wav" />
@@ -295,9 +296,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\YouDied.wav" />
-    <Resource Include="View\XML\Scores.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Content Include="View\XML\Scores.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
