@@ -15,12 +15,12 @@ namespace Game.Model
         /// Constructor that sets the position of the Prop
         /// </summary>
         /// <param name="position">The intended position of the prop</param>
-        public Prop(Point position)
+        protected Prop(Point position)
         {
             Position = position;
         }
 
-        public Prop()
+        protected Prop()
         {
         }
 
@@ -43,7 +43,7 @@ namespace Game.Model
         /// <param name="number2">The second number</param>
         /// <param name="range">The maximum allowed range between the numbers</param>
         /// <returns>Return true when in range false otherwise</returns>
-        public static bool CheckInRange(double number1, double number2, double range)
+        protected static bool CheckInRange(double number1, double number2, double range)
         {
             return number1 + range >= number2 && number2 >= number1 - range;
         }
