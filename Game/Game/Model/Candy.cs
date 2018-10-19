@@ -3,7 +3,7 @@
 namespace Game.Model
 {
     /// <summary>
-    /// Contains candy properties
+    /// Contains properties for candy
     /// </summary>
     internal class Candy : Prop
     {

@@ -15,7 +15,7 @@ using Game.View;
 namespace Game
 {
     /// <summary>
-    /// Class for building the level and handling events directly send from in-game.
+    /// Builds the level and handles interactions with Level1.xaml
     /// </summary>
     public partial class Level1 : Window
     {

@@ -8,6 +8,10 @@ namespace Game.Model
     /// </summary>
     internal class Skeleton : Enemy
     {
+        /// <summary>
+        /// Creates instance of skeleton
+        /// </summary>
+        /// <param name="position">Skeleton starting position</param>
         public Skeleton(Point position) : base(position)
         {
             Position = position;

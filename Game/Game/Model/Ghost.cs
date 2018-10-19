@@ -8,6 +8,10 @@ namespace Game.Model
     /// </summary>
     internal class Ghost : Enemy
     {
+        /// <summary>
+        /// Creates instance of ghost
+        /// </summary>
+        /// <param name="position">Ghost starting position</param>
         public Ghost(Point position) : base(position)
         {
             Position = position;
