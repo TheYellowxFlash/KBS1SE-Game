@@ -50,7 +50,7 @@ namespace Game
         public Level1()
         {
             InitializeComponent();
-            highScoreXML.LoadXml(Game.Properties.Resources.Scores);
+            highScoreXML.LoadXml("Resources/Scores.xml");
             timer.Tick += CheckCandyPick;
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
@@ -281,7 +281,7 @@ namespace Game
 
                     root.AppendChild(element);
                 }
-                highScoreXML.Save("Scores.xml");
+                highScoreXML.Save("../../Scores.xml");
             }
 
             gameWon.Visibility =
