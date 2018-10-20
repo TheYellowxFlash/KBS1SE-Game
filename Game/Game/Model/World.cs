@@ -127,11 +127,11 @@ namespace Game.Model
         {
             CandiesInGame.RemoveAll(c => c.Position.Equals(candyP));
             var addScore = 0;
-            if (ChooseDifficulty.Difficulty == 1)
+            if (ChooseDifficulty.difficulty == 1)
                 addScore = 30;
-            else if (ChooseDifficulty.Difficulty == 2)
+            else if (ChooseDifficulty.difficulty == 2)
                 addScore = 50;
-            else if (ChooseDifficulty.Difficulty == 3)
+            else if (ChooseDifficulty.difficulty == 3)
                 addScore = 100;
             Score += addScore;
         }

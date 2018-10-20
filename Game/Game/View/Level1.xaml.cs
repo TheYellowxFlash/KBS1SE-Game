@@ -23,7 +23,7 @@ namespace Game
         private const string highscoreLocation = "../../Scores.xml";
         private readonly Rectangle[] candyBoxes = new Rectangle[3];
         private bool clickedPlayertxb;
-        private readonly int diff = ChooseDifficulty.Difficulty;
+        private readonly int diff = ChooseDifficulty.difficulty;
         private readonly List<Rectangle> enemyBoxes = new List<Rectangle>();
 
         private bool finished = true;
@@ -56,47 +56,53 @@ namespace Game
         {
             InitializeComponent();
 
-
+            
             OpenFileDialog file = new OpenFileDialog();
             XmlDocument level = new XmlDocument();
-            if (file.ShowDialog() != null)
+            while (file.ShowDialog() == false)// == true is nodig hier
+            {
+                MessageBox.Show("Please select a file");
+            }
+            try
             {
                 level.Load(file.FileName);
-            }
-            else
-            {
-                MessageBox.Show("error");
-            }
-            var xmlObstacles = level.FirstChild.NextSibling;
+                var xmlObstacles = level.FirstChild.NextSibling;
 
-            foreach(XmlNode xmlObstacle in xmlObstacles.ChildNodes)
+                foreach (XmlNode xmlObstacle in xmlObstacles.ChildNodes)
+                {
+                    Image i = new Image();
+                    string s = xmlObstacle.Attributes["Source"].Value;
+                    i.Source = new BitmapImage(new Uri(xmlObstacle.Attributes["Source"].Value, UriKind.RelativeOrAbsolute));
+                    try
+                    {
+                        i.Height = double.Parse(xmlObstacle.Attributes["Height"].Value);
+                    }
+                    catch { }
+                    try
+                    {
+                        i.Width = double.Parse(xmlObstacle.Attributes["Width"].Value);
+                    }
+                    catch { }
+                    i.SetValue(Canvas.LeftProperty, double.Parse(xmlObstacle.Attributes["PositionX"].Value));
+                    i.SetValue(Canvas.TopProperty, double.Parse(xmlObstacle.Attributes["PositionY"].Value));
+                    try
+                    {
+                        i.SetValue(Panel.ZIndexProperty, int.Parse(xmlObstacle.Attributes["ZIndex"].Value));
+                    }
+                    catch { i.SetValue(Panel.ZIndexProperty, 0); }
+                    try
+                    {
+                        if (xmlObstacle.Attributes["isSolid"].Value == "True")
+                            world.Obstacles.Add(new Obstacle(i.Width, i.Height, (double)i.GetValue(Canvas.LeftProperty), (double)i.GetValue(Canvas.TopProperty)));
+                    }
+                    catch { }
+                    objects.Children.Add(i);
+                }
+            }
+            catch
             {
-                Image i = new Image();
-                i.Source = new BitmapImage(new Uri(xmlObstacle.Attributes["Source"].Value, UriKind.RelativeOrAbsolute));
-                try
-                {
-                    i.Height = double.Parse(xmlObstacle.Attributes["Height"].Value);
-                }
-                catch (Exception e) { }
-                try
-                {
-                    i.Width = double.Parse(xmlObstacle.Attributes["Width"].Value);
-                }
-                catch (Exception e) { }
-                i.SetValue(Canvas.LeftProperty, double.Parse(xmlObstacle.Attributes["PositionX"].Value));
-                i.SetValue(Canvas.TopProperty, double.Parse(xmlObstacle.Attributes["PositionY"].Value));
-                try
-                {
-                    i.SetValue(Canvas.ZIndexProperty, double.Parse(xmlObstacle.Attributes["ZIndex"].Value));
-                }
-                catch (Exception e) { }
-                try
-                {
-                    if (xmlObstacle.Attributes["isSolid"].Value == "True")
-                        world.Obstacles.Add(new Obstacle(i.Width,i.Height,(double)i.GetValue(Canvas.LeftProperty),(double)i.GetValue(Canvas.TopProperty)));
-                }
-                catch (Exception e) { }
-                objects.Children.Add(i);
+                MessageBox.Show("Invalid XML file. Please try again");
+                throw new Exception("Invalid XML");
             }
 
             highScoreXML.Load(highscoreLocation);
@@ -114,7 +120,6 @@ namespace Game
         // Windowload event, setting initial elements in game
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
             Timer.Content = Time.ToString();
 
             
@@ -286,10 +291,15 @@ namespace Game
         // Game restart if player restarts
         private void restart_Click(object sender, RoutedEventArgs e)
         {
-            var levelreload = new Level1();
-            levelreload.Show();
-
-            Close();
+            try
+            {
+                var levelReload = new Level1();
+                levelReload.Show();
+                Close();
+            }
+            catch
+            {
+            }
         }
 
         // Set new highscore

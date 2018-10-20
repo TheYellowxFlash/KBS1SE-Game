@@ -18,7 +18,7 @@ namespace Game.Model
         public double AttackRange { get; set; }
         public string Name { get; set; }
 
-        protected readonly int Diff = ChooseDifficulty.Difficulty;
+        protected readonly int Diff = ChooseDifficulty.difficulty;
 
         /// <summary>
         /// Enemy constructor
