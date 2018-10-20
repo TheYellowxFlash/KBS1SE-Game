@@ -17,10 +17,11 @@ using Microsoft.Win32;
 
 namespace Game
 {
-    //a
+    /// <summary>
+    /// Builds the level and handles interactions with Level1.xaml
+    /// </summary>
     public partial class Level1 : Window
     {
-        private const string highscoreLocation = "../../Scores.xml";
         private readonly Rectangle[] candyBoxes = new Rectangle[3];
         private bool clickedPlayertxb;
         private readonly int diff = ChooseDifficulty.difficulty;
@@ -28,7 +29,7 @@ namespace Game
 
         private bool finished = true;
         private bool gameOverBool;
-        private readonly XmlDocument highScoreXML = new XmlDocument();
+        private XmlDocument highScoreXML = new XmlDocument();
         private double lightDiff;
         public bool pausebool;
 
@@ -106,6 +107,10 @@ namespace Game
             }
         }
 
+
+        /// <summary>
+        /// For making the game flow there is a DispatchTimer being used with a timer on tick method.
+        /// </summary>
         public Level1()
         {
             InitializeComponent();
@@ -122,7 +127,17 @@ namespace Game
 
         private void Initialize()
         {
-            highScoreXML.Load(highscoreLocation);
+            bool bestand = File.Exists("View/XML/Scores.xml");
+            if (bestand)
+            {
+                highScoreXML.Load("View/XML/Scores.xml");
+            }
+            else
+            {
+                MessageBox.Show("kan bestand niet laden");
+            }
+
+            
             timer.Tick += CheckCandyPick;
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
@@ -134,7 +149,9 @@ namespace Game
             scoretimer.Start();
         }
 
-        // Windowload event, setting initial elements in game
+        /// <summary>
+        /// This method initializes all canvas elements and will be called on the window load event.
+        /// </summary>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Timer.Content = Time.ToString();
@@ -205,7 +222,7 @@ namespace Game
 
             var candyBrush = new ImageBrush();
             candyBrush.ImageSource =
-                new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
+                new BitmapImage(new Uri(@"View/PropIcons/candy.png", UriKind.RelativeOrAbsolute));
             foreach (var cBox in candyBoxes)
             {
                 var candy = world.GetCandyNotInGame();
@@ -267,7 +284,9 @@ namespace Game
             }
         }
 
-        // Timer method
+        /// <summary>
+        /// Timer on tick method which will call the UpdateWorld method on every tick.
+        /// </summary>
         private void TimerOnTick(object sender, EventArgs e)
         {
             if (world != null) UpdateWorld();
@@ -313,7 +332,7 @@ namespace Game
             Close();
         }
 
-        // Set new highscore
+        //Set new highscore
         private void btnSubmitScore_Click(object sender, RoutedEventArgs e)
         {
             var root = highScoreXML.FirstChild.NextSibling;
@@ -345,8 +364,12 @@ namespace Game
 
                     root.AppendChild(element);
                 }
-
-                highScoreXML.Save(highscoreLocation);
+                try {
+                    highScoreXML.Save("View/XML/Scores.xml");
+                } catch
+                {
+                    MessageBox.Show("kan het bestand niet laden");
+                }
             }
 
             gameWon.Visibility =
@@ -356,13 +379,15 @@ namespace Game
             mainMenu.Show();
             Close();
         }
-
+        /// <summary>
+        /// The update world method contains all in game updates, position updates for player, enemy, candies etc...
+        /// </summary>
         // Update elements in game world on timer tick
         private void UpdateWorld()
         {
             var player = world.Player;
 
-            // Endpoint of game
+            //Endpoint of game
             #region GameEndpoint
             var houseX = 144 + 161 / 2;
             if (player.Position.X + player.Size.X > houseX && player.Position.X < houseX &&
@@ -393,7 +418,7 @@ namespace Game
             playerBox.Height = player.Size.Y;
             var playerBrush = new ImageBrush();
             playerBrush.ImageSource =
-                new BitmapImage(new Uri(@"../../PropIcons/" + player.Image, UriKind.RelativeOrAbsolute));
+                new BitmapImage(new Uri(@"View/PropIcons/" + player.Image, UriKind.RelativeOrAbsolute));
             playerBox.Fill = playerBrush;
             playerBox.Opacity = 1;
 
@@ -455,7 +480,7 @@ namespace Game
                 ghostBox1.Height = ghost1.Size.Y;
                 var ghostBrush = new ImageBrush();
                 ghostBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + ghost1.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"View/PropIcons/" + ghost1.Image, UriKind.RelativeOrAbsolute));
                 ghostBox1.Fill = ghostBrush;
             }
 
@@ -469,7 +494,7 @@ namespace Game
                 ghostBox2.Height = ghost2.Size.Y;
                 var ghostBrush = new ImageBrush();
                 ghostBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + ghost2.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"View/PropIcons/" + ghost2.Image, UriKind.RelativeOrAbsolute));
                 ghostBox2.Fill = ghostBrush;
             }
 
@@ -488,7 +513,7 @@ namespace Game
                 skeletonBox1.Height = skeleton1.Size.Y;
                 var skeletonBrush = new ImageBrush();
                 skeletonBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + skeleton1.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"View/PropIcons/" + skeleton1.Image, UriKind.RelativeOrAbsolute));
                 skeletonBox1.Fill = skeletonBrush;
             }
 
@@ -502,7 +527,7 @@ namespace Game
                 skeletonBox2.Height = skeleton2.Size.Y;
                 var skeletonBrush = new ImageBrush();
                 skeletonBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + skeleton2.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"View/PropIcons/" + skeleton2.Image, UriKind.RelativeOrAbsolute));
                 skeletonBox2.Fill = skeletonBrush;
             }
 
@@ -521,7 +546,7 @@ namespace Game
                 zombieBox1.Height = zombie1.Size.Y;
                 var zombieBrush = new ImageBrush();
                 zombieBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + zombie1.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"View/PropIcons/" + zombie1.Image, UriKind.RelativeOrAbsolute));
                 zombieBox1.Fill = zombieBrush;
             }
 
@@ -535,7 +560,7 @@ namespace Game
                 zombieBox2.Height = zombie2.Size.Y;
                 var zombieBrush = new ImageBrush();
                 zombieBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + zombie2.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"View/PropIcons/" + zombie2.Image, UriKind.RelativeOrAbsolute));
                 zombieBox2.Fill = zombieBrush;
             }
 
@@ -549,15 +574,15 @@ namespace Game
                 zombieBox3.Height = zombie3.Size.Y;
                 var zombieBrush = new ImageBrush();
                 zombieBrush.ImageSource =
-                    new BitmapImage(new Uri(@"../../PropIcons/" + zombie3.Image, UriKind.RelativeOrAbsolute));
+                    new BitmapImage(new Uri(@"View/PropIcons/" + zombie3.Image, UriKind.RelativeOrAbsolute));
                 zombieBox3.Fill = zombieBrush;
             }
 
             #endregion
         }
 
-        // Calculate if player picked up a candy
-        public void CheckCandyPick(object sender, EventArgs e)
+        // Calculate if player picked up a candy, this method is called on every tick
+        private void CheckCandyPick(object sender, EventArgs e)
         {
             var playerBounds = BoundsRelativeTo(playerBox, objects);
 
@@ -583,12 +608,12 @@ namespace Game
             }
         }
 
-        // Generate new candy location
-        public void GenerateNewCandy(int candyBox)
+        // Generate new candy location, this method is called on every tick
+        private void GenerateNewCandy(int candyBox)
         {
             var candyBrush = new ImageBrush();
             candyBrush.ImageSource =
-                new BitmapImage(new Uri(@"../../PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
+                new BitmapImage(new Uri(@"View/PropIcons/" + Candy.ImageCandy, UriKind.RelativeOrAbsolute));
 
             var candy = world.GetCandyNotInGame();
 
@@ -602,7 +627,7 @@ namespace Game
         }
 
         // Check if player got hit by an enemy
-        public void RecalculateCollision(object sender, EventArgs e)
+        private void RecalculateCollision(object sender, EventArgs e)
         {
             var playerBounds = BoundsRelativeTo(playerBox, objects);
 

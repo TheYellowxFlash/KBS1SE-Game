@@ -8,6 +8,10 @@ namespace Game.Model
     /// </summary>
     internal class Zombie : Enemy
     {
+        /// <summary>
+        /// Creates a new zombie instance
+        /// </summary>
+        /// <param name="position">Zombie starting position</param>
         public Zombie(Point position) : base(position)
         {
             Position = position;

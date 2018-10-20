@@ -17,8 +17,8 @@ namespace Game.View
         // Get scores from xml document
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            var highScoreXML = new XmlDocument();
-            highScoreXML.Load("../../Scores.xml");
+            XmlDocument highScoreXML = new XmlDocument();
+            highScoreXML.Load("View/XML/Scores.xml");
 
             var root = highScoreXML.FirstChild.NextSibling;
 

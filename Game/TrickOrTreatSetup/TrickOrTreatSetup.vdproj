@@ -16,13 +16,223 @@
         "Entry"
         {
         "MsmKey" = "8:_02A1E87BE2D2D8E79D133ABFCA1ED525"
-        "OwnerKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+        "OwnerKey" = "8:_1F2104193A6B4878A9F2A7088713EA22"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6C4A2001ADDB5BBDF7A7A018D304998B"
-        "OwnerKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+        "MsmKey" = "8:_0818116B63F14853AD94486264D7C0E9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_09F2C9E9077245739336466A560FB8E3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0AE0B851E061440DAF2FE9975D41FAF2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0E694FB00E594C12B4158A2A01DBAFFF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_179794716F9B476E943182CFB073CDC7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1F2104193A6B4878A9F2A7088713EA22"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_225D99B4D8D348EDBD44E985F78A75D6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_22F4D5529F0043AF86482A7CC7480022"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_24D17BA802EC456092BAF247639A5E46"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_24ED9B70B01A48D99A2A113202C8EBD6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2687F3D771D345159263A198162BA783"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_273165CEF4D44C6BB3C35EB53D68DF17"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2C49F1F8425C434A8BD078D3270AF803"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4505A214AFED436398BA8407557D7088"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_465B0DD5CA2847C4928FADAC9B5E4058"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5BAD443295484748A2CF909E68E51A59"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_677ADF163C184073857CBA9195599F5C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6E1229AF9AB58A8C20FE6FC7097F0EA2"
+        "OwnerKey" = "8:_1F2104193A6B4878A9F2A7088713EA22"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6F5B5F5A14AD40209934CADF5A9FD76C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_701A972155794E07963668263838C45F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_705F6E0272984F5780D105AA220CE9B2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7FF52DE4D01D4EEDAC150D217837808D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_84B5E07A96A64DF79CBB87C9A880C9B4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_864D733776374072B6228E091B4376D0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8D494915A3B74322901E2E99E2B5A74D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_96CA355C51A34B61A35FC24A7C1A98C3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9ABE32716179413485407E8DB38A7C3C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A8F935F94528466E974F54DF347EF0CF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A984579E388B4B60BB58A9F5595367D1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AC22E79D36DE481AB5BF8970E304C471"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B4F4AE81CC3A4B4A8C9A4022F9D03312"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B882A2148F9A4CB5BB7EA25BF6736D18"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BA7A96EC754142F29855C07874ED1CF2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BDB8E9C9CAFC4F3D8F412D219734A82D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CA34E1E72A514EF69C4C2703B0E510FF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CE097FE1BF3D42D18EBE44AA15439BC2"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -33,7 +243,49 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+        "MsmKey" = "8:_D8DE4CAA5D714224BDE802DCF656B116"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D8F01C95ED564892A75E9EC0577C50D7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E07680AB10224F5FA82F3F32ED4CA142"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EC5F39DF025C469D9F642D6DFF3B0BFA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EFD2BD5DA0994B39860A62B4083F60D7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F25C3E4D50184164B02D23D9BDCF3793"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F8508E5029F04D6BB7A799AE406FF74E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F8E10FED8E2E47A881AA354B3A52F226"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -46,13 +298,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6C4A2001ADDB5BBDF7A7A018D304998B"
+        "OwnerKey" = "8:_1F2104193A6B4878A9F2A7088713EA22"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+        "OwnerKey" = "8:_6E1229AF9AB58A8C20FE6FC7097F0EA2"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -73,6 +325,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -89,6 +357,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -149,14 +433,334 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6C4A2001ADDB5BBDF7A7A018D304998B"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0818116B63F14853AD94486264D7C0E9"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player1\\Down\\Down.png"
+            "TargetName" = "8:Down.png"
+            "Tag" = "8:"
+            "Folder" = "8:_7420A9120B554655B68A82B20FDF4B73"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_09F2C9E9077245739336466A560FB8E3"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player2\\Up\\Up.png"
+            "TargetName" = "8:Up.png"
+            "Tag" = "8:"
+            "Folder" = "8:_4B47ADD686C7437489C55C831DC53822"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0AE0B851E061440DAF2FE9975D41FAF2"
+            {
+            "SourcePath" = "8:..\\Game\\View\\PropIcons\\zombie.png"
+            "TargetName" = "8:zombie.png"
+            "Tag" = "8:"
+            "Folder" = "8:_2F524D99BE6F48B4A845274689941AD5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0E694FB00E594C12B4158A2A01DBAFFF"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player3\\Left\\Left.png"
+            "TargetName" = "8:Left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_543B52EF3009462AB65C32694FC6429F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_179794716F9B476E943182CFB073CDC7"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Ghost\\Right\\Right.png"
+            "TargetName" = "8:Right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_E175236271C449168D15418E980A66EC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_225D99B4D8D348EDBD44E985F78A75D6"
+            {
+            "SourcePath" = "8:..\\Game\\View\\PropIcons\\skeleton.png"
+            "TargetName" = "8:skeleton.png"
+            "Tag" = "8:"
+            "Folder" = "8:_2F524D99BE6F48B4A845274689941AD5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_22F4D5529F0043AF86482A7CC7480022"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player2\\Left\\Left.png"
+            "TargetName" = "8:Left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CC3D881E128145A0897EB8328037FB9B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24D17BA802EC456092BAF247639A5E46"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player1\\Still\\Front.png"
+            "TargetName" = "8:Front.png"
+            "Tag" = "8:"
+            "Folder" = "8:_5C8772A0367143108FEFEE1F230FF325"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24ED9B70B01A48D99A2A113202C8EBD6"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Skeleton\\Still\\Front.png"
+            "TargetName" = "8:Front.png"
+            "Tag" = "8:"
+            "Folder" = "8:_488025047609406784457EA3EB040318"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2687F3D771D345159263A198162BA783"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player2\\Right\\Right.png"
+            "TargetName" = "8:Right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_E01360E41EF24DED8EE23B03A327ED29"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_273165CEF4D44C6BB3C35EB53D68DF17"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Zombie\\Still\\Back.png"
+            "TargetName" = "8:Back.png"
+            "Tag" = "8:"
+            "Folder" = "8:_1EB2286FF12745DF82E264085DBB9BCD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2C49F1F8425C434A8BD078D3270AF803"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player3\\Still\\Back.png"
+            "TargetName" = "8:Back.png"
+            "Tag" = "8:"
+            "Folder" = "8:_5713459BE44444828170D39780F5036A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4505A214AFED436398BA8407557D7088"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Zombie\\Up\\Up.png"
+            "TargetName" = "8:Up.png"
+            "Tag" = "8:"
+            "Folder" = "8:_26542BB4D3DA42E99F07F718B7AF76A9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_465B0DD5CA2847C4928FADAC9B5E4058"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player1\\Player1.png"
+            "TargetName" = "8:Player1.png"
+            "Tag" = "8:"
+            "Folder" = "8:_8ECD300DE29B4D8D8A3B6E23DA2BE793"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5BAD443295484748A2CF909E68E51A59"
+            {
+            "SourcePath" = "8:..\\Game\\View\\XML\\Scores.xml"
+            "TargetName" = "8:Scores.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_F9AC3899D4D04833AC942CC7BE31DDCE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_677ADF163C184073857CBA9195599F5C"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Skeleton\\Left\\Left.png"
+            "TargetName" = "8:Left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_0467C29282484022903C6217CDEF6A40"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6E1229AF9AB58A8C20FE6FC7097F0EA2"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Game.Theme, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6C4A2001ADDB5BBDF7A7A018D304998B"
+                    "_6E1229AF9AB58A8C20FE6FC7097F0EA2"
                     {
                     "Name" = "8:Game.Theme.dll"
                     "Attributes" = "3:512"
@@ -180,12 +784,532 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6F5B5F5A14AD40209934CADF5A9FD76C"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Skeleton\\Still\\Back.png"
+            "TargetName" = "8:Back.png"
+            "Tag" = "8:"
+            "Folder" = "8:_488025047609406784457EA3EB040318"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_701A972155794E07963668263838C45F"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player2\\Down\\Down.png"
+            "TargetName" = "8:Down.png"
+            "Tag" = "8:"
+            "Folder" = "8:_6D09154A32B14814A3D49FC516FBC082"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_705F6E0272984F5780D105AA220CE9B2"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player2\\Still\\Front.png"
+            "TargetName" = "8:Front.png"
+            "Tag" = "8:"
+            "Folder" = "8:_9D3EB89EE28143E48E8B0D55543FA02C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7FF52DE4D01D4EEDAC150D217837808D"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player2\\Still\\Back.png"
+            "TargetName" = "8:Back.png"
+            "Tag" = "8:"
+            "Folder" = "8:_9D3EB89EE28143E48E8B0D55543FA02C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_84B5E07A96A64DF79CBB87C9A880C9B4"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Skeleton\\Up\\Up.png"
+            "TargetName" = "8:Up.png"
+            "Tag" = "8:"
+            "Folder" = "8:_72BE9B1FC72649CB9866A95489523F41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_864D733776374072B6228E091B4376D0"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Skeleton\\Player2.png"
+            "TargetName" = "8:Player2.png"
+            "Tag" = "8:"
+            "Folder" = "8:_3F21C5C790684587AAFE36498911A754"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8D494915A3B74322901E2E99E2B5A74D"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Ghost\\Still\\Front.png"
+            "TargetName" = "8:Front.png"
+            "Tag" = "8:"
+            "Folder" = "8:_903F4DE7B5F64E158BA7A6F379510115"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_96CA355C51A34B61A35FC24A7C1A98C3"
+            {
+            "SourcePath" = "8:..\\Game\\View\\PropIcons\\Ghost\\Down\\Down.png"
+            "TargetName" = "8:Down.png"
+            "Tag" = "8:"
+            "Folder" = "8:_723D04AFD7614C28BB8D74FBFFD28042"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9ABE32716179413485407E8DB38A7C3C"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Zombie\\Still\\Front.png"
+            "TargetName" = "8:Front.png"
+            "Tag" = "8:"
+            "Folder" = "8:_1EB2286FF12745DF82E264085DBB9BCD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A8F935F94528466E974F54DF347EF0CF"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player3\\Down\\Down.png"
+            "TargetName" = "8:Down.png"
+            "Tag" = "8:"
+            "Folder" = "8:_01D9AF4E19834D25981102DE57C46A9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A984579E388B4B60BB58A9F5595367D1"
+            {
+            "SourcePath" = "8:..\\Game\\View\\PropIcons\\candy.png"
+            "TargetName" = "8:candy.png"
+            "Tag" = "8:"
+            "Folder" = "8:_2F524D99BE6F48B4A845274689941AD5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC22E79D36DE481AB5BF8970E304C471"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player1\\Up\\Up.png"
+            "TargetName" = "8:Up.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CEFDA6F3DC1A49AEAE7FD23E0CBC1C7D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B4F4AE81CC3A4B4A8C9A4022F9D03312"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player1\\Left\\Left.png"
+            "TargetName" = "8:Left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_D9ECADE07840451A9A17E2427AB842BE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B882A2148F9A4CB5BB7EA25BF6736D18"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player1\\Right\\Right.png"
+            "TargetName" = "8:Right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_041478B4C4734CBCB2D010269C929B80"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BA7A96EC754142F29855C07874ED1CF2"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Skeleton\\Right\\Right.png"
+            "TargetName" = "8:Right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_0294C42B5AE9494CB5530A501A8A70EC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BDB8E9C9CAFC4F3D8F412D219734A82D"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player3\\Still\\Front.png"
+            "TargetName" = "8:Front.png"
+            "Tag" = "8:"
+            "Folder" = "8:_5713459BE44444828170D39780F5036A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CA34E1E72A514EF69C4C2703B0E510FF"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player1\\Still\\Back.png"
+            "TargetName" = "8:Back.png"
+            "Tag" = "8:"
+            "Folder" = "8:_5C8772A0367143108FEFEE1F230FF325"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CE097FE1BF3D42D18EBE44AA15439BC2"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Ghost\\Left\\Left.png"
+            "TargetName" = "8:Left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_B3414E1B14384D87A3B907F80CCC578C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D76B2E469C7E4933A6F21D99E3923B6B"
             {
             "SourcePath" = "8:..\\Game\\TrickOrTreat.ico"
             "TargetName" = "8:TrickOrTreat.ico"
             "Tag" = "8:"
             "Folder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D8DE4CAA5D714224BDE802DCF656B116"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Skeleton\\Down\\Down.png"
+            "TargetName" = "8:Down.png"
+            "Tag" = "8:"
+            "Folder" = "8:_E9F187F45BC64F91BDC8D966F1805D71"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D8F01C95ED564892A75E9EC0577C50D7"
+            {
+            "SourcePath" = "8:..\\Game\\View\\PropIcons\\ghost.png"
+            "TargetName" = "8:ghost.png"
+            "Tag" = "8:"
+            "Folder" = "8:_2F524D99BE6F48B4A845274689941AD5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E07680AB10224F5FA82F3F32ED4CA142"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player3\\Up\\Up.png"
+            "TargetName" = "8:Up.png"
+            "Tag" = "8:"
+            "Folder" = "8:_D7F9A456A3144F8BBF26E68FE65FB1BE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC5F39DF025C469D9F642D6DFF3B0BFA"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Player3\\Right\\Right.png"
+            "TargetName" = "8:Right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_BCB4D120F2FA4FED87F249DEE6951ED6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EFD2BD5DA0994B39860A62B4083F60D7"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Zombie\\Left\\Left.png"
+            "TargetName" = "8:Left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_B03EC1DBC392416ABEB40B70CA509AE2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F25C3E4D50184164B02D23D9BDCF3793"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Zombie\\Down\\Down.png"
+            "TargetName" = "8:Down.png"
+            "Tag" = "8:"
+            "Folder" = "8:_1E12BF2B57604622BA2CE5C75B5D7374"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F8508E5029F04D6BB7A799AE406FF74E"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Zombie\\Right\\Right.png"
+            "TargetName" = "8:Right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CB9C32CFC2324F2C97AFDE931F498885"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F8E10FED8E2E47A881AA354B3A52F226"
+            {
+            "SourcePath" = "8:..\\Game\\bin\\Debug\\View\\PropIcons\\Ghost\\Up\\Up.png"
+            "TargetName" = "8:Up.png"
+            "Tag" = "8:"
+            "Folder" = "8:_8AC14B9A78584CF98FA33C4F962CAE61"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -238,6 +1362,435 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_18EF3F12321F44D7B7A99A8979BA3748"
+                    {
+                    "Name" = "8:View"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_63B7781A8BD44F24909E9150BCA492F7"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_2F524D99BE6F48B4A845274689941AD5"
+                            {
+                            "Name" = "8:PropIcons"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_CEBE22E00BB3499DBA06394D8AB5CED3"
+                                "Folders"
+                                {
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_3F21C5C790684587AAFE36498911A754"
+                                    {
+                                    "Name" = "8:Skeleton"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_961AFD0093F2484991BD8F80AD1AB071"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_0294C42B5AE9494CB5530A501A8A70EC"
+                                            {
+                                            "Name" = "8:Right"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_2ED66511190E4B27B5B3D5F4828C1F1E"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_0467C29282484022903C6217CDEF6A40"
+                                            {
+                                            "Name" = "8:Left"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_0A3EE0D85E43421AA18B549FC3197F8E"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_488025047609406784457EA3EB040318"
+                                            {
+                                            "Name" = "8:Still"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_A1B9687F56FB47318CF4A55E47443AAD"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_72BE9B1FC72649CB9866A95489523F41"
+                                            {
+                                            "Name" = "8:Up"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_61ABF1029DF145EEAE7B043E10D45A08"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_E9F187F45BC64F91BDC8D966F1805D71"
+                                            {
+                                            "Name" = "8:Down"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_A222F02BFA5148A8BCAA7301BB0EB1CA"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_8DABC73717F34B9891F3340FB459CFF3"
+                                    {
+                                    "Name" = "8:Player3"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_EE6E58AD89A0449F892606E2346FECD1"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_01D9AF4E19834D25981102DE57C46A9D"
+                                            {
+                                            "Name" = "8:Down"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_F16A67B3284E4AE39CCA65D6C1168295"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_543B52EF3009462AB65C32694FC6429F"
+                                            {
+                                            "Name" = "8:Left"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_B93EBF646A25476BB0A4A472C1293A8B"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_5713459BE44444828170D39780F5036A"
+                                            {
+                                            "Name" = "8:Still"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_A899F970A0904D228AC601D612B53E18"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_BCB4D120F2FA4FED87F249DEE6951ED6"
+                                            {
+                                            "Name" = "8:Right"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_2992DF16829145AC8F837D099C66131D"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_D7F9A456A3144F8BBF26E68FE65FB1BE"
+                                            {
+                                            "Name" = "8:Up"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_45C07E8868E24327B74FB1B4C39116D6"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_8ECD300DE29B4D8D8A3B6E23DA2BE793"
+                                    {
+                                    "Name" = "8:Player1"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_52B28F7FED85470B979940A49152A652"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_041478B4C4734CBCB2D010269C929B80"
+                                            {
+                                            "Name" = "8:Right"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_2B86D0CAB93F4D1E8638C1130FD0FFFD"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_5C8772A0367143108FEFEE1F230FF325"
+                                            {
+                                            "Name" = "8:Still"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_F6FD853768FD4ECDAD8C1C4E0639AF1D"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_7420A9120B554655B68A82B20FDF4B73"
+                                            {
+                                            "Name" = "8:Down"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_8AE66E9D4D3D4DE0A4326B8C0A24FDBF"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_CEFDA6F3DC1A49AEAE7FD23E0CBC1C7D"
+                                            {
+                                            "Name" = "8:Up"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_F88B675DF4BB4BBA897F8B766422B26F"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_D9ECADE07840451A9A17E2427AB842BE"
+                                            {
+                                            "Name" = "8:Left"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_56D68A4446004666A639E4F8E776000D"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_9200837569CB4DDE96F3FA9DDEBE583C"
+                                    {
+                                    "Name" = "8:Ghost"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_B71D25914BB84E44912A6880EAEB5459"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_723D04AFD7614C28BB8D74FBFFD28042"
+                                            {
+                                            "Name" = "8:Down"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_D0A3601DCBFF4A078C83E3E7C89F35C2"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_8AC14B9A78584CF98FA33C4F962CAE61"
+                                            {
+                                            "Name" = "8:Up"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_BB467F86BB57492098B6077A1C4AB5A6"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_903F4DE7B5F64E158BA7A6F379510115"
+                                            {
+                                            "Name" = "8:Still"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_3FA0A25F7F404D77B59AF3F632A57FB4"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_B3414E1B14384D87A3B907F80CCC578C"
+                                            {
+                                            "Name" = "8:Left"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_D87CB8A712C34312A1FD737E1B9DF856"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_E175236271C449168D15418E980A66EC"
+                                            {
+                                            "Name" = "8:Right"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_322535E3182746EAB4F1E64659580B7D"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_E2F9B17EE9B14A8D89E0791A7703F7D7"
+                                    {
+                                    "Name" = "8:Player2"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_45390B1942F341EDBBD03D87C35405E1"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_4B47ADD686C7437489C55C831DC53822"
+                                            {
+                                            "Name" = "8:Up"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_B5FDBA112078417B8FFDFF2F5D9DEFC5"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_6D09154A32B14814A3D49FC516FBC082"
+                                            {
+                                            "Name" = "8:Down"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_3683FA6C571848F992D9D2CC0FCAF46A"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_9D3EB89EE28143E48E8B0D55543FA02C"
+                                            {
+                                            "Name" = "8:Still"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_19D482CF419E4AFFAEAF66970807A41B"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_CC3D881E128145A0897EB8328037FB9B"
+                                            {
+                                            "Name" = "8:Left"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_D7BB7E76826445829853E53C0E953176"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_E01360E41EF24DED8EE23B03A327ED29"
+                                            {
+                                            "Name" = "8:Right"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_35D4B233528340BCB0931872678A50BE"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_E5F20025750647BBB3AE715F02120D6F"
+                                    {
+                                    "Name" = "8:Zombie"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_8ED49D72199A432982C2BCFDC9838C86"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_1E12BF2B57604622BA2CE5C75B5D7374"
+                                            {
+                                            "Name" = "8:Down"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_525B0B86020044DE82C8ACCCBE75D4DE"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_1EB2286FF12745DF82E264085DBB9BCD"
+                                            {
+                                            "Name" = "8:Still"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_9BD6CFA6EF774BD5959D005545593C0E"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_26542BB4D3DA42E99F07F718B7AF76A9"
+                                            {
+                                            "Name" = "8:Up"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_BC6E80BBF7A145AD9BFE9AC867A85F11"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_B03EC1DBC392416ABEB40B70CA509AE2"
+                                            {
+                                            "Name" = "8:Left"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_C06EC6363D594E2A83B2C50E122F832B"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_CB9C32CFC2324F2C97AFDE931F498885"
+                                            {
+                                            "Name" = "8:Right"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_1A4823C1B1AE4E6B84DFCB9546827125"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_F9AC3899D4D04833AC942CC7BE31DDCE"
+                            {
+                            "Name" = "8:XML"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_B5D847E773D8453E903E4CC426477851"
+                                "Folders"
+                                {
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -257,7 +1810,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TrickOrTreat"
         "ProductCode" = "8:{D11B2D0B-3B1E-4365-A66D-4F2FE6ABB19B}"
-        "PackageCode" = "8:{87920A4C-33CC-4FAF-A824-3A0DE34BE2D5}"
+        "PackageCode" = "8:{3AF3ED11-C826-478F-B13C-3BAE17FD164A}"
         "UpgradeCode" = "8:{A00BF3E6-31B1-4813-8D4D-1823278BE2AA}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -377,29 +1930,29 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_98A992C2B99D430BB3783963B575E068"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6AEE8529260B4CD69CEEE852517E95DD"
             {
-            "Name" = "8:TrickOrTreat"
+            "Name" = "8:Trick Or Treat"
             "Arguments" = "8:"
-            "Description" = "8:"
+            "Description" = "8:Little Game Created By Some Geniuses"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+            "Target" = "8:_1F2104193A6B4878A9F2A7088713EA22"
             "Folder" = "8:_9C5792DE94954B72AAB7563C51D41DA0"
             "WorkingFolder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
             "Icon" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A4EE411444F54B2088C2C43901387222"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F4E4D241011A4FA6BD2D204AE4C29D4A"
             {
-            "Name" = "8:TrickOrTreat"
+            "Name" = "8:Trick Or Treat"
             "Arguments" = "8:"
-            "Description" = "8:"
+            "Description" = "8:Little Game Created By Some Geniuses"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_F40F3C030A6F4BF5A7890A618CF98E82"
+            "Target" = "8:_1F2104193A6B4878A9F2A7088713EA22"
             "Folder" = "8:_B4FD4FAD3BF54D2D833D10038F6B3272"
             "WorkingFolder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
             "Icon" = "8:_D76B2E469C7E4933A6F21D99E3923B6B"
@@ -804,9 +2357,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F40F3C030A6F4BF5A7890A618CF98E82"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1F2104193A6B4878A9F2A7088713EA22"
             {
-            "SourcePath" = "8:..\\Game\\obj\\Release\\Trick Or Treat.exe"
+            "SourcePath" = "8:..\\Game\\obj\\Debug\\Trick Or Treat.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C96885751B8F4ED5ABDF7F813ED296D7"
