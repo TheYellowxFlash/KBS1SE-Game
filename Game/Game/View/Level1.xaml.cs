@@ -5,6 +5,7 @@ using System.Media;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -12,6 +13,7 @@ using System.Windows.Threading;
 using System.Xml;
 using Game.Model;
 using Game.View;
+using Microsoft.Win32;
 
 namespace Game
 {
@@ -22,7 +24,7 @@ namespace Game
     {
         private readonly Rectangle[] candyBoxes = new Rectangle[3];
         private bool clickedPlayertxb;
-        private readonly int diff = ChooseDifficulty.Difficulty;
+        private readonly int diff = ChooseDifficulty.difficulty;
         private readonly List<Rectangle> enemyBoxes = new List<Rectangle>();
 
         private bool finished = true;
@@ -47,7 +49,63 @@ namespace Game
         private int Time = 144;
 
         private readonly DispatcherTimer timer = new DispatcherTimer();
-        private World world;
+        private World world = new World();
+        private string levelXMLPath;
+
+
+        public Level1(string path)
+        {
+            InitializeComponent();
+            LoadLevelXML(path);
+            levelXMLPath = path;
+            Initialize();
+        }
+
+        private void LoadLevelXML(string path)
+        {
+            try
+            {
+                XmlDocument level = new XmlDocument();
+                level.Load(path);
+                var xmlObstacles = level.FirstChild.NextSibling;
+
+                foreach (XmlNode xmlObstacle in xmlObstacles.ChildNodes)
+                {
+                    Image i = new Image();
+                    string s = xmlObstacle.Attributes["Source"].Value;
+                    i.Source = new BitmapImage(new Uri(xmlObstacle.Attributes["Source"].Value, UriKind.RelativeOrAbsolute));
+                    try
+                    {
+                        i.Height = double.Parse(xmlObstacle.Attributes["Height"].Value);
+                    }
+                    catch { }
+                    try
+                    {
+                        i.Width = double.Parse(xmlObstacle.Attributes["Width"].Value);
+                    }
+                    catch { }
+                    i.SetValue(Canvas.LeftProperty, double.Parse(xmlObstacle.Attributes["PositionX"].Value));
+                    i.SetValue(Canvas.TopProperty, double.Parse(xmlObstacle.Attributes["PositionY"].Value));
+                    try
+                    {
+                        i.SetValue(Panel.ZIndexProperty, int.Parse(xmlObstacle.Attributes["ZIndex"].Value));
+                    }
+                    catch { i.SetValue(Panel.ZIndexProperty, 0); }
+                    try
+                    {
+                        if (xmlObstacle.Attributes["isSolid"].Value == "True")
+                            world.Obstacles.Add(new Obstacle(i.Width, i.Height, (double)i.GetValue(Canvas.LeftProperty), (double)i.GetValue(Canvas.TopProperty)));
+                    }
+                    catch { }
+                    objects.Children.Add(i);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Invalid XML file. Please try again");
+                throw new Exception("Invalid XML");
+            }
+        }
 
 
         /// <summary>
@@ -56,6 +114,19 @@ namespace Game
         public Level1()
         {
             InitializeComponent();
+            OpenFileDialog file = new OpenFileDialog();
+            XmlDocument level = new XmlDocument();
+            while (file.ShowDialog() == false)// == true is nodig hier
+            {
+                MessageBox.Show("Please select a file");
+            }
+            LoadLevelXML(file.FileName);
+            levelXMLPath = file.FileName;
+            Initialize();
+        }
+
+        private void Initialize()
+        {
             bool bestand = File.Exists("View/XML/Scores.xml");
             if (bestand)
             {
@@ -66,7 +137,7 @@ namespace Game
                 MessageBox.Show("kan bestand niet laden");
             }
 
-
+            
             timer.Tick += CheckCandyPick;
             timer.Tick += RecalculateCollision;
             timer.Tick += TimerOnTick;
@@ -84,63 +155,56 @@ namespace Game
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Timer.Content = Time.ToString();
-            world = new World();
 
-            foreach (var child in level1.Children)
-                if (child is Image)
-                {
-                    var obstacle = (Image)child;
-                    if (obstacle.IsEnabled)
-                        world.Obstacles.Add(new Obstacle(obstacle));
-                }
+            
 
             playerBox = new Rectangle();
-            level1.Children.Add(playerBox);
+            objects.Children.Add(playerBox);
 
             worldLight = new Rectangle();
-            level1.Children.Add(worldLight);
+            objects.Children.Add(worldLight);
 
             playerLight = new Ellipse();
-            level1.Children.Add(playerLight);
+            objects.Children.Add(playerLight);
 
             if (diff == 1)
             {
                 zombieBox1 = new Rectangle();
-                level1.Children.Add(zombieBox1);
+                objects.Children.Add(zombieBox1);
                 zombieBox2 = new Rectangle();
-                level1.Children.Add(zombieBox2);
+                objects.Children.Add(zombieBox2);
                 zombieBox3 = new Rectangle();
-                level1.Children.Add(zombieBox3);
+                objects.Children.Add(zombieBox3);
             }
             else if (diff == 2)
             {
                 ghostBox1 = new Rectangle();
-                level1.Children.Add(ghostBox1);
+                objects.Children.Add(ghostBox1);
 
                 skeletonBox1 = new Rectangle();
-                level1.Children.Add(skeletonBox1);
+                objects.Children.Add(skeletonBox1);
 
                 zombieBox1 = new Rectangle();
-                level1.Children.Add(zombieBox1);
+                objects.Children.Add(zombieBox1);
             }
             else if (diff == 3)
             {
                 ghostBox1 = new Rectangle();
-                level1.Children.Add(ghostBox1);
+                objects.Children.Add(ghostBox1);
                 ghostBox2 = new Rectangle();
-                level1.Children.Add(ghostBox2);
+                objects.Children.Add(ghostBox2);
 
                 skeletonBox1 = new Rectangle();
-                level1.Children.Add(skeletonBox1);
+                objects.Children.Add(skeletonBox1);
                 skeletonBox2 = new Rectangle();
-                level1.Children.Add(skeletonBox2);
+                objects.Children.Add(skeletonBox2);
 
                 zombieBox1 = new Rectangle();
-                level1.Children.Add(zombieBox1);
+                objects.Children.Add(zombieBox1);
                 zombieBox2 = new Rectangle();
-                level1.Children.Add(zombieBox2);
+                objects.Children.Add(zombieBox2);
                 zombieBox3 = new Rectangle();
-                level1.Children.Add(zombieBox3);
+                objects.Children.Add(zombieBox3);
             }
 
 
@@ -170,7 +234,7 @@ namespace Game
 
                 world.CandiesInGame.Add(candy);
                 cBox.Fill = candyBrush;
-                level1.Children.Add(cBox);
+                objects.Children.Add(cBox);
             }
 
             #endregion
@@ -263,9 +327,8 @@ namespace Game
         // Game restart if player restarts
         private void restart_Click(object sender, RoutedEventArgs e)
         {
-            var levelreload = new Level1();
-            levelreload.Show();
-
+            var levelReload = new Level1(levelXMLPath);
+            levelReload.Show();
             Close();
         }
 
@@ -521,12 +584,12 @@ namespace Game
         // Calculate if player picked up a candy, this method is called on every tick
         private void CheckCandyPick(object sender, EventArgs e)
         {
-            var playerBounds = BoundsRelativeTo(playerBox, level1);
+            var playerBounds = BoundsRelativeTo(playerBox, objects);
 
             var pickedCandy = 0;
             foreach (var candyBox in candyBoxes)
             {
-                var candy = BoundsRelativeTo(candyBox, level1);
+                var candy = BoundsRelativeTo(candyBox, objects);
                 if (playerBounds.IntersectsWith(candy))
                 {
                     var candyPosition = new Point(Canvas.GetLeft(candyBox), Canvas.GetTop(candyBox));
@@ -566,11 +629,11 @@ namespace Game
         // Check if player got hit by an enemy
         private void RecalculateCollision(object sender, EventArgs e)
         {
-            var playerBounds = BoundsRelativeTo(playerBox, level1);
+            var playerBounds = BoundsRelativeTo(playerBox, objects);
 
             foreach (var enemyBox in enemyBoxes)
             {
-                var enemy = BoundsRelativeTo(enemyBox, level1);
+                var enemy = BoundsRelativeTo(enemyBox, objects);
                 if (playerBounds.IntersectsWith(enemy))
                     if (!gameOverBool)
                     {

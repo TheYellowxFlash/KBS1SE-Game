@@ -9,80 +9,9 @@
     <Grid>
 
 
-        <Canvas x:Name="level1">
-            <Image Source="Images/Player_House_Part1.png" Canvas.Left="144" Canvas.Top="75" Height="117" Width="161" />
-            <Image Source="Images/Player_House_Part2.png" Canvas.Left="140" Canvas.Top="30" Height="46" Width="171" IsEnabled="False" Panel.ZIndex="1" />
-            <Image Source="Images/House_Part1.png" Canvas.Left="477" Canvas.Top="63" Height="129" Width="123"/>
-            <Image Source="Images/House_Part2.png" Canvas.Left="481" Canvas.Top="11" Height="52" Width="114" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="153" Canvas.Top="246"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="134" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="256" Canvas.Top="246"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="237" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="472" Canvas.Top="246"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="453" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="576" Canvas.Top="246"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="557" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="792" Canvas.Top="246"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="773" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="896" Canvas.Top="246"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="877" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/House_Part1.png" Canvas.Left="801" Canvas.Top="62" Height="129" Width="123"/>
-            <Image Source="Images/House_Part2.png" Canvas.Left="805" Canvas.Top="10" Height="52" Width="113" IsEnabled="False" Panel.ZIndex="1" RenderTransformOrigin="0.5,0.5"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="1216" Canvas.Top="382"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="1197" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="1038" Canvas.Top="382"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="1019" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="792" Canvas.Top="246"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="773" Canvas.Top="175" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="820" Canvas.Top="382"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="801" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="642" Canvas.Top="382"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="623" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="398" Canvas.Top="382"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="379" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
-            <Image Source="Images/tree_part3.png" Canvas.Left="220" Canvas.Top="382"/>
-            <Image Source="Images/tree_part4.png" Canvas.Left="201" Canvas.Top="311" IsEnabled="False" Panel.ZIndex="1"/>
+        <Canvas x:Name="objects">
+            
 
-            <!--GraveYard-->
-            <Image Source="Images/LevelProps/Tube_Stone.png" Canvas.Left="1155" Canvas.Top="612" IsEnabled="False"/>
-            <Image Source="Images/LevelProps/Tube_Stone.png" Canvas.Left="1193" Canvas.Top="612" IsEnabled="False"/>
-            <Image Source="Images/LevelProps/Tube_Stone.png" Canvas.Left="1231" Canvas.Top="612" IsEnabled="False"/>
-            <Image Source="Images/LevelProps/Tube_Stone.png" Canvas.Left="1155" Canvas.Top="651" IsEnabled="False"/>
-            <Image Source="Images/LevelProps/Tube_Stone.png" Canvas.Left="1193" Canvas.Top="651" IsEnabled="False"/>
-            <Image Source="Images/LevelProps/Tube_Stone.png" Canvas.Left="1231" Canvas.Top="651" IsEnabled="False"/>
-            <Image Source="Images/LevelProps/Tube_Stone.png" Canvas.Left="1118" Canvas.Top="651" IsEnabled="False"/>
-            <Image Source="Images/LevelProps/Tube_Stone.png" Canvas.Left="1118" Canvas.Top="612" IsEnabled="False"/>
-
-            <!--DeadBody's-->
-            <Image Source="Images/LevelProps/DeadBody.png" Canvas.Left="1027" Canvas.Top="360" IsEnabled="False" Height="37" Width="37" Panel.ZIndex="2"/>
-            <Image Source="Images/LevelProps/DeadBody.png" Canvas.Left="887" Canvas.Top="223" IsEnabled="False" Height="37" Width="37" Panel.ZIndex="2"/>
-
-            <!--Pumpkin's House1-->
-            <Image Source="Images/LevelProps/Pumpkin_1.png" Canvas.Left="252" Canvas.Top="242" IsEnabled="False" Height="14" Width="14"/>
-            <Image Source="Images/LevelProps/Pumpkin_1.png" Canvas.Left="181" Canvas.Top="242" IsEnabled="False" Height="14" Width="14"/>
-            <Image Source="Images/LevelProps/Pumpkin_1.png" Canvas.Left="252" Canvas.Top="228" IsEnabled="False" Height="14" Width="14"/>
-            <Image Source="Images/LevelProps/Pumpkin_1.png" Canvas.Left="181" Canvas.Top="228" IsEnabled="False" Height="14" Width="14" RenderTransformOrigin="-3.679,-0.5"/>
-            <!--Pumpkin's House2-->
-            <Image Source="Images/LevelProps/Pumpkin_1.png" Canvas.Left="502" Canvas.Top="242" IsEnabled="False" Height="14" Width="14"/>
-            <Image Source="Images/LevelProps/HalloweenCat.png" Canvas.Left="574" Canvas.Top="240" IsEnabled="False" Height="16" Width="16" Panel.ZIndex="2"/>
-
-            <!--Fences-->
-            <!--<Image Source="Images/LevelProps/water_corner.png" Canvas.Top="516" IsEnabled="False" Height="188" Width="387" Canvas.Left="-31"/>-->
-            <Image Source="Images/LevelProps/fence_1.png" Canvas.Top="487" IsEnabled="True" Height="29" Width="124" Canvas.Left="201"/>
-            <Image Source="Images/LevelProps/fence_2.png" Canvas.Top="506" IsEnabled="True" Height="123" Width="20" Canvas.Left="320"/>
-            <Image Source="Images/LevelProps/fence_2.png" Canvas.Top="620" IsEnabled="True" Height="123" Width="20" Canvas.Left="320"/>
-            <Image Source="Images/LevelProps/fence_1.png" IsEnabled="True" Canvas.Left="-53" Canvas.Top="491"/>
-            <Image Source="Images/LevelProps/fence_1.png" IsEnabled="True" Canvas.Left="73" Canvas.Top="491"/>
-
-            <!--Candel's-->
-            <Image Name="candle1" Source="Images/LevelProps/candle.png" Canvas.Top="552" IsEnabled="False" Height="25" Width="15" Canvas.Left="363" RenderTransformOrigin="0.262,0.711"/>
-            <Image Name="candle2" Source="Images/LevelProps/candle.png" Canvas.Top="552" IsEnabled="False" Height="25" Width="15" Canvas.Left="877" RenderTransformOrigin="0.262,0.711"/>
-            <Image Name="candle3" Source="Images/LevelProps/candle.png" Canvas.Top="552" IsEnabled="False" Height="25" Width="15" Canvas.Left="606" RenderTransformOrigin="0.262,0.711"/>
-            <Image Name="candle4" Source="Images/LevelProps/candle.png" Canvas.Top="552" IsEnabled="False" Height="25" Width="16" Canvas.Left="1078" RenderTransformOrigin="0.262,0.711"/>
-            <Image Name="candle5" Source="Images/LevelProps/candle.png" Canvas.Top="653" IsEnabled="False" Height="25" Width="15" Canvas.Left="1019" RenderTransformOrigin="0.262,0.711"/>
-            <Image Name="candle6" Source="Images/LevelProps/candle.png" Canvas.Top="367" IsEnabled="False" Height="25" Width="15" Canvas.Left="1078" RenderTransformOrigin="0.262,0.711"/>
-            <Image Name="candle7" Source="Images/LevelProps/candle.png" Canvas.Top="231" IsEnabled="False" Height="25" Width="15" Canvas.Left="620" RenderTransformOrigin="0.262,0.711"/>
-            <Image Name="candle8" Source="Images/LevelProps/candle.png" Canvas.Top="231" IsEnabled="False" Height="25" Width="15" Canvas.Left="1216" RenderTransformOrigin="0.262,0.711"/>
         </Canvas>
 
         <!--pause menu-->

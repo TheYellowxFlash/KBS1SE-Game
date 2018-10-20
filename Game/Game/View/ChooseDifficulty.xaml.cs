@@ -7,38 +7,43 @@ namespace Game.View
     /// </summary>
     public partial class ChooseDifficulty : Window
     {
-        public static int Difficulty;
+        public static int difficulty;
 
         public ChooseDifficulty()
         {
             InitializeComponent();
         }
 
+        private void LoadLevel(int difficulty)
+        {
+            ChooseDifficulty.difficulty = difficulty;
+            try
+            {
+                var level1 = new Level1();
+                level1.Show();
+                Close();
+            }
+            catch
+            {
+            }
+        }
+
         // Click on easy difficulty
         private void easy_Click(object sender, RoutedEventArgs e)
         {
-            Difficulty = 1;
-            var level1 = new Level1();
-            level1.Show();
-            Close();
+            LoadLevel(1);
         }
 
         // Click on normal difficulty
         private void normal_Click(object sender, RoutedEventArgs e)
         {
-            Difficulty = 2;
-            var level1 = new Level1();
-            level1.Show();
-            Close();
+            LoadLevel(2);
         }
 
         // Click on hard difficulty
         private void hard_Click(object sender, RoutedEventArgs e)
         {
-            Difficulty = 3;
-            var level1 = new Level1();
-            level1.Show();
-            Close();
+            LoadLevel(3);
         }
 
         // Click on back button

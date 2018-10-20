@@ -7,17 +7,16 @@ namespace Game.Model
     /// <summary>
     /// Obstacle class for Walkers to collide with
     /// </summary>
-    internal class Obstacle : Prop
+    public class Obstacle : Prop
     {
         /// <summary>
         /// create the obstacle and set its image
         /// </summary>
         /// <param name="obstacle"></param>
-        public Obstacle(Image obstacle)
+        public Obstacle(double width,double height,double xpos, double ypos)
         {
-            var test = TreeHelper.GetOffset(obstacle);
-            Position = new Point(test.X, test.Y);
-            Size = new Point(obstacle.ActualWidth, obstacle.ActualHeight);
+            Position = new Point(xpos, ypos);
+            Size = new Point(width, height);
         }
     }
 }

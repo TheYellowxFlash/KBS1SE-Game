@@ -11,7 +11,7 @@ namespace Game.Model
     internal class Player : Walker
     {
         private readonly string CC = CustomizeCharacter.character;
-        private readonly int Diff = ChooseDifficulty.Difficulty;
+        private readonly int Diff = ChooseDifficulty.difficulty;
         private readonly string Down = "/Down/Down.png";
         private readonly string Left = "/Left/Left.png";
 
