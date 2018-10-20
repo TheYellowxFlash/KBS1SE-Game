@@ -7,7 +7,7 @@ namespace Game.Model
     /// <summary>
     /// Obstacle class for Walkers to collide with
     /// </summary>
-    internal class Obstacle : Prop
+    public class Obstacle : Prop
     {
         /// <summary>
         /// create the obstacle and set its image

@@ -49,23 +49,23 @@ namespace Game
 
         private readonly DispatcherTimer timer = new DispatcherTimer();
         private World world = new World();
+        private string levelXMLPath;
 
 
-
-        public Level1()
+        public Level1(string path)
         {
             InitializeComponent();
+            LoadLevelXML(path);
+            levelXMLPath = path;
+            Initialize();
+        }
 
-            
-            OpenFileDialog file = new OpenFileDialog();
-            XmlDocument level = new XmlDocument();
-            while (file.ShowDialog() == false)// == true is nodig hier
-            {
-                MessageBox.Show("Please select a file");
-            }
+        private void LoadLevelXML(string path)
+        {
             try
             {
-                level.Load(file.FileName);
+                XmlDocument level = new XmlDocument();
+                level.Load(path);
                 var xmlObstacles = level.FirstChild.NextSibling;
 
                 foreach (XmlNode xmlObstacle in xmlObstacles.ChildNodes)
@@ -104,7 +104,24 @@ namespace Game
                 MessageBox.Show("Invalid XML file. Please try again");
                 throw new Exception("Invalid XML");
             }
+        }
 
+        public Level1()
+        {
+            InitializeComponent();
+            OpenFileDialog file = new OpenFileDialog();
+            XmlDocument level = new XmlDocument();
+            while (file.ShowDialog() == false)// == true is nodig hier
+            {
+                MessageBox.Show("Please select a file");
+            }
+            LoadLevelXML(file.FileName);
+            levelXMLPath = file.FileName;
+            Initialize();
+        }
+
+        private void Initialize()
+        {
             highScoreXML.Load(highscoreLocation);
             timer.Tick += CheckCandyPick;
             timer.Tick += RecalculateCollision;
@@ -291,15 +308,9 @@ namespace Game
         // Game restart if player restarts
         private void restart_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                var levelReload = new Level1();
-                levelReload.Show();
-                Close();
-            }
-            catch
-            {
-            }
+            var levelReload = new Level1(levelXMLPath);
+            levelReload.Show();
+            Close();
         }
 
         // Set new highscore
