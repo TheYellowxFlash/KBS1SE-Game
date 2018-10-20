@@ -22,7 +22,7 @@
 
         <!--Basis Pause Menu-->
         <Image x:Name="plaatje" HorizontalAlignment="Right" VerticalAlignment="Bottom" Source="Images/MenuBackground.png" Stretch="Fill" Visibility="Hidden"/>
-        <TextBlock x:Name="title" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="PAUSED" VerticalAlignment="Top" FontSize="130"  Foreground="DarkRed"/>
+        <TextBlock x:Name="title" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="PAUSED" VerticalAlignment="Top" FontSize="130"  Foreground="DarkRed" Margin="508,22,508,0"/>
         <TextBlock x:Name="titleWin" Visibility="Hidden" HorizontalAlignment="Center" FontFamily="/Trick Or Treat;component/View/Fonts/#YouMurderer BB" TextWrapping="Wrap" Text="You've won" VerticalAlignment="Top" FontSize="130"  Foreground="DarkRed"/>
 
         <!--Escape button pressed-->
