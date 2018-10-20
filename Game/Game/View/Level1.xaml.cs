@@ -85,7 +85,11 @@ namespace Game
                 catch (Exception e) { }
                 i.SetValue(Canvas.LeftProperty, double.Parse(xmlObstacle.Attributes["PositionX"].Value));
                 i.SetValue(Canvas.TopProperty, double.Parse(xmlObstacle.Attributes["PositionY"].Value));
-
+                try
+                {
+                    i.SetValue(Canvas.ZIndexProperty, double.Parse(xmlObstacle.Attributes["ZIndex"].Value));
+                }
+                catch (Exception e) { }
                 try
                 {
                     if (xmlObstacle.Attributes["isSolid"].Value == "True")
